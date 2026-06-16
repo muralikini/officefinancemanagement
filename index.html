@@ -170,14 +170,23 @@ function populateYearSelect(bank) {
 // ============== NORMALIZE BOTH FORMATS ==============
 function normalizeTransactions(data) {
   return data.map(t => {
-    let withdrawal = 0, deposit = 0, date = t.Date || t['Date'] || '';
+    let withdrawal = 0, 
+        deposit = 0, 
+        date = t.Date || t['Date'] || '';
+
+    // Helper to clean comma-separated numbers
+    const cleanNumber = (val) => {
+      if (!val) return 0;
+      return parseFloat(String(val).replace(/,/g, '')) || 0;
+    };
 
     if (t.transactionType) {                    // ICICI Format
-      if (t.transactionType === "DR") withdrawal = parseFloat(t.transactionAmount) || 0;
-      else if (t.transactionType === "CR") deposit = parseFloat(t.transactionAmount) || 0;
+      const amount = cleanNumber(t.transactionAmount);
+      if (t.transactionType === "DR") withdrawal = amount;
+      else if (t.transactionType === "CR") deposit = amount;
     } else {                                    // HDFC Format
-      withdrawal = parseFloat(t['Withdrawal Amt.'] || 0);
-      deposit = parseFloat(t['Deposit Amt.'] || 0);
+      withdrawal = cleanNumber(t['Withdrawal Amt.']);
+      deposit = cleanNumber(t['Deposit Amt.']);
     }
 
     return {
@@ -185,7 +194,7 @@ function normalizeTransactions(data) {
       Narration: t.Narration || t['Narration'] || '',
       Withdrawal: withdrawal,
       Deposit: deposit,
-      Balance: parseFloat(t.balance || t['Closing Balance'] || 0)
+      Balance: cleanNumber(t.balance || t['Closing Balance'] || t['balance'])
     };
   });
 }
