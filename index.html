@@ -167,19 +167,24 @@ function switchTab(n) {
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('tab-active'));
   document.querySelectorAll('.tab-btn')[n].classList.add('tab-active');
 
-  // Load dashboard data when switching to it
+  // Load data when switching tabs
   if (n === 0) {
     setTimeout(() => {
-      if (allTransactions.length === 0) {
-        loadAllDataForDashboard().then(loadDashboard);
-      } else {
+      if (allTransactions.length === 0 && typeof loadAllDataForDashboard === 'function') {
+        loadAllDataForDashboard().then(() => {
+          if (typeof loadDashboard === 'function') loadDashboard();
+        });
+      } else if (typeof loadDashboard === 'function') {
         loadDashboard();
       }
     }, 100);
   }
+  
   if (n === 2) {
-  setTimeout(loadSavingsTab, 100);
-}
+    setTimeout(() => {
+      if (typeof loadSavings === 'function') loadSavings();
+    }, 100);
+  }
 }
 
 // ============== LOAD MANIFEST ==============
@@ -398,11 +403,10 @@ async function loadSavings() {
     renderSavingsSummary();
     renderSavingsTable();
   } catch (e) {
-    console.error(e);
+    console.error("Savings load failed:", e);
     savingsData = { savings: [] };
   }
 }
-
 
 // Render Summary
 function renderSavingsSummary() {
