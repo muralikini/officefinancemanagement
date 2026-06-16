@@ -387,6 +387,7 @@ function renderRecentTransactions(data) {
 }
 
 let savingsData = { savings: [] };
+let editingIndex = -1;   // -1 means add new
 
 // Load Savings
 async function loadSavings() {
@@ -465,54 +466,129 @@ function renderSavingsTable() {
   });
 }
 
-// Edit & Break functions
 function editSavings(index) {
-  alert("Full Edit form coming in next update.");
+  editingIndex = index;
+  showSavingsModal();
 }
 
-// Add New Modal (Simple for now)
+// ==================== MODAL ====================
 function showAddSavingsModal() {
-  const id = prompt("Enter FD/RD ID (e.g. FD044):");
-  if (!id) return;
+  editingIndex = -1;
+  showSavingsModal();
+}
 
-  const type = prompt("Type (FD or RD):", "FD").toUpperCase();
-  const bank = prompt("Bank Name:", "HDFC");
-  const principal = parseFloat(prompt("Principal Amount:", "100000"));
-  const rate = prompt("Interest Rate (%):", "7.25");
-  const maturityDate = prompt("Maturity Date (DD-MM-YYYY):", "15-12-2026");
+unction showSavingsModal() {
+  const item = editingIndex >= 0 ? savingsData.savings[editingIndex] : {};
 
+  const modalHTML = `
+    <div id="savingsModal" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+      <div class="bg-gray-900 rounded-2xl w-full max-w-lg mx-4 p-8">
+        <h2 class="text-2xl font-semibold mb-6">${editingIndex >= 0 ? 'Edit' : 'Add New'} ${item.type || 'FD/RD'}</h2>
+        
+        <div class="space-y-5">
+          <div>
+            <label class="block text-sm mb-1">ID</label>
+            <input id="modal-id" value="${item.id || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1">Type</label>
+              <select id="modal-type" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+                <option value="FD" ${item.type === 'FD' ? 'selected' : ''}>FD</option>
+                <option value="RD" ${item.type === 'RD' ? 'selected' : ''}>RD</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Bank</label>
+              <input id="modal-bank" value="${item.bankName || 'HDFC'}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm mb-1">Principal (₹)</label>
+              <input id="modal-principal" type="number" value="${item.principal || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Interest Rate (%)</label>
+              <input id="modal-rate" value="${item.interestRate || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm mb-1">Maturity Date</label>
+            <input id="modal-maturity" value="${item.maturityDate || item.Maturity || ''}" placeholder="DD-MM-YYYY" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+          </div>
+
+          <div>
+            <label class="block text-sm mb-1">Status</label>
+            <select id="modal-status" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+              <option value="Active" ${item.status === 'Active' ? 'selected' : ''}>Active</option>
+              <option value="Broken" ${item.status === 'Broken' ? 'selected' : ''}>Broken</option>
+              <option value="Matured" ${item.status === 'Matured' ? 'selected' : ''}>Matured</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm mb-1">Notes</label>
+            <textarea id="modal-notes" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3 h-20">${item.notes || ''}</textarea>
+          </div>
+        </div>
+
+        <div class="flex gap-3 mt-8">
+          <button onclick="saveSavingsModal()" class="flex-1 bg-green-600 hover:bg-green-700 py-3 rounded-xl font-semibold">Save</button>
+          <button onclick="closeSavingsModal()" class="flex-1 bg-gray-700 hover:bg-gray-600 py-3 rounded-xl font-semibold">Cancel</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Remove existing modal if any
+  const oldModal = document.getElementById('savingsModal');
+  if (oldModal) oldModal.remove();
+
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+function saveSavingsModal() {
   const newItem = {
-    id: id,
-    type: type,
-    bankName: bank,
-    accountNumber: 62102,
-    interestRate: rate,
-    principal: principal,
-    maturityDate: maturityDate,
-    status: "Active",
-    Maturity: principal * 1.1,   // rough estimate
-    notes: ""
+    id: document.getElementById('modal-id').value || `FD${Date.now().toString().slice(-4)}`,
+    type: document.getElementById('modal-type').value,
+    bankName: document.getElementById('modal-bank').value,
+    principal: parseFloat(document.getElementById('modal-principal').value) || 0,
+    interestRate: document.getElementById('modal-rate').value,
+    maturityDate: document.getElementById('modal-maturity').value,
+    status: document.getElementById('modal-status').value,
+    notes: document.getElementById('modal-notes').value,
+    Maturity: parseFloat(document.getElementById('modal-principal').value) * 1.12 || 0   // rough estimate
   };
 
-  savingsData.savings.push(newItem);
+  if (editingIndex >= 0) {
+    savingsData.savings[editingIndex] = newItem;
+  } else {
+    savingsData.savings.push(newItem);
+  }
+
+  closeSavingsModal();
   renderSavingsTable();
   renderSavingsSummary();
-  alert("New entry added! You can later improve with proper form.");
+}
+
+function closeSavingsModal() {
+  const modal = document.getElementById('savingsModal');
+  if (modal) modal.remove();
 }
 
 // Break FD/RD
 function breakSavings(id, index) {
-  if (confirm(`Break ${id}? This will mark it as Broken.`)) {
+  if (confirm(`Mark ${id} as Broken?`)) {
     savingsData.savings[index].status = "Broken";
     renderSavingsTable();
     renderSavingsSummary();
   }
 }
 
-// Call this when switching to Savings tab
-function loadSavingsTab() {
-  loadSavings();
-}
 
 // ============== NORMALIZE ALL FORMATS ==============
 function normalizeTransactions(data) {
