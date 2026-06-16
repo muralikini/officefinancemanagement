@@ -1,7 +1,5 @@
 {
-  "savings": {
-    "filePath": "data/savings/savings.json"
-  },
+  
   "banks": [
     {
       "bankName": "HDFC",
@@ -36,5 +34,8 @@
         { "year": "2026", "filePath": "data/banking/IDFC/IDFC_12232_2026.json" }
       ]
     }
-  ]
+  ],
+  "savings": {
+    "filePath": "data/savings/savings.json"
+  }
 }
