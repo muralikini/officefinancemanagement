@@ -166,29 +166,47 @@ async function loadSelectedBank() {
 
   if (!fileObj) return;
 
-  let downloadUrl = fileObj.filePath;
-
-  // Improved Google Drive direct download link conversion
-  if (downloadUrl.includes('/file/d/')) {
-    const fileId = downloadUrl.match(/\/file\/d\/([^\/]+)/)[1];
-    downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+  // Extract File ID and use direct download
+  let fileId = null;
+  if (fileObj.filePath.includes('/file/d/')) {
+    fileId = fileObj.filePath.match(/\/file\/d\/([^\/]+)/)[1];
   }
 
+  const downloadUrl = fileId 
+    ? `https://drive.google.com/uc?export=download&id=${fileId}` 
+    : fileObj.filePath;
+
+  console.log("Trying to fetch:", downloadUrl);
+
   try {
-    console.log("Fetching:", downloadUrl); // For debugging
     const res = await fetch(downloadUrl);
     
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+
+    const text = await res.text();
     
-    currentTransactions = await res.json();
+    // Handle Google Drive warning page (common issue)
+    if (text.includes("virus") || text.includes("confirm")) {
+      throw new Error("Google Drive scan warning - please open the link manually once");
+    }
+
+    currentTransactions = JSON.parse(text);
     
     populateYearSelect(bank);
     renderSummary();
     renderTable(currentTransactions);
     
+    console.log(`Loaded ${currentTransactions.length} transactions`);
+    
   } catch (e) {
-    console.error("Fetch error:", e);
-    alert("Failed to load data. Please check:\n1. Link is 'Anyone with the link'\n2. File is JSON format");
+    console.error(e);
+    alert(`Failed to load ${bankName} ${year || ''} data.\n\n` +
+          "Common fixes:\n" +
+          "1. Open the Google Drive link manually in a new tab once (to pass virus scan)\n" +
+          "2. Make sure file is publicly set to 'Anyone with the link' → Viewer\n" +
+          "3. Try a smaller test JSON file first");
   }
 }
 
