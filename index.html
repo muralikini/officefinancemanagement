@@ -223,11 +223,50 @@
     </div>
     </div>
 
-    <!-- Placeholder Tabs -->
-    
+    <!-- INVOICES Tabs -->  
    
-    <div id="tab-3" class="tab-content hidden p-8 text-center text-xl">Invoices Coming Soon...</div>
+    <div id="tab-3" class="tab-content hidden">
+  <div class="max-w-screen-2xl mx-auto px-6 py-8">
+    <div class="flex justify-between items-center mb-8">
+      <h1 class="text-3xl font-bold">Procurement Invoices</h1>
+      <button onclick="selectInvoicesFolder()" 
+              class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-xl flex items-center gap-2">
+        📁 Select Invoices Root Folder
+      </button>
+    </div>
+
+    <div id="invoices-status" class="bg-gray-900 rounded-2xl p-6 mb-8 text-center text-gray-400">
+      No folder selected yet. Click above to select the "Procurement Invoices" folder from network drive.
+    </div>
+
+    <!-- Summary -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 hidden" id="invoices-summary">
+      <div class="bg-gray-900 rounded-2xl p-6">
+        <div class="text-sm text-gray-400">Total Invoices</div>
+        <div id="inv-count" class="text-3xl font-bold">0</div>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-6">
+        <div class="text-sm text-green-400">Total Value</div>
+        <div id="inv-total" class="text-3xl font-bold">₹0</div>
+      </div>
+    </div>
+
+    <div class="bg-gray-900 rounded-2xl overflow-hidden" id="invoices-table-container">
+      <table class="w-full">
+        <thead>
+          <tr class="border-b border-gray-700 text-gray-400">
+            <th class="px-6 py-4 text-left">Year</th>
+            <th class="px-6 py-4 text-left">Invoice No</th>
+            <th class="px-6 py-4 text-left">Date</th>
+            <th class="px-6 py-4 text-left">Vendor</th>
+            <th class="px-6 py-4 text-right">Amount</th>
+          </tr>
+        </thead>
+        <tbody id="invoices-table-body" class="divide-y divide-gray-700"></tbody>
+      </table>
+    </div>
   </div>
+    </div>
 
 <script>
 // ============== CONFIG ==============
@@ -1076,6 +1115,94 @@ function breakSavings(id, index) {
     renderSavingsTable();
     renderSavingsSummary();
   }
+}
+
+//-----------------INVOICES---------------------------------
+
+let allInvoices = [];
+
+async function selectInvoicesFolder() {
+  try {
+    const dirHandle = await window.showDirectoryPicker();
+    
+    document.getElementById('invoices-status').innerHTML = `
+      <span class="text-green-400">Scanning folder: ${dirHandle.name} ...</span>
+    `;
+
+    allInvoices = [];
+    await scanInvoicesFolder(dirHandle, "");
+
+    renderInvoicesTable();
+    document.getElementById('invoices-summary').classList.remove('hidden');
+    document.getElementById('invoices-status').innerHTML = `
+      <span class="text-green-400">✅ Scanned ${allInvoices.length} invoices successfully.</span>
+    `;
+
+  } catch (err) {
+    console.error(err);
+    alert("Folder selection cancelled or not supported in this browser.");
+  }
+}
+
+async function scanInvoicesFolder(dirHandle, currentPath) {
+  for await (const entry of dirHandle.values()) {
+    if (entry.kind === 'directory') {
+      await scanInvoicesFolder(entry, `${currentPath}/${entry.name}`);
+    } 
+    else if (entry.name.toLowerCase().endsWith('.pdf')) {
+      try {
+        const file = await entry.getFile();
+        const text = await extractTextFromPDF(file);   // We'll implement this
+        
+        const invoice = parseInvoiceFromText(text, entry.name, currentPath);
+        if (invoice) allInvoices.push(invoice);
+      } catch (e) {
+        console.warn("Failed to process PDF:", entry.name);
+      }
+    }
+  }
+}
+
+// Placeholder - will need PDF.js for real extraction
+async function extractTextFromPDF(file) {
+  // For now return filename as fallback
+  return file.name;
+}
+
+function parseInvoiceFromText(text, filename, path) {
+  // Very basic parser - we can improve later
+  const yearMatch = path.match(/(\d{4})/);
+  return {
+    year: yearMatch ? yearMatch[1] : 'Unknown',
+    invoiceNo: filename.replace('.pdf', ''),
+    date: '—',
+    vendor: '—',
+    amount: 0,
+    filename: filename
+  };
+}
+
+function renderInvoicesTable() {
+  const tbody = document.getElementById('invoices-table-body');
+  tbody.innerHTML = '';
+
+  const total = allInvoices.reduce((sum, inv) => sum + (inv.amount || 0), 0);
+
+  document.getElementById('inv-count').textContent = allInvoices.length;
+  document.getElementById('inv-total').textContent = '₹' + total.toLocaleString('en-IN');
+
+  allInvoices.forEach(inv => {
+    const row = document.createElement('tr');
+    row.className = 'hover:bg-gray-800';
+    row.innerHTML = `
+      <td class="px-6 py-4">${inv.year}</td>
+      <td class="px-6 py-4">${inv.invoiceNo}</td>
+      <td class="px-6 py-4">${inv.date}</td>
+      <td class="px-6 py-4">${inv.vendor}</td>
+      <td class="px-6 py-4 text-right">₹${(inv.amount || 0).toLocaleString('en-IN')}</td>
+    `;
+    tbody.appendChild(row);
+  });
 }
 
 
