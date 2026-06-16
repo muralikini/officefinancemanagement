@@ -506,6 +506,28 @@ async function loadSelectedBank() {
   }
 }
 
+function parseDate(dateStr) {
+  if (!dateStr) return null;
+  try {
+    const str = String(dateStr).trim();
+    const parts = str.split(/[\/-]/);
+    if (parts.length !== 3) return null;
+
+    let day = parseInt(parts[0], 10);
+    let month = parseInt(parts[1], 10);
+    let year = parseInt(parts[2], 10);
+
+    if (year < 100) year += 2000; // Handle 2-digit year
+
+    // Basic validation
+    if (month < 1 || month > 12 || day < 1 || day > 31) return null;
+
+    return new Date(year, month - 1, day);
+  } catch (e) {
+    return null;
+  }
+}
+
 function getAvailableFYs() {
   const fys = new Set();
   
@@ -1651,26 +1673,16 @@ async function selectSingleInvoice() {
 // ==================== CASHFLOW FUNCTIONS ====================
 
 function getFinancialYear(dateStr) {
-  if (!dateStr) return null;
-  try {
-    const parts = dateStr.split(/[\/-]/);
-    if (parts.length !== 3) return null;
+  const d = parseDate(dateStr);
+  if (!d) return null;
 
-    let day = parseInt(parts[0]);
-    let month = parseInt(parts[1]);
-    let year = parseInt(parts[2]);
+  const year = d.getFullYear();
+  const month = d.getMonth(); // 0 = Jan, 3 = April
 
-    // Handle 2-digit year
-    if (year < 100) year += 2000;
-
-    // Indian FY: April (month 3) to March (month 2 next year)
-    if (month >= 4) {
-      return `${year}-${year + 1}`;
-    } else {
-      return `${year - 1}-${year}`;
-    }
-  } catch (e) {
-    return null;
+  if (month >= 3) { // April onwards
+    return `${year}-${year + 1}`;
+  } else {
+    return `${year - 1}-${year}`;
   }
 }
 
@@ -1682,9 +1694,8 @@ function populateCashflowFY() {
   allTransactions.forEach(t => {
     const fy = getFinancialYear(t.date);
     if (fy) {
-      // Only show reasonable years (2021 onwards)
       const startYear = parseInt(fy.split('-')[0]);
-      if (startYear >= 2021) {
+      if (startYear >= 2021 && startYear <= 2026) {
         fys.add(fy);
       }
     }
@@ -1703,13 +1714,13 @@ function loadCashflow() {
   const fy = document.getElementById('cashflowFY').value;
   if (!fy) return;
 
-  const [fyStartYear, fyEndYear] = fy.split('-').map(Number);
+  const [fyStart] = fy.split('-').map(Number);
 
-  // Filter transactions for selected FY (April to March)
   const fyTransactions = allTransactions.filter(t => {
-    const transactionFY = getFinancialYear(t.date);
-    return transactionFY === fy;
+    return getFinancialYear(t.date) === fy;
   });
+
+  console.log(`Cashflow: Found ${fyTransactions.length} transactions for FY ${fy}`);
 
   let totalInflows = 0;
   let totalOutflows = 0;
@@ -1721,36 +1732,25 @@ function loadCashflow() {
 
   const netFlow = totalInflows - totalOutflows;
 
-  // Calculate Opening Balance (balance just before start of FY)
+  // Calculate Opening Balance
   let openingBalance = 0;
-  let closingBalance = 0;
 
-  // Find the last known balance before April of fyStartYear
-  const beforeFYTransactions = allTransactions.filter(t => {
-    if (!t.date) return false;
-    const parts = t.date.split(/[\/-]/);
-    if (parts.length !== 3) return false;
-
-    let year = parseInt(parts[2]);
-    if (year < 100) year += 2000;
-    let month = parseInt(parts[1]);
-
-    // Before April of fyStartYear
-    return (year < fyStartYear) || (year === fyStartYear && month < 4);
+  const beforeFY = allTransactions.filter(t => {
+    const d = parseDate(t.date);
+    if (!d) return false;
+    return d.getFullYear() < fyStart || (d.getFullYear() === fyStart && d.getMonth() < 3);
   });
 
-  if (beforeFYTransactions.length > 0) {
-    // Sort by date and take the last balance
-    beforeFYTransactions.sort((a, b) => {
-      const dateA = a.date.split(/[\/-]/).reverse().join('-');
-      const dateB = b.date.split(/[\/-]/).reverse().join('-');
-      return dateA.localeCompare(dateB);
+  if (beforeFY.length > 0) {
+    beforeFY.sort((a, b) => {
+      const da = parseDate(a.date);
+      const db = parseDate(b.date);
+      return da - db;
     });
-    openingBalance = beforeFYTransactions[beforeFYTransactions.length - 1].balance || 0;
+    openingBalance = beforeFY[beforeFY.length - 1].balance || 0;
   }
 
-  // Closing Balance = Opening + Net Flow
-  closingBalance = openingBalance + netFlow;
+  const closingBalance = openingBalance + netFlow;
 
   // Update UI
   document.getElementById('cf-opening').textContent = '₹' + openingBalance.toLocaleString('en-IN');
@@ -1768,20 +1768,18 @@ function renderMonthlyCashflow(transactions) {
   const container = document.getElementById('cf-monthly-table');
   const monthly = {};
 
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
   transactions.forEach(t => {
-    if (!t.date) return;
-    // Format: Apr-2025, May-2025 etc.
-    const parts = t.date.split(/[\/-]/);
-    if (parts.length !== 3) return;
+    const d = parseDate(t.date);
+    if (!d) return;
 
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const monthName = monthNames[parseInt(parts[1]) - 1];
-    const year = parts[2].length === 2 ? "20" + parts[2] : parts[2];
-    const monthKey = `${monthName}-${year}`;
+    const monthKey = `${monthNames[d.getMonth()]}-${d.getFullYear()}`;
 
-    if (!monthly[monthKey]) monthly[monthKey] = { inflow: 0, outflow: 0 };
-
+    if (!monthly[monthKey]) {
+      monthly[monthKey] = { inflow: 0, outflow: 0 };
+    }
     monthly[monthKey].inflow += t.deposit || 0;
     monthly[monthKey].outflow += t.withdrawal || 0;
   });
@@ -1799,7 +1797,12 @@ function renderMonthlyCashflow(transactions) {
       <tbody class="divide-y divide-gray-700">
   `;
 
-  Object.keys(monthly).sort().forEach(month => {
+  Object.keys(monthly).sort((a, b) => {
+    // Sort chronologically
+    const [ma, ya] = a.split('-');
+    const [mb, yb] = b.split('-');
+    return (ya - yb) || (monthNames.indexOf(ma) - monthNames.indexOf(mb));
+  }).forEach(month => {
     const data = monthly[month];
     const net = data.inflow - data.outflow;
 
