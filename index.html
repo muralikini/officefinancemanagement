@@ -197,15 +197,21 @@
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-bold">Savings (FD & RD)</h1>
       <div class="flex gap-3">
-        <button onclick="showAddSavingsModal()" 
-                class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl flex items-center gap-2">
-          + Add New
-        </button>
-        <button onclick="exportSavingsData()" 
-                class="bg-gray-700 hover:bg-gray-600 px-5 py-3 rounded-xl">
-          Export JSON
-        </button>
-      </div>
+  <button onclick="showAddSavingsModal()" 
+          class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl flex items-center gap-2">
+    + Add New
+  </button>
+  
+  <button onclick="exportSavingsData()" 
+          class="bg-gray-700 hover:bg-gray-600 px-5 py-3 rounded-xl">
+    Export JSON
+  </button>
+
+  <label class="bg-gray-700 hover:bg-gray-600 px-5 py-3 rounded-xl cursor-pointer flex items-center">
+    Import JSON
+    <input type="file" accept=".json" onchange="importSavingsData(event)" class="hidden">
+  </label>
+</div>
     </div>
 
     <!-- Summary Cards -->
@@ -994,6 +1000,56 @@ function editSavings(index) {
 }
 
 // ==================== SAVINGS MODAL ====================
+
+function importSavingsData(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const importedData = JSON.parse(e.target.result);
+      
+      // Support both formats: {savings: [...]} or direct array
+      let importedSavings = [];
+      if (Array.isArray(importedData)) {
+        importedSavings = importedData;
+      } else if (importedData.savings && Array.isArray(importedData.savings)) {
+        importedSavings = importedData.savings;
+      } else {
+        alert("Invalid JSON format. Please export using the Export button.");
+        return;
+      }
+
+      // Merge imported data with existing data (by ID)
+      const existingMap = new Map(savingsData.savings.map(item => [item.id, item]));
+      
+      importedSavings.forEach(importedItem => {
+        existingMap.set(importedItem.id, importedItem);
+      });
+
+      savingsData.savings = Array.from(existingMap.values());
+
+      // Save to localStorage so it persists
+      saveSavingsChangesToLocalStorage();
+
+      // Refresh UI
+      renderSavingsTable();
+      renderSavingsSummary();
+
+      alert(`Successfully imported ${importedSavings.length} records!`);
+
+    } catch (error) {
+      alert("Failed to import file. Please make sure it's a valid JSON file.");
+      console.error(error);
+    }
+  };
+  reader.readAsText(file);
+
+  // Reset file input so user can import again
+  event.target.value = '';
+}
+
 function showAddSavingsModal() {
   editingIndex = -1;
   showSavingsModal();           // ← Correct function name
