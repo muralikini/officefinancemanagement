@@ -160,23 +160,35 @@ async function loadSelectedBank() {
   const bank = manifest.banks.find(b => b.bankName === bankName);
   if (!bank) return;
 
-  // Load specific year or first available
   const fileObj = year 
     ? bank.files.find(f => f.year === year) 
     : bank.files[0];
 
   if (!fileObj) return;
 
+  let downloadUrl = fileObj.filePath;
+
+  // Improved Google Drive direct download link conversion
+  if (downloadUrl.includes('/file/d/')) {
+    const fileId = downloadUrl.match(/\/file\/d\/([^\/]+)/)[1];
+    downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+  }
+
   try {
-    const res = await fetch(fileObj.filePath.replace('/view?usp=drive_link', '/uc?export=download'));
+    console.log("Fetching:", downloadUrl); // For debugging
+    const res = await fetch(downloadUrl);
+    
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    
     currentTransactions = await res.json();
     
     populateYearSelect(bank);
     renderSummary();
     renderTable(currentTransactions);
+    
   } catch (e) {
-    console.error(e);
-    alert("Failed to load data. Make sure the Google Drive link is set to 'Anyone with the link'");
+    console.error("Fetch error:", e);
+    alert("Failed to load data. Please check:\n1. Link is 'Anyone with the link'\n2. File is JSON format");
   }
 }
 
