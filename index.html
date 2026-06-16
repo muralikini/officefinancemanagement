@@ -467,19 +467,30 @@ function loadDashboard() {
   if (selectedFY !== "All") {
     filteredTrans = allTransactions.filter(t => {
       if (!t.date) return false;
+      let dateStr = String(t.date).trim();
+      let d = null;
+
       try {
-        const parts = t.date.split(/[\/-]/);
-        let d;
-        if (parts.length === 3) {
-          d = new Date(parts[2], parts[1]-1, parts[0]);
+        if (dateStr.includes('/')) {
+          const parts = dateStr.split(/[\/-]/);
+          if (parts.length === 3) {
+            d = new Date(parts[2], parts[1]-1, parts[0]);
+          }
         } else {
-          d = new Date(t.date);
+          d = new Date(dateStr);
         }
-        const transYear = d.getFullYear();
-        const transMonth = d.getMonth();
-        const transFY = (transMonth < 3 ? transYear-1 : transYear) + '-' + (transMonth < 3 ? transYear : transYear+1);
+
+        if (!d || isNaN(d.getTime())) return false;
+
+        const year = d.getFullYear();
+        if (year < 2020 || year > 2027) return false;   // Extra safety
+
+        const month = d.getMonth();
+        const transFY = (month < 3 ? year-1 : year) + '-' + (month < 3 ? year : year+1);
         return transFY === selectedFY;
-      } catch(e) { return false; }
+      } catch(e) {
+        return false;
+      }
     });
   }
 
@@ -604,26 +615,36 @@ function populateFYSelect() {
   
   allTransactions.forEach(t => {
     if (!t.date) return;
+    
+    let dateStr = String(t.date).trim();
+    let d = null;
+
     try {
-      let d = null;
-      const dateStr = String(t.date);
-      
+      // Handle DD/MM/YYYY or DD-MM-YYYY
       if (dateStr.includes('/')) {
-        const parts = dateStr.split('/');
-        if (parts.length === 3) d = new Date(parts[2], parts[1]-1, parts[0]);
-      } else {
+        const parts = dateStr.split(/[\/-]/);
+        if (parts.length === 3) {
+          // DD/MM/YYYY → new Date(year, month-1, day)
+          d = new Date(parts[2], parts[1]-1, parts[0]);
+        }
+      } 
+      else if (dateStr.includes('-')) {
         d = new Date(dateStr);
       }
 
+      // Only accept reasonable years (2020 onwards)
       if (d && !isNaN(d.getTime())) {
         const year = d.getFullYear();
-        const month = d.getMonth();
-        const fy = (month < 3 ? year-1 : year) + '-' + (month < 3 ? year : year+1);
-        fys.add(fy);
+        if (year >= 2020 && year <= 2027) {   // Safety filter
+          const month = d.getMonth();
+          const fy = (month < 3 ? year-1 : year) + '-' + (month < 3 ? year : year + 1);
+          fys.add(fy);
+        }
       }
     } catch(e) {}
   });
 
+  // Sort and populate
   select.innerHTML = '<option value="All">All Years</option>';
   
   Array.from(fys).sort().reverse().forEach(fy => {
@@ -633,10 +654,10 @@ function populateFYSelect() {
     select.appendChild(opt);
   });
 
-  // Select current FY by default
-  const currentFY = getCurrentFY();
-  if (Array.from(fys).includes(currentFY)) {
-    select.value = currentFY;
+  // Default to latest year
+  if (fys.size > 0) {
+    const latest = Array.from(fys).sort().reverse()[0];
+    select.value = latest;
   }
 }
 
