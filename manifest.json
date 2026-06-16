@@ -11,6 +11,18 @@
         { "year": "2025", "filePath": "data/banking/HDFC/HDFC_62102_2025.json" },
         { "year": "2026", "filePath": "data/banking/HDFC/HDFC_62102_2026.json" }
       ]
+    },
+    {
+      "bankName": "ICICI",
+      "accountNumber": "18836",
+      "files": [
+        { "year": "2021", "filePath": "data/banking/ICICI/ICICI_18836_2021.json" },
+        { "year": "2022", "filePath": "data/banking/ICICI/ICICI_18836_2022.json" },
+        { "year": "2023", "filePath": "data/banking/ICICI/ICICI_18836_2023.json" },
+        { "year": "2024", "filePath": "data/banking/ICICI/ICICI_18836_2023.json" },
+        { "year": "2025", "filePath": "data/banking/ICICI/ICICI_18836_2025.json" },
+        { "year": "2026", "filePath": "data/banking/ICICI/ICICI_18836_2026.json" }
+      ]
     }
   ]
 }
