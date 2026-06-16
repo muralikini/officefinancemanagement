@@ -392,28 +392,22 @@ let savingsData = { savings: [] };
 async function loadSavings() {
   try {
     const res = await fetch('data/savings/savings.json');
-    let rawData = await res.json();
-    
-    // Handle both formats: array or {savings: [...]}
-    if (Array.isArray(rawData)) {
-      savingsData = { savings: rawData };
-    } else {
-      savingsData = rawData;
-    }
-    
+    let raw = await res.json();
+    savingsData = Array.isArray(raw) ? { savings: raw } : raw;
     renderSavingsSummary();
     renderSavingsTable();
   } catch (e) {
-    console.error("Savings load failed:", e);
+    console.error(e);
     savingsData = { savings: [] };
   }
 }
 
 
+// Render Summary
 function renderSavingsSummary() {
   const items = savingsData.savings || [];
   let totalFD = 0, totalRD = 0;
-  
+
   items.forEach(item => {
     const prin = parseFloat(item.principal) || 0;
     if (item.type === "FD") totalFD += prin;
@@ -440,12 +434,13 @@ function renderSavingsSummary() {
   `;
 }
 
+// Render Table
 function renderSavingsTable() {
   const tbody = document.getElementById('savingsBody');
   tbody.innerHTML = '';
   const items = savingsData.savings || [];
 
-  items.forEach(item => {
+  items.forEach((item, index) => {
     const row = document.createElement('tr');
     row.className = "hover:bg-gray-800";
     row.innerHTML = `
@@ -457,30 +452,60 @@ function renderSavingsTable() {
       <td class="p-4">${item.maturityDate || item.Maturity || '-'}</td>
       <td class="p-4 text-right font-medium">₹${parseFloat(item.Maturity || item.currentValue || 0).toLocaleString('en-IN')}</td>
       <td class="p-4 text-center">
-        <span class="px-3 py-1 rounded-full text-xs ${item.status === 'Active' ? 'bg-green-500/20 text-green-400' : 'bg-gray-500/20 text-gray-400'}">
+        <span class="px-3 py-1 rounded-full text-xs ${item.status === 'Active' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}">
           ${item.status || 'Active'}
         </span>
       </td>
-      <td class="p-4 text-center">
-        <button onclick="breakSavings('${item.id}')" class="text-red-400 hover:text-red-500 text-sm">Break</button>
+      <td class="p-4 text-center space-x-3">
+        <button onclick="editSavings(${index})" class="text-blue-400 hover:text-blue-500 text-sm">Edit</button>
+        <button onclick="breakSavings('${item.id}', ${index})" class="text-red-400 hover:text-red-500 text-sm">Break</button>
       </td>
     `;
     tbody.appendChild(row);
   });
 }
 
+// Edit & Break functions
+function editSavings(index) {
+  alert("Full Edit form coming in next update.");
+}
+
+// Add New Modal (Simple for now)
 function showAddSavingsModal() {
-  alert("Add New FD/RD form coming in next iteration.\n\nFor now, you can manually edit savings.json");
+  const id = prompt("Enter FD/RD ID (e.g. FD044):");
+  if (!id) return;
+
+  const type = prompt("Type (FD or RD):", "FD").toUpperCase();
+  const bank = prompt("Bank Name:", "HDFC");
+  const principal = parseFloat(prompt("Principal Amount:", "100000"));
+  const rate = prompt("Interest Rate (%):", "7.25");
+  const maturityDate = prompt("Maturity Date (DD-MM-YYYY):", "15-12-2026");
+
+  const newItem = {
+    id: id,
+    type: type,
+    bankName: bank,
+    accountNumber: 62102,
+    interestRate: rate,
+    principal: principal,
+    maturityDate: maturityDate,
+    status: "Active",
+    Maturity: principal * 1.1,   // rough estimate
+    notes: ""
+  };
+
+  savingsData.savings.push(newItem);
+  renderSavingsTable();
+  renderSavingsSummary();
+  alert("New entry added! You can later improve with proper form.");
 }
 
 // Break FD/RD
-function breakSavings(id) {
-  if (confirm(`Break instrument ${id}?`)) {
-    const item = savingsData.savings.find(i => i.id === id);
-    if (item) item.status = "Broken";
+function breakSavings(id, index) {
+  if (confirm(`Break ${id}? This will mark it as Broken.`)) {
+    savingsData.savings[index].status = "Broken";
     renderSavingsTable();
     renderSavingsSummary();
-    alert("Status updated to Broken. You can later add logic to move funds back to bank.");
   }
 }
 
