@@ -276,14 +276,22 @@ function populateBankSelect() {
   });
 }
 
-// ============== LOAD BANK ==============
+function filterBankingTable() {
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  const filtered = currentTransactions.filter(t => 
+    (t.narration || '').toLowerCase().includes(searchTerm)
+  );
+  renderBankingTable(filtered);
+}
+
+/// Main load function for selected bank
 async function loadSelectedBank() {
   const bankSelect = document.getElementById('bankSelect');
   const yearSelect = document.getElementById('yearSelect');
   
   const bankName = bankSelect.value;
   const year = yearSelect.value;
-  
+
   if (!bankName) return;
 
   try {
@@ -291,13 +299,19 @@ async function loadSelectedBank() {
     const manifest = await manifestRes.json();
     
     const bank = manifest.banks.find(b => b.bankName === bankName);
-    if (!bank) return;
+    if (!bank) {
+      console.error("Bank not found in manifest");
+      return;
+    }
 
     const fileObj = bank.files.find(f => f.year === year) || bank.files[0];
-    if (!fileObj) return;
+    if (!fileObj || !fileObj.filePath) {
+      console.error("File path not found");
+      return;
+    }
 
     const res = await fetch(fileObj.filePath);
-    if (!res.ok) throw new Error('Failed to load');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const rawData = await res.json();
     currentTransactions = normalizeTransactions(rawData);
@@ -307,19 +321,44 @@ async function loadSelectedBank() {
     
   } catch (e) {
     console.error("Load failed:", e);
-    alert("Could not load bank data. Check console for details.");
+    // alert("Could not load data for this bank/year.");
   }
 }
 
-function populateYearSelect(bank) {
-  const select = document.getElementById('yearSelect');
-  select.innerHTML = '';
-  bank.files.forEach(f => {
-    const opt = document.createElement('option');
-    opt.value = f.year;
-    opt.textContent = f.year;
-    select.appendChild(opt);
-  });
+function populateYearSelect() {
+  const bankSelect = document.getElementById('bankSelect');
+  const yearSelect = document.getElementById('yearSelect');
+  
+  const bankName = bankSelect.value;
+  if (!bankName) return;
+
+  try {
+    // We'll load manifest here to avoid timing issues
+    fetch('manifest.json')
+      .then(res => res.json())
+      .then(manifest => {
+        const bank = manifest.banks.find(b => b.bankName === bankName);
+        if (!bank || !bank.files) {
+          yearSelect.innerHTML = '<option value="">No years available</option>';
+          return;
+        }
+
+        yearSelect.innerHTML = '';
+        bank.files.forEach(file => {
+          const option = document.createElement('option');
+          option.value = file.year;
+          option.textContent = file.year;
+          yearSelect.appendChild(option);
+        });
+
+        // Auto load the first year
+        if (bank.files.length > 0) {
+          loadSelectedBank();
+        }
+      });
+  } catch (e) {
+    console.error("Failed to populate years", e);
+  }
 }
 
 // ============== DASHBOARD FUNCTIONS ==============
