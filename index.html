@@ -34,7 +34,7 @@
         <div class="flex border-b border-gray-800 overflow-x-auto">
   <button onclick="switchTab(0)" class="tab-btn tab-active px-6 py-3">Dashboard</button>
   <button onclick="switchTab(1)" class="tab-btn px-6 py-3">Banking</button>
-  <button onclick="switchTab(2)" class="tab-btn px-6 py-3">Savings</button>
+  <button onclick="switchTab(2)" class="tab-btn tab-active px-6 py-3">Savings</button>
   <button onclick="switchTab(3)" class="tab-btn px-6 py-3">Invoices</button>
         </div>
     </div>
@@ -102,9 +102,42 @@
       </div>
     </div>
 
+    <!-- SAVINGS TAB -->
+    <div id="tab-2" class="tab-content max-w-screen-2xl mx-auto px-6 py-8">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-semibold">Savings (FD & RD)</h2>
+        <button onclick="showAddSavingsModal()" class="bg-green-600 hover:bg-green-700 px-5 py-2 rounded-xl flex items-center gap-2">
+        <i class="fas fa-plus"></i> Add New FD/RD
+        </button>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8" id="savingsSummary"></div>
+
+    <!-- Savings Table -->
+    <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+        <table class="w-full">
+        <thead class="bg-gray-800">
+            <tr>
+            <th class="p-4 text-left">ID</th>
+            <th class="p-4 text-left">Type</th>
+            <th class="p-4 text-left">Bank</th>
+            <th class="p-4 text-right">Principal</th>
+            <th class="p-4 text-right">Interest Rate</th>
+            <th class="p-4 text-left">Maturity Date</th>
+            <th class="p-4 text-right">Maturity Value</th>
+            <th class="p-4 text-center">Status</th>
+            <th class="p-4 text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="savingsBody" class="divide-y divide-gray-800"></tbody>
+        </table>
+    </div>
+    </div>
+
     <!-- Placeholder Tabs -->
     
-    <div id="tab-2" class="tab-content hidden p-8 text-center text-xl">Savings Coming Soon...</div>
+   
     <div id="tab-3" class="tab-content hidden p-8 text-center text-xl">Invoices Coming Soon...</div>
   </div>
 
@@ -144,6 +177,9 @@ function switchTab(n) {
       }
     }, 100);
   }
+  if (n === 2) {
+  setTimeout(loadSavingsTab, 100);
+}
 }
 
 // ============== LOAD MANIFEST ==============
@@ -348,6 +384,96 @@ function renderRecentTransactions(data) {
       </div>`;
   });
   document.getElementById('recentTransactions').innerHTML = html || '<p class="text-gray-500">No transactions</p>';
+}
+
+let savingsData = [];
+
+// Load Savings
+async function loadSavings() {
+  try {
+    const res = await fetch('data/savings/savings.json');   // Update path if needed
+    savingsData = await res.json();
+    renderSavingsSummary();
+    renderSavingsTable();
+  } catch (e) {
+    console.error(e);
+    savingsData = { savings: [] }; // fallback
+  }
+}
+
+function renderSavingsSummary() {
+  let totalFD = 0, totalRD = 0;
+  savingsData.savings.forEach(item => {
+    if (item.type === "FD") totalFD += parseFloat(item.principal) || 0;
+    if (item.type === "RD") totalRD += parseFloat(item.principal) || 0;
+  });
+
+  document.getElementById('savingsSummary').innerHTML = `
+    <div class="bg-gray-900 p-6 rounded-3xl border border-amber-500/30">
+      <p class="text-amber-400">Total FD</p>
+      <p class="text-3xl font-bold">₹${totalFD.toLocaleString('en-IN')}</p>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-3xl border border-purple-500/30">
+      <p class="text-purple-400">Total RD</p>
+      <p class="text-3xl font-bold">₹${totalRD.toLocaleString('en-IN')}</p>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-3xl border border-blue-500/30">
+      <p class="text-blue-400">Total Savings</p>
+      <p class="text-3xl font-bold">₹${(totalFD + totalRD).toLocaleString('en-IN')}</p>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-3xl border border-gray-700">
+      <p class="text-gray-400">Active Instruments</p>
+      <p class="text-3xl font-bold">${savingsData.savings.length}</p>
+    </div>
+  `;
+}
+
+function renderSavingsTable() {
+  const tbody = document.getElementById('savingsBody');
+  tbody.innerHTML = '';
+
+  savingsData.savings.forEach(item => {
+    const row = document.createElement('tr');
+    row.className = "hover:bg-gray-800";
+    row.innerHTML = `
+      <td class="p-4 font-medium">${item.id}</td>
+      <td class="p-4">${item.type}</td>
+      <td class="p-4">${item.bankName}</td>
+      <td class="p-4 text-right">₹${parseFloat(item.principal).toLocaleString('en-IN')}</td>
+      <td class="p-4 text-right">${item.interestRate}</td>
+      <td class="p-4">${item.maturityDate || item.Maturity || '-'}</td>
+      <td class="p-4 text-right font-medium">₹${parseFloat(item.Maturity || item.currentValue || 0).toLocaleString('en-IN')}</td>
+      <td class="p-4 text-center">
+        <span class="px-3 py-1 rounded-full text-xs ${item.status === 'Active' ? 'bg-green-500/20 text-green-400' : 'bg-gray-500/20 text-gray-400'}">
+          ${item.status}
+        </span>
+      </td>
+      <td class="p-4 text-center">
+        <button onclick="breakSavings('${item.id}')" class="text-red-400 hover:text-red-500 text-sm">Break</button>
+      </td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+function showAddSavingsModal() {
+  alert("Add New FD/RD form coming in next iteration.\n\nFor now, you can manually edit savings.json");
+}
+
+// Break FD/RD
+function breakSavings(id) {
+  if (confirm(`Break instrument ${id}?`)) {
+    const item = savingsData.savings.find(i => i.id === id);
+    if (item) item.status = "Broken";
+    renderSavingsTable();
+    renderSavingsSummary();
+    alert("Status updated to Broken. You can later add logic to move funds back to bank.");
+  }
+}
+
+// Call this when switching to Savings tab
+function loadSavingsTab() {
+  loadSavings();
 }
 
 // ============== NORMALIZE ALL FORMATS ==============
