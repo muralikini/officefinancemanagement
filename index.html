@@ -33,10 +33,11 @@
 
     <div class="max-w-screen-2xl mx-auto px-6 pt-6">
         <div class="flex border-b border-gray-800 overflow-x-auto">
-  <button onclick="switchTab(0)" class="tab-btn tab-active px-6 py-3">Dashboard</button>
-  <button onclick="switchTab(1)" class="tab-btn px-6 py-3">Banking</button>
-  <button onclick="switchTab(2)" class="tab-btn tab-active px-6 py-3">Savings</button>
-  <button onclick="switchTab(3)" class="tab-btn px-6 py-3">Invoices</button>
+            <button onclick="switchTab(0)" class="tab-btn tab-active px-6 py-3">Dashboard</button>
+            <button onclick="switchTab(1)" class="tab-btn px-6 py-3">Banking</button>
+            <button onclick="switchTab(2)" class="tab-btn tab-active px-6 py-3">Savings</button>
+            <button onclick="switchTab(3)" class="tab-btn px-6 py-3">Invoices</button>
+            <button onclick="switchTab(4)" class="tab-btn px-6 py-3">Cashflow</button>
         </div>
     </div>
 
@@ -323,6 +324,58 @@
   </div>
     </div>
 
+    <!-- ==================== CASHFLOW TAB ==================== -->
+    <div id="tab-4" class="tab-content hidden">
+    <div class="max-w-screen-2xl mx-auto px-6 py-8">
+        <div class="flex justify-between items-center mb-8">
+        <h1 class="text-3xl font-bold">Cashflow Statement</h1>
+        
+        <div class="flex items-center gap-4">
+            <div>
+            <label class="block text-xs text-gray-400 mb-1">Financial Year</label>
+            <select id="cashflowFY" onchange="loadCashflow()" 
+                    class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-sm min-w-[140px]">
+            </select>
+            </div>
+            <button onclick="loadCashflow()" 
+                    class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl flex items-center gap-2 mt-4">
+            ↻ Refresh
+            </button>
+        </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-10">
+        <div class="bg-gray-900 rounded-2xl p-6">
+            <div class="text-sm text-gray-400">Opening Balance</div>
+            <div id="cf-opening" class="text-3xl font-bold mt-2">₹0</div>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-6">
+            <div class="text-sm text-green-400">Total Inflows</div>
+            <div id="cf-inflows" class="text-3xl font-bold mt-2">₹0</div>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-6">
+            <div class="text-sm text-red-400">Total Outflows</div>
+            <div id="cf-outflows" class="text-3xl font-bold mt-2">₹0</div>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-6">
+            <div class="text-sm text-gray-400">Closing Balance</div>
+            <div id="cf-closing" class="text-3xl font-bold mt-2">₹0</div>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-6">
+            <div class="text-sm text-gray-400">Net Cash Flow</div>
+            <div id="cf-net" class="text-3xl font-bold mt-2">₹0</div>
+        </div>
+        </div>
+
+        <!-- Monthly Breakdown -->
+        <div class="bg-gray-900 rounded-2xl p-8">
+        <h2 class="text-xl font-semibold mb-6">Monthly Cashflow Breakdown</h2>
+        <div id="cf-monthly-table" class="overflow-x-auto"></div>
+        </div>
+    </div>
+    </div>
+
 <script>
 // ============== CONFIG ==============
 const MANIFEST_URL = 'manifest.json';
@@ -367,6 +420,12 @@ function switchTab(n) {
       if (typeof loadSavings === 'function') loadSavings();
     }, 100);
   }
+  if (n === 4) { // Cashflow Tab
+  setTimeout(() => {
+    populateCashflowFY();
+    loadCashflow();
+  }, 150);
+}
 }
 
 async function refreshDashboard() {
@@ -1586,6 +1645,131 @@ async function selectSingleInvoice() {
   } catch (err) {
     console.error(err);
   }
+}
+
+
+// ==================== CASHFLOW FUNCTIONS ====================
+
+function populateCashflowFY() {
+  const select = document.getElementById('cashflowFY');
+  const fys = new Set();
+
+  allTransactions.forEach(t => {
+    if (!t.date) return;
+    try {
+      const parts = t.date.split(/[\/-]/);
+      if (parts.length === 3) {
+        const d = new Date(parts[2], parts[1] - 1, parts[0]);
+        if (!isNaN(d.getTime())) {
+          const year = d.getFullYear();
+          const month = d.getMonth();
+          const fy = (month < 3 ? year - 1 : year) + '-' + (month < 3 ? year : year + 1);
+          fys.add(fy);
+        }
+      }
+    } catch (e) {}
+  });
+
+  select.innerHTML = '';
+  Array.from(fys).sort().reverse().forEach(fy => {
+    const opt = document.createElement('option');
+    opt.value = fy;
+    opt.textContent = fy;
+    select.appendChild(opt);
+  });
+}
+
+function loadCashflow() {
+  const fySelect = document.getElementById('cashflowFY');
+  const fy = fySelect.value;
+  if (!fy) return;
+
+  // Filter transactions for selected FY
+  const fyTransactions = allTransactions.filter(t => {
+    if (!t.date) return false;
+    try {
+      const parts = t.date.split(/[\/-]/);
+      if (parts.length !== 3) return false;
+      const d = new Date(parts[2], parts[1] - 1, parts[0]);
+      if (isNaN(d.getTime())) return false;
+
+      const year = d.getFullYear();
+      const month = d.getMonth();
+      const transFY = (month < 3 ? year - 1 : year) + '-' + (month < 3 ? year : year + 1);
+      return transFY === fy;
+    } catch (e) {
+      return false;
+    }
+  });
+
+  let totalInflows = 0;
+  let totalOutflows = 0;
+
+  fyTransactions.forEach(t => {
+    totalInflows += t.deposit || 0;
+    totalOutflows += t.withdrawal || 0;
+  });
+
+  const netFlow = totalInflows - totalOutflows;
+
+  document.getElementById('cf-inflows').textContent = '₹' + totalInflows.toLocaleString('en-IN');
+  document.getElementById('cf-outflows').textContent = '₹' + totalOutflows.toLocaleString('en-IN');
+  document.getElementById('cf-net').textContent = '₹' + netFlow.toLocaleString('en-IN');
+  document.getElementById('cf-net').className = `text-3xl font-bold mt-2 ${netFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
+
+  // Placeholder for now (we can calculate proper balance later)
+  document.getElementById('cf-opening').textContent = '₹0 (Coming Soon)';
+  document.getElementById('cf-closing').textContent = '₹0 (Coming Soon)';
+
+  renderMonthlyCashflow(fyTransactions);
+}
+
+function renderMonthlyCashflow(transactions) {
+  const container = document.getElementById('cf-monthly-table');
+  const monthly = {};
+
+  transactions.forEach(t => {
+    if (!t.date) return;
+    const monthKey = t.date.substring(3); // Gets MM-YYYY
+
+    if (!monthly[monthKey]) {
+      monthly[monthKey] = { inflow: 0, outflow: 0 };
+    }
+    monthly[monthKey].inflow += t.deposit || 0;
+    monthly[monthKey].outflow += t.withdrawal || 0;
+  });
+
+  let html = `
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-gray-700 text-gray-400 text-sm">
+          <th class="py-4 text-left">Month</th>
+          <th class="py-4 text-right">Inflows</th>
+          <th class="py-4 text-right">Outflows</th>
+          <th class="py-4 text-right">Net Cash Flow</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-700">
+  `;
+
+  Object.keys(monthly).sort().forEach(month => {
+    const data = monthly[month];
+    const net = data.inflow - data.outflow;
+
+    html += `
+      <tr>
+        <td class="py-4 font-medium">${month}</td>
+        <td class="py-4 text-right text-green-400">₹${data.inflow.toLocaleString('en-IN')}</td>
+        <td class="py-4 text-right text-red-400">₹${data.outflow.toLocaleString('en-IN')}</td>
+        <td class="py-4 text-right font-semibold ${net >= 0 ? 'text-green-400' : 'text-red-400'}">
+          ₹${net.toLocaleString('en-IN')}
+        </td>
+      </tr>
+    `;
+  });
+
+  html += `</tbody></table>`;
+  container.innerHTML = html;
 }
 
 
