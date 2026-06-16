@@ -13,49 +13,36 @@
 </head>
 <body class="bg-gray-950 text-gray-100 min-h-screen">
 
-  <!-- Login Screen -->
-  <div id="loginScreen" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black">
+  <!-- Login -->
+  <div id="loginScreen" class="min-h-screen flex items-center justify-center">
     <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl w-full max-w-md">
       <h1 class="text-3xl font-bold text-center mb-8">Office Finance</h1>
       <input type="text" id="username" value="admin" class="w-full p-4 bg-gray-800 rounded-xl mb-4" placeholder="Username">
       <input type="password" id="password" value="admin123" class="w-full p-4 bg-gray-800 rounded-xl mb-6" placeholder="Password">
-      <button onclick="login()" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-semibold text-lg">
-        Login
-      </button>
+      <button onclick="login()" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-semibold">Login</button>
     </div>
   </div>
 
   <!-- Main App -->
   <div id="mainApp" class="hidden">
-    <!-- Header -->
     <header class="bg-gray-900 border-b border-gray-800 py-4 px-6 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Office Finance Manager</h1>
-      <div class="flex items-center gap-4">
-        <button onclick="logout()" class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-xl text-sm">Logout</button>
-      </div>
+      <button onclick="logout()" class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-xl">Logout</button>
     </header>
 
-    <!-- Tabs -->
     <div class="max-w-screen-2xl mx-auto px-6 pt-6">
-      <div class="flex border-b border-gray-800 overflow-x-auto">
-        <button onclick="switchTab(0)" class="tab-btn tab-active px-6 py-3 whitespace-nowrap">Dashboard</button>
-        <button onclick="switchTab(1)" class="tab-btn px-6 py-3 whitespace-nowrap">Banking</button>
-        <button onclick="switchTab(2)" class="tab-btn px-6 py-3 whitespace-nowrap">Savings</button>
-        <button onclick="switchTab(3)" class="tab-btn px-6 py-3 whitespace-nowrap">Invoices</button>
-        <button onclick="switchTab(4)" class="tab-btn px-6 py-3 whitespace-nowrap">Admin</button>
+      <div class="flex border-b border-gray-800">
+        <button onclick="switchTab(0)" class="tab-btn tab-active px-6 py-3">Dashboard</button>
+        <button onclick="switchTab(1)" class="tab-btn px-6 py-3">Banking</button>
+        <button onclick="switchTab(2)" class="tab-btn px-6 py-3">Savings</button>
+        <button onclick="switchTab(3)" class="tab-btn px-6 py-3">Invoices</button>
       </div>
     </div>
 
     <!-- Banking Tab -->
     <div id="tab-1" class="tab-content max-w-screen-2xl mx-auto px-6 py-8">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-3xl font-semibold">Banking Transactions</h2>
-        <button onclick="loadAllBanks()" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-xl flex items-center gap-2">
-          <i class="fas fa-sync"></i> Refresh All
-        </button>
-      </div>
+      <h2 class="text-3xl font-semibold mb-6">Banking Transactions</h2>
 
-      <!-- Bank & Year Selector -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div>
           <label class="block text-sm mb-2">Bank Account</label>
@@ -67,15 +54,12 @@
         </div>
         <div>
           <label class="block text-sm mb-2">Search</label>
-          <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search narration..." 
-                 class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+          <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search narration..." class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
         </div>
       </div>
 
-      <!-- Summary Cards -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" id="summaryCards"></div>
 
-      <!-- Transactions Table -->
       <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
         <table class="w-full">
           <thead class="bg-gray-800">
@@ -92,16 +76,14 @@
       </div>
     </div>
 
-    <!-- Placeholder Tabs -->
-    <div id="tab-0" class="tab-content hidden p-8 text-center">Dashboard Coming Soon...</div>
-    <div id="tab-2" class="tab-content hidden p-8 text-center">Savings (RD/FD) Coming Soon...</div>
-    <div id="tab-3" class="tab-content hidden p-8 text-center">Invoices Coming Soon...</div>
-    <div id="tab-4" class="tab-content hidden p-8 text-center">Admin Panel Coming Soon...</div>
+    <div id="tab-0" class="tab-content hidden p-8 text-center">Dashboard - Coming Soon</div>
+    <div id="tab-2" class="tab-content hidden p-8 text-center">Savings - Coming Soon</div>
+    <div id="tab-3" class="tab-content hidden p-8 text-center">Invoices - Coming Soon</div>
   </div>
 
 <script>
 // ============== CONFIG ==============
-const MANIFEST_URL = 'manifest.json';   // Same folder as index.html
+const MANIFEST_URL = 'manifest.json';
 
 let manifest = {};
 let currentTransactions = [];
@@ -110,39 +92,35 @@ let currentTransactions = [];
 function login() {
   document.getElementById('loginScreen').classList.add('hidden');
   document.getElementById('mainApp').classList.remove('hidden');
-  switchTab(1); // Open Banking tab by default
+  switchTab(1);
 }
-
 function logout() {
   document.getElementById('mainApp').classList.add('hidden');
   document.getElementById('loginScreen').classList.remove('hidden');
 }
 
-// ============== TAB SWITCH ==============
+// ============== TABS ==============
 function switchTab(n) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
   document.getElementById(`tab-${n}`).classList.remove('hidden');
-  
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('tab-active'));
   document.querySelectorAll('.tab-btn')[n].classList.add('tab-active');
 }
 
-// ============== LOAD MANIFEST & DATA ==============
+// ============== LOAD DATA ==============
 async function loadManifest() {
   try {
     const res = await fetch(MANIFEST_URL);
     manifest = await res.json();
     populateBankSelect();
   } catch (e) {
-    console.error("Failed to load manifest", e);
-    alert("Could not load manifest.json");
+    alert("Failed to load manifest.json");
   }
 }
 
 function populateBankSelect() {
   const select = document.getElementById('bankSelect');
   select.innerHTML = '<option value="">Select Bank</option>';
-  
   manifest.banks.forEach(bank => {
     const opt = document.createElement('option');
     opt.value = bank.bankName;
@@ -154,80 +132,89 @@ function populateBankSelect() {
 async function loadSelectedBank() {
   const bankName = document.getElementById('bankSelect').value;
   const year = document.getElementById('yearSelect').value;
-  
   if (!bankName) return;
 
   const bank = manifest.banks.find(b => b.bankName === bankName);
   if (!bank) return;
 
-  const fileObj = year 
-    ? bank.files.find(f => f.year === year) 
-    : bank.files[0];
-
+  const fileObj = year ? bank.files.find(f => f.year === year) : bank.files[0];
   if (!fileObj) return;
 
-  const downloadUrl = fileObj.filePath;   // Relative path
-
   try {
-    console.log("Fetching from GitHub:", downloadUrl);
-    const res = await fetch(downloadUrl);
+    const res = await fetch(fileObj.filePath);
+    if (!res.ok) throw new Error("File not found");
     
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    
-    currentTransactions = await res.json();
+    const data = await res.json();
+    currentTransactions = normalizeTransactions(data);
     
     populateYearSelect(bank);
     renderSummary();
     renderTable(currentTransactions);
-    
-    console.log(`✅ Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
-    
   } catch (e) {
     console.error(e);
-    alert(`Failed to load ${bankName} ${year}. Make sure the JSON file is uploaded to GitHub.`);
+    alert(`Failed to load ${bankName} ${year}. Check file path in manifest.`);
   }
 }
 
 function populateYearSelect(bank) {
   const select = document.getElementById('yearSelect');
   select.innerHTML = '';
-  
-  bank.files.forEach(file => {
+  bank.files.forEach(f => {
     const opt = document.createElement('option');
-    opt.value = file.year;
-    opt.textContent = file.year;
+    opt.value = f.year;
+    opt.textContent = f.year;
     select.appendChild(opt);
   });
 }
 
-// ============== RENDERING ==============
+// ============== NORMALIZE BOTH FORMATS ==============
+function normalizeTransactions(data) {
+  return data.map(t => {
+    let withdrawal = 0, deposit = 0, date = t.Date || t['Date'] || '';
+
+    if (t.transactionType) {                    // ICICI Format
+      if (t.transactionType === "DR") withdrawal = parseFloat(t.transactionAmount) || 0;
+      else if (t.transactionType === "CR") deposit = parseFloat(t.transactionAmount) || 0;
+    } else {                                    // HDFC Format
+      withdrawal = parseFloat(t['Withdrawal Amt.'] || 0);
+      deposit = parseFloat(t['Deposit Amt.'] || 0);
+    }
+
+    return {
+      Date: date,
+      Narration: t.Narration || t['Narration'] || '',
+      Withdrawal: withdrawal,
+      Deposit: deposit,
+      Balance: parseFloat(t.balance || t['Closing Balance'] || 0)
+    };
+  });
+}
+
+// ============== RENDER ==============
 function renderSummary() {
-  let totalDeposit = 0, totalWithdrawal = 0;
-  
+  let totalW = 0, totalD = 0;
   currentTransactions.forEach(t => {
-    totalDeposit += parseFloat(t['Deposit Amt.'] || 0) || 0;
-    totalWithdrawal += parseFloat(t['Withdrawal Amt.'] || 0) || 0;
+    totalW += t.Withdrawal || 0;
+    totalD += t.Deposit || 0;
   });
 
-  const net = totalDeposit - totalWithdrawal;
-
   document.getElementById('summaryCards').innerHTML = `
-    <div class="bg-gray-900 p-5 rounded-2xl border border-green-500/30">
-      <p class="text-green-400 text-sm">Total Deposits</p>
-      <p class="text-2xl font-bold">₹${totalDeposit.toLocaleString('en-IN')}</p>
-    </div>
     <div class="bg-gray-900 p-5 rounded-2xl border border-red-500/30">
-      <p class="text-red-400 text-sm">Total Withdrawals</p>
-      <p class="text-2xl font-bold">₹${totalWithdrawal.toLocaleString('en-IN')}</p>
+      <p class="text-red-400">Total Withdrawals</p>
+      <p class="text-2xl font-bold">₹${totalW.toLocaleString('en-IN')}</p>
+    </div>
+    <div class="bg-gray-900 p-5 rounded-2xl border border-green-500/30">
+      <p class="text-green-400">Total Deposits</p>
+      <p class="text-2xl font-bold">₹${totalD.toLocaleString('en-IN')}</p>
     </div>
     <div class="bg-gray-900 p-5 rounded-2xl border border-blue-500/30">
-      <p class="text-blue-400 text-sm">Net Flow</p>
-      <p class="text-2xl font-bold ${net >= 0 ? 'text-green-400' : 'text-red-400'}">
-        ₹${net.toLocaleString('en-IN')}
+      <p class="text-blue-400">Net Flow</p>
+      <p class="text-2xl font-bold ${totalD - totalW >= 0 ? 'text-green-400' : 'text-red-400'}">
+        ₹${(totalD - totalW).toLocaleString('en-IN')}
       </p>
     </div>
     <div class="bg-gray-900 p-5 rounded-2xl border border-gray-700">
-      <p class="text-gray-400 text-sm">Transactions</p>
+      <p class="text-gray-400">Transactions</p>
       <p class="text-2xl font-bold">${currentTransactions.length}</p>
     </div>
   `;
@@ -236,35 +223,26 @@ function renderSummary() {
 function renderTable(transactions) {
   const tbody = document.getElementById('transactionBody');
   tbody.innerHTML = '';
-
   transactions.forEach(t => {
-    const withdrawal = parseFloat(t['Withdrawal Amt.'] || 0) || 0;
-    const deposit = parseFloat(t['Deposit Amt.'] || 0) || 0;
-    
     const row = document.createElement('tr');
-    row.className = "hover:bg-gray-800 transition-colors";
+    row.className = "hover:bg-gray-800";
     row.innerHTML = `
-      <td class="p-4">${t.Date || ''}</td>
-      <td class="p-4 text-sm">${t.Narration || ''}</td>
-      <td class="p-4 text-right text-red-400">${withdrawal ? '₹' + withdrawal.toLocaleString('en-IN') : ''}</td>
-      <td class="p-4 text-right text-green-400">${deposit ? '₹' + deposit.toLocaleString('en-IN') : ''}</td>
-      <td class="p-4 text-right font-medium">${parseFloat(t['Closing Balance'] || 0).toLocaleString('en-IN')}</td>
+      <td class="p-4">${t.Date}</td>
+      <td class="p-4 text-sm">${t.Narration}</td>
+      <td class="p-4 text-right text-red-400">${t.Withdrawal ? '₹'+t.Withdrawal.toLocaleString('en-IN') : ''}</td>
+      <td class="p-4 text-right text-green-400">${t.Deposit ? '₹'+t.Deposit.toLocaleString('en-IN') : ''}</td>
+      <td class="p-4 text-right font-medium">₹${t.Balance.toLocaleString('en-IN')}</td>
     `;
     tbody.appendChild(row);
   });
 }
 
 function filterTable() {
-  const search = document.getElementById('searchInput').value.toLowerCase();
+  const term = document.getElementById('searchInput').value.toLowerCase();
   const filtered = currentTransactions.filter(t => 
-    (t.Narration || '').toLowerCase().includes(search)
+    t.Narration.toLowerCase().includes(term)
   );
   renderTable(filtered);
-}
-
-async function loadAllBanks() {
-  // For now, reloads the selected bank
-  loadSelectedBank();
 }
 
 // ============== INIT ==============
