@@ -1011,12 +1011,12 @@ function showSavingsModal() {
     <div class="bg-gray-900 rounded-3xl w-full max-w-2xl p-8">
       <h2 class="text-2xl font-semibold mb-6">${isEdit ? 'Edit' : 'Add New'} Savings</h2>
 
+      <!-- Common Fields -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        <!-- Common Fields -->
         <div>
           <label class="block text-sm text-gray-400 mb-1">ID</label>
-          <input id="modal-id" value="${item.id || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3" placeholder="FD001 or RD045">
+          <input id="modal-id" value="${item.id || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
         </div>
 
         <div>
@@ -1041,7 +1041,7 @@ function showSavingsModal() {
           </select>
         </div>
 
-        <!-- FD Specific Fields -->
+        <!-- FD Fields -->
         <div id="fd-fields">
           <div class="grid grid-cols-2 gap-4">
             <div>
@@ -1053,7 +1053,6 @@ function showSavingsModal() {
               <input id="modal-interest" value="${item.interestRate || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
             </div>
           </div>
-          
           <div class="grid grid-cols-2 gap-4 mt-4">
             <div>
               <label class="block text-sm text-gray-400 mb-1">Start Date</label>
@@ -1064,14 +1063,13 @@ function showSavingsModal() {
               <input id="modal-maturity-date" type="date" value="${item.maturityDate || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
             </div>
           </div>
-
           <div class="mt-4">
             <label class="block text-sm text-gray-400 mb-1">Maturity Amount (₹)</label>
             <input id="modal-maturity-amount" type="number" value="${item.maturityAmount || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
           </div>
         </div>
 
-        <!-- RD Specific Fields -->
+        <!-- RD Fields -->
         <div id="rd-fields" class="hidden">
           <div class="grid grid-cols-2 gap-4">
             <div>
@@ -1083,7 +1081,6 @@ function showSavingsModal() {
               <input id="modal-rd-interest" value="${item.interestRate || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
             </div>
           </div>
-
           <div class="grid grid-cols-2 gap-4 mt-4">
             <div>
               <label class="block text-sm text-gray-400 mb-1">Start Date</label>
@@ -1094,7 +1091,6 @@ function showSavingsModal() {
               <input id="modal-rd-end" type="date" value="${item.maturityDate || item.endDate || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
             </div>
           </div>
-
           <div class="mt-4">
             <label class="block text-sm text-gray-400 mb-1">Current Value / Total Deposited (₹)</label>
             <input id="modal-current-value" type="number" value="${item.currentValue || item.principal || ''}" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
@@ -1121,23 +1117,25 @@ function showSavingsModal() {
 
   document.body.appendChild(modal);
 
-  // Show correct fields based on type
+  // Important: Call toggle after modal is in DOM
   setTimeout(() => {
     toggleSavingsFields();
-  }, 50);
+  }, 100);
 }
 
 function toggleSavingsFields() {
   const type = document.getElementById('modal-type').value;
-  const fdFields = document.getElementById('fd-fields');
-  const rdFields = document.getElementById('rd-fields');
+  const fd = document.getElementById('fd-fields');
+  const rd = document.getElementById('rd-fields');
+
+  if (!fd || !rd) return;
 
   if (type === 'FD') {
-    fdFields.classList.remove('hidden');
-    rdFields.classList.add('hidden');
+    fd.classList.remove('hidden');
+    rd.classList.add('hidden');
   } else {
-    fdFields.classList.add('hidden');
-    rdFields.classList.remove('hidden');
+    fd.classList.add('hidden');
+    rd.classList.remove('hidden');
   }
 }
 
