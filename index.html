@@ -31,35 +31,33 @@
     </header>
 
     <div class="max-w-screen-2xl mx-auto px-6 pt-6">
-      <div class="flex border-b border-gray-800">
-        <button onclick="switchTab(0)" class="tab-btn tab-active px-6 py-3">Dashboard</button>
-        <button onclick="switchTab(1)" class="tab-btn px-6 py-3">Banking</button>
-        <button onclick="switchTab(2)" class="tab-btn px-6 py-3">Savings</button>
-        <button onclick="switchTab(3)" class="tab-btn px-6 py-3">Invoices</button>
-      </div>
+        <div class="flex border-b border-gray-800 overflow-x-auto">
+  <button onclick="switchTab(0)" class="tab-btn tab-active px-6 py-3">Dashboard</button>
+  <button onclick="switchTab(1)" class="tab-btn px-6 py-3">Banking</button>
+  <button onclick="switchTab(2)" class="tab-btn px-6 py-3">Savings</button>
+  <button onclick="switchTab(3)" class="tab-btn px-6 py-3">Invoices</button>
+        </div>
     </div>
 
-    <!-- ==================== DASHBOARD ==================== -->
+    <!-- DASHBOARD TAB -->
     <div id="tab-0" class="tab-content max-w-screen-2xl mx-auto px-6 py-8">
-      <div class="flex justify-between items-center mb-8">
+    <div class="flex justify-between items-center mb-8">
         <h2 class="text-3xl font-semibold">Dashboard</h2>
-        <select id="fySelect" onchange="loadDashboard()" class="bg-gray-800 border border-gray-700 rounded-xl p-3"></select>
-      </div>
+        <select id="fySelect" onchange="loadDashboard()" class="bg-gray-800 border border-gray-700 rounded-xl p-3 min-w-40"></select>
+    </div>
 
-      <!-- Summary Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10" id="dashSummary"></div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10" id="dashSummary"></div>
 
-      <!-- Category Breakdown -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800">
-          <h3 class="text-xl font-semibold mb-4">Expenses by Category</h3>
-          <div id="expenseBreakdown" class="space-y-3"></div>
+        <h3 class="text-xl font-semibold mb-4">Expenses by Category</h3>
+        <div id="expenseBreakdown" class="space-y-4"></div>
         </div>
         <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800">
-          <h3 class="text-xl font-semibold mb-4">Recent Transactions</h3>
-          <div id="recentTransactions" class="space-y-3"></div>
+        <h3 class="text-xl font-semibold mb-4">Recent Transactions</h3>
+        <div id="recentTransactions" class="space-y-4"></div>
         </div>
-      </div>
+    </div>
     </div>
 
     <!-- Banking Tab -->
@@ -132,8 +130,11 @@ function logout() {
 function switchTab(n) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
   document.getElementById(`tab-${n}`).classList.remove('hidden');
+  
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('tab-active'));
   document.querySelectorAll('.tab-btn')[n].classList.add('tab-active');
+
+  if (n === 0) setTimeout(loadDashboard, 150);   // Load dashboard when switched
 }
 
 // ============== LOAD MANIFEST ==============
@@ -197,23 +198,31 @@ function populateYearSelect(bank) {
   });
 }
 
-// ============== DASHBOARD ==============
+// ============== DASHBOARD FUNCTIONS ==============
+let allTransactions = [];
+
 async function loadAllDataForDashboard() {
   allTransactions = [];
   for (const bank of manifest.banks) {
     for (const file of bank.files) {
       try {
         const res = await fetch(file.filePath);
-        const data = await res.json();
-        const normalized = normalizeTransactions(data);
-        allTransactions = allTransactions.concat(normalized);
+        if (res.ok) {
+          const data = await res.json();
+          allTransactions = allTransactions.concat(normalizeTransactions(data));
+        }
       } catch (e) {}
     }
   }
 }
 
 function loadDashboard() {
-  const fy = document.getElementById('fySelect').value || getCurrentFY();
+  if (allTransactions.length === 0) return;
+
+  const fySelect = document.getElementById('fySelect');
+  if (fySelect.options.length === 0) populateFYSelect();
+
+  const fy = fySelect.value || getCurrentFY();
   const filtered = filterByFY(allTransactions, fy);
 
   renderDashSummary(filtered);
@@ -221,21 +230,44 @@ function loadDashboard() {
   renderRecentTransactions(filtered);
 }
 
+function populateFYSelect() {
+  const select = document.getElementById('fySelect');
+  const fys = new Set();
+  allTransactions.forEach(t => {
+    const fy = getFYFromDate(t.Date);
+    if (fy) fys.add(fy);
+  });
+  [...fys].sort().reverse().forEach(fy => {
+    const opt = document.createElement('option');
+    opt.value = fy;
+    opt.textContent = fy;
+    select.appendChild(opt);
+  });
+}
+
 function getCurrentFY() {
   const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1;
-  return month >= 4 ? `${year}-${(year+1).toString().slice(2)}` : `${year-1}-${year.toString().slice(2)}`;
+  const y = now.getFullYear();
+  return (now.getMonth() + 1) >= 4 ? `${y}-${(y+1).toString().slice(2)}` : `${y-1}-${y.toString().slice(2)}`;
+}
+
+function getFYFromDate(dateStr) {
+  if (!dateStr) return null;
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return null;
+  const y = d.getFullYear();
+  const m = d.getMonth() + 1;
+  return m >= 4 ? `${y}-${(y+1).toString().slice(2)}` : `${y-1}-${y.toString().slice(2)}`;
 }
 
 function filterByFY(transactions, fy) {
-  const [startYear] = fy.split('-').map(Number);
-  const startDate = new Date(`${startYear}-04-01`);
-  const endDate = new Date(`${startYear+1}-03-31`);
-
+  if (!fy) return transactions;
+  const [startY] = fy.split('-').map(Number);
+  const start = new Date(`${startY}-04-01`);
+  const end = new Date(`${startY + 1}-03-31`);
   return transactions.filter(t => {
     const d = new Date(t.Date);
-    return d >= startDate && d <= endDate;
+    return d >= start && d <= end;
   });
 }
 
@@ -267,50 +299,43 @@ function renderDashSummary(data) {
 }
 
 function renderExpenseBreakdown(data) {
-  // Simple keyword based categorization
-  const categories = {};
+  const cat = {};
   data.forEach(t => {
     if (t.Withdrawal <= 0) return;
-    let cat = "Others";
-    const narr = (t.Narration || "").toLowerCase();
-    if (narr.includes("salary")) cat = "Salary";
-    else if (narr.includes("rent") || narr.includes("fd")) cat = "Rent & FD";
-    else if (narr.includes("custom") || narr.includes("duty")) cat = "Customs & Duty";
-    else if (narr.includes("tax")) cat = "Tax";
-    else if (narr.includes("dmart") || narr.includes("grocery")) cat = "Groceries";
+    let key = "Others";
+    const n = (t.Narration || "").toLowerCase();
+    if (n.includes("salary")) key = "Salary";
+    else if (n.includes("rent") || n.includes("fd")) key = "Rent & FD";
+    else if (n.includes("custom") || n.includes("duty")) key = "Customs";
+    else if (n.includes("tax")) key = "Tax";
+    else if (n.includes("dmart") || n.includes("grocery")) key = "Groceries";
 
-    categories[cat] = (categories[cat] || 0) + t.Withdrawal;
+    cat[key] = (cat[key] || 0) + t.Withdrawal;
   });
 
   let html = '';
-  Object.keys(categories).sort((a,b) => categories[b]-categories[a]).forEach(cat => {
-    html += `
-      <div class="flex justify-between items-center">
-        <span>${cat}</span>
-        <span class="font-medium">₹${categories[cat].toLocaleString('en-IN')}</span>
-      </div>`;
+  Object.keys(cat).sort((a,b) => cat[b]-cat[a]).forEach(key => {
+    html += `<div class="flex justify-between py-1"><span>${key}</span><span class="font-medium">₹${cat[key].toLocaleString('en-IN')}</span></div>`;
   });
-  document.getElementById('expenseBreakdown').innerHTML = html || "<p class='text-gray-500'>No expense data</p>";
+  document.getElementById('expenseBreakdown').innerHTML = html || '<p class="text-gray-500">No expense data</p>';
 }
 
 function renderRecentTransactions(data) {
-  const recent = data.slice(0, 8);
+  const recent = data.slice(0, 10);
   let html = '';
   recent.forEach(t => {
+    const amt = t.Withdrawal ? `-₹${t.Withdrawal.toLocaleString('en-IN')}` : `+₹${t.Deposit.toLocaleString('en-IN')}`;
     html += `
-      <div class="flex justify-between text-sm">
-        <div>
-          <div class="text-gray-400">${t.Date}</div>
+      <div class="flex justify-between items-center text-sm py-2 border-l-4 ${t.Withdrawal ? 'border-red-500' : 'border-green-500'} pl-3">
+        <div class="flex-1">
+          <div class="text-gray-400 text-xs">${t.Date}</div>
           <div class="line-clamp-1">${t.Narration}</div>
         </div>
-        <div class="text-right ${t.Withdrawal ? 'text-red-400' : 'text-green-400'}">
-          ${t.Withdrawal ? '-' : '+'}₹${(t.Withdrawal || t.Deposit).toLocaleString('en-IN')}
-        </div>
+        <div class="font-medium ${t.Withdrawal ? 'text-red-400' : 'text-green-400'}">${amt}</div>
       </div>`;
   });
-  document.getElementById('recentTransactions').innerHTML = html;
+  document.getElementById('recentTransactions').innerHTML = html || '<p class="text-gray-500">No transactions</p>';
 }
-
 
 // ============== NORMALIZE ALL FORMATS ==============
 function normalizeTransactions(data) {
