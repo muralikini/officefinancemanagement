@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Office Finance Manager</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
@@ -1121,26 +1122,27 @@ function breakSavings(id, index) {
 
 let allInvoices = [];
 
+// Configure PDF.js worker
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
 async function selectInvoicesFolder() {
   try {
     const dirHandle = await window.showDirectoryPicker();
-    
-    document.getElementById('invoices-status').innerHTML = `
-      <span class="text-green-400">Scanning folder: ${dirHandle.name} ...</span>
-    `;
+    document.getElementById('invoices-status').innerHTML = `<span class="text-blue-400">Scanning ${dirHandle.name}... This may take a while.</span>`;
 
     allInvoices = [];
     await scanInvoicesFolder(dirHandle, "");
 
     renderInvoicesTable();
+    
     document.getElementById('invoices-summary').classList.remove('hidden');
     document.getElementById('invoices-status').innerHTML = `
-      <span class="text-green-400">✅ Scanned ${allInvoices.length} invoices successfully.</span>
+      <span class="text-green-400">✅ Successfully processed ${allInvoices.length} invoices.</span>
     `;
 
   } catch (err) {
     console.error(err);
-    alert("Folder selection cancelled or not supported in this browser.");
+    alert("Folder access cancelled or not supported.");
   }
 }
 
@@ -1152,14 +1154,44 @@ async function scanInvoicesFolder(dirHandle, currentPath) {
     else if (entry.name.toLowerCase().endsWith('.pdf')) {
       try {
         const file = await entry.getFile();
-        const text = await extractTextFromPDF(file);   // We'll implement this
-        
-        const invoice = parseInvoiceFromText(text, entry.name, currentPath);
+        const invoice = await extractInvoiceFromPDF(file, entry.name, currentPath);
         if (invoice) allInvoices.push(invoice);
       } catch (e) {
-        console.warn("Failed to process PDF:", entry.name);
+        console.warn(`Failed to read ${entry.name}`);
       }
     }
+  }
+}
+
+async function extractInvoiceFromPDF(file, filename, path) {
+  try {
+    const arrayBuffer = await file.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+    let fullText = '';
+
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const textContent = await page.getTextContent();
+      fullText += textContent.items.map(item => item.str).join(' ') + ' ';
+    }
+
+    // Basic parsing logic - we can make it smarter later
+    const yearMatch = path.match(/(\d{4})/);
+    const amountMatch = fullText.match(/₹?\s*([\d,]+(?:\.\d+)?)/);
+    const invoiceNoMatch = fullText.match(/(?:Invoice|Bill|No\.?)\s*[#:]\s*([A-Z0-9-]+)/i);
+
+    return {
+      year: yearMatch ? yearMatch[1] : 'Unknown',
+      invoiceNo: invoiceNoMatch ? invoiceNoMatch[1] : filename.replace('.pdf', ''),
+      date: '—', // Can be improved with regex
+      vendor: 'Procurement Vendor', // Will improve later
+      amount: amountMatch ? parseFloat(amountMatch[1].replace(/,/g, '')) : 0,
+      filename: filename,
+      path: path
+    };
+  } catch (e) {
+    console.warn("PDF parse error:", filename);
+    return null;
   }
 }
 
@@ -1191,15 +1223,15 @@ function renderInvoicesTable() {
   document.getElementById('inv-count').textContent = allInvoices.length;
   document.getElementById('inv-total').textContent = '₹' + total.toLocaleString('en-IN');
 
-  allInvoices.forEach(inv => {
+  allInvoices.sort((a,b) => b.year - a.year).forEach(inv => {
     const row = document.createElement('tr');
     row.className = 'hover:bg-gray-800';
     row.innerHTML = `
       <td class="px-6 py-4">${inv.year}</td>
-      <td class="px-6 py-4">${inv.invoiceNo}</td>
+      <td class="px-6 py-4 font-medium">${inv.invoiceNo}</td>
       <td class="px-6 py-4">${inv.date}</td>
       <td class="px-6 py-4">${inv.vendor}</td>
-      <td class="px-6 py-4 text-right">₹${(inv.amount || 0).toLocaleString('en-IN')}</td>
+      <td class="px-6 py-4 text-right font-medium">₹${(inv.amount || 0).toLocaleString('en-IN')}</td>
     `;
     tbody.appendChild(row);
   });
