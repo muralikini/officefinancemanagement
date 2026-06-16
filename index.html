@@ -96,45 +96,76 @@
     </div>
 
     <!-- Banking Tab -->
-    <div id="tab-1" class="tab-content max-w-screen-2xl mx-auto px-6 py-8">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-3xl font-semibold">Banking Transactions</h2>
-        <button onclick="loadSelectedBank()" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-xl flex items-center gap-2">
-          <i class="fas fa-sync"></i> Refresh
-        </button>
-      </div>
+    <div id="tab-1" class="tab-content">
+  <div class="max-w-screen-2xl mx-auto px-6 py-8">
+    <div class="flex justify-between items-center mb-8">
+      <h1 class="text-3xl font-bold">Banking Transactions</h1>
+      <button onclick="loadSelectedBank()" 
+              class="bg-blue-600 hover:bg-blue-700 px-5 py-2.5 rounded-xl flex items-center gap-2">
+        <span>↻</span> Refresh
+      </button>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div>
-          <label class="block text-sm mb-2">Bank Account</label>
-          <select id="bankSelect" onchange="loadSelectedBank()" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3"></select>
-        </div>
-        <div>
-          <label class="block text-sm mb-2">Year</label>
-          <select id="yearSelect" onchange="loadSelectedBank()" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3"></select>
-        </div>
-        <div>
-          <label class="block text-sm mb-2">Search</label>
-          <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search narration..." class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
-        </div>
+    <!-- Filters -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div>
+        <label class="block text-sm text-gray-400 mb-1">Bank Account</label>
+        <select id="bankSelect" onchange="populateYearSelect(); loadSelectedBank()" 
+                class="w-full bg-gray-900 border border-gray-700 rounded-xl p-3">
+        </select>
       </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" id="summaryCards"></div>
-
-      <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
-        <table class="w-full">
-          <thead class="bg-gray-800">
-            <tr>
-              <th class="p-4 text-left">Date</th>
-              <th class="p-4 text-left">Narration</th>
-              <th class="p-4 text-right">Withdrawal</th>
-              <th class="p-4 text-right">Deposit</th>
-              <th class="p-4 text-right">Balance</th>
-            </tr>
-          </thead>
-          <tbody id="transactionBody" class="divide-y divide-gray-800"></tbody>
-        </table>
+      <div>
+        <label class="block text-sm text-gray-400 mb-1">Year</label>
+        <select id="yearSelect" onchange="loadSelectedBank()" 
+                class="w-full bg-gray-900 border border-gray-700 rounded-xl p-3">
+        </select>
       </div>
+      <div>
+        <label class="block text-sm text-gray-400 mb-1">Search</label>
+        <input id="searchInput" type="text" placeholder="Search narration..." 
+               onkeyup="filterBankingTable()" 
+               class="w-full bg-gray-900 border border-gray-700 rounded-xl p-3">
+      </div>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="text-red-400 text-sm">Total Withdrawals</div>
+        <div id="total-withdrawals" class="text-2xl font-bold mt-1">₹0</div>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="text-green-400 text-sm">Total Deposits</div>
+        <div id="total-deposits" class="text-2xl font-bold mt-1">₹0</div>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="text-white text-sm">Net Flow</div>
+        <div id="net-flow-banking" class="text-2xl font-bold mt-1">₹0</div>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-5">
+        <div class="text-gray-400 text-sm">Transactions</div>
+        <div id="transaction-count" class="text-2xl font-bold mt-1">0</div>
+      </div>
+    </div>
+
+    <!-- Transactions Table -->
+    <div class="bg-gray-900 rounded-2xl overflow-hidden">
+      <table class="w-full">
+        <thead>
+          <tr class="border-b border-gray-700 text-left text-gray-400">
+            <th class="px-6 py-4">Date</th>
+            <th class="px-6 py-4">Narration</th>
+            <th class="px-6 py-4 text-right">Withdrawal</th>
+            <th class="px-6 py-4 text-right">Deposit</th>
+            <th class="px-6 py-4 text-right">Balance</th>
+          </tr>
+        </thead>
+        <tbody id="banking-table-body" class="divide-y divide-gray-700">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
     </div>
 
     <!-- SAVINGS TAB -->
