@@ -42,12 +42,22 @@
     <!-- DASHBOARD TAB -->
     <div id="tab-0" class="tab-content">
   <div class="max-w-screen-2xl mx-auto px-6 py-8">
-    <div class="flex justify-between items-center mb-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
       <h1 class="text-3xl font-bold">Office Finance Overview</h1>
-      <button onclick="refreshDashboard()" 
-              class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl flex items-center gap-2 font-medium">
-        <span>↻</span> Refresh All Data
-      </button>
+      
+      <div class="flex items-center gap-4">
+        <div>
+          <label class="block text-xs text-gray-400 mb-1">Financial Year</label>
+          <select id="fySelect" onchange="loadDashboard()" 
+                  class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-sm">
+            <!-- Populated by JS -->
+          </select>
+        </div>
+        <button onclick="refreshDashboard()" 
+                class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl flex items-center gap-2 font-medium">
+          <span>↻</span> Refresh All
+        </button>
+      </div>
     </div>
 
     <!-- Key Metrics -->
@@ -343,6 +353,29 @@ async function loadSelectedBank() {
   }
 }
 
+function getAvailableFYs() {
+  const fys = new Set();
+  
+  allTransactions.forEach(t => {
+    if (!t.date) return;
+    try {
+      const parts = t.date.split(/[\/-]/);
+      let d;
+      if (parts.length === 3) {
+        d = new Date(parts[2], parts[1]-1, parts[0]);
+      } else {
+        d = new Date(t.date);
+      }
+      const year = d.getFullYear();
+      const month = d.getMonth();
+      const fy = (month < 3 ? year-1 : year) + '-' + (month < 3 ? year : year + 1);
+      fys.add(fy);
+    } catch(e) {}
+  });
+  
+  return Array.from(fys).sort().reverse();
+}
+
 function populateYearSelect() {
   const bankSelect = document.getElementById('bankSelect');
   const yearSelect = document.getElementById('yearSelect');
@@ -416,27 +449,32 @@ async function loadAllDataForDashboard() {
 }
 
 function loadDashboard() {
-  const fy = getCurrentFY();
+  const selectedFY = document.getElementById('fySelect').value;
   
-  const currentFYTrans = allTransactions.filter(t => {
-    if (!t.date) return false;
-    try {
-      const parts = t.date.split(/[\/-]/);
-      let d;
-      if (parts.length === 3) {
-        d = new Date(parts[2], parts[1]-1, parts[0]);
-      } else {
-        d = new Date(t.date);
-      }
-      const transYear = d.getFullYear();
-      const transMonth = d.getMonth();
-      const transFY = (transMonth < 3 ? transYear-1 : transYear) + '-' + (transMonth < 3 ? transYear : transYear+1);
-      return transFY === fy;
-    } catch(e) { return false; }
-  });
+  let filteredTrans = allTransactions;
+  
+  if (selectedFY !== "All") {
+    filteredTrans = allTransactions.filter(t => {
+      if (!t.date) return false;
+      try {
+        const parts = t.date.split(/[\/-]/);
+        let d;
+        if (parts.length === 3) {
+          d = new Date(parts[2], parts[1]-1, parts[0]);
+        } else {
+          d = new Date(t.date);
+        }
+        const transYear = d.getFullYear();
+        const transMonth = d.getMonth();
+        const transFY = (transMonth < 3 ? transYear-1 : transYear) + '-' + (transMonth < 3 ? transYear : transYear+1);
+        return transFY === selectedFY;
+      } catch(e) { return false; }
+    });
+  }
 
-  const totalIncome = currentFYTrans.reduce((sum, t) => sum + (t.deposit || 0), 0);
-  const totalExpense = currentFYTrans.reduce((sum, t) => sum + (t.withdrawal || 0), 0);
+  // Rest of your calculations (Income, Expenses, etc.)
+  const totalIncome = filteredTrans.reduce((sum, t) => sum + (t.deposit || 0), 0);
+  const totalExpense = filteredTrans.reduce((sum, t) => sum + (t.withdrawal || 0), 0);
 
   document.getElementById('dash-total-income').textContent = '₹' + totalIncome.toLocaleString('en-IN');
   document.getElementById('dash-total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
@@ -446,7 +484,7 @@ function loadDashboard() {
   netEl.textContent = '₹' + net.toLocaleString('en-IN');
   netEl.className = `text-4xl font-bold mt-3 ${net >= 0 ? 'text-emerald-400' : 'text-red-400'}`;
 
-  // Savings
+  // Savings (unchanged by FY)
   const fds = savingsData.savings.filter(s => s.type === 'FD');
   const rds = savingsData.savings.filter(s => s.type === 'RD');
   const totalSavings = fds.concat(rds).reduce((sum, s) => sum + (parseFloat(s.principal)||0), 0);
@@ -460,7 +498,7 @@ function loadDashboard() {
   document.getElementById('dash-rd-count').textContent = rds.length;
   document.getElementById('dash-rd-value').textContent = '₹' + rds.reduce((sum, s) => sum + (parseFloat(s.principal)||0), 0).toLocaleString('en-IN');
 
-  renderDashExpenseBreakdown(currentFYTrans);
+  renderDashExpenseBreakdown(filteredTrans);
   renderDashRecentTransactions();
 }
 
@@ -549,25 +587,31 @@ function renderDashExpenseBreakdown(transactions) {
 
 function populateFYSelect() {
   const select = document.getElementById('fySelect');
-  const fys = new Set();
-  allTransactions.forEach(t => {
-    const fy = getFYFromDate(t.Date);
-    if (fy) fys.add(fy);
+  const fys = getAvailableFYs();
+  
+  select.innerHTML = '<option value="All">All Years</option>';
+  
+  fys.forEach(fy => {
+    const option = document.createElement('option');
+    option.value = fy;
+    option.textContent = fy;
+    select.appendChild(option);
   });
-  [...fys].sort().reverse().forEach(fy => {
-    const opt = document.createElement('option');
-    opt.value = fy;
-    opt.textContent = fy;
-    select.appendChild(opt);
-  });
+  
+  // Default to current FY
+  const current = getCurrentFY();
+  if (fys.includes(current)) {
+    select.value = current;
+  }
 }
 
 function getCurrentFY() {
   const now = new Date();
   let year = now.getFullYear();
-  if (now.getMonth() < 3) year--; // Before April
+  if (now.getMonth() < 3) year--; 
   return `${year}-${year+1}`;
 }
+
 
 function getFYFromDate(dateStr) {
   if (!dateStr) return null;
