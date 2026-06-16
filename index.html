@@ -166,47 +166,25 @@ async function loadSelectedBank() {
 
   if (!fileObj) return;
 
-  // Extract File ID and use direct download
-  let fileId = null;
-  if (fileObj.filePath.includes('/file/d/')) {
-    fileId = fileObj.filePath.match(/\/file\/d\/([^\/]+)/)[1];
-  }
-
-  const downloadUrl = fileId 
-    ? `https://drive.google.com/uc?export=download&id=${fileId}` 
-    : fileObj.filePath;
-
-  console.log("Trying to fetch:", downloadUrl);
+  const downloadUrl = fileObj.filePath;   // Relative path
 
   try {
+    console.log("Fetching from GitHub:", downloadUrl);
     const res = await fetch(downloadUrl);
     
-    if (!res.ok) {
-      throw new Error(`HTTP error! Status: ${res.status}`);
-    }
-
-    const text = await res.text();
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     
-    // Handle Google Drive warning page (common issue)
-    if (text.includes("virus") || text.includes("confirm")) {
-      throw new Error("Google Drive scan warning - please open the link manually once");
-    }
-
-    currentTransactions = JSON.parse(text);
+    currentTransactions = await res.json();
     
     populateYearSelect(bank);
     renderSummary();
     renderTable(currentTransactions);
     
-    console.log(`Loaded ${currentTransactions.length} transactions`);
+    console.log(`✅ Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
     
   } catch (e) {
     console.error(e);
-    alert(`Failed to load ${bankName} ${year || ''} data.\n\n` +
-          "Common fixes:\n" +
-          "1. Open the Google Drive link manually in a new tab once (to pass virus scan)\n" +
-          "2. Make sure file is publicly set to 'Anyone with the link' → Viewer\n" +
-          "3. Try a smaller test JSON file first");
+    alert(`Failed to load ${bankName} ${year}. Make sure the JSON file is uploaded to GitHub.`);
   }
 }
 
