@@ -192,36 +192,63 @@
     </div>
 
     <!-- SAVINGS TAB -->
-    <div id="tab-2" class="tab-content max-w-screen-2xl mx-auto px-6 py-8">
-    <div class="flex justify-between items-center mb-6">
-        <h2 class="text-3xl font-semibold">Savings (FD & RD)</h2>
-        <button onclick="showAddSavingsModal()" class="bg-green-600 hover:bg-green-700 px-5 py-2 rounded-xl flex items-center gap-2">
-        <i class="fas fa-plus"></i> Add New FD/RD
+    <div id="tab-2" class="tab-content hidden">
+  <div class="max-w-screen-2xl mx-auto px-6 py-8">
+    <div class="flex justify-between items-center mb-8">
+      <h1 class="text-3xl font-bold">Savings (FD & RD)</h1>
+      <div class="flex gap-3">
+        <button onclick="showAddSavingsModal()" 
+                class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl flex items-center gap-2">
+          + Add New
         </button>
+        <button onclick="exportSavingsData()" 
+                class="bg-gray-700 hover:bg-gray-600 px-5 py-3 rounded-xl">
+          Export JSON
+        </button>
+      </div>
     </div>
 
     <!-- Summary Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8" id="savingsSummary"></div>
-
-    <!-- Savings Table -->
-    <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
-        <table class="w-full">
-        <thead class="bg-gray-800">
-            <tr>
-            <th class="p-4 text-left">ID</th>
-            <th class="p-4 text-left">Type</th>
-            <th class="p-4 text-left">Bank</th>
-            <th class="p-4 text-right">Principal</th>
-            <th class="p-4 text-right">Interest Rate</th>
-            <th class="p-4 text-left">Maturity Date</th>
-            <th class="p-4 text-right">Maturity Value</th>
-            <th class="p-4 text-center">Status</th>
-            <th class="p-4 text-center">Actions</th>
-            </tr>
-        </thead>
-        <tbody id="savingsBody" class="divide-y divide-gray-800"></tbody>
-        </table>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+      <div class="bg-gray-900 rounded-2xl p-6">
+        <div class="text-sm text-gray-400">Total FD Principal</div>
+        <div id="fd-total" class="text-3xl font-bold text-green-400 mt-2">₹0</div>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-6">
+        <div class="text-sm text-gray-400">Total RD Deposited</div>
+        <div id="rd-total" class="text-3xl font-bold text-amber-400 mt-2">₹0</div>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-6">
+        <div class="text-sm text-gray-400">Active Instruments</div>
+        <div id="active-count" class="text-3xl font-bold mt-2">0</div>
+      </div>
+      <div class="bg-gray-900 rounded-2xl p-6">
+        <div class="text-sm text-gray-400">Broken / Closed</div>
+        <div id="broken-count" class="text-3xl font-bold text-red-400 mt-2">0</div>
+      </div>
     </div>
+
+    <!-- Table -->
+    <div class="bg-gray-900 rounded-2xl overflow-hidden">
+      <table class="w-full">
+        <thead>
+          <tr class="border-b border-gray-700 text-gray-400 text-sm">
+            <th class="px-6 py-4 text-left">ID</th>
+            <th class="px-6 py-4 text-left">Type</th>
+            <th class="px-6 py-4 text-left">Bank</th>
+            <th class="px-6 py-4 text-right">Principal / Deposited</th>
+            <th class="px-6 py-4 text-right">Interest Rate</th>
+            <th class="px-6 py-4 text-left">Start Date</th>
+            <th class="px-6 py-4 text-left">Maturity / End Date</th>
+            <th class="px-6 py-4 text-right">Current Value</th>
+            <th class="px-6 py-4 text-center">Status</th>
+            <th class="px-6 py-4 text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="savings-table-body" class="divide-y divide-gray-700"></tbody>
+      </table>
+    </div>
+  </div>
     </div>
 
     <!-- INVOICES Tabs -->  
@@ -871,73 +898,90 @@ let editingIndex = -1;   // -1 means add new
 // Load Savings
 async function loadSavings() {
   try {
+    // Load from JSON first
     const res = await fetch('data/savings/savings.json');
     let raw = await res.json();
-    savingsData = Array.isArray(raw) ? { savings: raw } : raw;
+    let baseData = Array.isArray(raw) ? { savings: raw } : raw;
+
+    // Merge with localStorage changes (for breaks, edits etc.)
+    const localChanges = JSON.parse(localStorage.getItem('savings_changes') || '{}');
+    
+    savingsData.savings = baseData.savings.map(item => {
+      if (localChanges[item.id]) {
+        return { ...item, ...localChanges[item.id] };
+      }
+      return item;
+    });
+
     renderSavingsSummary();
     renderSavingsTable();
   } catch (e) {
-    console.error("Savings load failed:", e);
+    console.warn("Could not load savings.json");
     savingsData = { savings: [] };
   }
 }
 
 // Render Summary
 function renderSavingsSummary() {
-  const items = savingsData.savings || [];
-  let totalFD = 0, totalRD = 0;
+  const fds = savingsData.savings.filter(s => s.type === 'FD');
+  const rds = savingsData.savings.filter(s => s.type === 'RD');
+  const active = savingsData.savings.filter(s => s.status === 'Active').length;
+  const broken = savingsData.savings.filter(s => s.status === 'Broken').length;
 
-  items.forEach(item => {
-    const prin = parseFloat(item.principal) || 0;
-    if (item.type === "FD") totalFD += prin;
-    if (item.type === "RD") totalRD += prin;
-  });
+  const fdTotal = fds.reduce((sum, s) => sum + (parseFloat(s.principal) || 0), 0);
+  const rdTotal = rds.reduce((sum, s) => sum + (parseFloat(s.principal) || 0), 0);
 
-  document.getElementById('savingsSummary').innerHTML = `
-    <div class="bg-gray-900 p-6 rounded-3xl border border-amber-500/30">
-      <p class="text-amber-400">Total FD</p>
-      <p class="text-3xl font-bold">₹${totalFD.toLocaleString('en-IN')}</p>
-    </div>
-    <div class="bg-gray-900 p-6 rounded-3xl border border-purple-500/30">
-      <p class="text-purple-400">Total RD</p>
-      <p class="text-3xl font-bold">₹${totalRD.toLocaleString('en-IN')}</p>
-    </div>
-    <div class="bg-gray-900 p-6 rounded-3xl border border-blue-500/30">
-      <p class="text-blue-400">Total Savings</p>
-      <p class="text-3xl font-bold">₹${(totalFD + totalRD).toLocaleString('en-IN')}</p>
-    </div>
-    <div class="bg-gray-900 p-6 rounded-3xl border border-gray-700">
-      <p class="text-gray-400">Active Instruments</p>
-      <p class="text-3xl font-bold">${items.length}</p>
-    </div>
-  `;
+  document.getElementById('fd-total').textContent = '₹' + fdTotal.toLocaleString('en-IN');
+  document.getElementById('rd-total').textContent = '₹' + rdTotal.toLocaleString('en-IN');
+  document.getElementById('active-count').textContent = active;
+  document.getElementById('broken-count').textContent = broken;
+}
+
+function exportSavingsData() {
+  const dataStr = JSON.stringify(savingsData, null, 2);
+  const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+  
+  const exportFileDefaultName = 'savings_updated.json';
+  
+  const linkElement = document.createElement('a');
+  linkElement.setAttribute('href', dataUri);
+  linkElement.setAttribute('download', exportFileDefaultName);
+  linkElement.click();
 }
 
 // Render Table
 function renderSavingsTable() {
-  const tbody = document.getElementById('savingsBody');
+  const tbody = document.getElementById('savings-table-body');
   tbody.innerHTML = '';
-  const items = savingsData.savings || [];
 
-  items.forEach((item, index) => {
+  savingsData.savings.forEach((item, index) => {
+    const isBroken = item.status === 'Broken';
     const row = document.createElement('tr');
-    row.className = "hover:bg-gray-800";
+    row.className = isBroken ? 'opacity-60' : '';
+
     row.innerHTML = `
-      <td class="p-4 font-medium">${item.id}</td>
-      <td class="p-4">${item.type}</td>
-      <td class="p-4">${item.bankName}</td>
-      <td class="p-4 text-right">₹${parseFloat(item.principal || 0).toLocaleString('en-IN')}</td>
-      <td class="p-4 text-right">${item.interestRate || '-'}</td>
-      <td class="p-4">${item.maturityDate || item.Maturity || '-'}</td>
-      <td class="p-4 text-right font-medium">₹${parseFloat(item.Maturity || item.currentValue || 0).toLocaleString('en-IN')}</td>
-      <td class="p-4 text-center">
-        <span class="px-3 py-1 rounded-full text-xs ${item.status === 'Active' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}">
-          ${item.status || 'Active'}
+      <td class="px-6 py-4 font-medium">${item.id}</td>
+      <td class="px-6 py-4">
+        <span class="${item.type === 'FD' ? 'bg-green-900 text-green-300' : 'bg-amber-900 text-amber-300'} px-3 py-1 rounded-full text-xs font-medium">
+          ${item.type}
         </span>
       </td>
-      <td class="p-4 text-center space-x-3">
-        <button onclick="editSavings(${index})" class="text-blue-400 hover:text-blue-500 text-sm">Edit</button>
-        <button onclick="breakSavings('${item.id}', ${index})" class="text-red-400 hover:text-red-500 text-sm">Break</button>
+      <td class="px-6 py-4">${item.bankName}</td>
+      <td class="px-6 py-4 text-right">₹${parseFloat(item.principal || 0).toLocaleString('en-IN')}</td>
+      <td class="px-6 py-4 text-right">${item.interestRate || '-'}%</td>
+      <td class="px-6 py-4">${item.startDate || '—'}</td>
+      <td class="px-6 py-4">${item.maturityDate || item.endDate || '—'}</td>
+      <td class="px-6 py-4 text-right font-medium">₹${parseFloat(item.currentValue || item.maturityAmount || 0).toLocaleString('en-IN')}</td>
+      <td class="px-6 py-4 text-center">
+        <span class="px-3 py-1 rounded-full text-xs font-medium ${item.status === 'Active' ? 'bg-green-900 text-green-300' : 'bg-red-900 text-red-300'}">
+          ${item.status}
+        </span>
+      </td>
+      <td class="px-6 py-4 text-center">
+        <button onclick="editSavings(${index})" class="text-blue-400 hover:text-blue-300 mr-4">Edit</button>
+        ${item.status === 'Active' ? 
+          `<button onclick="breakSavings(${index})" class="text-red-400 hover:text-red-300">Break</button>` : 
+          ''}
       </td>
     `;
     tbody.appendChild(row);
@@ -1131,12 +1175,38 @@ function closeSavingsModal() {
 }
 
 // Break FD/RD
-function breakSavings(id, index) {
-  if (confirm(`Mark ${id} as Broken?`)) {
-    savingsData.savings[index].status = "Broken";
-    renderSavingsTable();
-    renderSavingsSummary();
-  }
+function breakSavings(index) {
+  const item = savingsData.savings[index];
+  if (!confirm(`Are you sure you want to break this ${item.type}?`)) return;
+
+  const brokenDate = new Date().toISOString().split('T')[0];
+  
+  // Update status
+  item.status = "Broken";
+  item.brokenDate = brokenDate;
+  
+  // Optional: You can reduce currentValue if you have premature penalty logic
+  // For now we keep currentValue as is
+
+  // Save to localStorage
+  saveSavingsChangesToLocalStorage();
+
+  renderSavingsTable();
+  renderSavingsSummary();
+}
+
+function saveSavingsChangesToLocalStorage() {
+  const changes = {};
+  savingsData.savings.forEach(item => {
+    if (item.status === "Broken" || item.brokenDate) {
+      changes[item.id] = {
+        status: item.status,
+        brokenDate: item.brokenDate,
+        currentValue: item.currentValue
+      };
+    }
+  });
+  localStorage.setItem('savings_changes', JSON.stringify(changes));
 }
 
 //-----------------INVOICES---------------------------------
