@@ -14,12 +14,12 @@
 <body class="bg-gray-950 text-gray-100 min-h-screen">
 
   <!-- Login -->
-  <div id="loginScreen" class="min-h-screen flex items-center justify-center">
+  <div id="loginScreen" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black">
     <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl w-full max-w-md">
       <h1 class="text-3xl font-bold text-center mb-8">Office Finance</h1>
       <input type="text" id="username" value="admin" class="w-full p-4 bg-gray-800 rounded-xl mb-4" placeholder="Username">
       <input type="password" id="password" value="admin123" class="w-full p-4 bg-gray-800 rounded-xl mb-6" placeholder="Password">
-      <button onclick="login()" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-semibold">Login</button>
+      <button onclick="login()" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-semibold text-lg">Login</button>
     </div>
   </div>
 
@@ -27,7 +27,7 @@
   <div id="mainApp" class="hidden">
     <header class="bg-gray-900 border-b border-gray-800 py-4 px-6 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Office Finance Manager</h1>
-      <button onclick="logout()" class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-xl">Logout</button>
+      <button onclick="logout()" class="px-5 py-2 bg-red-600 hover:bg-red-700 rounded-xl">Logout</button>
     </header>
 
     <div class="max-w-screen-2xl mx-auto px-6 pt-6">
@@ -41,7 +41,12 @@
 
     <!-- Banking Tab -->
     <div id="tab-1" class="tab-content max-w-screen-2xl mx-auto px-6 py-8">
-      <h2 class="text-3xl font-semibold mb-6">Banking Transactions</h2>
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-semibold">Banking Transactions</h2>
+        <button onclick="loadSelectedBank()" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-xl flex items-center gap-2">
+          <i class="fas fa-sync"></i> Refresh
+        </button>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div>
@@ -76,9 +81,10 @@
       </div>
     </div>
 
-    <div id="tab-0" class="tab-content hidden p-8 text-center">Dashboard - Coming Soon</div>
-    <div id="tab-2" class="tab-content hidden p-8 text-center">Savings - Coming Soon</div>
-    <div id="tab-3" class="tab-content hidden p-8 text-center">Invoices - Coming Soon</div>
+    <!-- Placeholder Tabs -->
+    <div id="tab-0" class="tab-content hidden p-8 text-center text-xl">Dashboard Coming Soon...</div>
+    <div id="tab-2" class="tab-content hidden p-8 text-center text-xl">Savings Coming Soon...</div>
+    <div id="tab-3" class="tab-content hidden p-8 text-center text-xl">Invoices Coming Soon...</div>
   </div>
 
 <script>
@@ -107,7 +113,7 @@ function switchTab(n) {
   document.querySelectorAll('.tab-btn')[n].classList.add('tab-active');
 }
 
-// ============== LOAD DATA ==============
+// ============== LOAD MANIFEST ==============
 async function loadManifest() {
   try {
     const res = await fetch(MANIFEST_URL);
@@ -129,6 +135,7 @@ function populateBankSelect() {
   });
 }
 
+// ============== LOAD BANK ==============
 async function loadSelectedBank() {
   const bankName = document.getElementById('bankSelect').value;
   const year = document.getElementById('yearSelect').value;
@@ -142,7 +149,7 @@ async function loadSelectedBank() {
 
   try {
     const res = await fetch(fileObj.filePath);
-    if (!res.ok) throw new Error("File not found");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     
     const data = await res.json();
     currentTransactions = normalizeTransactions(data);
@@ -152,7 +159,7 @@ async function loadSelectedBank() {
     renderTable(currentTransactions);
   } catch (e) {
     console.error(e);
-    alert(`Failed to load ${bankName} ${year}. Check file path in manifest.`);
+    alert(`Failed to load ${bankName} ${year || ''}. Check file path in manifest.`);
   }
 }
 
@@ -167,34 +174,34 @@ function populateYearSelect(bank) {
   });
 }
 
-// ============== NORMALIZE BOTH FORMATS ==============
+// ============== NORMALIZE ALL FORMATS ==============
 function normalizeTransactions(data) {
   return data.map(t => {
-    let withdrawal = 0, 
-        deposit = 0, 
-        date = t.Date || t['Date'] || '';
-
-    // Helper to clean comma-separated numbers
-    const cleanNumber = (val) => {
+    const cleanNum = (val) => {
       if (!val) return 0;
-      return parseFloat(String(val).replace(/,/g, '')) || 0;
+      return parseFloat(String(val).replace(/,/g, '').trim()) || 0;
     };
 
-    if (t.transactionType) {                    // ICICI Format
-      const amount = cleanNumber(t.transactionAmount);
-      if (t.transactionType === "DR") withdrawal = amount;
-      else if (t.transactionType === "CR") deposit = amount;
-    } else {                                    // HDFC Format
-      withdrawal = cleanNumber(t['Withdrawal Amt.']);
-      deposit = cleanNumber(t['Deposit Amt.']);
+    let withdrawal = 0, deposit = 0;
+
+    // ICICI Format
+    if (t.transactionType) {
+      const amt = cleanNum(t.transactionAmount);
+      if (t.transactionType === "DR") withdrawal = amt;
+      else if (t.transactionType === "CR") deposit = amt;
+    } 
+    // HDFC / IDFC Format
+    else {
+      withdrawal = cleanNum(t['Withdrawal Amt.']);
+      deposit = cleanNum(t['Deposit Amt.']);
     }
 
     return {
-      Date: date,
+      Date: t.Date || t['Date'] || '',
       Narration: t.Narration || t['Narration'] || '',
       Withdrawal: withdrawal,
       Deposit: deposit,
-      Balance: cleanNumber(t.balance || t['Closing Balance'] || t['balance'])
+      Balance: cleanNum(t.balance || t['Closing Balance'] || t['balance'])
     };
   });
 }
@@ -209,21 +216,21 @@ function renderSummary() {
 
   document.getElementById('summaryCards').innerHTML = `
     <div class="bg-gray-900 p-5 rounded-2xl border border-red-500/30">
-      <p class="text-red-400">Total Withdrawals</p>
+      <p class="text-red-400 text-sm">Total Withdrawals</p>
       <p class="text-2xl font-bold">₹${totalW.toLocaleString('en-IN')}</p>
     </div>
     <div class="bg-gray-900 p-5 rounded-2xl border border-green-500/30">
-      <p class="text-green-400">Total Deposits</p>
+      <p class="text-green-400 text-sm">Total Deposits</p>
       <p class="text-2xl font-bold">₹${totalD.toLocaleString('en-IN')}</p>
     </div>
     <div class="bg-gray-900 p-5 rounded-2xl border border-blue-500/30">
-      <p class="text-blue-400">Net Flow</p>
-      <p class="text-2xl font-bold ${totalD - totalW >= 0 ? 'text-green-400' : 'text-red-400'}">
+      <p class="text-blue-400 text-sm">Net Flow</p>
+      <p class="text-2xl font-bold ${totalD-totalW >=0 ? 'text-green-400' : 'text-red-400'}">
         ₹${(totalD - totalW).toLocaleString('en-IN')}
       </p>
     </div>
     <div class="bg-gray-900 p-5 rounded-2xl border border-gray-700">
-      <p class="text-gray-400">Transactions</p>
+      <p class="text-gray-400 text-sm">Transactions</p>
       <p class="text-2xl font-bold">${currentTransactions.length}</p>
     </div>
   `;
@@ -232,15 +239,16 @@ function renderSummary() {
 function renderTable(transactions) {
   const tbody = document.getElementById('transactionBody');
   tbody.innerHTML = '';
+
   transactions.forEach(t => {
     const row = document.createElement('tr');
-    row.className = "hover:bg-gray-800";
+    row.className = "hover:bg-gray-800 transition-colors";
     row.innerHTML = `
-      <td class="p-4">${t.Date}</td>
+      <td class="p-4 whitespace-nowrap">${t.Date}</td>
       <td class="p-4 text-sm">${t.Narration}</td>
-      <td class="p-4 text-right text-red-400">${t.Withdrawal ? '₹'+t.Withdrawal.toLocaleString('en-IN') : ''}</td>
-      <td class="p-4 text-right text-green-400">${t.Deposit ? '₹'+t.Deposit.toLocaleString('en-IN') : ''}</td>
-      <td class="p-4 text-right font-medium">₹${t.Balance.toLocaleString('en-IN')}</td>
+      <td class="p-4 text-right text-red-400 font-medium">${t.Withdrawal ? '₹'+t.Withdrawal.toLocaleString('en-IN') : ''}</td>
+      <td class="p-4 text-right text-green-400 font-medium">${t.Deposit ? '₹'+t.Deposit.toLocaleString('en-IN') : ''}</td>
+      <td class="p-4 text-right font-medium">${t.Balance ? '₹'+t.Balance.toLocaleString('en-IN') : ''}</td>
     `;
     tbody.appendChild(row);
   });
@@ -249,7 +257,7 @@ function renderTable(transactions) {
 function filterTable() {
   const term = document.getElementById('searchInput').value.toLowerCase();
   const filtered = currentTransactions.filter(t => 
-    t.Narration.toLowerCase().includes(term)
+    (t.Narration || '').toLowerCase().includes(term)
   );
   renderTable(filtered);
 }
