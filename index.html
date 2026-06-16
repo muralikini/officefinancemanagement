@@ -990,13 +990,13 @@ function renderSavingsTable() {
 
 function editSavings(index) {
   editingIndex = index;
-  showSavingsModalForm();
+  showSavingsModal();           // ← Correct function name
 }
 
 // ==================== SAVINGS MODAL ====================
 function showAddSavingsModal() {
   editingIndex = -1;
-  showSavingsModalForm();
+  showSavingsModal();           // ← Correct function name
 }
 
 function showSavingsModal() {
