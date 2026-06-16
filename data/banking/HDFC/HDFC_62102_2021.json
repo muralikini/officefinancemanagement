@@ -1,0 +1,3476 @@
+[
+  {
+    "Date": "04/01/21",
+    "Narration": "NEFT DR-ICIC0006154-M PALANISAMY-NETBANK, MUM-N004211361667591-RC SHPMT CHG 2 BOX",
+    "Chq./Ref.No.": "N004211361667591",
+    "Value Dt": "04/01/21",
+    "Withdrawal Amt.": 19540,
+    "Deposit Amt.": "",
+    "Closing Balance": 566580.97
+  },
+  {
+    "Date": "06/01/21",
+    "Narration": "50400190339441- RD INSTALLMENT-JAN 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "05/01/21",
+    "Withdrawal Amt.": 20000,
+    "Deposit Amt.": "",
+    "Closing Balance": 546580.97
+  },
+  {
+    "Date": "07/01/21",
+    "Narration": "051001107012125174- CBDT TAX",
+    "Chq./Ref.No.": "IB07185740978966",
+    "Value Dt": "07/01/21",
+    "Withdrawal Amt.": 4875,
+    "Deposit Amt.": "",
+    "Closing Balance": 541705.97
+  },
+  {
+    "Date": "08/01/21",
+    "Narration": "VHDF9638980370/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 210088548805,
+    "Value Dt": "08/01/21",
+    "Withdrawal Amt.": 16426,
+    "Deposit Amt.": "",
+    "Closing Balance": 525279.97
+  },
+  {
+    "Date": "08/01/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N008211368094142-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N008211368094142",
+    "Value Dt": "08/01/21",
+    "Withdrawal Amt.": 14052,
+    "Deposit Amt.": "",
+    "Closing Balance": 511227.97
+  },
+  {
+    "Date": "15/01/21",
+    "Narration": "NEFT DR-ICIC0006154-M PALANISAMY-NETBANK, MUM-N015211375103134-RC SHPMT CHG 2 BOX",
+    "Chq./Ref.No.": "N015211375103134",
+    "Value Dt": "15/01/21",
+    "Withdrawal Amt.": 19420,
+    "Deposit Amt.": "",
+    "Closing Balance": 491807.97
+  },
+  {
+    "Date": "15/01/21",
+    "Narration": "VHDF9659284514/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 210153695962,
+    "Value Dt": "15/01/21",
+    "Withdrawal Amt.": 3224,
+    "Deposit Amt.": "",
+    "Closing Balance": 488583.97
+  },
+  {
+    "Date": "15/01/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PRIVATE LTD-NETBANK, MUM-N015211375334762-RENTDEC2020",
+    "Chq./Ref.No.": "N015211375334762",
+    "Value Dt": "15/01/21",
+    "Withdrawal Amt.": 69615,
+    "Deposit Amt.": "",
+    "Closing Balance": 418968.97
+  },
+  {
+    "Date": "15/01/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 4165,
+    "Value Dt": "15/01/21",
+    "Withdrawal Amt.": 297.75,
+    "Deposit Amt.": "",
+    "Closing Balance": 418671.22
+  },
+  {
+    "Date": "18/01/21",
+    "Narration": "POS 514834XXXXXX5068 DARSHAN AUTO SER",
+    "Chq./Ref.No.": 41232,
+    "Value Dt": "18/01/21",
+    "Withdrawal Amt.": 300,
+    "Deposit Amt.": "",
+    "Closing Balance": 418371.22
+  },
+  {
+    "Date": "21/01/21",
+    "Narration": "KQRXY54MARZK5OGTCI/PAYUTALLYSOLUTIONS",
+    "Chq./Ref.No.": 210217968033,
+    "Value Dt": "21/01/21",
+    "Withdrawal Amt.": 708,
+    "Deposit Amt.": "",
+    "Closing Balance": 417663.22
+  },
+  {
+    "Date": "21/01/21",
+    "Narration": "POS REF 514834******5068-01/21 ..DARSHAN",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "21/01/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2.25,
+    "Closing Balance": 417665.47
+  },
+  {
+    "Date": "22/01/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021012200705360",
+    "Chq./Ref.No.": "CITIR52021012200705360",
+    "Value Dt": "22/01/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 1250000,
+    "Closing Balance": 1667665.47
+  },
+  {
+    "Date": "23/01/21",
+    "Narration": "POS 514834XXXXXX5068 PHONEPE",
+    "Chq./Ref.No.": "0000VF9683443835",
+    "Value Dt": "23/01/21",
+    "Withdrawal Amt.": 2,
+    "Deposit Amt.": "",
+    "Closing Balance": 1667663.47
+  },
+  {
+    "Date": "25/01/21",
+    "Narration": "SI HGA1P11AC40489246742 BANGALO-23/01/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "25/01/21",
+    "Withdrawal Amt.": 3559,
+    "Deposit Amt.": "",
+    "Closing Balance": 1664104.47
+  },
+  {
+    "Date": "25/01/21",
+    "Narration": "POS REF 514834******5068-01/24 PHONEPE",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "25/01/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2,
+    "Closing Balance": 1664106.47
+  },
+  {
+    "Date": "28/01/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 3732,
+    "Value Dt": "28/01/21",
+    "Withdrawal Amt.": 297.75,
+    "Deposit Amt.": "",
+    "Closing Balance": 1663808.72
+  },
+  {
+    "Date": "29/01/21",
+    "Narration": "01331140014684-TPT-JAN21 REMUNERATION-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 161917024,
+    "Value Dt": "29/01/21",
+    "Withdrawal Amt.": 100000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1563808.72
+  },
+  {
+    "Date": "29/01/21",
+    "Narration": "03671140001675-TPT-JAN21 REMUNERATION-SREENATH SASI T C V",
+    "Chq./Ref.No.": 161917037,
+    "Value Dt": "29/01/21",
+    "Withdrawal Amt.": 100000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1463808.72
+  },
+  {
+    "Date": "29/01/21",
+    "Narration": "00091140036401-TPT-JAN21 REMUNERATION-PROJESH BAKSHI",
+    "Chq./Ref.No.": 161917047,
+    "Value Dt": "29/01/21",
+    "Withdrawal Amt.": 100000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1363808.72
+  },
+  {
+    "Date": "29/01/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N029211387921427-FOR JAN21 SALARY",
+    "Chq./Ref.No.": "N029211387921427",
+    "Value Dt": "29/01/21",
+    "Withdrawal Amt.": 500000,
+    "Deposit Amt.": "",
+    "Closing Balance": 863808.72
+  },
+  {
+    "Date": "04/02/21",
+    "Narration": "POS 514834XXXXXX5068 MAHASHAKTI",
+    "Chq./Ref.No.": 946,
+    "Value Dt": "04/02/21",
+    "Withdrawal Amt.": 300,
+    "Deposit Amt.": "",
+    "Closing Balance": 863508.72
+  },
+  {
+    "Date": "06/02/21",
+    "Narration": "50400190339441- RD INSTALLMENT-FEB 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "05/02/21",
+    "Withdrawal Amt.": 20000,
+    "Deposit Amt.": "",
+    "Closing Balance": 843508.72
+  },
+  {
+    "Date": "06/02/21",
+    "Narration": "POS REF 514834******5068-02/06 MAHASHAKT",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "06/02/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2.25,
+    "Closing Balance": 843510.97
+  },
+  {
+    "Date": "06/02/21",
+    "Narration": "051030806022174734- CBDT TAX",
+    "Chq./Ref.No.": "IB06144738059121",
+    "Value Dt": "06/02/21",
+    "Withdrawal Amt.": 4725,
+    "Deposit Amt.": "",
+    "Closing Balance": 838785.97
+  },
+  {
+    "Date": "06/02/21",
+    "Narration": "051030806022175933- CBDT TAX",
+    "Chq./Ref.No.": "IB06145142129933",
+    "Value Dt": "06/02/21",
+    "Withdrawal Amt.": 4725,
+    "Deposit Amt.": "",
+    "Closing Balance": 834060.97
+  },
+  {
+    "Date": "06/02/21",
+    "Narration": "051030806022176713- CBDT TAX",
+    "Chq./Ref.No.": "IB06145427845891",
+    "Value Dt": "06/02/21",
+    "Withdrawal Amt.": 4875,
+    "Deposit Amt.": "",
+    "Closing Balance": 829185.97
+  },
+  {
+    "Date": "06/02/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N037211398588621-RENTJAN2021",
+    "Chq./Ref.No.": "N037211398588621",
+    "Value Dt": "06/02/21",
+    "Withdrawal Amt.": 69615,
+    "Deposit Amt.": "",
+    "Closing Balance": 759570.97
+  },
+  {
+    "Date": "09/02/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N040211401395877-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N040211401395877",
+    "Value Dt": "09/02/21",
+    "Withdrawal Amt.": 8303.01,
+    "Deposit Amt.": "",
+    "Closing Balance": 751267.96
+  },
+  {
+    "Date": "09/02/21",
+    "Narration": "VHDF9734499658/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 210403020757,
+    "Value Dt": "09/02/21",
+    "Withdrawal Amt.": 767,
+    "Deposit Amt.": "",
+    "Closing Balance": 750500.96
+  },
+  {
+    "Date": "14/02/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 6090,
+    "Value Dt": "14/02/21",
+    "Withdrawal Amt.": 297.75,
+    "Deposit Amt.": "",
+    "Closing Balance": 750203.21
+  },
+  {
+    "Date": "18/02/21",
+    "Narration": "POS 514834XXXXXX5076 KONFIDENCE",
+    "Chq./Ref.No.": 46497,
+    "Value Dt": "18/02/21",
+    "Withdrawal Amt.": 3715,
+    "Deposit Amt.": "",
+    "Closing Balance": 746488.21
+  },
+  {
+    "Date": "18/02/21",
+    "Narration": "POS 514834XXXXXX5076 PAY*M SRINIVAS",
+    "Chq./Ref.No.": 695866,
+    "Value Dt": "18/02/21",
+    "Withdrawal Amt.": 800,
+    "Deposit Amt.": "",
+    "Closing Balance": 745688.21
+  },
+  {
+    "Date": "18/02/21",
+    "Narration": "POS 514834XXXXXX5076 AVENUE.",
+    "Chq./Ref.No.": 35585,
+    "Value Dt": "18/02/21",
+    "Withdrawal Amt.": 1065.5,
+    "Deposit Amt.": "",
+    "Closing Balance": 744622.71
+  },
+  {
+    "Date": "19/02/21",
+    "Narration": "ATW-514834XXXXXX5076-P1DCBU03-BANGALORE-URB",
+    "Chq./Ref.No.": 2229,
+    "Value Dt": "19/02/21",
+    "Withdrawal Amt.": 20000,
+    "Deposit Amt.": "",
+    "Closing Balance": 724622.71
+  },
+  {
+    "Date": "20/02/21",
+    "Narration": "50100019523195-TPT-EMPLOYEE TRIP-MANOJ KUMAR K L",
+    "Chq./Ref.No.": 139191182,
+    "Value Dt": "20/02/21",
+    "Withdrawal Amt.": 27180,
+    "Deposit Amt.": "",
+    "Closing Balance": 697442.71
+  },
+  {
+    "Date": "23/02/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021022300704392",
+    "Chq./Ref.No.": "CITIR52021022300704392",
+    "Value Dt": "23/02/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 3808926.83,
+    "Closing Balance": 4506369.54
+  },
+  {
+    "Date": "24/02/21",
+    "Narration": "SI HGA1P1328D0581167814 BANGALO-24/02/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "24/02/21",
+    "Withdrawal Amt.": 3752,
+    "Deposit Amt.": "",
+    "Closing Balance": 4502617.54
+  },
+  {
+    "Date": "24/02/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N055211417164092-TO ICICI",
+    "Chq./Ref.No.": "N055211417164092",
+    "Value Dt": "24/02/21",
+    "Withdrawal Amt.": 100000,
+    "Deposit Amt.": "",
+    "Closing Balance": 4402617.54
+  },
+  {
+    "Date": "26/02/21",
+    "Narration": "50100321521907-TPT-PAYMENT UI/UX DESIGN-SANDYA RAJEESH",
+    "Chq./Ref.No.": 178102467,
+    "Value Dt": "26/02/21",
+    "Withdrawal Amt.": 138750,
+    "Deposit Amt.": "",
+    "Closing Balance": 4263867.54
+  },
+  {
+    "Date": "26/02/21",
+    "Narration": "NEFT DR-UBIN0907031-ROOPA A S-NETBANK, MUM-N057211419166637-WEB SEARCH OUTSRCE",
+    "Chq./Ref.No.": "N057211419166637",
+    "Value Dt": "26/02/21",
+    "Withdrawal Amt.": 37000,
+    "Deposit Amt.": "",
+    "Closing Balance": 4226867.54
+  },
+  {
+    "Date": "26/02/21",
+    "Narration": "NEFT DR-ICIC0000169-BALAJI KOPPARAM-NETBANK, MUM-N057211419169731-BUSINESS DEVELOPME",
+    "Chq./Ref.No.": "N057211419169731",
+    "Value Dt": "26/02/21",
+    "Withdrawal Amt.": 37000,
+    "Deposit Amt.": "",
+    "Closing Balance": 4189867.54
+  },
+  {
+    "Date": "26/02/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N057211419179736-SALARY",
+    "Chq./Ref.No.": "N057211419179736",
+    "Value Dt": "26/02/21",
+    "Withdrawal Amt.": 400000,
+    "Deposit Amt.": "",
+    "Closing Balance": 3789867.54
+  },
+  {
+    "Date": "27/02/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N058211420207520-SALARY",
+    "Chq./Ref.No.": "N058211420207520",
+    "Value Dt": "27/02/21",
+    "Withdrawal Amt.": 700000,
+    "Deposit Amt.": "",
+    "Closing Balance": 3089867.54
+  },
+  {
+    "Date": "28/02/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 6083,
+    "Value Dt": "28/02/21",
+    "Withdrawal Amt.": 347.37,
+    "Deposit Amt.": "",
+    "Closing Balance": 3089520.17
+  },
+  {
+    "Date": "03/03/21",
+    "Narration": "20210303150023066973/PAYTMACTBROADBAND",
+    "Chq./Ref.No.": 210620252016,
+    "Value Dt": "03/03/21",
+    "Withdrawal Amt.": 49560,
+    "Deposit Amt.": "",
+    "Closing Balance": 3039960.17
+  },
+  {
+    "Date": "06/03/21",
+    "Narration": "50400190339441- RD INSTALLMENT-MAR 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "05/03/21",
+    "Withdrawal Amt.": 20000,
+    "Deposit Amt.": "",
+    "Closing Balance": 3019960.17
+  },
+  {
+    "Date": "06/03/21",
+    "Narration": "051001106032112513- CBDT TAX",
+    "Chq./Ref.No.": "IB06201821251123",
+    "Value Dt": "06/03/21",
+    "Withdrawal Amt.": 22406,
+    "Deposit Amt.": "",
+    "Closing Balance": 2997554.17
+  },
+  {
+    "Date": "06/03/21",
+    "Narration": "051001106032112937- CBDT TAX",
+    "Chq./Ref.No.": "IB06202212725094",
+    "Value Dt": "06/03/21",
+    "Withdrawal Amt.": 63750,
+    "Deposit Amt.": "",
+    "Closing Balance": 2933804.17
+  },
+  {
+    "Date": "06/03/21",
+    "Narration": "051001106032113218- CBDT TAX",
+    "Chq./Ref.No.": "IB06202514129239",
+    "Value Dt": "06/03/21",
+    "Withdrawal Amt.": 4725,
+    "Deposit Amt.": "",
+    "Closing Balance": 2929079.17
+  },
+  {
+    "Date": "06/03/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N065211430794048-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N065211430794048",
+    "Value Dt": "06/03/21",
+    "Withdrawal Amt.": 16725,
+    "Deposit Amt.": "",
+    "Closing Balance": 2912354.17
+  },
+  {
+    "Date": "08/03/21",
+    "Narration": "NEFT DR-SCBL0036089-QUIKIEAPPS TECHNOLOGIES-NETBANK, MUM-N067211431531466-INVOICE 2021MAR063",
+    "Chq./Ref.No.": "N067211431531466",
+    "Value Dt": "08/03/21",
+    "Withdrawal Amt.": 74000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2838354.17
+  },
+  {
+    "Date": "08/03/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021030800704692",
+    "Chq./Ref.No.": "CITIR52021030800704692",
+    "Value Dt": "08/03/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 900000,
+    "Closing Balance": 3738354.17
+  },
+  {
+    "Date": "10/03/21",
+    "Narration": "33SJQOOGHLZ7AW2WR9/AMAZONSELLER1",
+    "Chq./Ref.No.": 210695961338,
+    "Value Dt": "10/03/21",
+    "Withdrawal Amt.": 5298,
+    "Deposit Amt.": "",
+    "Closing Balance": 3733056.17
+  },
+  {
+    "Date": "10/03/21",
+    "Narration": "VHDF9818681048/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 210696172490,
+    "Value Dt": "10/03/21",
+    "Withdrawal Amt.": 760,
+    "Deposit Amt.": "",
+    "Closing Balance": 3732296.17
+  },
+  {
+    "Date": "11/03/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N070211436515081-RENTFEB21",
+    "Chq./Ref.No.": "N070211436515081",
+    "Value Dt": "11/03/21",
+    "Withdrawal Amt.": 69615,
+    "Deposit Amt.": "",
+    "Closing Balance": 3662681.17
+  },
+  {
+    "Date": "12/03/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N071211437615405-TRANSFER TO CC",
+    "Chq./Ref.No.": "N071211437615405",
+    "Value Dt": "12/03/21",
+    "Withdrawal Amt.": 200000,
+    "Deposit Amt.": "",
+    "Closing Balance": 3462681.17
+  },
+  {
+    "Date": "12/03/21",
+    "Narration": "VHDF9825287849/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 210717990071,
+    "Value Dt": "12/03/21",
+    "Withdrawal Amt.": 30054,
+    "Deposit Amt.": "",
+    "Closing Balance": 3432627.17
+  },
+  {
+    "Date": "12/03/21",
+    "Narration": "01331140014684-TPT-AZURE REFUND DEC-FEB-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 165511543,
+    "Value Dt": "12/03/21",
+    "Withdrawal Amt.": 12843.48,
+    "Deposit Amt.": "",
+    "Closing Balance": 3419783.69
+  },
+  {
+    "Date": "15/03/21",
+    "Narration": "051030815032137288- CBDT TAX",
+    "Chq./Ref.No.": "IB15121201571764",
+    "Value Dt": "15/03/21",
+    "Withdrawal Amt.": 150000,
+    "Deposit Amt.": "",
+    "Closing Balance": 3269783.69
+  },
+  {
+    "Date": "15/03/21",
+    "Narration": "KQRXQ54MBJ4K5PG2CA/PAYUTALLYSOLUTIONS",
+    "Chq./Ref.No.": 210740067152,
+    "Value Dt": "15/03/21",
+    "Withdrawal Amt.": 708,
+    "Deposit Amt.": "",
+    "Closing Balance": 3269075.69
+  },
+  {
+    "Date": "15/03/21",
+    "Narration": "1394004944/KHAJANE GOK",
+    "Chq./Ref.No.": 210740082090,
+    "Value Dt": "15/03/21",
+    "Withdrawal Amt.": 1600,
+    "Deposit Amt.": "",
+    "Closing Balance": 3267475.69
+  },
+  {
+    "Date": "15/03/21",
+    "Narration": "RTGS DR-ICIC0000204-BHAVNA R K-NETBANK, MUM-HDFCR52021031581435647-PROFESSIONAL CHARGES",
+    "Chq./Ref.No.": "HDFCR52021031581435647",
+    "Value Dt": "15/03/21",
+    "Withdrawal Amt.": 462500,
+    "Deposit Amt.": "",
+    "Closing Balance": 2804975.69
+  },
+  {
+    "Date": "16/03/21",
+    "Narration": "NEFT DR-ICIC0000204-A U KUNDNANI HUF-NETBANK, MUM-N075211441107794-PROFESIONAL CHARGE",
+    "Chq./Ref.No.": "N075211441107794",
+    "Value Dt": "16/03/21",
+    "Withdrawal Amt.": 462500,
+    "Deposit Amt.": "",
+    "Closing Balance": 2342475.69
+  },
+  {
+    "Date": "17/03/21",
+    "Narration": "POS 514834XXXXXX5068 MAHASHAKTI",
+    "Chq./Ref.No.": 6377,
+    "Value Dt": "17/03/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2342125.69
+  },
+  {
+    "Date": "18/03/21",
+    "Narration": "NEFT DR-ICIC0000204-RAVI A KUNDNANI HUF-NETBANK, MUM-N077211444033695-PROFESIONAL CHARGE",
+    "Chq./Ref.No.": "N077211444033695",
+    "Value Dt": "18/03/21",
+    "Withdrawal Amt.": 462500,
+    "Deposit Amt.": "",
+    "Closing Balance": 1879625.69
+  },
+  {
+    "Date": "19/03/21",
+    "Narration": "NEFT DR-UBIN0907031-ROOPA A S-NETBANK, MUM-N078211444301543-FEB2021PAYMENT",
+    "Chq./Ref.No.": "N078211444301543",
+    "Value Dt": "19/03/21",
+    "Withdrawal Amt.": 37000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1842625.69
+  },
+  {
+    "Date": "19/03/21",
+    "Narration": "NEFT DR-ICIC0000169-BALAJI KOPPARAM-NETBANK, MUM-N078211444301550-FEB2021PAYMENT",
+    "Chq./Ref.No.": "N078211444301550",
+    "Value Dt": "19/03/21",
+    "Withdrawal Amt.": 37000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1805625.69
+  },
+  {
+    "Date": "19/03/21",
+    "Narration": "50100321521907-TPT-FEB2021PAYMENT-SANDYA RAJEESH",
+    "Chq./Ref.No.": 180441161,
+    "Value Dt": "19/03/21",
+    "Withdrawal Amt.": 92500,
+    "Deposit Amt.": "",
+    "Closing Balance": 1713125.69
+  },
+  {
+    "Date": "19/03/21",
+    "Narration": "POS REF 514834******5068-03/19 MAHASHAKT",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "19/03/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2.63,
+    "Closing Balance": 1713128.32
+  },
+  {
+    "Date": "23/03/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021032300703909",
+    "Chq./Ref.No.": "CITIR52021032300703909",
+    "Value Dt": "23/03/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 900000,
+    "Closing Balance": 2613128.32
+  },
+  {
+    "Date": "23/03/21",
+    "Narration": "POS 514834XXXXXX5076 5604 D MART JAYA",
+    "Chq./Ref.No.": 32521,
+    "Value Dt": "23/03/21",
+    "Withdrawal Amt.": 3105,
+    "Deposit Amt.": "",
+    "Closing Balance": 2610023.32
+  },
+  {
+    "Date": "24/03/21",
+    "Narration": "SI HGA1P171B70669620679 BANGALO-24/03/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "24/03/21",
+    "Withdrawal Amt.": 4179,
+    "Deposit Amt.": "",
+    "Closing Balance": 2605844.32
+  },
+  {
+    "Date": "26/03/21",
+    "Narration": "ATW-514834XXXXXX5076-P1DCBU03-BANGALORE-URB",
+    "Chq./Ref.No.": 5908,
+    "Value Dt": "26/03/21",
+    "Withdrawal Amt.": 20000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2585844.32
+  },
+  {
+    "Date": "26/03/21",
+    "Narration": "ATW-514834XXXXXX5076-P1DCBU03-BANGALORE-URB",
+    "Chq./Ref.No.": 5909,
+    "Value Dt": "26/03/21",
+    "Withdrawal Amt.": 6000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2579844.32
+  },
+  {
+    "Date": "26/03/21",
+    "Narration": "PROJESH BAKSHI - CHQ PAID - JAYANAGAR",
+    "Chq./Ref.No.": 8,
+    "Value Dt": "26/03/21",
+    "Withdrawal Amt.": 60000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2519844.32
+  },
+  {
+    "Date": "26/03/21",
+    "Narration": "MURALIDHAR KINI - CHQ PAID - JAYANAGAR",
+    "Chq./Ref.No.": 9,
+    "Value Dt": "26/03/21",
+    "Withdrawal Amt.": 60000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2459844.32
+  },
+  {
+    "Date": "29/03/21",
+    "Narration": "051030829032110559- CBDT TAX",
+    "Chq./Ref.No.": "IB29070801144749",
+    "Value Dt": "29/03/21",
+    "Withdrawal Amt.": 156000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2303844.32
+  },
+  {
+    "Date": "29/03/21",
+    "Narration": "NAVEEN P - CHQ PAID - JAYANAGAR",
+    "Chq./Ref.No.": 14,
+    "Value Dt": "29/03/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2253844.32
+  },
+  {
+    "Date": "31/03/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N090211458178289-TRANSFER TO CC",
+    "Chq./Ref.No.": "N090211458178289",
+    "Value Dt": "31/03/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1953844.32
+  },
+  {
+    "Date": "31/03/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N090211458380200-INTERNAL TRANSFER",
+    "Chq./Ref.No.": "N090211458380200",
+    "Value Dt": "31/03/21",
+    "Withdrawal Amt.": 400000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1553844.32
+  },
+  {
+    "Date": "31/03/21",
+    "Narration": "NEFT DR-ICIC0000169-BALAJI KOPPARAM-NETBANK, MUM-N090211458760467-PAYMENTMAR21",
+    "Chq./Ref.No.": "N090211458760467",
+    "Value Dt": "31/03/21",
+    "Withdrawal Amt.": 37000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1516844.32
+  },
+  {
+    "Date": "31/03/21",
+    "Narration": "NEFT DR-UBIN0907031-ROOPA A S-NETBANK, MUM-N090211458757541-PAYMENTMAR21",
+    "Chq./Ref.No.": "N090211458757541",
+    "Value Dt": "31/03/21",
+    "Withdrawal Amt.": 37000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1479844.32
+  },
+  {
+    "Date": "31/03/21",
+    "Narration": "50100321521907-TPT-PAYMENTMAR2021-SANDYA RAJEESH",
+    "Chq./Ref.No.": 115817989,
+    "Value Dt": "31/03/21",
+    "Withdrawal Amt.": 92500,
+    "Deposit Amt.": "",
+    "Closing Balance": 1387344.32
+  },
+  {
+    "Date": "01/04/21",
+    "Narration": "01331140014684-TPT-TEAMVIEW SUBS REUM-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 730906617,
+    "Value Dt": "01/04/21",
+    "Withdrawal Amt.": 17700,
+    "Deposit Amt.": "",
+    "Closing Balance": 1369644.32
+  },
+  {
+    "Date": "05/04/21",
+    "Narration": "NEFT DR-CNRB0014202-ART LABS-NETBANK, MUM-N095211462482787-TRAINING CHARGES",
+    "Chq./Ref.No.": "N095211462482787",
+    "Value Dt": "05/04/21",
+    "Withdrawal Amt.": 552500,
+    "Deposit Amt.": "",
+    "Closing Balance": 817144.32
+  },
+  {
+    "Date": "05/04/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N095211462490604-RENTMAR21",
+    "Chq./Ref.No.": "N095211462490604",
+    "Value Dt": "05/04/21",
+    "Withdrawal Amt.": 69615,
+    "Deposit Amt.": "",
+    "Closing Balance": 747529.32
+  },
+  {
+    "Date": "05/04/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N095211462880471-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N095211462880471",
+    "Value Dt": "05/04/21",
+    "Withdrawal Amt.": 24731,
+    "Deposit Amt.": "",
+    "Closing Balance": 722798.32
+  },
+  {
+    "Date": "06/04/21",
+    "Narration": "50400190339441- RD INSTALLMENT-APR 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "05/04/21",
+    "Withdrawal Amt.": 20000,
+    "Deposit Amt.": "",
+    "Closing Balance": 702798.32
+  },
+  {
+    "Date": "06/04/21",
+    "Narration": "POS 514834XXXXXX5068 MAHASHAKTI",
+    "Chq./Ref.No.": 2607,
+    "Value Dt": "06/04/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 702448.32
+  },
+  {
+    "Date": "06/04/21",
+    "Narration": "POS 514834XXXXXX5068 SUNIL BALAGAVI",
+    "Chq./Ref.No.": 1041,
+    "Value Dt": "06/04/21",
+    "Withdrawal Amt.": 8555,
+    "Deposit Amt.": "",
+    "Closing Balance": 693893.32
+  },
+  {
+    "Date": "07/04/21",
+    "Narration": "VHDF9887803526/BILLDKDHLEXPRESSINDI",
+    "Chq./Ref.No.": 210978061061,
+    "Value Dt": "07/04/21",
+    "Withdrawal Amt.": 11272.43,
+    "Deposit Amt.": "",
+    "Closing Balance": 682620.89
+  },
+  {
+    "Date": "07/04/21",
+    "Narration": "051030807042117851- CBDT TAX",
+    "Chq./Ref.No.": "IB07111942748351",
+    "Value Dt": "07/04/21",
+    "Withdrawal Amt.": 60375,
+    "Deposit Amt.": "",
+    "Closing Balance": 622245.89
+  },
+  {
+    "Date": "07/04/21",
+    "Narration": "051030807042118464- CBDT TAX",
+    "Chq./Ref.No.": "IB07112316701995",
+    "Value Dt": "07/04/21",
+    "Withdrawal Amt.": 4725,
+    "Deposit Amt.": "",
+    "Closing Balance": 617520.89
+  },
+  {
+    "Date": "08/04/21",
+    "Narration": "POS REF 514834******5068-04/08 MAHASHAKT",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "08/04/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2.63,
+    "Closing Balance": 617523.52
+  },
+  {
+    "Date": "11/04/21",
+    "Narration": "POS 514834XXXXXX5068 SRI MALAI MAHADE",
+    "Chq./Ref.No.": 3635,
+    "Value Dt": "11/04/21",
+    "Withdrawal Amt.": 1000,
+    "Deposit Amt.": "",
+    "Closing Balance": 616523.52
+  },
+  {
+    "Date": "12/04/21",
+    "Narration": "MURALIDHAR KINI - CHQ PAID - BOMMANAHALLY",
+    "Chq./Ref.No.": 11,
+    "Value Dt": "12/04/21",
+    "Withdrawal Amt.": 60000,
+    "Deposit Amt.": "",
+    "Closing Balance": 556523.52
+  },
+  {
+    "Date": "13/04/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021041300700975",
+    "Chq./Ref.No.": "CITIR52021041300700975",
+    "Value Dt": "13/04/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 1875000,
+    "Closing Balance": 2431523.52
+  },
+  {
+    "Date": "14/04/21",
+    "Narration": "RTGS DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-HDFCR52021041487591815-TRANSFER TO CC",
+    "Chq./Ref.No.": "HDFCR52021041487591815",
+    "Value Dt": "14/04/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2131523.52
+  },
+  {
+    "Date": "14/04/21",
+    "Narration": "VHDF9904050071/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 211043712779,
+    "Value Dt": "14/04/21",
+    "Withdrawal Amt.": 757,
+    "Deposit Amt.": "",
+    "Closing Balance": 2130766.52
+  },
+  {
+    "Date": "15/04/21",
+    "Narration": "VHDF9906312826/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 211054489231,
+    "Value Dt": "15/04/21",
+    "Withdrawal Amt.": 21026,
+    "Deposit Amt.": "",
+    "Closing Balance": 2109740.52
+  },
+  {
+    "Date": "15/04/21",
+    "Narration": "POS REF 514834******5068-04/13 ..SRI MAL",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "15/04/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 7.5,
+    "Closing Balance": 2109748.02
+  },
+  {
+    "Date": "16/04/21",
+    "Narration": "POS 514834XXXXXX5068 MANIKANTA FILLIN",
+    "Chq./Ref.No.": 21894,
+    "Value Dt": "16/04/21",
+    "Withdrawal Amt.": 1000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2108748.02
+  },
+  {
+    "Date": "16/04/21",
+    "Narration": "SREENATH SASI - CHQ PAID - JAYANAGAR",
+    "Chq./Ref.No.": 10,
+    "Value Dt": "16/04/21",
+    "Withdrawal Amt.": 60000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2048748.02
+  },
+  {
+    "Date": "16/04/21",
+    "Narration": "POS 514834XXXXXX5068 MANIKANTA FILLIN",
+    "Chq./Ref.No.": 21955,
+    "Value Dt": "16/04/21",
+    "Withdrawal Amt.": 500,
+    "Deposit Amt.": "",
+    "Closing Balance": 2048248.02
+  },
+  {
+    "Date": "16/04/21",
+    "Narration": "KQRXU44FBN7KHOW2DY/PAYUZOMATOMEDIAPVTLT",
+    "Chq./Ref.No.": 211065592387,
+    "Value Dt": "16/04/21",
+    "Withdrawal Amt.": 582.8,
+    "Deposit Amt.": "",
+    "Closing Balance": 2047665.22
+  },
+  {
+    "Date": "19/04/21",
+    "Narration": "POS REF 514834******5068-04/18 ..MANIKAN",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "19/04/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 3.75,
+    "Closing Balance": 2047668.97
+  },
+  {
+    "Date": "19/04/21",
+    "Narration": "POS REF 514834******5068-04/18 ..MANIKAN",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "19/04/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 7.5,
+    "Closing Balance": 2047676.47
+  },
+  {
+    "Date": "20/04/21",
+    "Narration": "POS 514834XXXXXX5068 SRI CHOWD ESWARI",
+    "Chq./Ref.No.": 2994,
+    "Value Dt": "20/04/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2047326.47
+  },
+  {
+    "Date": "22/04/21",
+    "Narration": "POS REF 514834******5068-04/22 ..SRI CHO",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "22/04/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2.63,
+    "Closing Balance": 2047329.1
+  },
+  {
+    "Date": "23/04/21",
+    "Narration": "CHQ PAID-MICR CTS-CH-FEDEX EXPRESS TRANS",
+    "Chq./Ref.No.": 15,
+    "Value Dt": "23/04/21",
+    "Withdrawal Amt.": 22509,
+    "Deposit Amt.": "",
+    "Closing Balance": 2024820.1
+  },
+  {
+    "Date": "23/04/21",
+    "Narration": "SI HGA2P134E70099406273 BANGALO-23/04/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "23/04/21",
+    "Withdrawal Amt.": 5725,
+    "Deposit Amt.": "",
+    "Closing Balance": 2019095.1
+  },
+  {
+    "Date": "23/04/21",
+    "Narration": "PROJESH BAKSHI - CHQ PAID - JAYANAGAR",
+    "Chq./Ref.No.": 12,
+    "Value Dt": "23/04/21",
+    "Withdrawal Amt.": 60000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1959095.1
+  },
+  {
+    "Date": "23/04/21",
+    "Narration": "SREENATH SASI - CHQ PAID - JAYANAGAR",
+    "Chq./Ref.No.": 13,
+    "Value Dt": "23/04/21",
+    "Withdrawal Amt.": 60000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1899095.1
+  },
+  {
+    "Date": "26/04/21",
+    "Narration": "CHQ PAID-MICR CTS-CH-FEDEX EXPRESS TSCS",
+    "Chq./Ref.No.": 16,
+    "Value Dt": "26/04/21",
+    "Withdrawal Amt.": 3639,
+    "Deposit Amt.": "",
+    "Closing Balance": 1895456.1
+  },
+  {
+    "Date": "26/04/21",
+    "Narration": "1427392591/KHAJANE GOK",
+    "Chq./Ref.No.": 211162481822,
+    "Value Dt": "26/04/21",
+    "Withdrawal Amt.": 3000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1892456.1
+  },
+  {
+    "Date": "26/04/21",
+    "Narration": "UPI-MICRO COMP INC-9342540480@OKBIZAXIS-UTIB0000000-111622167729-PAYMENT FROM PHONE",
+    "Chq./Ref.No.": 111622167729,
+    "Value Dt": "26/04/21",
+    "Withdrawal Amt.": 27848,
+    "Deposit Amt.": "",
+    "Closing Balance": 1864608.1
+  },
+  {
+    "Date": "26/04/21",
+    "Narration": "POS 514834XXXXXX5068 SRI CHOWD ESWARI",
+    "Chq./Ref.No.": 3448,
+    "Value Dt": "26/04/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 1864258.1
+  },
+  {
+    "Date": "28/04/21",
+    "Narration": "POS REF 514834******5068-04/28 ..SRI CHO",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "28/04/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2.63,
+    "Closing Balance": 1864260.73
+  },
+  {
+    "Date": "30/04/21",
+    "Narration": "01331140014684-TPT-APR21 SALARY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 224420373,
+    "Value Dt": "30/04/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1814260.73
+  },
+  {
+    "Date": "30/04/21",
+    "Narration": "03671140001675-TPT-APR21 SALARY-SREENATH SASI T C V",
+    "Chq./Ref.No.": 224420382,
+    "Value Dt": "30/04/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1764260.73
+  },
+  {
+    "Date": "30/04/21",
+    "Narration": "00091140036401-TPT-APR21 SALARY-PROJESH BAKSHI",
+    "Chq./Ref.No.": 224420390,
+    "Value Dt": "30/04/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1714260.73
+  },
+  {
+    "Date": "30/04/21",
+    "Narration": "IMPS-112020116223-ADDIT LABS-ICIC-XXXXXXXX8836-SALARYAPR",
+    "Chq./Ref.No.": 112020116223,
+    "Value Dt": "30/04/21",
+    "Withdrawal Amt.": 200000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1514260.73
+  },
+  {
+    "Date": "30/04/21",
+    "Narration": "IMPS-112020115750-ADDIT LABS-ICIC-XXXXXXXX8836-SALARYAPR",
+    "Chq./Ref.No.": 112020115750,
+    "Value Dt": "30/04/21",
+    "Withdrawal Amt.": 200000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1314260.73
+  },
+  {
+    "Date": "03/05/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N123211491847052-TRANSFER TO CC",
+    "Chq./Ref.No.": "N123211491847052",
+    "Value Dt": "03/05/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1014260.73
+  },
+  {
+    "Date": "06/05/21",
+    "Narration": "50400190339441- RD INSTALLMENT-MAY 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "05/05/21",
+    "Withdrawal Amt.": 20000,
+    "Deposit Amt.": "",
+    "Closing Balance": 994260.73
+  },
+  {
+    "Date": "06/05/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N126211496060595-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N126211496060595",
+    "Value Dt": "06/05/21",
+    "Withdrawal Amt.": 21048.22,
+    "Deposit Amt.": "",
+    "Closing Balance": 973212.51
+  },
+  {
+    "Date": "07/05/21",
+    "Narration": "051008007052166161- CBDT TAX",
+    "Chq./Ref.No.": "IB07194533335719",
+    "Value Dt": "07/05/21",
+    "Withdrawal Amt.": 6500,
+    "Deposit Amt.": "",
+    "Closing Balance": 966712.51
+  },
+  {
+    "Date": "07/05/21",
+    "Narration": "051008007052166639- CBDT TAX",
+    "Chq./Ref.No.": "IB07194816336128",
+    "Value Dt": "07/05/21",
+    "Withdrawal Amt.": 6300,
+    "Deposit Amt.": "",
+    "Closing Balance": 960412.51
+  },
+  {
+    "Date": "10/05/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N130211499738948-RENTAPR21",
+    "Chq./Ref.No.": "N130211499738948",
+    "Value Dt": "10/05/21",
+    "Withdrawal Amt.": 68040,
+    "Deposit Amt.": "",
+    "Closing Balance": 892372.51
+  },
+  {
+    "Date": "10/05/21",
+    "Narration": "VHDF9961131672/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 211303607511,
+    "Value Dt": "10/05/21",
+    "Withdrawal Amt.": 758,
+    "Deposit Amt.": "",
+    "Closing Balance": 891614.51
+  },
+  {
+    "Date": "11/05/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021051100704776",
+    "Chq./Ref.No.": "CITIR52021051100704776",
+    "Value Dt": "11/05/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 1400000,
+    "Closing Balance": 2291614.51
+  },
+  {
+    "Date": "19/05/21",
+    "Narration": "VHDF9981454381/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 211390293873,
+    "Value Dt": "19/05/21",
+    "Withdrawal Amt.": 5117,
+    "Deposit Amt.": "",
+    "Closing Balance": 2286497.51
+  },
+  {
+    "Date": "20/05/21",
+    "Narration": "VHDF9982508721/BILLDKDHLEXPRESSINDI",
+    "Chq./Ref.No.": 211400607900,
+    "Value Dt": "20/05/21",
+    "Withdrawal Amt.": 1342.65,
+    "Deposit Amt.": "",
+    "Closing Balance": 2285154.86
+  },
+  {
+    "Date": "24/05/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N144211511258154-TRANSFER TO CC",
+    "Chq./Ref.No.": "N144211511258154",
+    "Value Dt": "24/05/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1985154.86
+  },
+  {
+    "Date": "24/05/21",
+    "Narration": "SI HGA2P0420B0194049678 BANGALO-24/05/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "24/05/21",
+    "Withdrawal Amt.": 2983,
+    "Deposit Amt.": "",
+    "Closing Balance": 1982171.86
+  },
+  {
+    "Date": "31/05/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N151211516833434-SALARYMAY21",
+    "Chq./Ref.No.": "N151211516833434",
+    "Value Dt": "31/05/21",
+    "Withdrawal Amt.": 400000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1582171.86
+  },
+  {
+    "Date": "01/06/21",
+    "Narration": "01331140014684-TPT-MAY21 SALARY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 232440005,
+    "Value Dt": "01/06/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1532171.86
+  },
+  {
+    "Date": "01/06/21",
+    "Narration": "03671140001675-TPT-MAY21 SALARY-SREENATH SASI T C V",
+    "Chq./Ref.No.": 232440019,
+    "Value Dt": "01/06/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1482171.86
+  },
+  {
+    "Date": "01/06/21",
+    "Narration": "00091140036401-TPT-MAY21 SALARY-PROJESH BAKSHI",
+    "Chq./Ref.No.": 232440034,
+    "Value Dt": "01/06/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1432171.86
+  },
+  {
+    "Date": "05/06/21",
+    "Narration": "MATURED RD. TRANSFER CR 50400190339441",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "05/06/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 247357,
+    "Closing Balance": 1679528.86
+  },
+  {
+    "Date": "07/06/21",
+    "Narration": "051008007062198353- CBDT TAX",
+    "Chq./Ref.No.": "IB07192600206017",
+    "Value Dt": "07/06/21",
+    "Withdrawal Amt.": 6500,
+    "Deposit Amt.": "",
+    "Closing Balance": 1673028.86
+  },
+  {
+    "Date": "07/06/21",
+    "Narration": "051008007062198977- CBDT TAX",
+    "Chq./Ref.No.": "IB07192827036047",
+    "Value Dt": "07/06/21",
+    "Withdrawal Amt.": 6300,
+    "Deposit Amt.": "",
+    "Closing Balance": 1666728.86
+  },
+  {
+    "Date": "09/06/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N160211528219224-RENTMAY21",
+    "Chq./Ref.No.": "N160211528219224",
+    "Value Dt": "09/06/21",
+    "Withdrawal Amt.": 68040,
+    "Deposit Amt.": "",
+    "Closing Balance": 1598688.86
+  },
+  {
+    "Date": "09/06/21",
+    "Narration": "VHDF0028270789/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 211606799456,
+    "Value Dt": "09/06/21",
+    "Withdrawal Amt.": 782,
+    "Deposit Amt.": "",
+    "Closing Balance": 1597906.86
+  },
+  {
+    "Date": "10/06/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021061000705351",
+    "Chq./Ref.No.": "CITIR52021061000705351",
+    "Value Dt": "10/06/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2400000,
+    "Closing Balance": 3997906.86
+  },
+  {
+    "Date": "10/06/21",
+    "Narration": "RD THROUGH NET-50400238542428  :ADDIT LABS",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "10/06/21",
+    "Withdrawal Amt.": 30000,
+    "Deposit Amt.": "",
+    "Closing Balance": 3967906.86
+  },
+  {
+    "Date": "10/06/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N161211529852904-OFFICE EXPENSES",
+    "Chq./Ref.No.": "N161211529852904",
+    "Value Dt": "10/06/21",
+    "Withdrawal Amt.": 800000,
+    "Deposit Amt.": "",
+    "Closing Balance": 3167906.86
+  },
+  {
+    "Date": "11/06/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N162211530764520-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N162211530764520",
+    "Value Dt": "11/06/21",
+    "Withdrawal Amt.": 13893.56,
+    "Deposit Amt.": "",
+    "Closing Balance": 3154013.3
+  },
+  {
+    "Date": "11/06/21",
+    "Narration": "051030811062113150- CBDT TAX",
+    "Chq./Ref.No.": "IB11120021743224",
+    "Value Dt": "11/06/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 3104013.3
+  },
+  {
+    "Date": "14/06/21",
+    "Narration": "VHDF0038478150/BILLDKAMAZONSELLERSE",
+    "Chq./Ref.No.": 211650181260,
+    "Value Dt": "14/06/21",
+    "Withdrawal Amt.": 588,
+    "Deposit Amt.": "",
+    "Closing Balance": 3103425.3
+  },
+  {
+    "Date": "16/06/21",
+    "Narration": "VHDF0043881566/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 211671968988,
+    "Value Dt": "16/06/21",
+    "Withdrawal Amt.": 15922,
+    "Deposit Amt.": "",
+    "Closing Balance": 3087503.3
+  },
+  {
+    "Date": "17/06/21",
+    "Narration": "FT - DR - 01571140017421 - NANDAN B",
+    "Chq./Ref.No.": 17,
+    "Value Dt": "17/06/21",
+    "Withdrawal Amt.": 462500,
+    "Deposit Amt.": "",
+    "Closing Balance": 2625003.3
+  },
+  {
+    "Date": "17/06/21",
+    "Narration": "11000028279370/ATOMDHLEXPRESSINDIAP",
+    "Chq./Ref.No.": 211683082492,
+    "Value Dt": "17/06/21",
+    "Withdrawal Amt.": 18822,
+    "Deposit Amt.": "",
+    "Closing Balance": 2606181.3
+  },
+  {
+    "Date": "19/06/21",
+    "Narration": "VHDF0052063690/BILLDKAMAZONSELLERSE",
+    "Chq./Ref.No.": 211704403898,
+    "Value Dt": "19/06/21",
+    "Withdrawal Amt.": 360,
+    "Deposit Amt.": "",
+    "Closing Balance": 2605821.3
+  },
+  {
+    "Date": "22/06/21",
+    "Narration": "SREENATH SASI - CHQ PAID - JAYANAGAR",
+    "Chq./Ref.No.": 19,
+    "Value Dt": "22/06/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2555821.3
+  },
+  {
+    "Date": "23/06/21",
+    "Narration": "NEFT DR-CITI0100000-UPS EXPRESS PRIVATE LIMITED-NETBANK, MUM-N174211541448218-CUSTOMS DUTY",
+    "Chq./Ref.No.": "N174211541448218",
+    "Value Dt": "23/06/21",
+    "Withdrawal Amt.": 16235,
+    "Deposit Amt.": "",
+    "Closing Balance": 2539586.3
+  },
+  {
+    "Date": "24/06/21",
+    "Narration": "SI HGA2P0A28A0303536212 BANGALO-24/06/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "24/06/21",
+    "Withdrawal Amt.": 2711,
+    "Deposit Amt.": "",
+    "Closing Balance": 2536875.3
+  },
+  {
+    "Date": "25/06/21",
+    "Narration": "CHQ PAID-MICR CTS-CH-FEDEX EXPRESS TSCS",
+    "Chq./Ref.No.": 21,
+    "Value Dt": "25/06/21",
+    "Withdrawal Amt.": 1004,
+    "Deposit Amt.": "",
+    "Closing Balance": 2535871.3
+  },
+  {
+    "Date": "25/06/21",
+    "Narration": "CHQ PAID-MICR CTS-CH-FEDEX EXPRESS TASC",
+    "Chq./Ref.No.": 20,
+    "Value Dt": "25/06/21",
+    "Withdrawal Amt.": 12395,
+    "Deposit Amt.": "",
+    "Closing Balance": 2523476.3
+  },
+  {
+    "Date": "28/06/21",
+    "Narration": "CHQ PAID-MICR CTS-CH-FEDEX EXPRESS TSCS",
+    "Chq./Ref.No.": 22,
+    "Value Dt": "28/06/21",
+    "Withdrawal Amt.": 11235,
+    "Deposit Amt.": "",
+    "Closing Balance": 2512241.3
+  },
+  {
+    "Date": "29/06/21",
+    "Narration": "D MART CASHBACK MAR 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "29/06/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 155.25,
+    "Closing Balance": 2512396.55
+  },
+  {
+    "Date": "01/07/21",
+    "Narration": "01331140014684-TPT-JUN21 SALARY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 260745981,
+    "Value Dt": "01/07/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2462396.55
+  },
+  {
+    "Date": "01/07/21",
+    "Narration": "03671140001675-TPT-JUN21 SALARY-SREENATH SASI T C V",
+    "Chq./Ref.No.": 260745985,
+    "Value Dt": "01/07/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2412396.55
+  },
+  {
+    "Date": "01/07/21",
+    "Narration": "00091140036401-TPT-JUN21 SALARY-PROJESH BAKSHI",
+    "Chq./Ref.No.": 260745990,
+    "Value Dt": "01/07/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2362396.55
+  },
+  {
+    "Date": "01/07/21",
+    "Narration": "00091140036401-TPT-CUSTOMREIMBURSEMENT-PROJESH BAKSHI",
+    "Chq./Ref.No.": 260806155,
+    "Value Dt": "01/07/21",
+    "Withdrawal Amt.": 41000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2321396.55
+  },
+  {
+    "Date": "01/07/21",
+    "Narration": "03671140001675-TPT-FEDEX-SREENATH SASI T C V",
+    "Chq./Ref.No.": 164263410,
+    "Value Dt": "01/07/21",
+    "Withdrawal Amt.": 1004,
+    "Deposit Amt.": "",
+    "Closing Balance": 2320392.55
+  },
+  {
+    "Date": "01/07/21",
+    "Narration": "03671140001675-TPT-FEDEX-SREENATH SASI T C V",
+    "Chq./Ref.No.": 164263421,
+    "Value Dt": "01/07/21",
+    "Withdrawal Amt.": 971,
+    "Deposit Amt.": "",
+    "Closing Balance": 2319421.55
+  },
+  {
+    "Date": "01/07/21",
+    "Narration": "03671140001675-TPT-ARAHAM-SREENATH SASI T C V",
+    "Chq./Ref.No.": 164263433,
+    "Value Dt": "01/07/21",
+    "Withdrawal Amt.": 6550,
+    "Deposit Amt.": "",
+    "Closing Balance": 2312871.55
+  },
+  {
+    "Date": "01/07/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N182211550408200-TRANSFER TO CC",
+    "Chq./Ref.No.": "N182211550408200",
+    "Value Dt": "01/07/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2012871.55
+  },
+  {
+    "Date": "05/07/21",
+    "Narration": "CHQ PAID-MICR CTS-CH-FEDEX EXPRESS TSCS",
+    "Chq./Ref.No.": 23,
+    "Value Dt": "05/07/21",
+    "Withdrawal Amt.": 18103,
+    "Deposit Amt.": "",
+    "Closing Balance": 1994768.55
+  },
+  {
+    "Date": "05/07/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N186211555509704-519017926079",
+    "Chq./Ref.No.": "N186211555509704",
+    "Value Dt": "05/07/21",
+    "Withdrawal Amt.": 1273,
+    "Deposit Amt.": "",
+    "Closing Balance": 1993495.55
+  },
+  {
+    "Date": "05/07/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N186211555523099-519017926080",
+    "Chq./Ref.No.": "N186211555523099",
+    "Value Dt": "05/07/21",
+    "Withdrawal Amt.": 1273,
+    "Deposit Amt.": "",
+    "Closing Balance": 1992222.55
+  },
+  {
+    "Date": "05/07/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N186211555524796-519017926090",
+    "Chq./Ref.No.": "N186211555524796",
+    "Value Dt": "05/07/21",
+    "Withdrawal Amt.": 818,
+    "Deposit Amt.": "",
+    "Closing Balance": 1991404.55
+  },
+  {
+    "Date": "08/07/21",
+    "Narration": "051030808072110213- CBDT TAX",
+    "Chq./Ref.No.": "IB08012614211800",
+    "Value Dt": "08/07/21",
+    "Withdrawal Amt.": 6500,
+    "Deposit Amt.": "",
+    "Closing Balance": 1984904.55
+  },
+  {
+    "Date": "08/07/21",
+    "Narration": "051030808072110196- CBDT TAX",
+    "Chq./Ref.No.": "IB08012956937463",
+    "Value Dt": "08/07/21",
+    "Withdrawal Amt.": 6300,
+    "Deposit Amt.": "",
+    "Closing Balance": 1978604.55
+  },
+  {
+    "Date": "09/07/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N190211561295684-CUSTOMSDUTY",
+    "Chq./Ref.No.": "N190211561295684",
+    "Value Dt": "09/07/21",
+    "Withdrawal Amt.": 21568,
+    "Deposit Amt.": "",
+    "Closing Balance": 1957036.55
+  },
+  {
+    "Date": "09/07/21",
+    "Narration": "VHDF0101708637/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 211901220509,
+    "Value Dt": "09/07/21",
+    "Withdrawal Amt.": 758,
+    "Deposit Amt.": "",
+    "Closing Balance": 1956278.55
+  },
+  {
+    "Date": "09/07/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021070900707031",
+    "Chq./Ref.No.": "CITIR52021070900707031",
+    "Value Dt": "09/07/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 900000,
+    "Closing Balance": 2856278.55
+  },
+  {
+    "Date": "09/07/21",
+    "Narration": "VHDF0101941041/BILLDKAMAZONSELLERSE",
+    "Chq./Ref.No.": 211901302835,
+    "Value Dt": "09/07/21",
+    "Withdrawal Amt.": 2879.1,
+    "Deposit Amt.": "",
+    "Closing Balance": 2853399.45
+  },
+  {
+    "Date": "11/07/21",
+    "Narration": "50400238542428- RD INSTALLMENT-JUL 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "10/07/21",
+    "Withdrawal Amt.": 30000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2823399.45
+  },
+  {
+    "Date": "12/07/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N193211563228928-RENTJUN21",
+    "Chq./Ref.No.": "N193211563228928",
+    "Value Dt": "12/07/21",
+    "Withdrawal Amt.": 68040,
+    "Deposit Amt.": "",
+    "Closing Balance": 2755359.45
+  },
+  {
+    "Date": "12/07/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N193211563639466-CUSTOMSDUTY",
+    "Chq./Ref.No.": "N193211563639466",
+    "Value Dt": "12/07/21",
+    "Withdrawal Amt.": 4614,
+    "Deposit Amt.": "",
+    "Closing Balance": 2750745.45
+  },
+  {
+    "Date": "13/07/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N194211564876520-CUSTOMDUTY941285",
+    "Chq./Ref.No.": "N194211564876520",
+    "Value Dt": "13/07/21",
+    "Withdrawal Amt.": 1289,
+    "Deposit Amt.": "",
+    "Closing Balance": 2749456.45
+  },
+  {
+    "Date": "14/07/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N195211566741327-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N195211566741327",
+    "Value Dt": "14/07/21",
+    "Withdrawal Amt.": 25229.29,
+    "Deposit Amt.": "",
+    "Closing Balance": 2724227.16
+  },
+  {
+    "Date": "15/07/21",
+    "Narration": "VHDF0115311842/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 211965769173,
+    "Value Dt": "15/07/21",
+    "Withdrawal Amt.": 27640,
+    "Deposit Amt.": "",
+    "Closing Balance": 2696587.16
+  },
+  {
+    "Date": "15/07/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N196211567303025-TRANSFER TO CC",
+    "Chq./Ref.No.": "N196211567303025",
+    "Value Dt": "15/07/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2396587.16
+  },
+  {
+    "Date": "22/07/21",
+    "Narration": "01331140014684-TPT-G CLOUD MAR21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 271159770,
+    "Value Dt": "22/07/21",
+    "Withdrawal Amt.": 762.75,
+    "Deposit Amt.": "",
+    "Closing Balance": 2395824.41
+  },
+  {
+    "Date": "22/07/21",
+    "Narration": "01331140014684-TPT-G CLOUD APR21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 271159779,
+    "Value Dt": "22/07/21",
+    "Withdrawal Amt.": 742.04,
+    "Deposit Amt.": "",
+    "Closing Balance": 2395082.37
+  },
+  {
+    "Date": "22/07/21",
+    "Narration": "01331140014684-TPT-G CLOUD MAY21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 271159783,
+    "Value Dt": "22/07/21",
+    "Withdrawal Amt.": 783.99,
+    "Deposit Amt.": "",
+    "Closing Balance": 2394298.38
+  },
+  {
+    "Date": "22/07/21",
+    "Narration": "01331140014684-TPT-G CLOUD JUN21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 271159788,
+    "Value Dt": "22/07/21",
+    "Withdrawal Amt.": 741.96,
+    "Deposit Amt.": "",
+    "Closing Balance": 2393556.42
+  },
+  {
+    "Date": "22/07/21",
+    "Narration": "01331140014684-TPT-AZURE BILL APR21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 272006899,
+    "Value Dt": "22/07/21",
+    "Withdrawal Amt.": 3825.86,
+    "Deposit Amt.": "",
+    "Closing Balance": 2389730.56
+  },
+  {
+    "Date": "22/07/21",
+    "Narration": "01331140014684-TPT-AZURE BILL JUN21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 272006905,
+    "Value Dt": "22/07/21",
+    "Withdrawal Amt.": 8403.59,
+    "Deposit Amt.": "",
+    "Closing Balance": 2381326.97
+  },
+  {
+    "Date": "23/07/21",
+    "Narration": "01331140014684-TPT-AZURE BILL MAY21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 190314358,
+    "Value Dt": "23/07/21",
+    "Withdrawal Amt.": 7295.59,
+    "Deposit Amt.": "",
+    "Closing Balance": 2374031.38
+  },
+  {
+    "Date": "23/07/21",
+    "Narration": "01331140014684-TPT-FEDEX_19JUL21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 190314363,
+    "Value Dt": "23/07/21",
+    "Withdrawal Amt.": 4709,
+    "Deposit Amt.": "",
+    "Closing Balance": 2369322.38
+  },
+  {
+    "Date": "23/07/21",
+    "Narration": "SI HGA2P079810419945065 BANGALO-23/07/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "23/07/21",
+    "Withdrawal Amt.": 3172,
+    "Deposit Amt.": "",
+    "Closing Balance": 2366150.38
+  },
+  {
+    "Date": "23/07/21",
+    "Narration": "KQRHW5EOANZKHOOQCQ/PAYUMONEY",
+    "Chq./Ref.No.": 212042349633,
+    "Value Dt": "23/07/21",
+    "Withdrawal Amt.": 1481,
+    "Deposit Amt.": "",
+    "Closing Balance": 2364669.38
+  },
+  {
+    "Date": "26/07/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 9457,
+    "Value Dt": "26/07/21",
+    "Withdrawal Amt.": 347.37,
+    "Deposit Amt.": "",
+    "Closing Balance": 2364322.01
+  },
+  {
+    "Date": "30/07/21",
+    "Narration": "051030830072111191- CBDT TAX",
+    "Chq./Ref.No.": "IB30103607814993",
+    "Value Dt": "30/07/21",
+    "Withdrawal Amt.": 24522,
+    "Deposit Amt.": "",
+    "Closing Balance": 2339800.01
+  },
+  {
+    "Date": "30/07/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N211211581926349-CUSTOMDUTY",
+    "Chq./Ref.No.": "N211211581926349",
+    "Value Dt": "30/07/21",
+    "Withdrawal Amt.": 3176,
+    "Deposit Amt.": "",
+    "Closing Balance": 2336624.01
+  },
+  {
+    "Date": "30/07/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N211211582119738-SALARY",
+    "Chq./Ref.No.": "N211211582119738",
+    "Value Dt": "30/07/21",
+    "Withdrawal Amt.": 200000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2136624.01
+  },
+  {
+    "Date": "31/07/21",
+    "Narration": "00030350015850-TPT-GROUPINSURANCE-CARE HEALTH INSURANCE LTD-COLLECTION 01",
+    "Chq./Ref.No.": 252477134,
+    "Value Dt": "31/07/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2086624.01
+  },
+  {
+    "Date": "02/08/21",
+    "Narration": "00030350015850-TPT-GROUPINSURANCE-CARE HEALTH INSURANCE LTD-COLLECTION 01",
+    "Chq./Ref.No.": 173079858,
+    "Value Dt": "02/08/21",
+    "Withdrawal Amt.": 315000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1771624.01
+  },
+  {
+    "Date": "02/08/21",
+    "Narration": "01331140014684-TPT-JUL21 SALARY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 178237615,
+    "Value Dt": "02/08/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1721624.01
+  },
+  {
+    "Date": "02/08/21",
+    "Narration": "03671140001675-TPT-JUL21 SALARY-SREENATH SASI T C V",
+    "Chq./Ref.No.": 178237625,
+    "Value Dt": "02/08/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1671624.01
+  },
+  {
+    "Date": "02/08/21",
+    "Narration": "00091140036401-TPT-JUL21 SALARY-PROJESH BAKSHI",
+    "Chq./Ref.No.": 178237636,
+    "Value Dt": "02/08/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1621624.01
+  },
+  {
+    "Date": "02/08/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N214211585762994-CUSTOMDUTY",
+    "Chq./Ref.No.": "N214211585762994",
+    "Value Dt": "02/08/21",
+    "Withdrawal Amt.": 8716,
+    "Deposit Amt.": "",
+    "Closing Balance": 1612908.01
+  },
+  {
+    "Date": "04/08/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 10732,
+    "Value Dt": "04/08/21",
+    "Withdrawal Amt.": 347.37,
+    "Deposit Amt.": "",
+    "Closing Balance": 1612560.64
+  },
+  {
+    "Date": "05/08/21",
+    "Narration": "KQRHU4UIAJ4KBOOQCI/PAYUWORKINDIA",
+    "Chq./Ref.No.": 212172718385,
+    "Value Dt": "05/08/21",
+    "Withdrawal Amt.": 2124,
+    "Deposit Amt.": "",
+    "Closing Balance": 1610436.64
+  },
+  {
+    "Date": "05/08/21",
+    "Narration": "WHDF0170951564/BILLDKDHLEXPRESSINDI",
+    "Chq./Ref.No.": 212172877064,
+    "Value Dt": "05/08/21",
+    "Withdrawal Amt.": 4606,
+    "Deposit Amt.": "",
+    "Closing Balance": 1605830.64
+  },
+  {
+    "Date": "05/08/21",
+    "Narration": "NEFT CR-ICIC0SF0002-INFIQUITY AUTO TECHN-ADDIT LABS-24695678971DC",
+    "Chq./Ref.No.": "00024695678971DC",
+    "Value Dt": "05/08/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 32400,
+    "Closing Balance": 1638230.64
+  },
+  {
+    "Date": "07/08/21",
+    "Narration": "051001107082114667- CBDT TAX",
+    "Chq./Ref.No.": "IB07200023217981",
+    "Value Dt": "07/08/21",
+    "Withdrawal Amt.": 6500,
+    "Deposit Amt.": "",
+    "Closing Balance": 1631730.64
+  },
+  {
+    "Date": "07/08/21",
+    "Narration": "051001107082115018- CBDT TAX",
+    "Chq./Ref.No.": "IB07200240218537",
+    "Value Dt": "07/08/21",
+    "Withdrawal Amt.": 6300,
+    "Deposit Amt.": "",
+    "Closing Balance": 1625430.64
+  },
+  {
+    "Date": "07/08/21",
+    "Narration": "051001107082116168- CBDT TAX",
+    "Chq./Ref.No.": "IB07200857737961",
+    "Value Dt": "07/08/21",
+    "Withdrawal Amt.": 16000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1609430.64
+  },
+  {
+    "Date": "09/08/21",
+    "Narration": "WHDF0181707323/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 212215981220,
+    "Value Dt": "09/08/21",
+    "Withdrawal Amt.": 1773,
+    "Deposit Amt.": "",
+    "Closing Balance": 1607657.64
+  },
+  {
+    "Date": "09/08/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 11079,
+    "Value Dt": "09/08/21",
+    "Withdrawal Amt.": 347.37,
+    "Deposit Amt.": "",
+    "Closing Balance": 1607310.27
+  },
+  {
+    "Date": "09/08/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N221211594806353-TOICICI",
+    "Chq./Ref.No.": "N221211594806353",
+    "Value Dt": "09/08/21",
+    "Withdrawal Amt.": 200000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1407310.27
+  },
+  {
+    "Date": "09/08/21",
+    "Narration": "051030809082113684- CBDT TAX",
+    "Chq./Ref.No.": "IB09125041134161",
+    "Value Dt": "09/08/21",
+    "Withdrawal Amt.": 192,
+    "Deposit Amt.": "",
+    "Closing Balance": 1407118.27
+  },
+  {
+    "Date": "09/08/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N221211595347174-TRANSFER TO CC",
+    "Chq./Ref.No.": "N221211595347174",
+    "Value Dt": "09/08/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1107118.27
+  },
+  {
+    "Date": "10/08/21",
+    "Narration": "IMPS-122208337478-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOMSDUTY",
+    "Chq./Ref.No.": 122208337478,
+    "Value Dt": "10/08/21",
+    "Withdrawal Amt.": 18656,
+    "Deposit Amt.": "",
+    "Closing Balance": 1088462.27
+  },
+  {
+    "Date": "10/08/21",
+    "Narration": "IMPS-122208340719-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOMSDUTY",
+    "Chq./Ref.No.": 122208340719,
+    "Value Dt": "10/08/21",
+    "Withdrawal Amt.": 4199,
+    "Deposit Amt.": "",
+    "Closing Balance": 1084263.27
+  },
+  {
+    "Date": "11/08/21",
+    "Narration": "50400238542428- RD INSTALLMENT-AUG 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "10/08/21",
+    "Withdrawal Amt.": 30000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1054263.27
+  },
+  {
+    "Date": "11/08/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021081100704468",
+    "Chq./Ref.No.": "CITIR52021081100704468",
+    "Value Dt": "11/08/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 900000,
+    "Closing Balance": 1954263.27
+  },
+  {
+    "Date": "12/08/21",
+    "Narration": "HKEXP4B3WAXJOI/RAZPFRESHERSWORLD",
+    "Chq./Ref.No.": 212249016033,
+    "Value Dt": "12/08/21",
+    "Withdrawal Amt.": 1769,
+    "Deposit Amt.": "",
+    "Closing Balance": 1952494.27
+  },
+  {
+    "Date": "14/08/21",
+    "Narration": "POS 514834XXXXXX5068 MURTHY AND CO",
+    "Chq./Ref.No.": 2264,
+    "Value Dt": "14/08/21",
+    "Withdrawal Amt.": 1578,
+    "Deposit Amt.": "",
+    "Closing Balance": 1950916.27
+  },
+  {
+    "Date": "14/08/21",
+    "Narration": "POS 514834XXXXXX5068 IOCL BUNK ( MAHA",
+    "Chq./Ref.No.": 10498,
+    "Value Dt": "14/08/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 1950566.27
+  },
+  {
+    "Date": "15/08/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N227211602414928-RENTJUL21",
+    "Chq./Ref.No.": "N227211602414928",
+    "Value Dt": "15/08/21",
+    "Withdrawal Amt.": 68040,
+    "Deposit Amt.": "",
+    "Closing Balance": 1882526.27
+  },
+  {
+    "Date": "16/08/21",
+    "Narration": "IMPS-122810343720-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOMDUTY",
+    "Chq./Ref.No.": 122810343720,
+    "Value Dt": "16/08/21",
+    "Withdrawal Amt.": 5034,
+    "Deposit Amt.": "",
+    "Closing Balance": 1877492.27
+  },
+  {
+    "Date": "16/08/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N228211602834661-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N228211602834661",
+    "Value Dt": "16/08/21",
+    "Withdrawal Amt.": 21007.65,
+    "Deposit Amt.": "",
+    "Closing Balance": 1856484.62
+  },
+  {
+    "Date": "16/08/21",
+    "Narration": "01331140014684-TPT-GODADDY MAIL RMBRSMT-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 270479370,
+    "Value Dt": "16/08/21",
+    "Withdrawal Amt.": 22622.6,
+    "Deposit Amt.": "",
+    "Closing Balance": 1833862.02
+  },
+  {
+    "Date": "17/08/21",
+    "Narration": "WHDF0202211799/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 212292625742,
+    "Value Dt": "17/08/21",
+    "Withdrawal Amt.": 14209,
+    "Deposit Amt.": "",
+    "Closing Balance": 1819653.02
+  },
+  {
+    "Date": "17/08/21",
+    "Narration": "CRV POS 514834******5068 IOCL BUNK ( MAH",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "17/08/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2.63,
+    "Closing Balance": 1819655.65
+  },
+  {
+    "Date": "18/08/21",
+    "Narration": "CRV POS 514834******5068 MURTHY AND CO",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "18/08/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 11.84,
+    "Closing Balance": 1819667.49
+  },
+  {
+    "Date": "19/08/21",
+    "Narration": "WHDF0207217473/BILLDKDHLEXPRESSINDI",
+    "Chq./Ref.No.": 212314175844,
+    "Value Dt": "19/08/21",
+    "Withdrawal Amt.": 2855,
+    "Deposit Amt.": "",
+    "Closing Balance": 1816812.49
+  },
+  {
+    "Date": "20/08/21",
+    "Narration": "1534629396/KHAJANE GOK",
+    "Chq./Ref.No.": 212325043054,
+    "Value Dt": "20/08/21",
+    "Withdrawal Amt.": 1200,
+    "Deposit Amt.": "",
+    "Closing Balance": 1815612.49
+  },
+  {
+    "Date": "21/08/21",
+    "Narration": "NEFT CR-SBIN0001916-SALEH AYED BALHARITH EST FOR GENER-ADDIT LABS-SBIN121233050470",
+    "Chq./Ref.No.": "SBIN121233050470",
+    "Value Dt": "21/08/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 52260.71,
+    "Closing Balance": 1867873.2
+  },
+  {
+    "Date": "22/08/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 9916,
+    "Value Dt": "22/08/21",
+    "Withdrawal Amt.": 347.37,
+    "Deposit Amt.": "",
+    "Closing Balance": 1867525.83
+  },
+  {
+    "Date": "23/08/21",
+    "Narration": "IMPS-123512332013-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOMDUTY",
+    "Chq./Ref.No.": 123512332013,
+    "Value Dt": "23/08/21",
+    "Withdrawal Amt.": 6004,
+    "Deposit Amt.": "",
+    "Closing Balance": 1861521.83
+  },
+  {
+    "Date": "24/08/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N236211610797158-TRANSFER TO CC",
+    "Chq./Ref.No.": "N236211610797158",
+    "Value Dt": "24/08/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1561521.83
+  },
+  {
+    "Date": "24/08/21",
+    "Narration": "SI HGA2P0A7C60523408792 BANGALO-24/08/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "24/08/21",
+    "Withdrawal Amt.": 3477,
+    "Deposit Amt.": "",
+    "Closing Balance": 1558044.83
+  },
+  {
+    "Date": "27/08/21",
+    "Narration": "IMPS-123913392906-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOMDUTY",
+    "Chq./Ref.No.": 123913392906,
+    "Value Dt": "27/08/21",
+    "Withdrawal Amt.": 32780,
+    "Deposit Amt.": "",
+    "Closing Balance": 1525264.83
+  },
+  {
+    "Date": "28/08/21",
+    "Narration": "IMPS-124007385892-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOMDUTY",
+    "Chq./Ref.No.": 124007385892,
+    "Value Dt": "28/08/21",
+    "Withdrawal Amt.": 3757,
+    "Deposit Amt.": "",
+    "Closing Balance": 1521507.83
+  },
+  {
+    "Date": "28/08/21",
+    "Narration": "POS 514834XXXXXX5068 SONI FILLING STA",
+    "Chq./Ref.No.": 1818,
+    "Value Dt": "28/08/21",
+    "Withdrawal Amt.": 1577,
+    "Deposit Amt.": "",
+    "Closing Balance": 1519930.83
+  },
+  {
+    "Date": "31/08/21",
+    "Narration": "01331140014684-TPT-AUG21 SALARY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 128383848,
+    "Value Dt": "31/08/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1469930.83
+  },
+  {
+    "Date": "31/08/21",
+    "Narration": "01331140014684-TPT-AUG21 SALARY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 128383868,
+    "Value Dt": "31/08/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1419930.83
+  },
+  {
+    "Date": "31/08/21",
+    "Narration": "00091140036401-TPT-AUG21 SALARY-PROJESH BAKSHI",
+    "Chq./Ref.No.": 128383883,
+    "Value Dt": "31/08/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1369930.83
+  },
+  {
+    "Date": "31/08/21",
+    "Narration": "CRV POS 514834******5068 SONI FILLING ST",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "31/08/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 11.83,
+    "Closing Balance": 1369942.66
+  },
+  {
+    "Date": "01/09/21",
+    "Narration": "POS 514834XXXXXX5068 SREE SHAKTHI FIL",
+    "Chq./Ref.No.": 40071,
+    "Value Dt": "01/09/21",
+    "Withdrawal Amt.": 1400,
+    "Deposit Amt.": "",
+    "Closing Balance": 1368542.66
+  },
+  {
+    "Date": "01/09/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N244211620729686-SALARY",
+    "Chq./Ref.No.": "N244211620729686",
+    "Value Dt": "01/09/21",
+    "Withdrawal Amt.": 400000,
+    "Deposit Amt.": "",
+    "Closing Balance": 968542.66
+  },
+  {
+    "Date": "02/09/21",
+    "Narration": "IMPS-124510303022-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOM DUTY",
+    "Chq./Ref.No.": 124510303022,
+    "Value Dt": "02/09/21",
+    "Withdrawal Amt.": 4004,
+    "Deposit Amt.": "",
+    "Closing Balance": 964538.66
+  },
+  {
+    "Date": "03/09/21",
+    "Narration": "POS REF 514834******5068-09/03 ..SREE SH",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "03/09/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 10.5,
+    "Closing Balance": 964549.16
+  },
+  {
+    "Date": "03/09/21",
+    "Narration": "03671140001675-TPT-SALARY AUG21-SREENATH SASI T C V",
+    "Chq./Ref.No.": 175967241,
+    "Value Dt": "03/09/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 914549.16
+  },
+  {
+    "Date": "04/09/21",
+    "Narration": "01331140014684-TPT-RTRNEXCESSSALARY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 313137144,
+    "Value Dt": "04/09/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 50000,
+    "Closing Balance": 964549.16
+  },
+  {
+    "Date": "04/09/21",
+    "Narration": "NEFT CR-SBIN0001916-SALEH AYED BALHARITH EST FOR GENRE-ADDIT LABS-SBIN321247645822",
+    "Chq./Ref.No.": "SBIN321247645822",
+    "Value Dt": "04/09/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 77884.51,
+    "Closing Balance": 1042433.67
+  },
+  {
+    "Date": "06/09/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N249211626469597-CUSTOMDUTY",
+    "Chq./Ref.No.": "N249211626469597",
+    "Value Dt": "06/09/21",
+    "Withdrawal Amt.": 30045,
+    "Deposit Amt.": "",
+    "Closing Balance": 1012388.67
+  },
+  {
+    "Date": "07/09/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N250211627524230-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N250211627524230",
+    "Value Dt": "07/09/21",
+    "Withdrawal Amt.": 22676.21,
+    "Deposit Amt.": "",
+    "Closing Balance": 989712.46
+  },
+  {
+    "Date": "07/09/21",
+    "Narration": "051001107092118886- CBDT TAX",
+    "Chq./Ref.No.": "IB07185850919323",
+    "Value Dt": "07/09/21",
+    "Withdrawal Amt.": 6500,
+    "Deposit Amt.": "",
+    "Closing Balance": 983212.46
+  },
+  {
+    "Date": "07/09/21",
+    "Narration": "051001107092120570- CBDT TAX",
+    "Chq./Ref.No.": "IB07190151910271",
+    "Value Dt": "07/09/21",
+    "Withdrawal Amt.": 6300,
+    "Deposit Amt.": "",
+    "Closing Balance": 976912.46
+  },
+  {
+    "Date": "07/09/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N250211629473062-RENTAUG2021",
+    "Chq./Ref.No.": "N250211629473062",
+    "Value Dt": "07/09/21",
+    "Withdrawal Amt.": 68040,
+    "Deposit Amt.": "",
+    "Closing Balance": 908872.46
+  },
+  {
+    "Date": "08/09/21",
+    "Narration": "WHDF0254970188/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 212510134147,
+    "Value Dt": "08/09/21",
+    "Withdrawal Amt.": 775,
+    "Deposit Amt.": "",
+    "Closing Balance": 908097.46
+  },
+  {
+    "Date": "08/09/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N251211630117051-CUSTOMDUTY",
+    "Chq./Ref.No.": "N251211630117051",
+    "Value Dt": "08/09/21",
+    "Withdrawal Amt.": 5738,
+    "Deposit Amt.": "",
+    "Closing Balance": 902359.46
+  },
+  {
+    "Date": "09/09/21",
+    "Narration": "01331140014684-TPT-AZURE JUL21 REMNT-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 328382748,
+    "Value Dt": "09/09/21",
+    "Withdrawal Amt.": 8550.22,
+    "Deposit Amt.": "",
+    "Closing Balance": 893809.24
+  },
+  {
+    "Date": "09/09/21",
+    "Narration": "01331140014684-TPT-AZURE SAB JUL21 REM-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 328525583,
+    "Value Dt": "09/09/21",
+    "Withdrawal Amt.": 2851.85,
+    "Deposit Amt.": "",
+    "Closing Balance": 890957.39
+  },
+  {
+    "Date": "09/09/21",
+    "Narration": "01331140014684-TPT-G CLOUD JUL21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 328700140,
+    "Value Dt": "09/09/21",
+    "Withdrawal Amt.": 826.45,
+    "Deposit Amt.": "",
+    "Closing Balance": 890130.94
+  },
+  {
+    "Date": "09/09/21",
+    "Narration": "01331140014684-TPT-G CLOUD AUG21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 328700148,
+    "Value Dt": "09/09/21",
+    "Withdrawal Amt.": 794.67,
+    "Deposit Amt.": "",
+    "Closing Balance": 889336.27
+  },
+  {
+    "Date": "10/09/21",
+    "Narration": "POS 514834XXXXXX5068 SREE SHAKTHI.",
+    "Chq./Ref.No.": 11520,
+    "Value Dt": "10/09/21",
+    "Withdrawal Amt.": 2094,
+    "Deposit Amt.": "",
+    "Closing Balance": 887242.27
+  },
+  {
+    "Date": "10/09/21",
+    "Narration": "50400238542428- RD INSTALLMENT-SEP 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "10/09/21",
+    "Withdrawal Amt.": 30000,
+    "Deposit Amt.": "",
+    "Closing Balance": 857242.27
+  },
+  {
+    "Date": "13/09/21",
+    "Narration": "051030813092112271- CBDT TAX",
+    "Chq./Ref.No.": "IB13102343712734",
+    "Value Dt": "13/09/21",
+    "Withdrawal Amt.": 150000,
+    "Deposit Amt.": "",
+    "Closing Balance": 707242.27
+  },
+  {
+    "Date": "13/09/21",
+    "Narration": "1557489554/KHAJANE GOK",
+    "Chq./Ref.No.": 212563720111,
+    "Value Dt": "13/09/21",
+    "Withdrawal Amt.": 1200,
+    "Deposit Amt.": "",
+    "Closing Balance": 706042.27
+  },
+  {
+    "Date": "13/09/21",
+    "Narration": "01331140014684-TPT-3NOS RC PURCHASE-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 182718894,
+    "Value Dt": "13/09/21",
+    "Withdrawal Amt.": 4288.12,
+    "Deposit Amt.": "",
+    "Closing Balance": 701754.15
+  },
+  {
+    "Date": "13/09/21",
+    "Narration": "POS REF 514834******5068-09/12 SREE SHAK",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "13/09/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 15.71,
+    "Closing Balance": 701769.86
+  },
+  {
+    "Date": "14/09/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021091400704255",
+    "Chq./Ref.No.": "CITIR52021091400704255",
+    "Value Dt": "14/09/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2400000,
+    "Closing Balance": 3101769.86
+  },
+  {
+    "Date": "17/09/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N260211640586981-CUSTOMSDUTY",
+    "Chq./Ref.No.": "N260211640586981",
+    "Value Dt": "17/09/21",
+    "Withdrawal Amt.": 6819,
+    "Deposit Amt.": "",
+    "Closing Balance": 3094950.86
+  },
+  {
+    "Date": "18/09/21",
+    "Narration": "WHDF0277391869/BILLDKDHLEXPRESSINDI",
+    "Chq./Ref.No.": 212617733535,
+    "Value Dt": "18/09/21",
+    "Withdrawal Amt.": 773,
+    "Deposit Amt.": "",
+    "Closing Balance": 3094177.86
+  },
+  {
+    "Date": "20/09/21",
+    "Narration": "HZEZJZQKBGC5N5/RAZPSIMPLINAMDHARIS",
+    "Chq./Ref.No.": 212639426712,
+    "Value Dt": "20/09/21",
+    "Withdrawal Amt.": 500,
+    "Deposit Amt.": "",
+    "Closing Balance": 3093677.86
+  },
+  {
+    "Date": "22/09/21",
+    "Narration": "WHDF0286967889/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 212650953554,
+    "Value Dt": "22/09/21",
+    "Withdrawal Amt.": 12330,
+    "Deposit Amt.": "",
+    "Closing Balance": 3081347.86
+  },
+  {
+    "Date": "22/09/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N265211645369933-TRANSFER TO CC",
+    "Chq./Ref.No.": "N265211645369933",
+    "Value Dt": "22/09/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2781347.86
+  },
+  {
+    "Date": "23/09/21",
+    "Narration": "SI HGA3P08EFC0079361987 BANGALO-23/09/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "23/09/21",
+    "Withdrawal Amt.": 3738,
+    "Deposit Amt.": "",
+    "Closing Balance": 2777609.86
+  },
+  {
+    "Date": "23/09/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 12457,
+    "Value Dt": "23/09/21",
+    "Withdrawal Amt.": 297.75,
+    "Deposit Amt.": "",
+    "Closing Balance": 2777312.11
+  },
+  {
+    "Date": "24/09/21",
+    "Narration": "540236710/CSHFREMYPETROLPUMP",
+    "Chq./Ref.No.": 212672529630,
+    "Value Dt": "24/09/21",
+    "Withdrawal Amt.": 4033.34,
+    "Deposit Amt.": "",
+    "Closing Balance": 2773278.77
+  },
+  {
+    "Date": "27/09/21",
+    "Narration": "NEFT DR-CITI0100000-UPS EXPRESS PRIVATE LIMITED-NETBANK, MUM-N270211649806899-UPS EXPRESSCOURIER",
+    "Chq./Ref.No.": "N270211649806899",
+    "Value Dt": "27/09/21",
+    "Withdrawal Amt.": 20559,
+    "Deposit Amt.": "",
+    "Closing Balance": 2752719.77
+  },
+  {
+    "Date": "30/09/21",
+    "Narration": "WHDF0305069691/BILLDKDHLEXPRESSINDI",
+    "Chq./Ref.No.": 212737052594,
+    "Value Dt": "30/09/21",
+    "Withdrawal Amt.": 11457,
+    "Deposit Amt.": "",
+    "Closing Balance": 2741262.77
+  },
+  {
+    "Date": "30/09/21",
+    "Narration": "NEFT DR-KARB0000107-CGS AND CO-NETBANK, MUM-N273211654157783-AUDIT FEE",
+    "Chq./Ref.No.": "N273211654157783",
+    "Value Dt": "30/09/21",
+    "Withdrawal Amt.": 33150,
+    "Deposit Amt.": "",
+    "Closing Balance": 2708112.77
+  },
+  {
+    "Date": "30/09/21",
+    "Narration": "IMPS-127311355492-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOMDUTY",
+    "Chq./Ref.No.": 127311355492,
+    "Value Dt": "30/09/21",
+    "Withdrawal Amt.": 53587,
+    "Deposit Amt.": "",
+    "Closing Balance": 2654525.77
+  },
+  {
+    "Date": "30/09/21",
+    "Narration": "IMPS-127313371395-FEDEX EXPRESS-BOFA-XXXX5014-CUSTOM DUTY",
+    "Chq./Ref.No.": 127313371395,
+    "Value Dt": "30/09/21",
+    "Withdrawal Amt.": 8325,
+    "Deposit Amt.": "",
+    "Closing Balance": 2646200.77
+  },
+  {
+    "Date": "30/09/21",
+    "Narration": "01331140014684-TPT-SEP21 SALARY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 196667466,
+    "Value Dt": "30/09/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2596200.77
+  },
+  {
+    "Date": "30/09/21",
+    "Narration": "03671140001675-TPT-SEP21 SALARY-SREENATH SASI T C V",
+    "Chq./Ref.No.": 196667494,
+    "Value Dt": "30/09/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2546200.77
+  },
+  {
+    "Date": "30/09/21",
+    "Narration": "00091140036401-TPT-SEP21 SALARY-PROJESH BAKSHI",
+    "Chq./Ref.No.": 196667521,
+    "Value Dt": "30/09/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2496200.77
+  },
+  {
+    "Date": "30/09/21",
+    "Narration": "IMPS-127321385327-ADDIT LABS-ICIC-XXXXXXXX8836-SALARY",
+    "Chq./Ref.No.": 127321385327,
+    "Value Dt": "30/09/21",
+    "Withdrawal Amt.": 100000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2396200.77
+  },
+  {
+    "Date": "01/10/21",
+    "Narration": "IMPS-127414301722-ADDIT LABS-ICIC-XXXXXXXX8836-SALARY",
+    "Chq./Ref.No.": 127414301722,
+    "Value Dt": "01/10/21",
+    "Withdrawal Amt.": 100000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2296200.77
+  },
+  {
+    "Date": "05/10/21",
+    "Narration": "POS 514834XXXXXX5068 SRI CHOWD ESWARI",
+    "Chq./Ref.No.": 15130,
+    "Value Dt": "05/10/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2295850.77
+  },
+  {
+    "Date": "05/10/21",
+    "Narration": "NEFT DR-IPOS0000001-LATHA POST OFFICE-NETBANK, MUM-N278211660888891-CUSTOMDUTY",
+    "Chq./Ref.No.": "N278211660888891",
+    "Value Dt": "05/10/21",
+    "Withdrawal Amt.": 14842,
+    "Deposit Amt.": "",
+    "Closing Balance": 2281008.77
+  },
+  {
+    "Date": "05/10/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N278211661357324-CUSTOMDUTY",
+    "Chq./Ref.No.": "N278211661357324",
+    "Value Dt": "05/10/21",
+    "Withdrawal Amt.": 8285,
+    "Deposit Amt.": "",
+    "Closing Balance": 2272723.77
+  },
+  {
+    "Date": "06/10/21",
+    "Narration": "NEFT DR-ICIC0000169-BALAJI KOPPARAM-NETBANK, MUM-N279211663371750-CONSULTATIONCHARGE",
+    "Chq./Ref.No.": "N279211663371750",
+    "Value Dt": "06/10/21",
+    "Withdrawal Amt.": 36000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2236723.77
+  },
+  {
+    "Date": "06/10/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N279211664158679-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N279211664158679",
+    "Value Dt": "06/10/21",
+    "Withdrawal Amt.": 18014,
+    "Deposit Amt.": "",
+    "Closing Balance": 2218709.77
+  },
+  {
+    "Date": "06/10/21",
+    "Narration": "051008006102144905- CBDT TAX",
+    "Chq./Ref.No.": "IB06214651849293",
+    "Value Dt": "06/10/21",
+    "Withdrawal Amt.": 14500,
+    "Deposit Amt.": "",
+    "Closing Balance": 2204209.77
+  },
+  {
+    "Date": "06/10/21",
+    "Narration": "051008006102145014- CBDT TAX",
+    "Chq./Ref.No.": "IB06214855221556",
+    "Value Dt": "06/10/21",
+    "Withdrawal Amt.": 6300,
+    "Deposit Amt.": "",
+    "Closing Balance": 2197909.77
+  },
+  {
+    "Date": "06/10/21",
+    "Narration": "03671140001675-TPT-GENERATOR SERVICE-SREENATH SASI T C V",
+    "Chq./Ref.No.": 143411580,
+    "Value Dt": "06/10/21",
+    "Withdrawal Amt.": 6500,
+    "Deposit Amt.": "",
+    "Closing Balance": 2191409.77
+  },
+  {
+    "Date": "06/10/21",
+    "Narration": "03671140001675-TPT-CUSTOMDUTY-SREENATH SASI T C V",
+    "Chq./Ref.No.": 143411584,
+    "Value Dt": "06/10/21",
+    "Withdrawal Amt.": 8815,
+    "Deposit Amt.": "",
+    "Closing Balance": 2182594.77
+  },
+  {
+    "Date": "06/10/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N279211664208086-RENTSEPT2021",
+    "Chq./Ref.No.": "N279211664208086",
+    "Value Dt": "06/10/21",
+    "Withdrawal Amt.": 68040,
+    "Deposit Amt.": "",
+    "Closing Balance": 2114554.77
+  },
+  {
+    "Date": "07/10/21",
+    "Narration": "WHDF0322887280/BILLDKDHLEXPRESSINDI",
+    "Chq./Ref.No.": 212803655465,
+    "Value Dt": "07/10/21",
+    "Withdrawal Amt.": 3459,
+    "Deposit Amt.": "",
+    "Closing Balance": 2111095.77
+  },
+  {
+    "Date": "07/10/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N280211664653470-TRANSFER TO CC",
+    "Chq./Ref.No.": "N280211664653470",
+    "Value Dt": "07/10/21",
+    "Withdrawal Amt.": 300000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1811095.77
+  },
+  {
+    "Date": "07/10/21",
+    "Narration": "POS REF 514834******5068-10/07 ..SRI CHO",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "07/10/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2.63,
+    "Closing Balance": 1811098.4
+  },
+  {
+    "Date": "10/10/21",
+    "Narration": "I7SYOOYOILZKGD/RAZPSIMPLINAMDHARIS",
+    "Chq./Ref.No.": 212836207228,
+    "Value Dt": "10/10/21",
+    "Withdrawal Amt.": 1000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1810098.4
+  },
+  {
+    "Date": "10/10/21",
+    "Narration": "50400238542428- RD INSTALLMENT-OCT 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "10/10/21",
+    "Withdrawal Amt.": 30000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1780098.4
+  },
+  {
+    "Date": "11/10/21",
+    "Narration": "WHDF0332595074/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 212847026088,
+    "Value Dt": "11/10/21",
+    "Withdrawal Amt.": 774,
+    "Deposit Amt.": "",
+    "Closing Balance": 1779324.4
+  },
+  {
+    "Date": "11/10/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N284211669695893-CUSTOMDUTY",
+    "Chq./Ref.No.": "N284211669695893",
+    "Value Dt": "11/10/21",
+    "Withdrawal Amt.": 10848,
+    "Deposit Amt.": "",
+    "Closing Balance": 1768476.4
+  },
+  {
+    "Date": "13/10/21",
+    "Narration": "KQSXY5UFAR62LNOWCE/PAYUAMAZON",
+    "Chq./Ref.No.": 212868919963,
+    "Value Dt": "13/10/21",
+    "Withdrawal Amt.": 8406.39,
+    "Deposit Amt.": "",
+    "Closing Balance": 1760070.01
+  },
+  {
+    "Date": "13/10/21",
+    "Narration": "NEFT CR-ICIC0SF0002-INFIQUITY AUTO TECHN-ADDIT LABS-25225346001DC",
+    "Chq./Ref.No.": "00025225346001DC",
+    "Value Dt": "13/10/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 162000,
+    "Closing Balance": 1922070.01
+  },
+  {
+    "Date": "14/10/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021101400705787",
+    "Chq./Ref.No.": "CITIR52021101400705787",
+    "Value Dt": "14/10/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 900000,
+    "Closing Balance": 2822070.01
+  },
+  {
+    "Date": "18/10/21",
+    "Narration": "WHDF0348290224/BILLDKDHLEXPRESSINDI",
+    "Chq./Ref.No.": 212912260706,
+    "Value Dt": "18/10/21",
+    "Withdrawal Amt.": 2084,
+    "Deposit Amt.": "",
+    "Closing Balance": 2819986.01
+  },
+  {
+    "Date": "18/10/21",
+    "Narration": "IMPS-129109391189-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOM DUTY",
+    "Chq./Ref.No.": 129109391189,
+    "Value Dt": "18/10/21",
+    "Withdrawal Amt.": 7320,
+    "Deposit Amt.": "",
+    "Closing Balance": 2812666.01
+  },
+  {
+    "Date": "18/10/21",
+    "Narration": "WHDF0348886394/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 212912445663,
+    "Value Dt": "18/10/21",
+    "Withdrawal Amt.": 15360,
+    "Deposit Amt.": "",
+    "Closing Balance": 2797306.01
+  },
+  {
+    "Date": "18/10/21",
+    "Narration": "1596172066/KHAJANE GOK",
+    "Chq./Ref.No.": 212912748297,
+    "Value Dt": "18/10/21",
+    "Withdrawal Amt.": 1400,
+    "Deposit Amt.": "",
+    "Closing Balance": 2795906.01
+  },
+  {
+    "Date": "18/10/21",
+    "Narration": "POS 514834XXXXXX5068 IOCL BUNK ( MAHA",
+    "Chq./Ref.No.": 52,
+    "Value Dt": "18/10/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2795556.01
+  },
+  {
+    "Date": "20/10/21",
+    "Narration": "20211020218514263402/PAYTMACTBROADBAND",
+    "Chq./Ref.No.": 212934783113,
+    "Value Dt": "20/10/21",
+    "Withdrawal Amt.": 49853.7,
+    "Deposit Amt.": "",
+    "Closing Balance": 2745702.31
+  },
+  {
+    "Date": "21/10/21",
+    "Narration": "21102110383491269/FLIPKART PAYMENTS1",
+    "Chq./Ref.No.": 212945122088,
+    "Value Dt": "21/10/21",
+    "Withdrawal Amt.": 3499,
+    "Deposit Amt.": "",
+    "Closing Balance": 2742203.31
+  },
+  {
+    "Date": "22/10/21",
+    "Narration": "IMPS-129523152460-ADDIT LABS-ICIC-XXXXXXXX8836-TOICICI",
+    "Chq./Ref.No.": 129523152460,
+    "Value Dt": "22/10/21",
+    "Withdrawal Amt.": 250000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2492203.31
+  },
+  {
+    "Date": "23/10/21",
+    "Narration": "IMPS-129607183531-PRATHAM MARKETING-INDB-XXXXXXXX0919-PLY",
+    "Chq./Ref.No.": 129607183531,
+    "Value Dt": "23/10/21",
+    "Withdrawal Amt.": 38,
+    "Deposit Amt.": "",
+    "Closing Balance": 2492165.31
+  },
+  {
+    "Date": "25/10/21",
+    "Narration": "SI HGA3P132280185439441 BANGALO-23/10/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "25/10/21",
+    "Withdrawal Amt.": 4390,
+    "Deposit Amt.": "",
+    "Closing Balance": 2487775.31
+  },
+  {
+    "Date": "25/10/21",
+    "Narration": "NEFT DR-CITI0100000-UPS EXPRESS PRIVATE LIMITED-NETBANK, MUM-N298211685118701-UPS COURIER",
+    "Chq./Ref.No.": "N298211685118701",
+    "Value Dt": "25/10/21",
+    "Withdrawal Amt.": 3463,
+    "Deposit Amt.": "",
+    "Closing Balance": 2484312.31
+  },
+  {
+    "Date": "25/10/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N298211685148677-CUSTOMDUTY",
+    "Chq./Ref.No.": "N298211685148677",
+    "Value Dt": "25/10/21",
+    "Withdrawal Amt.": 3366,
+    "Deposit Amt.": "",
+    "Closing Balance": 2480946.31
+  },
+  {
+    "Date": "27/10/21",
+    "Narration": "RTGS DR-INDB0000294-YASH PLY AGENCIES-NETBANK, MUM-HDFCR52021102773479316-FURNITURE",
+    "Chq./Ref.No.": "HDFCR52021102773479316",
+    "Value Dt": "27/10/21",
+    "Withdrawal Amt.": 252000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2228946.31
+  },
+  {
+    "Date": "28/10/21",
+    "Narration": "POS 514834XXXXXX5068 SRI CHOWD ESWARI",
+    "Chq./Ref.No.": 17115,
+    "Value Dt": "28/10/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2228596.31
+  },
+  {
+    "Date": "29/10/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N302211691791458-SALARY",
+    "Chq./Ref.No.": "N302211691791458",
+    "Value Dt": "29/10/21",
+    "Withdrawal Amt.": 200000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2028596.31
+  },
+  {
+    "Date": "30/10/21",
+    "Narration": "POS REF 514834******5068-10/30 ..SRI CHO",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "30/10/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 2.63,
+    "Closing Balance": 2028598.94
+  },
+  {
+    "Date": "01/11/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 10752,
+    "Value Dt": "01/11/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2028248.94
+  },
+  {
+    "Date": "01/11/21",
+    "Narration": "00091140036401-TPT-SALARY OCT21-PROJESH BAKSHI",
+    "Chq./Ref.No.": 115250612,
+    "Value Dt": "01/11/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1978248.94
+  },
+  {
+    "Date": "01/11/21",
+    "Narration": "03671140001675-TPT-SALARY OCT21-SREENATH SASI T C V",
+    "Chq./Ref.No.": 115250623,
+    "Value Dt": "01/11/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1928248.94
+  },
+  {
+    "Date": "01/11/21",
+    "Narration": "01331140014684-TPT-SALARY OCT21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 115250636,
+    "Value Dt": "01/11/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1878248.94
+  },
+  {
+    "Date": "02/11/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N306211697781145-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N306211697781145",
+    "Value Dt": "02/11/21",
+    "Withdrawal Amt.": 14080,
+    "Deposit Amt.": "",
+    "Closing Balance": 1864168.94
+  },
+  {
+    "Date": "02/11/21",
+    "Narration": "01331140014684-TPT-SINGAPORE RC BUY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 157082163,
+    "Value Dt": "02/11/21",
+    "Withdrawal Amt.": 2513.71,
+    "Deposit Amt.": "",
+    "Closing Balance": 1861655.23
+  },
+  {
+    "Date": "02/11/21",
+    "Narration": "01331140014684-TPT-ATLASSIAN PAYMENT-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 157082184,
+    "Value Dt": "02/11/21",
+    "Withdrawal Amt.": 1169.62,
+    "Deposit Amt.": "",
+    "Closing Balance": 1860485.61
+  },
+  {
+    "Date": "02/11/21",
+    "Narration": "IB BILLPAY DR-HDFCYA-463917XXXXXX0806",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "02/11/21",
+    "Withdrawal Amt.": 50612.5,
+    "Deposit Amt.": "",
+    "Closing Balance": 1809873.11
+  },
+  {
+    "Date": "05/11/21",
+    "Narration": "KQSX654EAF6K7PWWCA/PAYUAMAZON",
+    "Chq./Ref.No.": 213097508977,
+    "Value Dt": "05/11/21",
+    "Withdrawal Amt.": 9361.5,
+    "Deposit Amt.": "",
+    "Closing Balance": 1800511.61
+  },
+  {
+    "Date": "08/11/21",
+    "Narration": "NEFT DR-ICIC0000169-BALAJI KOPPARAM-NETBANK, MUM-N312211705476691-PROFESSIONALFEE",
+    "Chq./Ref.No.": "N312211705476691",
+    "Value Dt": "08/11/21",
+    "Withdrawal Amt.": 36000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1764511.61
+  },
+  {
+    "Date": "08/11/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N312211705510720-RENTOCT2021",
+    "Chq./Ref.No.": "N312211705510720",
+    "Value Dt": "08/11/21",
+    "Withdrawal Amt.": 68040,
+    "Deposit Amt.": "",
+    "Closing Balance": 1696471.61
+  },
+  {
+    "Date": "08/11/21",
+    "Narration": "051030808112116949- CBDT TAX",
+    "Chq./Ref.No.": "IB08121320825831",
+    "Value Dt": "08/11/21",
+    "Withdrawal Amt.": 14500,
+    "Deposit Amt.": "",
+    "Closing Balance": 1681971.61
+  },
+  {
+    "Date": "08/11/21",
+    "Narration": "051030808112117092- CBDT TAX",
+    "Chq./Ref.No.": "IB08121644713464",
+    "Value Dt": "08/11/21",
+    "Withdrawal Amt.": 6300,
+    "Deposit Amt.": "",
+    "Closing Balance": 1675671.61
+  },
+  {
+    "Date": "09/11/21",
+    "Narration": "WHDF0400363656/BILLDKAMERICANEXPRES",
+    "Chq./Ref.No.": 213130652538,
+    "Value Dt": "09/11/21",
+    "Withdrawal Amt.": 770,
+    "Deposit Amt.": "",
+    "Closing Balance": 1674901.61
+  },
+  {
+    "Date": "11/11/21",
+    "Narration": "50400238542428- RD INSTALLMENT-NOV 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "10/11/21",
+    "Withdrawal Amt.": 30000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1644901.61
+  },
+  {
+    "Date": "11/11/21",
+    "Narration": "NEFT CR-SBIN0001916-SALEH AYED BALHARITH EST FOR GENRE-ADDIT LABS-SBIN321315209145",
+    "Chq./Ref.No.": "SBIN321315209145",
+    "Value Dt": "11/11/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 24401.88,
+    "Closing Balance": 1669303.49
+  },
+  {
+    "Date": "12/11/21",
+    "Narration": "POS 514834XXXXXX5068 SRI SHARADA ENTE",
+    "Chq./Ref.No.": 36795,
+    "Value Dt": "12/11/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 1668953.49
+  },
+  {
+    "Date": "12/11/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021111200705119",
+    "Chq./Ref.No.": "CITIR52021111200705119",
+    "Value Dt": "12/11/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 900000,
+    "Closing Balance": 2568953.49
+  },
+  {
+    "Date": "16/11/21",
+    "Narration": "1623333812/KHAJANE GOK",
+    "Chq./Ref.No.": 213205736927,
+    "Value Dt": "16/11/21",
+    "Withdrawal Amt.": 1200,
+    "Deposit Amt.": "",
+    "Closing Balance": 2567753.49
+  },
+  {
+    "Date": "18/11/21",
+    "Narration": "IMPS-132209399125-LATHA POST OFFICE-IPOS-XXXXXXXX5838-CUSTOM DUTY",
+    "Chq./Ref.No.": 132209399125,
+    "Value Dt": "18/11/21",
+    "Withdrawal Amt.": 13419,
+    "Deposit Amt.": "",
+    "Closing Balance": 2554334.49
+  },
+  {
+    "Date": "19/11/21",
+    "Narration": "INW6B5XZDTOC21/RAZPSIMPLINAMDHARIS",
+    "Chq./Ref.No.": 213238836006,
+    "Value Dt": "19/11/21",
+    "Withdrawal Amt.": 1000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2553334.49
+  },
+  {
+    "Date": "22/11/21",
+    "Narration": "20211122232249294416/PAYTMAIRTEL",
+    "Chq./Ref.No.": 213260354329,
+    "Value Dt": "22/11/21",
+    "Withdrawal Amt.": 6541.92,
+    "Deposit Amt.": "",
+    "Closing Balance": 2546792.57
+  },
+  {
+    "Date": "24/11/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 14115,
+    "Value Dt": "24/11/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2546442.57
+  },
+  {
+    "Date": "24/11/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N328211724149845-CUSTOMDUTY",
+    "Chq./Ref.No.": "N328211724149845",
+    "Value Dt": "24/11/21",
+    "Withdrawal Amt.": 3223,
+    "Deposit Amt.": "",
+    "Closing Balance": 2543219.57
+  },
+  {
+    "Date": "24/11/21",
+    "Narration": "SI HGA3P11DA30301810003 BANGALO-24/11/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "24/11/21",
+    "Withdrawal Amt.": 4439,
+    "Deposit Amt.": "",
+    "Closing Balance": 2538780.57
+  },
+  {
+    "Date": "29/11/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 9594,
+    "Value Dt": "29/11/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2538430.57
+  },
+  {
+    "Date": "30/11/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N334211730566939-SALARY",
+    "Chq./Ref.No.": "N334211730566939",
+    "Value Dt": "30/11/21",
+    "Withdrawal Amt.": 500000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2038430.57
+  },
+  {
+    "Date": "30/11/21",
+    "Narration": "01331140014684-TPT-NOV21 SALARY-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 154105237,
+    "Value Dt": "30/11/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1988430.57
+  },
+  {
+    "Date": "30/11/21",
+    "Narration": "03671140001675-TPT-NOV21 SALARY-SREENATH SASI T C V",
+    "Chq./Ref.No.": 154105251,
+    "Value Dt": "30/11/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1938430.57
+  },
+  {
+    "Date": "30/11/21",
+    "Narration": "00091140036401-TPT-NOV21 SALARY-PROJESH BAKSHI",
+    "Chq./Ref.No.": 154105266,
+    "Value Dt": "30/11/21",
+    "Withdrawal Amt.": 50000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1888430.57
+  },
+  {
+    "Date": "02/12/21",
+    "Narration": "NEFT CR-ICIC0SF0002-INFIQUITY AUTO TECHN-ADDIT LABS-25616685441DC",
+    "Chq./Ref.No.": "00025616685441DC",
+    "Value Dt": "02/12/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 70200,
+    "Closing Balance": 1958630.57
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "NEFT DR-IBKL0000381-QUADRASYSTEMS INDIA PRIVATE LIMITED-NETBANK, MUM-N337211736806814-AZURE SUBSCRIPTION",
+    "Chq./Ref.No.": "N337211736806814",
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 26439.7,
+    "Deposit Amt.": "",
+    "Closing Balance": 1932190.87
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "01331140014684-TPT-GODADY EMAIL RENEW-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 140055265,
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 1764,
+    "Deposit Amt.": "",
+    "Closing Balance": 1930426.87
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "01331140014684-TPT-GODADY DOMAIN RENEW-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 140055272,
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 3036.76,
+    "Deposit Amt.": "",
+    "Closing Balance": 1927390.11
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "01331140014684-TPT-RESORT ADVANCE-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 140055277,
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 3000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1924390.11
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "01331140014684-TPT-AZURE SEPT 21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 140134832,
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 5479.59,
+    "Deposit Amt.": "",
+    "Closing Balance": 1918910.52
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "01331140014684-TPT-AZURE OCT 21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 140134839,
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 4968.68,
+    "Deposit Amt.": "",
+    "Closing Balance": 1913941.84
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "01331140014684-TPT-ATLANSSIAN OCT21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 140134841,
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 1218.54,
+    "Deposit Amt.": "",
+    "Closing Balance": 1912723.3
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "01331140014684-TPT-GOOGLE CLOUD OCT21-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 140134843,
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 781.55,
+    "Deposit Amt.": "",
+    "Closing Balance": 1911941.75
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "01331140014684-TPT-RC PURCHASE 21OCT-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 140211117,
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 2473.57,
+    "Deposit Amt.": "",
+    "Closing Balance": 1909468.18
+  },
+  {
+    "Date": "03/12/21",
+    "Narration": "01331140014684-TPT-RC PURCHASE 25NOV-MURALIDHAR KINI B",
+    "Chq./Ref.No.": 140211126,
+    "Value Dt": "03/12/21",
+    "Withdrawal Amt.": 1698.39,
+    "Deposit Amt.": "",
+    "Closing Balance": 1907769.79
+  },
+  {
+    "Date": "04/12/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N338211738467152-CUSTOM DUTY",
+    "Chq./Ref.No.": "N338211738467152",
+    "Value Dt": "04/12/21",
+    "Withdrawal Amt.": 3148,
+    "Deposit Amt.": "",
+    "Closing Balance": 1904621.79
+  },
+  {
+    "Date": "06/12/21",
+    "Narration": "NEFT DR-ICIC0000169-BALAJI KOPPARAM-NETBANK, MUM-N340211740443589-PROFESSIONALFEENOV",
+    "Chq./Ref.No.": "N340211740443589",
+    "Value Dt": "06/12/21",
+    "Withdrawal Amt.": 36000,
+    "Deposit Amt.": "",
+    "Closing Balance": 1868621.79
+  },
+  {
+    "Date": "07/12/21",
+    "Narration": "NEFT DR-UBIN0552461-CHIRRA ENERGY SOLUTIONS PVT LTD-NETBANK, MUM-N341211743162300-RENTNOV2021",
+    "Chq./Ref.No.": "N341211743162300",
+    "Value Dt": "07/12/21",
+    "Withdrawal Amt.": 68040,
+    "Deposit Amt.": "",
+    "Closing Balance": 1800581.79
+  },
+  {
+    "Date": "08/12/21",
+    "Narration": "RTGS CR-CITI0100000-HOME CONTROL SINGAPORE PTE LTD-ADDIT LABS-CITIR52021120800705117",
+    "Chq./Ref.No.": "CITIR52021120800705117",
+    "Value Dt": "08/12/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 1262250,
+    "Closing Balance": 3062831.79
+  },
+  {
+    "Date": "10/12/21",
+    "Narration": "KQSX44MJARZKDPOUD4/PAYUAMAZON",
+    "Chq./Ref.No.": 213445510034,
+    "Value Dt": "10/12/21",
+    "Withdrawal Amt.": 9104.97,
+    "Deposit Amt.": "",
+    "Closing Balance": 3053726.82
+  },
+  {
+    "Date": "10/12/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N344211747843475-TOICICI",
+    "Chq./Ref.No.": "N344211747843475",
+    "Value Dt": "10/12/21",
+    "Withdrawal Amt.": 200000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2853726.82
+  },
+  {
+    "Date": "10/12/21",
+    "Narration": "50400238542428- RD INSTALLMENT-DEC 2021",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "10/12/21",
+    "Withdrawal Amt.": 30000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2823726.82
+  },
+  {
+    "Date": "14/12/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 31530,
+    "Value Dt": "14/12/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2823376.82
+  },
+  {
+    "Date": "15/12/21",
+    "Narration": "051030815122176993- CBDT TAX",
+    "Chq./Ref.No.": "IB15150850217141",
+    "Value Dt": "15/12/21",
+    "Withdrawal Amt.": 100000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2723376.82
+  },
+  {
+    "Date": "16/12/21",
+    "Narration": "NEFT DR-SCBL0036020-AECB CARD 376540618721006-NETBANK, MUM-N350211754964482-TRANSFER TO CC",
+    "Chq./Ref.No.": "N350211754964482",
+    "Value Dt": "16/12/21",
+    "Withdrawal Amt.": 100000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2623376.82
+  },
+  {
+    "Date": "23/12/21",
+    "Narration": "SI HGA3P0B57C0417043002 BANGALO-23/12/21",
+    "Chq./Ref.No.": 0,
+    "Value Dt": "23/12/21",
+    "Withdrawal Amt.": 4136,
+    "Deposit Amt.": "",
+    "Closing Balance": 2619240.82
+  },
+  {
+    "Date": "24/12/21",
+    "Narration": "051030824122118981- CBDT TAX",
+    "Chq./Ref.No.": "IB24130742122122",
+    "Value Dt": "24/12/21",
+    "Withdrawal Amt.": 94050,
+    "Deposit Amt.": "",
+    "Closing Balance": 2525190.82
+  },
+  {
+    "Date": "27/12/21",
+    "Narration": "051030827122112678- CBDT TAX",
+    "Chq./Ref.No.": "IB27104620047082",
+    "Value Dt": "27/12/21",
+    "Withdrawal Amt.": 44470,
+    "Deposit Amt.": "",
+    "Closing Balance": 2480720.82
+  },
+  {
+    "Date": "27/12/21",
+    "Narration": "POS 514834XXXXXX5068 BPCL SRI CHOWDES",
+    "Chq./Ref.No.": 11054,
+    "Value Dt": "27/12/21",
+    "Withdrawal Amt.": 350,
+    "Deposit Amt.": "",
+    "Closing Balance": 2480370.82
+  },
+  {
+    "Date": "27/12/21",
+    "Narration": "051030827122116644- CBDT TAX",
+    "Chq./Ref.No.": "IB27120152145327",
+    "Value Dt": "27/12/21",
+    "Withdrawal Amt.": 73950,
+    "Deposit Amt.": "",
+    "Closing Balance": 2406420.82
+  },
+  {
+    "Date": "28/12/21",
+    "Narration": "NEFT DR-BOFA0MM6205-FEDEX EXPRESS-NETBANK, MUM-N362211767603707-CUSTOM DUTY",
+    "Chq./Ref.No.": "N362211767603707",
+    "Value Dt": "28/12/21",
+    "Withdrawal Amt.": 6756,
+    "Deposit Amt.": "",
+    "Closing Balance": 2399664.82
+  },
+  {
+    "Date": "29/12/21",
+    "Narration": "NEFT CR-ICIC0SF0002-INFIQUITY AUTO TECHN-ADDIT LABS-25846830621DC",
+    "Chq./Ref.No.": "00025846830621DC",
+    "Value Dt": "29/12/21",
+    "Withdrawal Amt.": "",
+    "Deposit Amt.": 140400,
+    "Closing Balance": 2540064.82
+  },
+  {
+    "Date": "31/12/21",
+    "Narration": "NEFT DR-ICIC0006254-ADDIT LABS-NETBANK, MUM-N365211772593554-SALARY",
+    "Chq./Ref.No.": "N365211772593554",
+    "Value Dt": "31/12/21",
+    "Withdrawal Amt.": 400000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2140064.82
+  },
+  {
+    "Date": "31/12/21",
+    "Narration": "NEFT DR-ICIC0000169-BALAJI KOPPARAM-NETBANK, MUM-N365211773587023-CONSULTATION CHARG",
+    "Chq./Ref.No.": "N365211773587023",
+    "Value Dt": "31/12/21",
+    "Withdrawal Amt.": 36000,
+    "Deposit Amt.": "",
+    "Closing Balance": 2104064.82
+  }
+]
