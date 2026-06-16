@@ -1,189 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Office Finance Manager</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     body { font-family: 'Segoe UI', system-ui, sans-serif; }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
+    .tab-active { border-bottom: 3px solid #3b82f6; color: #3b82f6; font-weight: 600; }
   </style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen">
-  <div class="max-w-screen-2xl mx-auto">
+<body class="bg-gray-950 text-gray-100 min-h-screen">
 
-    <!-- Login Screen -->
-    <div id="loginScreen" class="min-h-screen flex items-center justify-center bg-zinc-900">
-      <div class="bg-zinc-800 p-10 rounded-3xl shadow-2xl w-full max-w-md">
-        <div class="text-center mb-10">
-          <i class="fas fa-building text-6xl text-emerald-500 mb-4"></i>
-          <h1 class="text-3xl font-bold">Office Finance</h1>
-          <p class="text-zinc-400 mt-2">Financial Management System</p>
-        </div>
-        <input id="username" type="text" placeholder="Username" value="admin" 
-               class="w-full bg-zinc-700 border border-zinc-600 rounded-xl px-5 py-4 mb-4 focus:outline-none focus:border-emerald-500"/>
-        <input id="password" type="password" placeholder="Password" value="admin123"
-               class="w-full bg-zinc-700 border border-zinc-600 rounded-xl px-5 py-4 mb-6 focus:outline-none focus:border-emerald-500"/>
-        <button onclick="login()" 
-                class="w-full bg-emerald-600 hover:bg-emerald-500 py-4 rounded-2xl font-semibold text-lg transition">
-          Login
-        </button>
-      </div>
-    </div>
-
-    <!-- Main App -->
-    <div id="mainApp" class="hidden">
-      <!-- Header -->
-      <header class="bg-zinc-900 border-b border-zinc-800 px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <i class="fas fa-building text-emerald-500 text-2xl"></i>
-          <h1 class="text-2xl font-bold">Office Finance</h1>
-        </div>
-        <div class="flex items-center gap-4">
-          <button onclick="toggleDarkMode()" class="p-3 hover:bg-zinc-800 rounded-xl">
-            <i class="fas fa-moon"></i>
-          </button>
-          <button onclick="logout()" class="px-5 py-2 bg-red-600 hover:bg-red-500 rounded-xl text-sm font-medium">
-            Logout
-          </button>
-        </div>
-      </header>
-
-      <!-- Tabs -->
-      <div class="flex border-b border-zinc-800 overflow-x-auto bg-zinc-900">
-        <button onclick="switchTab(0)" class="tab-btn tab-active px-8 py-4 font-medium">Dashboard</button>
-        <button onclick="switchTab(1)" class="tab-btn px-8 py-4 font-medium">Banking</button>
-        <button onclick="switchTab(2)" class="tab-btn px-8 py-4 font-medium">Savings</button>
-        <button onclick="switchTab(3)" class="tab-btn px-8 py-4 font-medium">Invoices</button>
-        <button onclick="switchTab(4)" class="tab-btn px-8 py-4 font-medium">Admin</button>
-      </div>
-
-      <!-- Tab Contents -->
-      <div id="tab0" class="tab-content active p-6"> <!-- Dashboard -->
-        <h2 class="text-2xl font-bold mb-6">Dashboard</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-zinc-800 p-6 rounded-3xl">
-            <p class="text-zinc-400">FY 2025-26 Income</p>
-            <p class="text-4xl font-bold text-emerald-500 mt-2" id="totalIncome">₹0</p>
-          </div>
-          <div class="bg-zinc-800 p-6 rounded-3xl">
-            <p class="text-zinc-400">FY 2025-26 Expense</p>
-            <p class="text-4xl font-bold text-red-500 mt-2" id="totalExpense">₹0</p>
-          </div>
-          <div class="bg-zinc-800 p-6 rounded-3xl">
-            <p class="text-zinc-400">Net Position</p>
-            <p class="text-4xl font-bold text-blue-500 mt-2" id="netPosition">₹0</p>
-          </div>
-        </div>
-        <div class="mt-8">
-          <h3 class="text-lg font-semibold mb-4">Expense by Category</h3>
-          <div id="categoryBreakup" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
-        </div>
-      </div>
-
-      <div id="tab1" class="tab-content p-6"> <!-- Banking -->
-        <h2 class="text-2xl font-bold mb-6">Banking Transactions</h2>
-        <button onclick="alert('Import Banking JSON coming soon...')" 
-                class="bg-emerald-600 px-6 py-3 rounded-2xl mb-6">
-          Import Bank Statement
-        </button>
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="bg-zinc-800">
-                <th class="p-4 text-left">Date</th>
-                <th class="p-4 text-left">Description</th>
-                <th class="p-4 text-right">Amount</th>
-                <th class="p-4 text-left">Category</th>
-              </tr>
-            </thead>
-            <tbody id="bankTableBody" class="text-zinc-300"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div id="tab2" class="tab-content p-6"> <!-- Savings -->
-        <h2 class="text-2xl font-bold mb-6">Savings (RD & FD)</h2>
-        <p class="text-zinc-400">RD and FD tracking module coming in next phase...</p>
-      </div>
-
-      <div id="tab3" class="tab-content p-6"> <!-- Invoices -->
-        <h2 class="text-2xl font-bold mb-6">Invoices</h2>
-        <p class="text-zinc-400">Invoice upload and project-wise tracking coming soon...</p>
-      </div>
-
-      <div id="tab4" class="tab-content p-6"> <!-- Admin -->
-        <h2 class="text-2xl font-bold mb-6">Admin Panel</h2>
-        <p class="text-zinc-400">User management and settings coming soon...</p>
-      </div>
+  <!-- Login Screen -->
+  <div id="loginScreen" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black">
+    <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl w-full max-w-md">
+      <h1 class="text-3xl font-bold text-center mb-8">Office Finance</h1>
+      <input type="text" id="username" value="admin" class="w-full p-4 bg-gray-800 rounded-xl mb-4" placeholder="Username">
+      <input type="password" id="password" value="admin123" class="w-full p-4 bg-gray-800 rounded-xl mb-6" placeholder="Password">
+      <button onclick="login()" class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-semibold text-lg">
+        Login
+      </button>
     </div>
   </div>
 
-  <script>
-    let currentUser = null;
+  <!-- Main App -->
+  <div id="mainApp" class="hidden">
+    <!-- Header -->
+    <header class="bg-gray-900 border-b border-gray-800 py-4 px-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Office Finance Manager</h1>
+      <div class="flex items-center gap-4">
+        <button onclick="logout()" class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-xl text-sm">Logout</button>
+      </div>
+    </header>
 
-    function login() {
-      const username = document.getElementById('username').value.trim();
-      const password = document.getElementById('password').value.trim();
-      
-      if (username && password) {
-        currentUser = username;
-        document.getElementById('loginScreen').classList.add('hidden');
-        document.getElementById('mainApp').classList.remove('hidden');
-        switchTab(0);
-      } else {
-        alert("Please enter username and password");
-      }
-    }
+    <!-- Tabs -->
+    <div class="max-w-screen-2xl mx-auto px-6 pt-6">
+      <div class="flex border-b border-gray-800 overflow-x-auto">
+        <button onclick="switchTab(0)" class="tab-btn tab-active px-6 py-3 whitespace-nowrap">Dashboard</button>
+        <button onclick="switchTab(1)" class="tab-btn px-6 py-3 whitespace-nowrap">Banking</button>
+        <button onclick="switchTab(2)" class="tab-btn px-6 py-3 whitespace-nowrap">Savings</button>
+        <button onclick="switchTab(3)" class="tab-btn px-6 py-3 whitespace-nowrap">Invoices</button>
+        <button onclick="switchTab(4)" class="tab-btn px-6 py-3 whitespace-nowrap">Admin</button>
+      </div>
+    </div>
 
-    function logout() {
-      currentUser = null;
-      document.getElementById('mainApp').classList.add('hidden');
-      document.getElementById('loginScreen').classList.remove('hidden');
-    }
+    <!-- Banking Tab -->
+    <div id="tab-1" class="tab-content max-w-screen-2xl mx-auto px-6 py-8">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-semibold">Banking Transactions</h2>
+        <button onclick="loadAllBanks()" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-xl flex items-center gap-2">
+          <i class="fas fa-sync"></i> Refresh All
+        </button>
+      </div>
 
-    function switchTab(n) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      document.getElementById('tab' + n).classList.add('active');
-      
-      document.querySelectorAll('.tab-btn').forEach((btn, i) => {
-        btn.classList.toggle('tab-active', i === n);
-      });
-    }
-
-    function toggleDarkMode() {
-      alert("Dark/Light mode toggle coming soon");
-    }
-
-    // Sample Data for Dashboard
-    function loadSampleData() {
-      document.getElementById('totalIncome').textContent = '₹18,45,230';
-      document.getElementById('totalExpense').textContent = '₹12,67,890';
-      document.getElementById('netPosition').textContent = '₹5,77,340';
-      
-      const categories = [
-        {name: "Devices & Hardware", amount: 456000},
-        {name: "Travel", amount: 289000},
-        {name: "Office Rent", amount: 180000},
-        {name: "Internet & Utilities", amount: 89000}
-      ];
-      
-      const container = document.getElementById('categoryBreakup');
-      container.innerHTML = categories.map(cat => `
-        <div class="bg-zinc-800 p-5 rounded-3xl">
-          <p class="text-zinc-400 text-sm">${cat.name}</p>
-          <p class="text-2xl font-bold text-red-400 mt-1">₹${cat.amount.toLocaleString('en-IN')}</p>
+      <!-- Bank & Year Selector -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div>
+          <label class="block text-sm mb-2">Bank Account</label>
+          <select id="bankSelect" onchange="loadSelectedBank()" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3"></select>
         </div>
-      `).join('');
-    }
+        <div>
+          <label class="block text-sm mb-2">Year</label>
+          <select id="yearSelect" onchange="loadSelectedBank()" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3"></select>
+        </div>
+        <div>
+          <label class="block text-sm mb-2">Search</label>
+          <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search narration..." 
+                 class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+        </div>
+      </div>
 
-    // Initialize
-    window.onload = () => {
-      loadSampleData();
-    };
-  </script>
+      <!-- Summary Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" id="summaryCards"></div>
+
+      <!-- Transactions Table -->
+      <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+        <table class="w-full">
+          <thead class="bg-gray-800">
+            <tr>
+              <th class="p-4 text-left">Date</th>
+              <th class="p-4 text-left">Narration</th>
+              <th class="p-4 text-right">Withdrawal</th>
+              <th class="p-4 text-right">Deposit</th>
+              <th class="p-4 text-right">Balance</th>
+            </tr>
+          </thead>
+          <tbody id="transactionBody" class="divide-y divide-gray-800"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Placeholder Tabs -->
+    <div id="tab-0" class="tab-content hidden p-8 text-center">Dashboard Coming Soon...</div>
+    <div id="tab-2" class="tab-content hidden p-8 text-center">Savings (RD/FD) Coming Soon...</div>
+    <div id="tab-3" class="tab-content hidden p-8 text-center">Invoices Coming Soon...</div>
+    <div id="tab-4" class="tab-content hidden p-8 text-center">Admin Panel Coming Soon...</div>
+  </div>
+
+<script>
+// ============== CONFIG ==============
+const MANIFEST_URL = 'manifest.json';   // Same folder as index.html
+
+let manifest = {};
+let currentTransactions = [];
+
+// ============== LOGIN ==============
+function login() {
+  document.getElementById('loginScreen').classList.add('hidden');
+  document.getElementById('mainApp').classList.remove('hidden');
+  switchTab(1); // Open Banking tab by default
+}
+
+function logout() {
+  document.getElementById('mainApp').classList.add('hidden');
+  document.getElementById('loginScreen').classList.remove('hidden');
+}
+
+// ============== TAB SWITCH ==============
+function switchTab(n) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  document.getElementById(`tab-${n}`).classList.remove('hidden');
+  
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('tab-active'));
+  document.querySelectorAll('.tab-btn')[n].classList.add('tab-active');
+}
+
+// ============== LOAD MANIFEST & DATA ==============
+async function loadManifest() {
+  try {
+    const res = await fetch(MANIFEST_URL);
+    manifest = await res.json();
+    populateBankSelect();
+  } catch (e) {
+    console.error("Failed to load manifest", e);
+    alert("Could not load manifest.json");
+  }
+}
+
+function populateBankSelect() {
+  const select = document.getElementById('bankSelect');
+  select.innerHTML = '<option value="">Select Bank</option>';
+  
+  manifest.banks.forEach(bank => {
+    const opt = document.createElement('option');
+    opt.value = bank.bankName;
+    opt.textContent = `${bank.bankName} - ${bank.accountNumber}`;
+    select.appendChild(opt);
+  });
+}
+
+async function loadSelectedBank() {
+  const bankName = document.getElementById('bankSelect').value;
+  const year = document.getElementById('yearSelect').value;
+  
+  if (!bankName) return;
+
+  const bank = manifest.banks.find(b => b.bankName === bankName);
+  if (!bank) return;
+
+  // Load specific year or first available
+  const fileObj = year 
+    ? bank.files.find(f => f.year === year) 
+    : bank.files[0];
+
+  if (!fileObj) return;
+
+  try {
+    const res = await fetch(fileObj.filePath.replace('/view?usp=drive_link', '/uc?export=download'));
+    currentTransactions = await res.json();
+    
+    populateYearSelect(bank);
+    renderSummary();
+    renderTable(currentTransactions);
+  } catch (e) {
+    console.error(e);
+    alert("Failed to load data. Make sure the Google Drive link is set to 'Anyone with the link'");
+  }
+}
+
+function populateYearSelect(bank) {
+  const select = document.getElementById('yearSelect');
+  select.innerHTML = '';
+  
+  bank.files.forEach(file => {
+    const opt = document.createElement('option');
+    opt.value = file.year;
+    opt.textContent = file.year;
+    select.appendChild(opt);
+  });
+}
+
+// ============== RENDERING ==============
+function renderSummary() {
+  let totalDeposit = 0, totalWithdrawal = 0;
+  
+  currentTransactions.forEach(t => {
+    totalDeposit += parseFloat(t['Deposit Amt.'] || 0) || 0;
+    totalWithdrawal += parseFloat(t['Withdrawal Amt.'] || 0) || 0;
+  });
+
+  const net = totalDeposit - totalWithdrawal;
+
+  document.getElementById('summaryCards').innerHTML = `
+    <div class="bg-gray-900 p-5 rounded-2xl border border-green-500/30">
+      <p class="text-green-400 text-sm">Total Deposits</p>
+      <p class="text-2xl font-bold">₹${totalDeposit.toLocaleString('en-IN')}</p>
+    </div>
+    <div class="bg-gray-900 p-5 rounded-2xl border border-red-500/30">
+      <p class="text-red-400 text-sm">Total Withdrawals</p>
+      <p class="text-2xl font-bold">₹${totalWithdrawal.toLocaleString('en-IN')}</p>
+    </div>
+    <div class="bg-gray-900 p-5 rounded-2xl border border-blue-500/30">
+      <p class="text-blue-400 text-sm">Net Flow</p>
+      <p class="text-2xl font-bold ${net >= 0 ? 'text-green-400' : 'text-red-400'}">
+        ₹${net.toLocaleString('en-IN')}
+      </p>
+    </div>
+    <div class="bg-gray-900 p-5 rounded-2xl border border-gray-700">
+      <p class="text-gray-400 text-sm">Transactions</p>
+      <p class="text-2xl font-bold">${currentTransactions.length}</p>
+    </div>
+  `;
+}
+
+function renderTable(transactions) {
+  const tbody = document.getElementById('transactionBody');
+  tbody.innerHTML = '';
+
+  transactions.forEach(t => {
+    const withdrawal = parseFloat(t['Withdrawal Amt.'] || 0) || 0;
+    const deposit = parseFloat(t['Deposit Amt.'] || 0) || 0;
+    
+    const row = document.createElement('tr');
+    row.className = "hover:bg-gray-800 transition-colors";
+    row.innerHTML = `
+      <td class="p-4">${t.Date || ''}</td>
+      <td class="p-4 text-sm">${t.Narration || ''}</td>
+      <td class="p-4 text-right text-red-400">${withdrawal ? '₹' + withdrawal.toLocaleString('en-IN') : ''}</td>
+      <td class="p-4 text-right text-green-400">${deposit ? '₹' + deposit.toLocaleString('en-IN') : ''}</td>
+      <td class="p-4 text-right font-medium">${parseFloat(t['Closing Balance'] || 0).toLocaleString('en-IN')}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+function filterTable() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const filtered = currentTransactions.filter(t => 
+    (t.Narration || '').toLowerCase().includes(search)
+  );
+  renderTable(filtered);
+}
+
+async function loadAllBanks() {
+  // For now, reloads the selected bank
+  loadSelectedBank();
+}
+
+// ============== INIT ==============
+window.onload = () => {
+  loadManifest();
+};
+</script>
 </body>
 </html>
