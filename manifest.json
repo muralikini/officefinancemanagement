@@ -1,4 +1,7 @@
 {
+  "savings": {
+    "filePath": "data/savings/savings.json"
+  }
   "banks": [
     {
       "bankName": "HDFC",
