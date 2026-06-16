@@ -134,7 +134,16 @@ function switchTab(n) {
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('tab-active'));
   document.querySelectorAll('.tab-btn')[n].classList.add('tab-active');
 
-  if (n === 0) setTimeout(loadDashboard, 150);   // Load dashboard when switched
+  // Load dashboard data when switching to it
+  if (n === 0) {
+    setTimeout(() => {
+      if (allTransactions.length === 0) {
+        loadAllDataForDashboard().then(loadDashboard);
+      } else {
+        loadDashboard();
+      }
+    }, 100);
+  }
 }
 
 // ============== LOAD MANIFEST ==============
@@ -143,8 +152,9 @@ async function loadManifest() {
     const res = await fetch(MANIFEST_URL);
     manifest = await res.json();
     populateBankSelect();
+    await loadAllDataForDashboard();   // ← Add this line
   } catch (e) {
-    alert("Failed to load manifest.json");
+    console.error(e);
   }
 }
 
@@ -211,9 +221,12 @@ async function loadAllDataForDashboard() {
           const data = await res.json();
           allTransactions = allTransactions.concat(normalizeTransactions(data));
         }
-      } catch (e) {}
+      } catch (e) {
+        console.warn("Failed to load file:", file.filePath);
+      }
     }
   }
+  return allTransactions;
 }
 
 function loadDashboard() {
