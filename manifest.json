@@ -1,0 +1,34 @@
+{
+  "banks": [
+    {
+      "bankName": "HDFC",
+      "accountNumber": "62102",
+      "files": [
+        {
+          "year": "2021",
+          "filePath": "https://drive.google.com/file/d/1wADjSvnk2wLGwDQQPofGwMF_7qiC915p/view?usp=drive_link"
+        },
+        {
+          "year": "2022",
+          "filePath": "https://drive.google.com/file/d/1P0wHmbSDzdZQB9BtESibH3FW74WyXFhm/view?usp=drive_link"
+        },
+        {
+          "year": "2023",
+          "filePath": "https://drive.google.com/file/d/1KU2Y4LRwK9UqHDmy868QewM_w2DEkAVl/view?usp=drive_link"
+        },
+        {
+          "year": "2024",
+          "filePath": "https://drive.google.com/file/d/1hqIwINe2E4XaoGQp8YTWjsx9RL1n3XWy/view?usp=drive_link"
+        },
+        {
+          "year": "2025",
+          "filePath": "https://drive.google.com/file/d/1IviwbFVPFW7qUCVCGy0T1DcbqEzpFZo5/view?usp=drive_link"
+        },
+        {
+          "year": "2026",
+          "filePath": "https://drive.google.com/file/d/1AuTb4EjffKNoiiBwdhN9TJblc7a-MBqW/view?usp=drive_link"
+        }
+      ]
+    }
+  ]
+}
