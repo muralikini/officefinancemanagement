@@ -230,41 +230,62 @@
   <div class="max-w-screen-2xl mx-auto px-6 py-8">
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-bold">Procurement Invoices</h1>
-      <button onclick="selectInvoicesFolder()" 
+      <button onclick="selectSingleInvoice()" 
               class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-xl flex items-center gap-2">
-        📁 Select Invoices Root Folder
+        📄 Select Single Invoice (PDF)
       </button>
     </div>
 
-    <div id="invoices-status" class="bg-gray-900 rounded-2xl p-6 mb-8 text-center text-gray-400">
-      No folder selected yet. Click above to select the "Procurement Invoices" folder from network drive.
+    <div id="invoice-review-area" class="hidden bg-gray-900 rounded-3xl p-8">
+      <h2 class="text-xl font-semibold mb-6">Review Invoice</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Left: Preview Info -->
+        <div>
+          <p class="text-sm text-gray-400 mb-2">Filename:</p>
+          <p id="review-filename" class="font-medium mb-6"></p>
+          
+          <div class="space-y-6">
+            <div>
+              <label class="block text-sm text-gray-400 mb-1">Invoice Number</label>
+              <input id="review-invoice-no" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+            </div>
+            <div>
+              <label class="block text-sm text-gray-400 mb-1">Date</label>
+              <input id="review-date" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+            </div>
+            <div>
+              <label class="block text-sm text-gray-400 mb-1">Vendor</label>
+              <input id="review-vendor" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3">
+            </div>
+            <div>
+              <label class="block text-sm text-gray-400 mb-1">Amount (₹)</label>
+              <input id="review-amount" type="number" class="w-full bg-gray-800 border border-gray-700 rounded-xl p-3 text-2xl">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Raw Text -->
+        <div>
+          <label class="block text-sm text-gray-400 mb-2">Extracted Raw Text</label>
+          <textarea id="review-raw-text" class="w-full h-96 bg-gray-950 border border-gray-700 rounded-2xl p-4 text-sm font-mono" readonly></textarea>
+        </div>
+      </div>
+
+      <div class="flex gap-4 mt-10">
+        <button onclick="saveReviewedInvoice()" 
+                class="flex-1 bg-green-600 hover:bg-green-700 py-4 rounded-2xl font-semibold text-lg">
+          ✅ Save & Next
+        </button>
+        <button onclick="skipInvoice()" 
+                class="flex-1 bg-gray-700 hover:bg-gray-600 py-4 rounded-2xl font-semibold">
+          Skip
+        </button>
+      </div>
     </div>
 
-    <!-- Summary -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 hidden" id="invoices-summary">
-      <div class="bg-gray-900 rounded-2xl p-6">
-        <div class="text-sm text-gray-400">Total Invoices</div>
-        <div id="inv-count" class="text-3xl font-bold">0</div>
-      </div>
-      <div class="bg-gray-900 rounded-2xl p-6">
-        <div class="text-sm text-green-400">Total Value</div>
-        <div id="inv-total" class="text-3xl font-bold">₹0</div>
-      </div>
-    </div>
-
-    <div class="bg-gray-900 rounded-2xl overflow-hidden" id="invoices-table-container">
-      <table class="w-full">
-        <thead>
-          <tr class="border-b border-gray-700 text-gray-400">
-            <th class="px-6 py-4 text-left">Year</th>
-            <th class="px-6 py-4 text-left">Invoice No</th>
-            <th class="px-6 py-4 text-left">Date</th>
-            <th class="px-6 py-4 text-left">Vendor</th>
-            <th class="px-6 py-4 text-right">Amount</th>
-          </tr>
-        </thead>
-        <tbody id="invoices-table-body" class="divide-y divide-gray-700"></tbody>
-      </table>
+    <div id="invoices-summary-area" class="mt-12">
+      <!-- Summary will appear here after saving some invoices -->
     </div>
   </div>
     </div>
@@ -1171,56 +1192,32 @@ async function extractInvoiceFromPDF(file, filename, path) {
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
     let fullText = '';
 
-    for (let i = 1; i <= Math.min(pdf.numPages, 3); i++) {  // Limit to first 3 pages
+    for (let i = 1; i <= Math.min(pdf.numPages, 5); i++) {
       const page = await pdf.getPage(i);
-      const textContent = await page.getTextContent();
-      fullText += textContent.items.map(item => item.str).join(' ') + '\n';
+      const content = await page.getTextContent();
+      fullText += content.items.map(item => item.str).join(' ') + '\n';
     }
 
-    const yearMatch = path.match(/(\d{4})/);
-    
-    // Improved amount detection - look for ₹ or numbers near "Total", "Amount", "Grand Total" etc.
+    // Better amount extraction
     let amount = 0;
-    
-    // Try to find amounts near common invoice keywords
-    const amountRegex = /(?:₹|Rs\.?|Total|Amount|Grand Total|Invoice Value)[\s:₹]*([\d,]+(?:\.\d+)?)/gi;
-    let match;
-    let bestAmount = 0;
-    
-    while ((match = amountRegex.exec(fullText)) !== null) {
-      const candidate = parseFloat(match[1].replace(/,/g, ''));
-      if (candidate > bestAmount && candidate < 100000000) {  // Reasonable upper limit
-        bestAmount = candidate;
-      }
-    }
-    
-    amount = bestAmount;
-
-    // Fallback: find largest reasonable number
-    if (amount === 0) {
-      const allNumbers = fullText.match(/[\d,]+(?:\.\d+)?/g) || [];
-      for (let numStr of allNumbers) {
-        const num = parseFloat(numStr.replace(/,/g, ''));
-        if (num > 100 && num < 100000000 && num > amount) {
-          amount = num;
-        }
-      }
+    const amountMatches = fullText.match(/₹?\s*([\d,]+(?:\.\d{2})?)/g) || [];
+    for (let m of amountMatches) {
+      const num = parseFloat(m.replace(/[^0-9.]/g, ''));
+      if (num > 100 && num < 50000000 && num > amount) amount = num;
     }
 
-    const invoiceNoMatch = fullText.match(/(?:Invoice|Bill|No\.?|PO)\s*[#:]\s*([A-Z0-9\-\/]+)/i);
+    const invoiceNoMatch = fullText.match(/(?:No\.?|Invoice|Bill)[^A-Z0-9]*([A-Z0-9\-]+)/i);
 
     return {
-      year: yearMatch ? yearMatch[1] : 'Unknown',
       invoiceNo: invoiceNoMatch ? invoiceNoMatch[1] : filename.replace('.pdf', ''),
-      date: '—',
-      vendor: 'Procurement Vendor',
+      date: '',
+      vendor: '',
       amount: amount,
-      filename: filename,
-      path: path
+      rawText: fullText.substring(0, 2000), // First 2000 chars for preview
+      filename: filename
     };
   } catch (e) {
-    console.warn("PDF parse error:", filename, e);
-    return null;
+    return { invoiceNo: filename, amount: 0, rawText: "Error reading PDF" };
   }
 }
 
@@ -1265,6 +1262,68 @@ function renderInvoicesTable() {
     `;
     tbody.appendChild(row);
   });
+}
+
+function saveReviewedInvoice() {
+  if (!currentReviewData) return;
+
+  const validated = {
+    year: currentReviewData.filename.match(/(\d{4})/) ? currentReviewData.filename.match(/(\d{4})/)[1] : 'Unknown',
+    invoiceNo: document.getElementById('review-invoice-no').value,
+    date: document.getElementById('review-date').value,
+    vendor: document.getElementById('review-vendor').value,
+    amount: parseFloat(document.getElementById('review-amount').value) || 0,
+    filename: currentReviewData.filename
+  };
+
+  reviewedInvoices.push(validated);
+  renderReviewedSummary();
+
+  // Clear and ready for next
+  document.getElementById('invoice-review-area').classList.add('hidden');
+  currentReviewData = null;
+}
+
+function renderReviewedSummary() {
+  // TODO: Show summary table of validated invoices
+  console.log("Saved Invoices:", reviewedInvoices);
+  alert(`Saved ${reviewedInvoices.length} validated invoice(s).`);
+}
+
+function skipInvoice() {
+  document.getElementById('invoice-review-area').classList.add('hidden');
+}
+
+let reviewedInvoices = [];
+let currentReviewFile = null;
+let currentReviewData = null;
+
+async function selectSingleInvoice() {
+  try {
+    const fileHandle = await window.showOpenFilePicker({
+      types: [{ description: 'PDF Files', accept: { 'application/pdf': ['.pdf'] } }]
+    });
+    
+    const file = await fileHandle[0].getFile();
+    currentReviewFile = file;
+    
+    const extracted = await extractInvoiceFromPDF(file, file.name, "");
+    
+    currentReviewData = extracted;
+    
+    // Populate form
+    document.getElementById('review-filename').textContent = file.name;
+    document.getElementById('review-invoice-no').value = extracted.invoiceNo || '';
+    document.getElementById('review-date').value = extracted.date || '';
+    document.getElementById('review-vendor').value = extracted.vendor || '';
+    document.getElementById('review-amount').value = extracted.amount || '';
+    document.getElementById('review-raw-text').value = extracted.rawText || 'No text extracted';
+    
+    document.getElementById('invoice-review-area').classList.remove('hidden');
+    
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 
