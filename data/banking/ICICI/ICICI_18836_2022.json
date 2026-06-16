@@ -1,0 +1,3002 @@
+[
+  {
+    "transactionId": "S11753862",
+    "Date": "03/01/2022",
+    "Narration": "VPS/FUTURA DIGI/202201031926/200313113821/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1912,
+    "balance": 194710.71
+  },
+  {
+    "transactionId": "S32570866",
+    "Date": "04/01/2022",
+    "Narration": "VPS/RAJANNA MIL/202201041417/200408062058/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1322,
+    "balance": 193388.71
+  },
+  {
+    "transactionId": "S23297282",
+    "Date": "07/01/2022",
+    "Narration": "Mob alrt Chg Nov-21+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 193359.21
+  },
+  {
+    "transactionId": "S29583186",
+    "Date": "25/01/2022",
+    "Narration": "VPS/SRI CHOWD E/202201251302/202507429515/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 200,
+    "balance": 193159.21
+  },
+  {
+    "transactionId": "S97422031",
+    "Date": "31/01/2022",
+    "Narration": "NEFT-N031221812423461-ADDIT LABS-SALARYJAN22-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 593159.21
+  },
+  {
+    "transactionId": "S99082995",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181680851/HDFC0004274/LGcQQ91UAf by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 44400,
+    "balance": 548759.21
+  },
+  {
+    "transactionId": "S99085942",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181682461/HDFC0000041/qAdqFz4Zmq by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 74200,
+    "balance": 474559.21
+  },
+  {
+    "transactionId": "S99089354",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181682611/HDFC0004183/hwSOaK81bI by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 443759.21
+  },
+  {
+    "transactionId": "S99088467",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181682981/HDFC0004183/D6fA0w90WU by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 403959.21
+  },
+  {
+    "transactionId": "S99088628",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181682781/KKBK0000430/VpchpzCx7h by SREENATH from KREDILY/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 44000,
+    "balance": 359959.21
+  },
+  {
+    "transactionId": "S99089220",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181683361/CNRB0001381/t5kfL36gHL by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 21800,
+    "balance": 338159.21
+  },
+  {
+    "transactionId": "S99092196",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181683391/CNRB0000406/TOqEZzT1Fx by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 325159.21
+  },
+  {
+    "transactionId": "S99090821",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181683721/KARB0000724/DKem3Dr8EK by SREENATH from KREDILY/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 6322.58,
+    "balance": 318836.63
+  },
+  {
+    "transactionId": "S99093060",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181684151/IOBA0000310/iRwEbAI0aI by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 304036.63
+  },
+  {
+    "transactionId": "S99093523",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181684681/CNRB0000562/ddPaNqlBjp by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 292036.63
+  },
+  {
+    "transactionId": "S99094049",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181685051/BARB0VASNAG/5WThU6pZbG by SREENATH from KREDILY/YASHASWINI SOMA",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 284036.63
+  },
+  {
+    "transactionId": "S99095513",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181684921/BARB0VJRABA/6s4FlQRWbX by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 274036.63
+  },
+  {
+    "transactionId": "S99095770",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181685241/SBIN0040340/sc5iFJf74C by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 254236.63
+  },
+  {
+    "transactionId": "S99098522",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181685601/SBIN0003966/ZN32V0Ny7d by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 240736.63
+  },
+  {
+    "transactionId": "S99098923",
+    "Date": "31/01/2022",
+    "Narration": "INF/NEFT/026181686021/SBIN0004926/VB344almCC by SREENATH from KREDILY/Rahul Balaji",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 232736.63
+  },
+  {
+    "transactionId": "S79565889",
+    "Date": "03/02/2022",
+    "Narration": "ATD/Auto Debit CC1xx6899",
+    "transactionType": "DR",
+    "transactionAmount": 12891.4,
+    "balance": 219845.23
+  },
+  {
+    "transactionId": "S85351808",
+    "Date": "03/02/2022",
+    "Narration": "BIL/ONL/000319075372/cred.club(/cc payment ICICI BANK NODA",
+    "transactionType": "DR",
+    "transactionAmount": 12891.4,
+    "balance": 206953.83
+  },
+  {
+    "transactionId": "S6098159",
+    "Date": "07/02/2022",
+    "Narration": "BIL/ONL/000322454678/AMAZON PAY ICICI BANK NODA",
+    "transactionType": "DR",
+    "transactionAmount": 220.5,
+    "balance": 206733.33
+  },
+  {
+    "transactionId": "S19823742",
+    "Date": "07/02/2022",
+    "Narration": "INF/NEFT/026275828421/BARB0VjBYAT/consultation charges JAN22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 36000,
+    "balance": 170733.33
+  },
+  {
+    "transactionId": "S36370839",
+    "Date": "11/02/2022",
+    "Narration": "VPS/BPCL SRI CH/202202111547/204210894050/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 170433.33
+  },
+  {
+    "transactionId": "S16704132",
+    "Date": "22/02/2022",
+    "Narration": "BIL/ONL/000333243768/Emudhra Li ICICI BANK NODA",
+    "transactionType": "DR",
+    "transactionAmount": 590,
+    "balance": 169843.33
+  },
+  {
+    "transactionId": "S25118889",
+    "Date": "22/02/2022",
+    "Narration": "BIL/ONL/000333427421/Simpli Nam",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 168843.33
+  },
+  {
+    "transactionId": "S47736300",
+    "Date": "23/02/2022",
+    "Narration": "BIL/ONL/000334005954/Flipkart P",
+    "transactionType": "DR",
+    "transactionAmount": 7683,
+    "balance": 161160.33
+  },
+  {
+    "transactionId": "S47879719",
+    "Date": "23/02/2022",
+    "Narration": "BIL/ONL/000334009651/AMAZON PAY ICICI BANK NODA",
+    "transactionType": "DR",
+    "transactionAmount": 15211.56,
+    "balance": 145948.77
+  },
+  {
+    "transactionId": "S34611748",
+    "Date": "26/02/2022",
+    "Narration": "VPS/SRI CHOWD E/202202261809/205712866001/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 145648.77
+  },
+  {
+    "transactionId": "S84940810",
+    "Date": "28/02/2022",
+    "Narration": "NEFT-N059221850912520-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 545648.77
+  },
+  {
+    "transactionId": "S91914305",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524013971/HDFC0004274/Du41G2VfHK by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 44400,
+    "balance": 501248.77
+  },
+  {
+    "transactionId": "S91918361",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524015391/HDFC0000041/Z4XHDrCMyF by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 80200,
+    "balance": 421048.77
+  },
+  {
+    "transactionId": "S91918780",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524015811/HDFC0004183/wlf5m8VSkv by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 390248.77
+  },
+  {
+    "transactionId": "S91919215",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524015981/HDFC0004183/OtE8eYSTES by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 350448.77
+  },
+  {
+    "transactionId": "S91919593",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524016481/KKBK0000430/1GNR7eAJTX by SREENATH from KREDILY/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 37600,
+    "balance": 312848.77
+  },
+  {
+    "transactionId": "S91919956",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524016611/CNRB0001381/aBDdlaVoO1 by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 288048.77
+  },
+  {
+    "transactionId": "S91920326",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524017231/CNRB0000406/W0hDZljkIu by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 274048.77
+  },
+  {
+    "transactionId": "S91920711",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524017491/KARB0000724/KcSKoLHt9A by SREENATH from KREDILY/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 260048.77
+  },
+  {
+    "transactionId": "S91927307",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524017901/IOBA0000310/HLobb7PRh2 by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 245248.77
+  },
+  {
+    "transactionId": "S91924820",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524018311/BARB0VJRABA/V132mBqxFk by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 233248.77
+  },
+  {
+    "transactionId": "S91925257",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524018801/CNRB0000562/F0uzXZCI4E by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 218448.77
+  },
+  {
+    "transactionId": "S91925595",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524019231/BARB0VASNAG/g9T6vZqh5s by SREENATH from KREDILY/YASHASWINI SOMA",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 208448.77
+  },
+  {
+    "transactionId": "S91925840",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524019291/SBIN0040340/Yl0QLj3nl0 by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 188648.77
+  },
+  {
+    "transactionId": "S91926010",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524019611/SBIN0004926/93m4Y4sQ4j by SREENATH from KREDILY/Rahul Balaji",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 178648.77
+  },
+  {
+    "transactionId": "S91926282",
+    "Date": "28/02/2022",
+    "Narration": "INF/NEFT/026524019871/SBIN0003966/4SC8ttkzeR by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 165148.77
+  },
+  {
+    "transactionId": "S25151370",
+    "Date": "04/03/2022",
+    "Narration": "INF/INFT/026588299311/AttendanceDevic/Kwality",
+    "transactionType": "DR",
+    "transactionAmount": 7788,
+    "balance": 157360.77
+  },
+  {
+    "transactionId": "S28928332",
+    "Date": "04/03/2022",
+    "Narration": "VPS/GROUND UP C/202203041842/206313722714/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 858,
+    "balance": 156502.77
+  },
+  {
+    "transactionId": "S68383431",
+    "Date": "05/03/2022",
+    "Narration": "BIL/ONL/000343488992/Karnataka",
+    "transactionType": "DR",
+    "transactionAmount": 735,
+    "balance": 155767.77
+  },
+  {
+    "transactionId": "S4068993",
+    "Date": "07/03/2022",
+    "Narration": "INF/NEFT/026616150661/BARB0VjBYAT/consultation charges FEB22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 36000,
+    "balance": 119767.77
+  },
+  {
+    "transactionId": "S22147157",
+    "Date": "10/03/2022",
+    "Narration": "VPS/SRI CHOWD E/202203101605/206910882684/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 119467.77
+  },
+  {
+    "transactionId": "S56356513",
+    "Date": "11/03/2022",
+    "Narration": "VPS/DMART GARUD/202203111653/207011033633/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4712.2,
+    "balance": 114755.57
+  },
+  {
+    "transactionId": "S56356292",
+    "Date": "11/03/2022",
+    "Narration": "VPS/DMART GARUD/202203111654/207011034878/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4712.2,
+    "balance": 110043.37
+  },
+  {
+    "transactionId": "S56362405",
+    "Date": "11/03/2022",
+    "Narration": "VPS/PAYMNT RVSL/DMART GARUD/202203111653/207011033633/",
+    "transactionType": "CR",
+    "transactionAmount": 4712.2,
+    "balance": 114755.57
+  },
+  {
+    "transactionId": "S56360350",
+    "Date": "11/03/2022",
+    "Narration": "VPS/PAYMNT RVSL/DMART GARUD/202203111654/207011034878/",
+    "transactionType": "CR",
+    "transactionAmount": 4712.2,
+    "balance": 119467.77
+  },
+  {
+    "transactionId": "S37749739",
+    "Date": "14/03/2022",
+    "Narration": "BIL/ONL/000350479312/ICICI Bank",
+    "transactionType": "DR",
+    "transactionAmount": 5645.13,
+    "balance": 113822.64
+  },
+  {
+    "transactionId": "S87598895",
+    "Date": "16/03/2022",
+    "Narration": "VPS/Gopinath En/202203160603/207500500555/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4200.39,
+    "balance": 109622.25
+  },
+  {
+    "transactionId": "S97793919",
+    "Date": "16/03/2022",
+    "Narration": "VPS/DMART GARUD/202203161312/207507058502/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4164.67,
+    "balance": 105457.58
+  },
+  {
+    "transactionId": "S49389381",
+    "Date": "18/03/2022",
+    "Narration": "Int on FD/RD XXX4255  Tds:0.Int:1115 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1115,
+    "balance": 106572.58
+  },
+  {
+    "transactionId": "S49389381",
+    "Date": "18/03/2022",
+    "Narration": "Int on FD/RD XXX4256  Tds:0.Int:1115 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1115,
+    "balance": 107687.58
+  },
+  {
+    "transactionId": "S53835580",
+    "Date": "18/03/2022",
+    "Narration": "BIL/ONL/000353200846/ICICI Bank",
+    "transactionType": "DR",
+    "transactionAmount": 43500,
+    "balance": 64187.58
+  },
+  {
+    "transactionId": "S1754908",
+    "Date": "20/03/2022",
+    "Narration": "GIB/000077166908/STAX      /63900042003202200016",
+    "transactionType": "DR",
+    "transactionAmount": 1600,
+    "balance": 62587.58
+  },
+  {
+    "transactionId": "S36830045",
+    "Date": "21/03/2022",
+    "Narration": "VPS/BPCL SRI CH/202203211447/208009417076/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 62287.58
+  },
+  {
+    "transactionId": "S12408240",
+    "Date": "24/03/2022",
+    "Narration": "VPS/R A P C M S/202203240754/208302005976/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 2000,
+    "balance": 60287.58
+  },
+  {
+    "transactionId": "S31179968",
+    "Date": "24/03/2022",
+    "Narration": "BIL/ONL/000357426063/Simpli Nam",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 59287.58
+  },
+  {
+    "transactionId": "S48798219",
+    "Date": "25/03/2022",
+    "Narration": "VPS/DHL EXPRESS/202203251210/208406639433/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 415,
+    "balance": 58872.58
+  },
+  {
+    "transactionId": "S57879392",
+    "Date": "25/03/2022",
+    "Narration": "VPS/IOCL BUNK  /202203252334/208418337123/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1002.22,
+    "balance": 57870.36
+  },
+  {
+    "transactionId": "S96670819",
+    "Date": "26/03/2022",
+    "Narration": "IPS/KNIGHT RIDE/202203262335/032622003125/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4000,
+    "balance": 53870.36
+  },
+  {
+    "transactionId": "S7799193",
+    "Date": "27/03/2022",
+    "Narration": "VPS/DEVI       /202203271429/208608674574/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 7400,
+    "balance": 46470.36
+  },
+  {
+    "transactionId": "S34258821",
+    "Date": "31/03/2022",
+    "Narration": "MMT/IMPS/209016107812/Salary/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 446470.36
+  },
+  {
+    "transactionId": "S35027672",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946283801/HDFC0004274/5DHvNojatA by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 44400,
+    "balance": 402070.36
+  },
+  {
+    "transactionId": "S35029157",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946285021/HDFC0000041/YtTArGzIIf by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 80200,
+    "balance": 321870.36
+  },
+  {
+    "transactionId": "S35031945",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946285011/HDFC0004183/043cNxFUqO by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 291070.36
+  },
+  {
+    "transactionId": "S35032388",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946285621/HDFC0004183/vJfnYuypm2 by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 251270.36
+  },
+  {
+    "transactionId": "S35033596",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946285811/CNRB0000406/AyM28pRfag by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 237270.36
+  },
+  {
+    "transactionId": "S35033160",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946286341/KARB0000724/7FVZ0cLQjP by SREENATH from KREDILY/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 223270.36
+  },
+  {
+    "transactionId": "S35033472",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946286551/CNRB0001381/8KUlkB2tmu by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 198470.36
+  },
+  {
+    "transactionId": "S35037080",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946287041/KKBK0000430/FWzSRyuDfd by SREENATH from KREDILY/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 37600,
+    "balance": 160870.36
+  },
+  {
+    "transactionId": "S35035071",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946287441/BARB0VJRABA/LsZE1ANbIt by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 148870.36
+  },
+  {
+    "transactionId": "S35037615",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946287491/CNRB0000562/NqLeWsNeED by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 134070.36
+  },
+  {
+    "transactionId": "S35035582",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946287841/BARB0VASNAG/ClAP5HZTOO by SREENATH from KREDILY/YASHASWINI SOMA",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 124070.36
+  },
+  {
+    "transactionId": "S35037504",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946287371/IOBA0000310/6j4ll4yoqM by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 109270.36
+  },
+  {
+    "transactionId": "S35035948",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946288011/SBIN0040340/rwEM8br6DS by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 89470.36
+  },
+  {
+    "transactionId": "S35036059",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946288281/SBIN0003966/wAnuN10laz by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 75970.36
+  },
+  {
+    "transactionId": "S35038725",
+    "Date": "31/03/2022",
+    "Narration": "INF/NEFT/026946288541/SBIN0004926/ZnW3IwMMoW by SREENATH from KREDILY/Rahul Balaji",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 65970.36
+  },
+  {
+    "transactionId": "C66411839",
+    "Date": "01/04/2022",
+    "Narration": "VPS/BPCL SRI CH/202204011442/209109747716/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 65670.36
+  },
+  {
+    "transactionId": "C71639373",
+    "Date": "01/04/2022",
+    "Narration": "VPS/NAMDHARI AG/202204011738/209112014452/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 828,
+    "balance": 64842.36
+  },
+  {
+    "transactionId": "S81425791",
+    "Date": "02/04/2022",
+    "Narration": "VPS/SEA PIRATE /202204030050/209219360726/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 63642.36
+  },
+  {
+    "transactionId": "S18584708",
+    "Date": "04/04/2022",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 714.31,
+    "balance": 62928.05
+  },
+  {
+    "transactionId": "S62727705",
+    "Date": "05/04/2022",
+    "Narration": "INF/NEFT/027004682341/BARB0VjBYAT/consultation charges MAR22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 36000,
+    "balance": 26928.05
+  },
+  {
+    "transactionId": "S80058117",
+    "Date": "12/04/2022",
+    "Narration": "VPS/SRI CHOWD E/202204120923/210203269756/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 26628.05
+  },
+  {
+    "transactionId": "S12109969",
+    "Date": "13/04/2022",
+    "Narration": "VPS/AVENUE     /202204130829/210302423185/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3379,
+    "balance": 23249.05
+  },
+  {
+    "transactionId": "S29480973",
+    "Date": "13/04/2022",
+    "Narration": "IPS/IOCL MAHASH/202204131717/000000012908/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4313.89,
+    "balance": 18935.16
+  },
+  {
+    "transactionId": "S43211196",
+    "Date": "20/04/2022",
+    "Narration": "VPS/M S WINES  /202204201853/211013041118/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1237,
+    "balance": 17698.16
+  },
+  {
+    "transactionId": "S68243465",
+    "Date": "21/04/2022",
+    "Narration": "NEFT-N111221926226662-ADDIT LABS-TO ICICI-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 217698.16
+  },
+  {
+    "transactionId": "S85673744",
+    "Date": "22/04/2022",
+    "Narration": "VPS/AVENUE     /202204220859/211203474416/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 7529.2,
+    "balance": 210168.96
+  },
+  {
+    "transactionId": "S99687673",
+    "Date": "22/04/2022",
+    "Narration": "VPS/AVENUE     /202204221649/211211019379/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4583.5,
+    "balance": 205585.46
+  },
+  {
+    "transactionId": "S61002031",
+    "Date": "24/04/2022",
+    "Narration": "VPS/SREE GOKULA/202204250301/211421049724/KASARGOD",
+    "transactionType": "DR",
+    "transactionAmount": 2614,
+    "balance": 202971.46
+  },
+  {
+    "transactionId": "S36779926",
+    "Date": "27/04/2022",
+    "Narration": "Mob alrt Chg Mar-22+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 202941.96
+  },
+  {
+    "transactionId": "S68101924",
+    "Date": "28/04/2022",
+    "Narration": "VPS/CHARVI FUEL/202204281329/211807822285/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 202641.96
+  },
+  {
+    "transactionId": "S80224910",
+    "Date": "28/04/2022",
+    "Narration": "VPS/IOCL BUNK  /202204290111/211819615190/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 433.53,
+    "balance": 202208.43
+  },
+  {
+    "transactionId": "S92564813",
+    "Date": "29/04/2022",
+    "Narration": "VPS/AVENUE     /202204290954/211904784173/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 6664,
+    "balance": 195544.43
+  },
+  {
+    "transactionId": "S16529959",
+    "Date": "29/04/2022",
+    "Narration": "MMT/IMPS/211920174071/Salary/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 595544.43
+  },
+  {
+    "transactionId": "S17208221",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343796941/HDFC0004274/R1Y8I8jX1x by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 528644.43
+  },
+  {
+    "transactionId": "S17209299",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343801521/HDFC0000041/RGDg9JgF3u by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 80200,
+    "balance": 448444.43
+  },
+  {
+    "transactionId": "S17211477",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343801571/HDFC0004183/DylvHT3Xcp by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 417644.43
+  },
+  {
+    "transactionId": "S17211875",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343801401/HDFC0004183/gkLXC76SfD by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 377844.43
+  },
+  {
+    "transactionId": "S17210273",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343801631/KKBK0000430/FPCjlrGXOK by SREENATH from KREDILY/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 47600,
+    "balance": 330244.43
+  },
+  {
+    "transactionId": "S17212540",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343801681/CNRB0001381/71TVKiSTtE by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 305444.43
+  },
+  {
+    "transactionId": "S17214224",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343801941/KARB0000724/JDZ8hRIs4z by SREENATH from KREDILY/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 291444.43
+  },
+  {
+    "transactionId": "S17213486",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343801981/CNRB0000406/vlH3VCiBKX by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 277444.43
+  },
+  {
+    "transactionId": "S17214463",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343801991/IOBA0000310/yAUZvbMBlF by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 262644.43
+  },
+  {
+    "transactionId": "S17214721",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343802041/BARB0VJRABA/6bJVBoNvQB by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 250644.43
+  },
+  {
+    "transactionId": "S17215424",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343802101/BARB0VASNAG/NjtLBTl54B by SREENATH from KREDILY/YASHASWINI SOMA",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 240644.43
+  },
+  {
+    "transactionId": "S17217986",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343802201/SBIN0040340/8TFcaGXomI by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 220844.43
+  },
+  {
+    "transactionId": "S17218278",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343802621/SBIN0004926/iZNK6n2v3Z by SREENATH from KREDILY/Rahul Balaji",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 210844.43
+  },
+  {
+    "transactionId": "S17219676",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343802511/SBIN0003966/I8H6SFQdRy by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 197344.43
+  },
+  {
+    "transactionId": "S17219865",
+    "Date": "29/04/2022",
+    "Narration": "INF/NEFT/027343802521/CNRB0000562/pEm05pOdVO by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 182544.43
+  },
+  {
+    "transactionId": "S42573610",
+    "Date": "30/04/2022",
+    "Narration": "IPS/BOWRING SER/202204301716/000000003052/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4300.62,
+    "balance": 178243.81
+  },
+  {
+    "transactionId": "S31029804",
+    "Date": "03/05/2022",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 30382.9,
+    "balance": 147860.91
+  },
+  {
+    "transactionId": "S41654408",
+    "Date": "03/05/2022",
+    "Narration": "VPS/MADHU TRADE/202205031934/212314390812/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4067.95,
+    "balance": 143792.96
+  },
+  {
+    "transactionId": "S68196811",
+    "Date": "04/05/2022",
+    "Narration": "Dt:29/04/22 IOCL BUNK   MAHASH",
+    "transactionType": "DR",
+    "transactionAmount": 2.04,
+    "balance": 143790.92
+  },
+  {
+    "transactionId": "S76982296",
+    "Date": "07/05/2022",
+    "Narration": "VPS/BPCL SRI CH/202205071336/212708378245/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 143490.92
+  },
+  {
+    "transactionId": "S71395865",
+    "Date": "10/05/2022",
+    "Narration": "ATM/SPCNC958/CASH WDL/10-05-22",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 123490.92
+  },
+  {
+    "transactionId": "S71399265",
+    "Date": "10/05/2022",
+    "Narration": "ATM/SPCNC958/CASH WDL RVSL/10-05-22",
+    "transactionType": "CR",
+    "transactionAmount": 20000,
+    "balance": 143490.92
+  },
+  {
+    "transactionId": "S51234759",
+    "Date": "12/05/2022",
+    "Narration": "INF/NEFT/027555686391/BARB0VjBYAT/Salary Apr 22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 40000,
+    "balance": 103490.92
+  },
+  {
+    "transactionId": "S51234947",
+    "Date": "12/05/2022",
+    "Narration": "INF/NEFT/027555686511/HDFC0004183/Reimbursement/MAHESHA P",
+    "transactionType": "DR",
+    "transactionAmount": 970,
+    "balance": 102520.92
+  },
+  {
+    "transactionId": "S74068243",
+    "Date": "13/05/2022",
+    "Narration": "ATM/SPCNC958/CASH WDL/13-05-22",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 82520.92
+  },
+  {
+    "transactionId": "S59757140",
+    "Date": "16/05/2022",
+    "Narration": "VPS/5604 D MART/202205161027/213604251553/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 5735,
+    "balance": 76785.92
+  },
+  {
+    "transactionId": "S62972035",
+    "Date": "16/05/2022",
+    "Narration": "BIL/ONL/000399534813/Eloquent I",
+    "transactionType": "DR",
+    "transactionAmount": 2948,
+    "balance": 73837.92
+  },
+  {
+    "transactionId": "S84830562",
+    "Date": "17/05/2022",
+    "Narration": "VPS/CHARVI FUEL/202205170919/213703778230/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 73537.92
+  },
+  {
+    "transactionId": "S74534468",
+    "Date": "23/05/2022",
+    "Narration": "INF/NEFT/027702216701/KARB0000724/Final Settlement/TANUJA BS",
+    "transactionType": "DR",
+    "transactionAmount": 10387,
+    "balance": 63150.92
+  },
+  {
+    "transactionId": "S2019242",
+    "Date": "24/05/2022",
+    "Narration": "VPS/DARSHAN AUT/202205241148/214406098892/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 62850.92
+  },
+  {
+    "transactionId": "S2035079",
+    "Date": "24/05/2022",
+    "Narration": "VPS/PAYMNT RVSL/DARSHAN AUT/202205241148/214406098892/",
+    "transactionType": "CR",
+    "transactionAmount": 300,
+    "balance": 63150.92
+  },
+  {
+    "transactionId": "S2035315",
+    "Date": "24/05/2022",
+    "Narration": "VPS/DARSHAN AUT/202205241149/214406099464/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 62850.92
+  },
+  {
+    "transactionId": "S5846247",
+    "Date": "24/05/2022",
+    "Narration": "Mob alrt Chg Apr-22+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 62821.42
+  },
+  {
+    "transactionId": "S17317280",
+    "Date": "24/05/2022",
+    "Narration": "BIL/ONL/000405028229/Simpli Nam",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 61821.42
+  },
+  {
+    "transactionId": "S42315872",
+    "Date": "25/05/2022",
+    "Narration": "VIN/PAYU-www cr/202205251733/214512347895/",
+    "transactionType": "DR",
+    "transactionAmount": 3077.19,
+    "balance": 58744.23
+  },
+  {
+    "transactionId": "S11107548",
+    "Date": "27/05/2022",
+    "Narration": "IPS/IOCL MAHASH/202205272126/000000003707/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4100,
+    "balance": 54644.23
+  },
+  {
+    "transactionId": "S70940472",
+    "Date": "30/05/2022",
+    "Narration": "BIL/ONL/000408483500/Razorpay S/Kredily",
+    "transactionType": "DR",
+    "transactionAmount": 16981,
+    "balance": 37663.23
+  },
+  {
+    "transactionId": "C68773816",
+    "Date": "01/06/2022",
+    "Narration": "MMT/IMPS/215200104747/SalaryMay22/ADDIT LABS/HDFCBank",
+    "transactionType": "CR",
+    "transactionAmount": 450000,
+    "balance": 487663.23
+  },
+  {
+    "transactionId": "C68799916",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101451/HDFC0000041/rafW7UTMZt by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 80200,
+    "balance": 407463.23
+  },
+  {
+    "transactionId": "C68801018",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101331/IOBA0000310/vZFgKUyX4E by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 392663.23
+  },
+  {
+    "transactionId": "C68801450",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101751/CNRB0000562/x3m8p96FvO by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 377863.23
+  },
+  {
+    "transactionId": "C68801643",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101781/BARB0VASNAG/JwZDdhJuzM by SREENATH from KREDILY/YASHASWINI SOMA",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 367863.23
+  },
+  {
+    "transactionId": "C68800876",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101311/CNRB0000406/KPJcbKl4q0 by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 353863.23
+  },
+  {
+    "transactionId": "C68802273",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101831/BARB0VJBYAT/aFJNiHSprI by SREENATH from KREDILY/Vidya Lakshmi",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 339063.23
+  },
+  {
+    "transactionId": "C68800089",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101251/HDFC0004183/KGHEt6fk75 by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 308263.23
+  },
+  {
+    "transactionId": "C68800271",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101491/HDFC0004183/T4ZJ0DGt3s by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 268463.23
+  },
+  {
+    "transactionId": "C68800461",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101291/KKBK0000430/IYzfHklbLo by SREENATH from KREDILY/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 47600,
+    "balance": 220863.23
+  },
+  {
+    "transactionId": "C68800658",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101521/CNRB0001381/DEnxtW3lwg by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 196063.23
+  },
+  {
+    "transactionId": "C68802446",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101661/SBIN0018590/VUdixuzqtg by SREENATH from KREDILY/Srujan S",
+    "transactionType": "DR",
+    "transactionAmount": 5161.29,
+    "balance": 190901.94
+  },
+  {
+    "transactionId": "C68802597",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101691/SBIN0003966/DfBvR00W3q by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 177401.94
+  },
+  {
+    "transactionId": "C68801223",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101611/BARB0VJRABA/2UFLBBVTkT by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 165401.94
+  },
+  {
+    "transactionId": "C68801820",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101791/SBIN0040340/4TTg6PxV2H by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 145601.94
+  },
+  {
+    "transactionId": "C68801960",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101641/SBIN0004926/1p2uSMVJ4D by SREENATH from KREDILY/Rahul Balaji",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 135601.94
+  },
+  {
+    "transactionId": "C68799089",
+    "Date": "01/06/2022",
+    "Narration": "INF/NEFT/027836101191/HDFC0004274/MC1lZ1R4xH by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 68701.94
+  },
+  {
+    "transactionId": "S16766380",
+    "Date": "03/06/2022",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 19321.55,
+    "balance": 49380.39
+  },
+  {
+    "transactionId": "S88845520",
+    "Date": "06/06/2022",
+    "Narration": "LABNGXX23275 JUN22 Addit Labs",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 29844.39
+  },
+  {
+    "transactionId": "S18527045",
+    "Date": "06/06/2022",
+    "Narration": "MMT/IMPS/215708164260/ToICICI/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 100000,
+    "balance": 129844.39
+  },
+  {
+    "transactionId": "S18807885",
+    "Date": "06/06/2022",
+    "Narration": "INF/NEFT/027923322091/BARB0VjBYAT/Salary May 22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 39600,
+    "balance": 90244.39
+  },
+  {
+    "transactionId": "S68333571",
+    "Date": "07/06/2022",
+    "Narration": "VPS/BPCL SRI CH/202206071549/215810536254/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 89944.39
+  },
+  {
+    "transactionId": "S9048719",
+    "Date": "08/06/2022",
+    "Narration": "GIB/000081429939/STAX      /63900040806202200995",
+    "transactionType": "DR",
+    "transactionAmount": 2000,
+    "balance": 87944.39
+  },
+  {
+    "transactionId": "S9115877",
+    "Date": "08/06/2022",
+    "Narration": "GIB/000081430047/STAX      /63900040806202200977",
+    "transactionType": "DR",
+    "transactionAmount": 1600,
+    "balance": 86344.39
+  },
+  {
+    "transactionId": "S38770332",
+    "Date": "09/06/2022",
+    "Narration": "VPS/FUTURA DIGI/202206091639/216011011444/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1038,
+    "balance": 85306.39
+  },
+  {
+    "transactionId": "M339066",
+    "Date": "11/06/2022",
+    "Narration": "625413017612 FD clos 11-06-2022 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 105005,
+    "balance": 190311.39
+  },
+  {
+    "transactionId": "M339074",
+    "Date": "11/06/2022",
+    "Narration": "625413017613 FD clos 11-06-2022 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 105005,
+    "balance": 295316.39
+  },
+  {
+    "transactionId": "M377043",
+    "Date": "17/06/2022",
+    "Narration": "TRF TO FD no. 625413021449",
+    "transactionType": "DR",
+    "transactionAmount": 50000,
+    "balance": 245316.39
+  },
+  {
+    "transactionId": "M377578",
+    "Date": "17/06/2022",
+    "Narration": "TRF TO FD no. 625413021450",
+    "transactionType": "DR",
+    "transactionAmount": 50000,
+    "balance": 195316.39
+  },
+  {
+    "transactionId": "S52498422",
+    "Date": "22/06/2022",
+    "Narration": "VPS/BPCL SRI CH/202206221907/217313177560/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 195016.39
+  },
+  {
+    "transactionId": "S1380554",
+    "Date": "24/06/2022",
+    "Narration": "Mob alrt Chg May-22+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 194986.89
+  },
+  {
+    "transactionId": "S89161751",
+    "Date": "30/06/2022",
+    "Narration": "MMT/IMPS/218116165822/SalaryJune22/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 594986.89
+  },
+  {
+    "transactionId": "S92649832",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300218951/HDFC0004274/hEHEf25kr4 by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 528086.89
+  },
+  {
+    "transactionId": "S92652411",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300219451/HDFC0000041/8hz1j4ZO7o by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 80200,
+    "balance": 447886.89
+  },
+  {
+    "transactionId": "S92651423",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300219541/HDFC0004183/aD0EkTCIjU by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 417086.89
+  },
+  {
+    "transactionId": "S92655239",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300219841/HDFC0004183/SBDwxhOwQN by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 59400,
+    "balance": 357686.89
+  },
+  {
+    "transactionId": "S92653675",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300220131/CNRB0001381/XaRaLsCaAz by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 332886.89
+  },
+  {
+    "transactionId": "S92653760",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300220171/KKBK0000430/Hcz10iA4n9 by SREENATH from KREDILY/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 47600,
+    "balance": 285286.89
+  },
+  {
+    "transactionId": "S92654091",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300220441/CNRB0000406/TP5jOVtOny by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 271286.89
+  },
+  {
+    "transactionId": "S92656695",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300220501/IOBA0000310/8Gv7STDXVR by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 256486.89
+  },
+  {
+    "transactionId": "S92654653",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300220791/BARB0VJRABA/pbHV62P4pl by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 244486.89
+  },
+  {
+    "transactionId": "S92657437",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300220701/CNRB0000562/B3kmIAzwKo by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 229686.89
+  },
+  {
+    "transactionId": "S92659180",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300220991/SBIN0040340/kdnnSov74X by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 209886.89
+  },
+  {
+    "transactionId": "S92659466",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300221091/BARB0VJBYAT/miWjRMdRnN by SREENATH from KREDILY/Vidya Lakshmi",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 195086.89
+  },
+  {
+    "transactionId": "S92659804",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300221401/SBIN0018590/KaxkQhvIiE by SREENATH from KREDILY/Srujan S",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 185086.89
+  },
+  {
+    "transactionId": "S92662302",
+    "Date": "30/06/2022",
+    "Narration": "INF/NEFT/028300221621/SBIN0003966/ScWMhMK3fo by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 171586.89
+  },
+  {
+    "transactionId": "S26306387",
+    "Date": "01/07/2022",
+    "Narration": "VPS/SRI CHOWD E/202207011609/218210498074/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 171286.89
+  },
+  {
+    "transactionId": "S17314675",
+    "Date": "04/07/2022",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 17200.21,
+    "balance": 154086.68
+  },
+  {
+    "transactionId": "S17317748",
+    "Date": "04/07/2022",
+    "Narration": "ATD/Auto Debit CC1xx6899",
+    "transactionType": "DR",
+    "transactionAmount": 4078,
+    "balance": 150008.68
+  },
+  {
+    "transactionId": "S54234275",
+    "Date": "05/07/2022",
+    "Narration": "LABNGXX23275 JUL22 Addit Labs",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 130472.68
+  },
+  {
+    "transactionId": "S97693499",
+    "Date": "06/07/2022",
+    "Narration": "INF/NEFT/028397223841/BARB0VjBYAT/Salary Jun 22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 90672.68
+  },
+  {
+    "transactionId": "S617901",
+    "Date": "06/07/2022",
+    "Narration": "VPS/5604 D MART/202207061405/218708048874/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3955.32,
+    "balance": 86717.36
+  },
+  {
+    "transactionId": "S72613651",
+    "Date": "14/07/2022",
+    "Narration": "VPS/BPCL SRI CH/202207141557/219510638133/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 86417.36
+  },
+  {
+    "transactionId": "S30518954",
+    "Date": "29/07/2022",
+    "Narration": "NEFT-N210222055137077-ADDIT LABS-SALARYJUL22-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 450000,
+    "balance": 536417.36
+  },
+  {
+    "transactionId": "S39618588",
+    "Date": "29/07/2022",
+    "Narration": "VPS/AVENUE SUPE/202207291940/221014506613/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4135.2,
+    "balance": 532282.16
+  },
+  {
+    "transactionId": "S53604677",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753847251/HDFC0004274/ZdHRlv0AV5 by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 465382.16
+  },
+  {
+    "transactionId": "S53607610",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753847671/HDFC0000041/OPduqapsA3 by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 75950,
+    "balance": 389432.16
+  },
+  {
+    "transactionId": "S53608115",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753847541/HDFC0004183/MOqMxk9mPE by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 358632.16
+  },
+  {
+    "transactionId": "S53609037",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753848011/HDFC0004183/VT0VIZMLNZ by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 59400,
+    "balance": 299232.16
+  },
+  {
+    "transactionId": "S53610265",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753847911/KKBK0000430/GgJJmzejTt by SREENATH from KREDILY/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 47600,
+    "balance": 251632.16
+  },
+  {
+    "transactionId": "S53610621",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753847941/CNRB0001381/7MTdOkvc8U by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 226832.16
+  },
+  {
+    "transactionId": "S53611468",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753848201/CNRB0000406/mozJeUTC8Q by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 212832.16
+  },
+  {
+    "transactionId": "S53611947",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753848421/IOBA0000310/GNdD0pcfVq by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 198032.16
+  },
+  {
+    "transactionId": "S53612890",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753848311/BARB0VJRABA/ZHE3wWg4ef by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 186032.16
+  },
+  {
+    "transactionId": "S53613425",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753848571/CNRB0000562/6TakYLlueD by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 171232.16
+  },
+  {
+    "transactionId": "S53614390",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753848651/SBIN0040340/0xot4JMzw0 by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 151432.16
+  },
+  {
+    "transactionId": "S53615364",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753848691/BARB0VJBYAT/IWTZgt34Vp by SREENATH from KREDILY/Vidya Lakshmi",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 136632.16
+  },
+  {
+    "transactionId": "S53615832",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753848731/SBIN0018590/g1McqociNA by SREENATH from KREDILY/Srujan S",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 126632.16
+  },
+  {
+    "transactionId": "S53616653",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753849201/IOBA0001099/Ii8AUBJwd3 by SREENATH from KREDILY/Abin Sakkaria",
+    "transactionType": "DR",
+    "transactionAmount": 3548.39,
+    "balance": 123083.77
+  },
+  {
+    "transactionId": "S53617289",
+    "Date": "29/07/2022",
+    "Narration": "INF/INFT/028753849261/vMZOKT1s9M by SREENATH fromKREDILY/Michael Dravid",
+    "transactionType": "DR",
+    "transactionAmount": 3387.1,
+    "balance": 119696.67
+  },
+  {
+    "transactionId": "S53617986",
+    "Date": "29/07/2022",
+    "Narration": "INF/NEFT/028753849121/SBIN0003966/m10vpiMbpR by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 106196.67
+  },
+  {
+    "transactionId": "C32550468",
+    "Date": "30/07/2022",
+    "Narration": "INF/NEFT/028756508111/BARB0VjBYAT/Salary Jul 22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 66396.67
+  },
+  {
+    "transactionId": "S67673937",
+    "Date": "02/08/2022",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 38455.34,
+    "balance": 27941.33
+  },
+  {
+    "transactionId": "S86394369",
+    "Date": "02/08/2022",
+    "Narration": "VPS/SRI CHOWD E/202208021653/221411792477/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 27641.33
+  },
+  {
+    "transactionId": "S66408467",
+    "Date": "04/08/2022",
+    "Narration": "VPS/CROMA      /202208041957/221614827938/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1399,
+    "balance": 26242.33
+  },
+  {
+    "transactionId": "S77891545",
+    "Date": "05/08/2022",
+    "Narration": "LABNGXX23275 AUG22 Addit Labs",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 6706.33
+  },
+  {
+    "transactionId": "S41139332",
+    "Date": "12/08/2022",
+    "Narration": "VPS/HILTON BAR /202208130037/222419291211/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3041,
+    "balance": 3665.33
+  },
+  {
+    "transactionId": "C67119041",
+    "Date": "13/08/2022",
+    "Narration": "IPS/HPCL SRI GA/202208130400/000000037268/MAD-MADDU",
+    "transactionType": "DR",
+    "transactionAmount": 3500.69,
+    "balance": 164.64
+  },
+  {
+    "transactionId": "S86635157",
+    "Date": "17/08/2022",
+    "Narration": "NEFT-N229222082169776-ADDIT LABS-TOADDITLABSICICI-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 100000,
+    "balance": 100164.64
+  },
+  {
+    "transactionId": "C91480569",
+    "Date": "18/08/2022",
+    "Narration": "INF/NEFT/029029942501/CNRB0001381/reimbursement/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 1141,
+    "balance": 99023.64
+  },
+  {
+    "transactionId": "S45627919",
+    "Date": "23/08/2022",
+    "Narration": "IPS/IOCL MAHASH/202208231457/000000014305/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1300.75,
+    "balance": 97722.89
+  },
+  {
+    "transactionId": "S75193325",
+    "Date": "24/08/2022",
+    "Narration": "VPS/AVENUE     /202208241411/223608376499/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4214.7,
+    "balance": 93508.19
+  },
+  {
+    "transactionId": "S95780239",
+    "Date": "25/08/2022",
+    "Narration": "NFS/00762049/CASH WDL/25-08-22/Fee Rs21.00 GST Rs3.78",
+    "transactionType": "DR",
+    "transactionAmount": 10024.78,
+    "balance": 83483.41
+  },
+  {
+    "transactionId": "S95794313",
+    "Date": "25/08/2022",
+    "Narration": "NFS/00762049/CASH WDL/25-08-22/Fee Rs21.00 GST Rs3.78",
+    "transactionType": "DR",
+    "transactionAmount": 10024.78,
+    "balance": 73458.63
+  },
+  {
+    "transactionId": "S78695865",
+    "Date": "30/08/2022",
+    "Narration": "NEFT-N242222097607439-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 573458.63
+  },
+  {
+    "transactionId": "S80980885",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157622601/HDFC0004274/kMrZo2XceY by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 506558.63
+  },
+  {
+    "transactionId": "S80985317",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157623271/HDFC0000041/8ZldRnV7xb by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 75950,
+    "balance": 430608.63
+  },
+  {
+    "transactionId": "S80986320",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157623591/HDFC0004183/Imzc2EI2XL by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 399808.63
+  },
+  {
+    "transactionId": "S80987407",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157623671/HDFC0004183/wRtlZJJZ0y by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 59400,
+    "balance": 340408.63
+  },
+  {
+    "transactionId": "S80988376",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157623781/KKBK0000430/FH1vJicyyV by SREENATH from KREDILY/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 47600,
+    "balance": 292808.63
+  },
+  {
+    "transactionId": "S80988900",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157624071/CNRB0001381/Qpq9GgtkTU by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 268008.63
+  },
+  {
+    "transactionId": "S80990586",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157624181/CNRB0000406/ovTsyHcLPq by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 254008.63
+  },
+  {
+    "transactionId": "S80990997",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157624451/IOBA0000310/QBCVvgfHLp by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 239208.63
+  },
+  {
+    "transactionId": "S80992662",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157624341/CNRB0000562/wTl5LG6MAr by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 224408.63
+  },
+  {
+    "transactionId": "S80993686",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157624791/SBIN0040340/mFZL0TPzIU by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 204608.63
+  },
+  {
+    "transactionId": "S80994623",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157625091/BARB0VJBYAT/PbwkSxRRPA by SREENATH from KREDILY/Vidya Lakshmi",
+    "transactionType": "DR",
+    "transactionAmount": 12580.65,
+    "balance": 192027.98
+  },
+  {
+    "transactionId": "S80995563",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157625191/SBIN0018590/9MH0LtX94q by SREENATH from KREDILY/Srujan S",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 182027.98
+  },
+  {
+    "transactionId": "S80996359",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157625281/IOBA0001099/s784xWSRku by SREENATH from KREDILY/Abin Sakkaria",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 172027.98
+  },
+  {
+    "transactionId": "S80997603",
+    "Date": "30/08/2022",
+    "Narration": "INF/INFT/029157625611/fh4da17m3b by SREENATH fromKREDILY/Michael Dravid",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 157227.98
+  },
+  {
+    "transactionId": "S80998627",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157625731/SBIN0003966/tq4lHKG2fv by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 143727.98
+  },
+  {
+    "transactionId": "S81017705",
+    "Date": "30/08/2022",
+    "Narration": "INF/NEFT/029157629181/BARB0VJRABA/CddFueLkN7 by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 131727.98
+  },
+  {
+    "transactionId": "S86244794",
+    "Date": "02/09/2022",
+    "Narration": "IPS/DARSHAN AUT/202209021750/000000000019/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 131427.98
+  },
+  {
+    "transactionId": "S86774101",
+    "Date": "02/09/2022",
+    "Narration": "INF/NEFT/029192634931/BARB0VjBYAT/Salary Aug 22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 91627.98
+  },
+  {
+    "transactionId": "S86774610",
+    "Date": "02/09/2022",
+    "Narration": "INF/NEFT/029192635031/HDFC0004183/Reimbursement/MAHESHA P",
+    "transactionType": "DR",
+    "transactionAmount": 326,
+    "balance": 91301.98
+  },
+  {
+    "transactionId": "S86774479",
+    "Date": "02/09/2022",
+    "Narration": "INF/NEFT/029192635291/KKBK0000430/Final Settlement/NAVEEN P",
+    "transactionType": "DR",
+    "transactionAmount": 3135,
+    "balance": 88166.98
+  },
+  {
+    "transactionId": "S70507004",
+    "Date": "05/09/2022",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 2759.16,
+    "balance": 85407.82
+  },
+  {
+    "transactionId": "S70507235",
+    "Date": "05/09/2022",
+    "Narration": "ATD/Auto Debit CC1xx6899",
+    "transactionType": "DR",
+    "transactionAmount": 4917.5,
+    "balance": 80490.32
+  },
+  {
+    "transactionId": "S71692577",
+    "Date": "05/09/2022",
+    "Narration": "LABNGXX23275 SEP22 Addit Labs",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 60954.32
+  },
+  {
+    "transactionId": "S77771913",
+    "Date": "08/09/2022",
+    "Narration": "INF/NEFT/029257220521/CNRB0001381/Reimbursement/Vaishak Chaitha",
+    "transactionType": "DR",
+    "transactionAmount": 4071,
+    "balance": 56883.32
+  },
+  {
+    "transactionId": "S50945498",
+    "Date": "19/09/2022",
+    "Narration": "Int on FD/RD XXX4255  Tds:0.Int:1115 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1115,
+    "balance": 57998.32
+  },
+  {
+    "transactionId": "S50945498",
+    "Date": "19/09/2022",
+    "Narration": "Int on FD/RD XXX4256  Tds:0.Int:1115 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1115,
+    "balance": 59113.32
+  },
+  {
+    "transactionId": "S65882284",
+    "Date": "20/09/2022",
+    "Narration": "IPS/DARSHAN AUT/202209201652/000000023842/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 58813.32
+  },
+  {
+    "transactionId": "S73411372",
+    "Date": "21/09/2022",
+    "Narration": "CAM/02871OAR/CASH WDL/21-09-22",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 46813.32
+  },
+  {
+    "transactionId": "S48463952",
+    "Date": "30/09/2022",
+    "Narration": "Dbt card Chg Jul-22+GST",
+    "transactionType": "DR",
+    "transactionAmount": 885,
+    "balance": 45928.32
+  },
+  {
+    "transactionId": "S53248226",
+    "Date": "30/09/2022",
+    "Narration": "NEFT-N273222141129219-ADDIT LABS-SALARY SEPT2022-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 445928.32
+  },
+  {
+    "transactionId": "S54280629",
+    "Date": "30/09/2022",
+    "Narration": "VPS/AVENUE     /202209301915/227313827660/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 6654.04,
+    "balance": 439274.28
+  },
+  {
+    "transactionId": "S56250088",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508599181/HDFC0004274/RWSh0RHPR5 by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 372374.28
+  },
+  {
+    "transactionId": "S56250658",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508599401/HDFC0000041/e8CfjrQpGP by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 75950,
+    "balance": 296424.28
+  },
+  {
+    "transactionId": "S56250432",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508599461/HDFC0004183/wbFy2gm2xq by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 265624.28
+  },
+  {
+    "transactionId": "S56251030",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508599541/HDFC0004183/bmP71Hm76R by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 59400,
+    "balance": 206224.28
+  },
+  {
+    "transactionId": "S56251458",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508599781/CNRB0001381/fZLslBVPWp by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 181424.28
+  },
+  {
+    "transactionId": "S56251201",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508599811/CNRB0000406/AAXEepGZMx by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 167424.28
+  },
+  {
+    "transactionId": "S56251653",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508600041/IOBA0000310/Zx0KqQHAJV by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 152624.28
+  },
+  {
+    "transactionId": "S56251354",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508599901/BARB0VJRABA/XVZUQtSmqJ by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 140624.28
+  },
+  {
+    "transactionId": "S56251831",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508600161/CNRB0000562/3dxvq6VFYM by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 125824.28
+  },
+  {
+    "transactionId": "S56251929",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508600221/SBIN0040340/zEpmEWZUsx by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 106024.28
+  },
+  {
+    "transactionId": "S56252532",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508600271/BARB0VJBYAT/ubXW9xtnP5 by SREENATH from KREDILY/Vidya Lakshmi",
+    "transactionType": "DR",
+    "transactionAmount": 14500,
+    "balance": 91524.28
+  },
+  {
+    "transactionId": "S56252177",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508600451/SBIN0018590/JcQLeZvFdh by SREENATH from KREDILY/Srujan S",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 81524.28
+  },
+  {
+    "transactionId": "S56252257",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508600551/IOBA0001099/GKSkSw94Ss by SREENATH from KREDILY/Abin Sakkaria",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 71524.28
+  },
+  {
+    "transactionId": "S56252337",
+    "Date": "30/09/2022",
+    "Narration": "INF/INFT/029508600611/811Xz5abIL by SREENATH fromKREDILY/Michael Dravid",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 56724.28
+  },
+  {
+    "transactionId": "S56252942",
+    "Date": "30/09/2022",
+    "Narration": "INF/NEFT/029508600691/SBIN0003966/mF0TuxJmo3 by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 43224.28
+  },
+  {
+    "transactionId": "S88551793",
+    "Date": "04/10/2022",
+    "Narration": "ATD/Auto Debit CC1xx6899",
+    "transactionType": "DR",
+    "transactionAmount": 4856.64,
+    "balance": 38367.64
+  },
+  {
+    "transactionId": "S88552065",
+    "Date": "04/10/2022",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 3872.94,
+    "balance": 34494.7
+  },
+  {
+    "transactionId": "S89392182",
+    "Date": "04/10/2022",
+    "Narration": "Mob alrt Chg Jul-22+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 34465.2
+  },
+  {
+    "transactionId": "S96984124",
+    "Date": "05/10/2022",
+    "Narration": "LABNGXX23275 OCT22 Addit Labs",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 14929.2
+  },
+  {
+    "transactionId": "S15790145",
+    "Date": "07/10/2022",
+    "Narration": "INF/NEFT/029585530901/CNRB0001381/Reimbursement/Vaishak Chaitha",
+    "transactionType": "DR",
+    "transactionAmount": 3155,
+    "balance": 11774.2
+  },
+  {
+    "transactionId": "S15927725",
+    "Date": "07/10/2022",
+    "Narration": "MMT/IMPS/228010315845/Toicici/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 100000,
+    "balance": 111774.2
+  },
+  {
+    "transactionId": "S19759333",
+    "Date": "07/10/2022",
+    "Narration": "INF/NEFT/029591890041/BARB0VjBYAT/Salary Aug 22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 71974.2
+  },
+  {
+    "transactionId": "S76507265",
+    "Date": "26/10/2022",
+    "Narration": "VPS/5604 D MART/202210260823/229902502284/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1552.3,
+    "balance": 70421.9
+  },
+  {
+    "transactionId": "S81005123",
+    "Date": "26/10/2022",
+    "Narration": "INF/NEFT/029830574771/SBIN0040340/o9TL7SdUt8 by SREENATH from KREDILY/Nagaraj BS",
+    "transactionType": "DR",
+    "transactionAmount": 4516.13,
+    "balance": 65905.77
+  },
+  {
+    "transactionId": "S87627437",
+    "Date": "27/10/2022",
+    "Narration": "INF/NEFT/029840345011/CNRB0001381/Reimbursement/Vaishak Chaitha",
+    "transactionType": "DR",
+    "transactionAmount": 5915,
+    "balance": 59990.77
+  },
+  {
+    "transactionId": "S87627449",
+    "Date": "27/10/2022",
+    "Narration": "INF/NEFT/029840345071/HDFC0004274/Diwali Gift Reimb/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 14680,
+    "balance": 45310.77
+  },
+  {
+    "transactionId": "S89632734",
+    "Date": "27/10/2022",
+    "Narration": "BIL/ONL/000522385895/Simpli Nam",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 44310.77
+  },
+  {
+    "transactionId": "S93689366",
+    "Date": "28/10/2022",
+    "Narration": "Mob alrt Chg Aug-22+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 44281.27
+  },
+  {
+    "transactionId": "S16735738",
+    "Date": "31/10/2022",
+    "Narration": "NEFT-N304222184515896-ADDIT LABS-SALRY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 444281.27
+  },
+  {
+    "transactionId": "S21887297",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885704411/HDFC0004274/C0nt4t5L8o by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 377381.27
+  },
+  {
+    "transactionId": "S21887749",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885704621/HDFC0000041/hgAl8mLaD0 by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 75950,
+    "balance": 301431.27
+  },
+  {
+    "transactionId": "S21887431",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885704671/HDFC0004183/VvqkQ0YhoV by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 270631.27
+  },
+  {
+    "transactionId": "S21887467",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885704721/HDFC0004183/CJbaSsNJyU by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 59400,
+    "balance": 211231.27
+  },
+  {
+    "transactionId": "S21887515",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885704951/CNRB0001381/d3YE9HMsZe by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 186431.27
+  },
+  {
+    "transactionId": "S21887534",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885704971/CNRB0000406/AHy9X0544z by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 172431.27
+  },
+  {
+    "transactionId": "S21887976",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885705041/BARB0VJRABA/QD1dlMvtbA by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 11225.81,
+    "balance": 161205.46
+  },
+  {
+    "transactionId": "S21887610",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885705191/IOBA0000310/y8LIuHDhXF by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 146405.46
+  },
+  {
+    "transactionId": "S21888061",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885705271/BARB0VJBYAT/6UXvCjQIQd by SREENATH from KREDILY/Vidya Lakshmi",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 131605.46
+  },
+  {
+    "transactionId": "S21888158",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885705091/CNRB0000562/aDqdgyQfIK by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 116805.46
+  },
+  {
+    "transactionId": "S21888214",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885705381/SBIN0018590/5YuX8lu13R by SREENATH from KREDILY/Srujan S",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 106805.46
+  },
+  {
+    "transactionId": "S21889530",
+    "Date": "31/10/2022",
+    "Narration": "INF/INFT/029885706851/KgWt65Apfq by SREENATH fromKREDILY/Michael Dravid",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 92005.46
+  },
+  {
+    "transactionId": "S21889536",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885706861/IOBA0001099/DuiCwAFp8u by SREENATH from KREDILY/Abin Sakkaria",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 82005.46
+  },
+  {
+    "transactionId": "S21889561",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885706941/SBIN0003966/xSl2eAzeSK by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 68505.46
+  },
+  {
+    "transactionId": "S21889942",
+    "Date": "31/10/2022",
+    "Narration": "INF/NEFT/029885707021/HDFC0000367/kmJFPrGr2U by SREENATH from KREDILY/Rakesh Kadam",
+    "transactionType": "DR",
+    "transactionAmount": 17741.94,
+    "balance": 50763.52
+  },
+  {
+    "transactionId": "S22392311",
+    "Date": "01/11/2022",
+    "Narration": "INF/NEFT/029886576731/BARB0VjBYAT/Salary Oct 22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 10963.52
+  },
+  {
+    "transactionId": "S45456645",
+    "Date": "03/11/2022",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 10186.47,
+    "balance": 777.05
+  },
+  {
+    "transactionId": "S63953187",
+    "Date": "05/11/2022",
+    "Narration": "IPS/DARSHAN AUT/202211050907/000000001068/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 477.05
+  },
+  {
+    "transactionId": "S93099503",
+    "Date": "08/11/2022",
+    "Narration": "MMT/IMPS/231214134060/To ICICI AC/ADDIT LABS/HDFCBank",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 200477.05
+  },
+  {
+    "transactionId": "S93296887",
+    "Date": "08/11/2022",
+    "Narration": "INF/NEFT/029985713661/HDFC0004183/Lab Components Reimbursement/MAHESHA P",
+    "transactionType": "DR",
+    "transactionAmount": 38350,
+    "balance": 162127.05
+  },
+  {
+    "transactionId": "S5303615",
+    "Date": "09/11/2022",
+    "Narration": "LABNGXX23275_DM_ADDIT LABS",
+    "transactionType": "DR",
+    "transactionAmount": 20126,
+    "balance": 142001.05
+  },
+  {
+    "transactionId": "S39053425",
+    "Date": "14/11/2022",
+    "Narration": "BIL/ONL/000536433175/Simpli Nam/Milk",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 141001.05
+  },
+  {
+    "transactionId": "S52956482",
+    "Date": "15/11/2022",
+    "Narration": "LABNGXX23275-BOUNCECHGSNOV22GST",
+    "transactionType": "DR",
+    "transactionAmount": 59,
+    "balance": 140942.05
+  },
+  {
+    "transactionId": "S53432342",
+    "Date": "15/11/2022",
+    "Narration": "VPS/BPCL SRI CH/202211151622/231910687972/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 140642.05
+  },
+  {
+    "transactionId": "S54920236",
+    "Date": "15/11/2022",
+    "Narration": "VPS/KONFIDENCE /202211151842/231913917220/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 8520,
+    "balance": 132122.05
+  },
+  {
+    "transactionId": "S5160273",
+    "Date": "22/11/2022",
+    "Narration": "INF/NEFT/030151307331/BARB0VJBYAT/Reimbursement/VIDYA LAKSHMI P",
+    "transactionType": "DR",
+    "transactionAmount": 697,
+    "balance": 131425.05
+  },
+  {
+    "transactionId": "S22660694",
+    "Date": "24/11/2022",
+    "Narration": "NFS/CHBLR009/CASH WDL/24-11-22/Fee Rs21.00 GST Rs3.78",
+    "transactionType": "DR",
+    "transactionAmount": 10024.78,
+    "balance": 121400.27
+  },
+  {
+    "transactionId": "S22674892",
+    "Date": "24/11/2022",
+    "Narration": "NFS/CHBLR009/CASH WDL/24-11-22/Fee Rs21.00 GST Rs3.78",
+    "transactionType": "DR",
+    "transactionAmount": 10024.78,
+    "balance": 111375.49
+  },
+  {
+    "transactionId": "S54243942",
+    "Date": "28/11/2022",
+    "Narration": "BIL/ONL/000545747467/Simpli Nam",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 110375.49
+  },
+  {
+    "transactionId": "S72533352",
+    "Date": "30/11/2022",
+    "Narration": "NEFT-N334222226294733-ADDIT LABS-NOV SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 510375.49
+  },
+  {
+    "transactionId": "S75033846",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249633831/HDFC0004274/dwSnZ9vb2C by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 443475.49
+  },
+  {
+    "transactionId": "S75036116",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249634691/HDFC0000041/NJ9jO3udNd by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 75950,
+    "balance": 367525.49
+  },
+  {
+    "transactionId": "S75036225",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249634981/HDFC0004183/NIS144QnST by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 336725.49
+  },
+  {
+    "transactionId": "S75036353",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249635231/HDFC0004183/VS1YMtyheL by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 59400,
+    "balance": 277325.49
+  },
+  {
+    "transactionId": "S75036856",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249635881/CNRB0001381/8gKnmHHf8u by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 252525.49
+  },
+  {
+    "transactionId": "S75037295",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249636381/IOBA0000310/CJ8elqsvl4 by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 232725.49
+  },
+  {
+    "transactionId": "S75037536",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249636521/BARB0VJRABA/YKnizE6trD by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 220725.49
+  },
+  {
+    "transactionId": "S75037482",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249636601/CNRB0000406/ni2FRjK3u2 by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 206725.49
+  },
+  {
+    "transactionId": "S75038063",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249636951/IOBA0001099/IOFRcsP2QY by SREENATH from KREDILY/Abin Sakkaria",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 196725.49
+  },
+  {
+    "transactionId": "S75037844",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249637291/HDFC0000367/VCWGGh86bw by SREENATH from KREDILY/Rakesh Kadam",
+    "transactionType": "DR",
+    "transactionAmount": 25000,
+    "balance": 171725.49
+  },
+  {
+    "transactionId": "S75038178",
+    "Date": "30/11/2022",
+    "Narration": "INF/INFT/030249637111/rTcZxB63oa by SREENATH fromKREDILY/Michael Dravid",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 156925.49
+  },
+  {
+    "transactionId": "S75038304",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249637631/BARB0VJBYAT/YzH7fvyzCF by SREENATH from KREDILY/Vidya Lakshmi",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 142125.49
+  },
+  {
+    "transactionId": "S75038397",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249637791/SBIN0003916/OY55CE69gg by SREENATH from KREDILY/Sagar K",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 141125.49
+  },
+  {
+    "transactionId": "S75038530",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249638001/PKGB0011105/vvFMhzKCk7 by SREENATH from KREDILY/Raviraj  Telkar",
+    "transactionType": "DR",
+    "transactionAmount": 4500,
+    "balance": 136625.49
+  },
+  {
+    "transactionId": "S75039047",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249638131/CNRB0000562/KmodzdwsNT by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 116825.49
+  },
+  {
+    "transactionId": "S75039139",
+    "Date": "30/11/2022",
+    "Narration": "INF/NEFT/030249638321/SBIN0003966/AqFSQhx391 by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 103325.49
+  },
+  {
+    "transactionId": "S83527125",
+    "Date": "01/12/2022",
+    "Narration": "INF/NEFT/030258957681/SBIN0018590/ePEOuIvpKn by SREENATH from KREDILY/Srujan S",
+    "transactionType": "DR",
+    "transactionAmount": 5000,
+    "balance": 98325.49
+  },
+  {
+    "transactionId": "S17847547",
+    "Date": "05/12/2022",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 22200.28,
+    "balance": 76125.21
+  },
+  {
+    "transactionId": "S20406899",
+    "Date": "05/12/2022",
+    "Narration": "LABNGXX23275 DEC22 Addit Labs",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 56589.21
+  },
+  {
+    "transactionId": "S25117331",
+    "Date": "05/12/2022",
+    "Narration": "IPS/DARSHAN AUT/202212051650/000000000686/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 56289.21
+  },
+  {
+    "transactionId": "S25344015",
+    "Date": "05/12/2022",
+    "Narration": "VPS/YESSAR HOME/202212052235/233917528480/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 745,
+    "balance": 55544.21
+  },
+  {
+    "transactionId": "S44191824",
+    "Date": "07/12/2022",
+    "Narration": "INF/NEFT/030340763041/BARB0VjBYAT/Salary Nov 22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 15744.21
+  },
+  {
+    "transactionId": "S53911305",
+    "Date": "08/12/2022",
+    "Narration": "VPS/YESSAR HOME/202212081816/234212649962/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 445,
+    "balance": 15299.21
+  },
+  {
+    "transactionId": "S92779960",
+    "Date": "12/12/2022",
+    "Narration": "BIL/ONL/000557840622/Simpli Nam",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 14299.21
+  },
+  {
+    "transactionId": "S3368115",
+    "Date": "14/12/2022",
+    "Narration": "625413018565 FD clos 14-12-2022 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 106277,
+    "balance": 120576.21
+  },
+  {
+    "transactionId": "S3368132",
+    "Date": "14/12/2022",
+    "Narration": "625413018566 FD clos 14-12-2022 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 106277,
+    "balance": 226853.21
+  },
+  {
+    "transactionId": "M372508",
+    "Date": "14/12/2022",
+    "Narration": "TRF TO FD no. 625413023380",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 126853.21
+  },
+  {
+    "transactionId": "S41901914",
+    "Date": "18/12/2022",
+    "Narration": "VPS/YESSAR HOME/202212182144/235216830762/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 932,
+    "balance": 125921.21
+  },
+  {
+    "transactionId": "S42039883",
+    "Date": "18/12/2022",
+    "Narration": "IPS/DARSHAN AUT/202212181642/000000000431/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 300,
+    "balance": 125621.21
+  },
+  {
+    "transactionId": "S50599296",
+    "Date": "19/12/2022",
+    "Narration": "NEFT-CITIN22382246436-PAYPAL PAYMENTS PL-OPGSP COLL AC-P1008-0521888008-CITI0100000",
+    "transactionType": "CR",
+    "transactionAmount": 34.76,
+    "balance": 125655.97
+  },
+  {
+    "transactionId": "S74671810",
+    "Date": "22/12/2022",
+    "Narration": "Mob alrt Chg Sep-22+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 125626.47
+  },
+  {
+    "transactionId": "S77319337",
+    "Date": "22/12/2022",
+    "Narration": "VPS/FUTURA DIGI/202212222042/235615225463/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 71,
+    "balance": 125555.47
+  },
+  {
+    "transactionId": "S79153191",
+    "Date": "22/12/2022",
+    "Narration": "INF/NEFT/030533719661/CNRB0001381/Christmas  reimbursement/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 2720,
+    "balance": 122835.47
+  },
+  {
+    "transactionId": "S79152936",
+    "Date": "22/12/2022",
+    "Narration": "INF/NEFT/030533719771/CNRB0001381/IT reimbursement/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 1420,
+    "balance": 121415.47
+  },
+  {
+    "transactionId": "S79372959",
+    "Date": "22/12/2022",
+    "Narration": "VPS/FUTURA DIGI/202212222356/235618347403/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3098,
+    "balance": 118317.47
+  },
+  {
+    "transactionId": "S87249732",
+    "Date": "23/12/2022",
+    "Narration": "VPS/Venus Wine /202212231430/235709731127/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1275,
+    "balance": 117042.47
+  },
+  {
+    "transactionId": "S27703530",
+    "Date": "28/12/2022",
+    "Narration": "BIL/ONL/000567742923/Simpli Nam",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 116042.47
+  },
+  {
+    "transactionId": "S52255284",
+    "Date": "30/12/2022",
+    "Narration": "MMT/IMPS/236419139456/Salary Dec/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 450000,
+    "balance": 566042.47
+  },
+  {
+    "transactionId": "S52887517",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619988841/HDFC0004274/sNo8V70nfZ by SREENATH from KREDILY/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 499142.47
+  },
+  {
+    "transactionId": "S52887744",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619989241/HDFC0000041/jj2VWJsd1i by SREENATH from KREDILY/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 75950,
+    "balance": 423192.47
+  },
+  {
+    "transactionId": "S52887895",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619989411/HDFC0004183/SQgZWkozIU by SREENATH from KREDILY/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 30800,
+    "balance": 392392.47
+  },
+  {
+    "transactionId": "S52888393",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619989561/HDFC0004183/xB6ImjZDy5 by SREENATH from KREDILY/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 59400,
+    "balance": 332992.47
+  },
+  {
+    "transactionId": "S52888020",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619989531/CNRB0001381/7BPQIkwtGF by SREENATH from KREDILY/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 308192.47
+  },
+  {
+    "transactionId": "S52888076",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619989651/CNRB0000406/aXFxgtIzh1 by SREENATH from KREDILY/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 294192.47
+  },
+  {
+    "transactionId": "S52888155",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619989701/IOBA0000310/zF8eYi1H19 by SREENATH from KREDILY/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 274392.47
+  },
+  {
+    "transactionId": "S52888205",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619989741/BARB0VJRABA/204cwDUxK7 by SREENATH from KREDILY/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 262392.47
+  },
+  {
+    "transactionId": "S52888759",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619990041/CNRB0000562/ksilttmsq5 by SREENATH from KREDILY/VILAS HJ",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 242592.47
+  },
+  {
+    "transactionId": "S52888832",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619990251/BARB0VJBYAT/5YKAjOzRGy by SREENATH from KREDILY/Vidya Lakshmi",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 227792.47
+  },
+  {
+    "transactionId": "S52889395",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619990111/IOBA0001099/SvP45MUTza by SREENATH from KREDILY/Abin Sakkaria",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 217792.47
+  },
+  {
+    "transactionId": "S52889448",
+    "Date": "30/12/2022",
+    "Narration": "INF/INFT/030619990561/RsEi14vKyp by SREENATH fromKREDILY/Michael Dravid",
+    "transactionType": "DR",
+    "transactionAmount": 14800,
+    "balance": 202992.47
+  },
+  {
+    "transactionId": "S52889527",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619990641/HDFC0000367/EOMWh4vwsG by SREENATH from KREDILY/Rakesh Kadam",
+    "transactionType": "DR",
+    "transactionAmount": 24400,
+    "balance": 178592.47
+  },
+  {
+    "transactionId": "S52889176",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619990481/PKGB0011105/RBhDL1MDuP by SREENATH from KREDILY/Raviraj  Telkar",
+    "transactionType": "DR",
+    "transactionAmount": 14516.13,
+    "balance": 164076.34
+  },
+  {
+    "transactionId": "S52889688",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619990521/SBIN0003916/oiaO2iGrD5 by SREENATH from KREDILY/Sagar K",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 154076.34
+  },
+  {
+    "transactionId": "S52889969",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619990911/KARB0000981/0FBmABp0dU by SREENATH from KREDILY/Shashank T",
+    "transactionType": "DR",
+    "transactionAmount": 3870.97,
+    "balance": 150205.37
+  },
+  {
+    "transactionId": "S52890047",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619991351/BKID0008462/QSEUZACXA4 by SREENATH from KREDILY/Ranjita Kundur",
+    "transactionType": "DR",
+    "transactionAmount": 8709.68,
+    "balance": 141495.69
+  },
+  {
+    "transactionId": "S52890557",
+    "Date": "30/12/2022",
+    "Narration": "INF/NEFT/030619991251/SBIN0003966/9JcYKb2uOK by SREENATH from KREDILY/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 127995.69
+  },
+  {
+    "transactionId": "S55223144",
+    "Date": "31/12/2022",
+    "Narration": "INF/NEFT/030622826651/BARB0VjBYAT/Salary Dec 22/SUBRAMANYA PR",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 88195.69
+  },
+  {
+    "transactionId": "S55223167",
+    "Date": "31/12/2022",
+    "Narration": "INF/NEFT/030622826681/CNRB0001381/Futura Digital/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 295,
+    "balance": 87900.69
+  },
+  {
+    "transactionId": "S55223229",
+    "Date": "31/12/2022",
+    "Narration": "INF/NEFT/030622826711/HDFC0000367/Office Supplies/Rakesh Kadam",
+    "transactionType": "DR",
+    "transactionAmount": 2525,
+    "balance": 85375.69
+  },
+  {
+    "transactionId": "S55223414",
+    "Date": "31/12/2022",
+    "Narration": "INF/NEFT/030622826691/CNRB0001381/Office Supplies/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 303,
+    "balance": 85072.69
+  }
+]

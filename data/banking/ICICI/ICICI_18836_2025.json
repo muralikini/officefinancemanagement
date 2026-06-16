@@ -1,0 +1,2090 @@
+[
+  {
+    "transactionId": "S22568173",
+    "Date": "03-01-2025",
+    "Narration": "ATD/Auto Debit CC1xx6899",
+    "transactionType": "DR",
+    "transactionAmount": 12055.54,
+    "balance": 90381.61
+  },
+  {
+    "transactionId": "S46286863",
+    "Date": "05-01-2025",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 70845.61
+  },
+  {
+    "transactionId": "S54336797",
+    "Date": "16/01/2025",
+    "Narration": "Mob alrt Chg Nov-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 70816.11
+  },
+  {
+    "transactionId": "S85152903",
+    "Date": "20/01/2025",
+    "Narration": "INF/NEFT/ICICN42025012054510795/CNRB0001381/Salary Jan Advance 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 41800,
+    "balance": 29016.11
+  },
+  {
+    "transactionId": "S48269408",
+    "Date": "28/01/2025",
+    "Narration": "Mob alrt Chg Sep-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 28986.61
+  },
+  {
+    "transactionId": "S81176195",
+    "Date": "31/01/2025",
+    "Narration": "NEFT-HDFCN52025013132319197-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 450000,
+    "balance": 478986.61
+  },
+  {
+    "transactionId": "S83380224",
+    "Date": "31/01/2025",
+    "Narration": "INF/INFT/039111089581/Salary Jan 25 /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 456986.61
+  },
+  {
+    "transactionId": "S83433914",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932478/CNRB0001381/Salary Jan 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 438986.61
+  },
+  {
+    "transactionId": "S83433480",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932481/BARB0VJSIUT/Salary Jan 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 425986.61
+  },
+  {
+    "transactionId": "S83432672",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932630/IDIB000D030/Salary Jan 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 415986.61
+  },
+  {
+    "transactionId": "S83433131",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932637/BKID0009249/Salary Jan 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 405986.61
+  },
+  {
+    "transactionId": "S83433167",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932641/BKID0009675/Salary Jan 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 395986.61
+  },
+  {
+    "transactionId": "S83437240",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932826/HDFC0004274/Salary Jan 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 329086.61
+  },
+  {
+    "transactionId": "S83438127",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932897/HDFC0000041/Salary Jan 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 252086.61
+  },
+  {
+    "transactionId": "S83438148",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151933012/KKBK0000430/Salary Jan 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 203686.61
+  },
+  {
+    "transactionId": "S83437734",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932904/BARB0VJRABA/Salary Jan 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 183686.61
+  },
+  {
+    "transactionId": "S83438252",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932911/KKBK0000811/Salary Jan 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 168686.61
+  },
+  {
+    "transactionId": "S83438570",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932907/HDFC0000367/Salary Jan 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 141386.61
+  },
+  {
+    "transactionId": "S83437832",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932916/SBIN0040392/Salary Jan 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 124386.61
+  },
+  {
+    "transactionId": "S83437885",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932925/CNRB0000479/Salary Jan 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 110386.61
+  },
+  {
+    "transactionId": "S83438353",
+    "Date": "31/01/2025",
+    "Narration": "INF/NEFT/ICICN42025013151932930/SBIN0003966/Salary Jan 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 96886.61
+  },
+  {
+    "transactionId": "S21169693",
+    "Date": "04-02-2025",
+    "Narration": "Mob alrt Chg Dec-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 96857.11
+  },
+  {
+    "transactionId": "S32482014",
+    "Date": "05-02-2025",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 77321.11
+  },
+  {
+    "transactionId": "S52630378",
+    "Date": "28/02/2025",
+    "Narration": "MMT/IMPS/505920335354/Salary/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 477321.11
+  },
+  {
+    "transactionId": "S53488976",
+    "Date": "28/02/2025",
+    "Narration": "INF/INFT/039422055591/Salary Feb 2025/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 455321.11
+  },
+  {
+    "transactionId": "S53528599",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426702/SBIN0040392/Salary Feb 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 438321.11
+  },
+  {
+    "transactionId": "S53527758",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426693/SBIN0003966/Salary Feb 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 424821.11
+  },
+  {
+    "transactionId": "S53528199",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426704/CNRB0000479/Salary Feb 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 410821.11
+  },
+  {
+    "transactionId": "S53527771",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426694/CNRB0001381/Salary Feb 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 392821.11
+  },
+  {
+    "transactionId": "S53528244",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426712/BARB0VJSIUT/Salary Feb 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 379821.11
+  },
+  {
+    "transactionId": "S53528257",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426715/IDIB000D030/Salary Feb 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 369821.11
+  },
+  {
+    "transactionId": "S53527802",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426716/BKID0009249/Salary Feb 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 359821.11
+  },
+  {
+    "transactionId": "S53528707",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426744/BKID0009675/Salary Feb 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 349821.11
+  },
+  {
+    "transactionId": "S53528362",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426749/HDFC0000041/Salary Feb 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 272821.11
+  },
+  {
+    "transactionId": "S53528753",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426748/HDFC0004274/Salary Feb 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 205921.11
+  },
+  {
+    "transactionId": "S53527876",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426750/KKBK0000430/Salary Feb 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 157521.11
+  },
+  {
+    "transactionId": "S53528393",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426751/CNRB0001381/Salary Feb 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 41800,
+    "balance": 115721.11
+  },
+  {
+    "transactionId": "S53527917",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426757/HDFC0000367/Salary Feb 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 88421.11
+  },
+  {
+    "transactionId": "S53528405",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426753/BARB0VJRABA/Salary Feb 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 68421.11
+  },
+  {
+    "transactionId": "S53528817",
+    "Date": "28/02/2025",
+    "Narration": "INF/NEFT/ICICN42025022857426759/KKBK0000811/Salary Feb 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 53421.11
+  },
+  {
+    "transactionId": "S2767124",
+    "Date": "05-03-2025",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 33885.11
+  },
+  {
+    "transactionId": "S68180246",
+    "Date": "11-03-2025",
+    "Narration": "Mob alrt Chg Jan-25+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 33855.61
+  },
+  {
+    "transactionId": "S19532284",
+    "Date": "28/03/2025",
+    "Narration": "Mob alrt Chg Feb-25+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 33826.11
+  },
+  {
+    "transactionId": "S23207983",
+    "Date": "28/03/2025",
+    "Narration": "NEFT-HDFCN52025032842291738-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 450000,
+    "balance": 483826.11
+  },
+  {
+    "transactionId": "S24931614",
+    "Date": "28/03/2025",
+    "Narration": "INF/INFT/039746137341/Salary Mar 2025/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 461826.11
+  },
+  {
+    "transactionId": "S25140496",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815506/HDFC0004274/Salary Mar 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 394926.11
+  },
+  {
+    "transactionId": "S25141463",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815508/HDFC0000041/Salary Mar 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 317926.11
+  },
+  {
+    "transactionId": "S25141500",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815516/KKBK0000430/Salary Mar 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 269526.11
+  },
+  {
+    "transactionId": "S25141542",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815524/CNRB0001381/Salary Mar 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 41800,
+    "balance": 227726.11
+  },
+  {
+    "transactionId": "S25140641",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815533/BARB0VJRABA/Salary Mar 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 207726.11
+  },
+  {
+    "transactionId": "S25141643",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815544/HDFC0000367/Salary Mar 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 180426.11
+  },
+  {
+    "transactionId": "S25142280",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815552/KKBK0000811/Salary Mar 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 165426.11
+  },
+  {
+    "transactionId": "S25142321",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815612/SBIN0040392/Salary Mar 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 148426.11
+  },
+  {
+    "transactionId": "S25142645",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815613/CNRB0000479/Salary Mar 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 134426.11
+  },
+  {
+    "transactionId": "S25141790",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815619/SBIN0003966/Salary Mar 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 120926.11
+  },
+  {
+    "transactionId": "S25142693",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815620/CNRB0001381/Salary Mar 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 102926.11
+  },
+  {
+    "transactionId": "S25141858",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815627/BARB0VJSIUT/Salary Mar 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 89926.11
+  },
+  {
+    "transactionId": "S25143158",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815630/IDIB000D030/Salary Mar 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 79926.11
+  },
+  {
+    "transactionId": "S25141969",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815695/BKID0009675/Salary Mar 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 7500,
+    "balance": 72426.11
+  },
+  {
+    "transactionId": "S25142518",
+    "Date": "28/03/2025",
+    "Narration": "INF/NEFT/ICICN42025032853815687/BKID0009249/Salary Mar 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 7500,
+    "balance": 64926.11
+  },
+  {
+    "transactionId": "S7383466",
+    "Date": "05-04-2025",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 45390.11
+  },
+  {
+    "transactionId": "S14534973",
+    "Date": "16/04/2025",
+    "Narration": "RTGS-HDFCR52025041661701049-ADDIT LABS-50200032062102 -HDFC0000240",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 445390.11
+  },
+  {
+    "transactionId": "M3660574",
+    "Date": "16/04/2025",
+    "Narration": "TRF TO FD no. 625413033505",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 345390.11
+  },
+  {
+    "transactionId": "M3661199",
+    "Date": "16/04/2025",
+    "Narration": "TRF TO FD no. 625413033506",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 245390.11
+  },
+  {
+    "transactionId": "M3660711",
+    "Date": "16/04/2025",
+    "Narration": "TRF TO FD no. 625413033507",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 145390.11
+  },
+  {
+    "transactionId": "M3661181",
+    "Date": "16/04/2025",
+    "Narration": "TRF TO FD no. 625413033508",
+    "transactionType": "DR",
+    "transactionAmount": 50000,
+    "balance": 95390.11
+  },
+  {
+    "transactionId": "M3661601",
+    "Date": "16/04/2025",
+    "Narration": "TRF TO FD no. 625413033509",
+    "transactionType": "DR",
+    "transactionAmount": 50000,
+    "balance": 45390.11
+  },
+  {
+    "transactionId": "S27208926",
+    "Date": "18/04/2025",
+    "Narration": "NEFT-HDFCN52025041885488223-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 600000,
+    "balance": 645390.11
+  },
+  {
+    "transactionId": "M3221901",
+    "Date": "18/04/2025",
+    "Narration": "TRF TO FD no. 625413033528",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 545390.11
+  },
+  {
+    "transactionId": "M3222325",
+    "Date": "18/04/2025",
+    "Narration": "TRF TO FD no. 625413033529",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 445390.11
+  },
+  {
+    "transactionId": "M3222678",
+    "Date": "18/04/2025",
+    "Narration": "TRF TO FD no. 625413033530",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 345390.11
+  },
+  {
+    "transactionId": "M3222630",
+    "Date": "18/04/2025",
+    "Narration": "TRF TO FD no. 625413033531",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 245390.11
+  },
+  {
+    "transactionId": "M3222995",
+    "Date": "18/04/2025",
+    "Narration": "TRF TO FD no. 625413033532",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 145390.11
+  },
+  {
+    "transactionId": "M3223222",
+    "Date": "18/04/2025",
+    "Narration": "TRF TO FD no. 625413033533",
+    "transactionType": "DR",
+    "transactionAmount": 50000,
+    "balance": 95390.11
+  },
+  {
+    "transactionId": "S13456108",
+    "Date": "29/04/2025",
+    "Narration": "Mob alrt Chg Mar-25+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 95360.61
+  },
+  {
+    "transactionId": "S24061754",
+    "Date": "30/04/2025",
+    "Narration": "NEFT-HDFCN52025043003277543-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 700000,
+    "balance": 795360.61
+  },
+  {
+    "transactionId": "S27956321",
+    "Date": "30/04/2025",
+    "Narration": "INF/INFT/040103640831/Salary Apr 2025/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 24200,
+    "balance": 771160.61
+  },
+  {
+    "transactionId": "S28022203",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058523832/SBIN0003966/Bonus24 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 757660.61
+  },
+  {
+    "transactionId": "S28023357",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058523680/HDFC0000041/Bonus24 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 81000,
+    "balance": 676660.61
+  },
+  {
+    "transactionId": "S28026209",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524381/HDFC0004274/Salary Apr 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 609760.61
+  },
+  {
+    "transactionId": "S28026611",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524390/HDFC0000041/Salary Apr 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 532760.61
+  },
+  {
+    "transactionId": "S28027002",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524398/KKBK0000430/Salary Apr 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 53300,
+    "balance": 479460.61
+  },
+  {
+    "transactionId": "S28027038",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524402/CNRB0001381/Salary Apr 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 45800,
+    "balance": 433660.61
+  },
+  {
+    "transactionId": "S28027070",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524410/BARB0VJRABA/Salary Apr 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 411660.61
+  },
+  {
+    "transactionId": "S28027103",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524624/HDFC0000367/Salary Apr 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 381660.61
+  },
+  {
+    "transactionId": "S28027636",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524638/KKBK0000811/Salary Apr 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 362660.61
+  },
+  {
+    "transactionId": "S28027683",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524651/SBIN0040392/Salary Apr 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 21000,
+    "balance": 341660.61
+  },
+  {
+    "transactionId": "S28027216",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524667/CNRB0000479/Salary Apr 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 323660.61
+  },
+  {
+    "transactionId": "S28026836",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524752/SBIN0003966/Salary Apr 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 310160.61
+  },
+  {
+    "transactionId": "S28028484",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524842/CNRB0001381/Salary Apr 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 290160.61
+  },
+  {
+    "transactionId": "S28027330",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524773/BARB0VJSIUT/Salary Apr 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 16000,
+    "balance": 274160.61
+  },
+  {
+    "transactionId": "S28028220",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524875/IDIB000D030/Salary Apr 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 260160.61
+  },
+  {
+    "transactionId": "S28027389",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524891/BKID0009249/Salary Apr 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 7500,
+    "balance": 252660.61
+  },
+  {
+    "transactionId": "S28028588",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524909/BKID0009675/Salary Apr 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 7500,
+    "balance": 245160.61
+  },
+  {
+    "transactionId": "S28029026",
+    "Date": "30/04/2025",
+    "Narration": "INF/NEFT/ICICN42025043058524805/HDFC0004274/Bonus24 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 67500,
+    "balance": 177660.61
+  },
+  {
+    "transactionId": "S73833674",
+    "Date": "05-05-2025",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19502,
+    "balance": 158158.61
+  },
+  {
+    "transactionId": "S501922",
+    "Date": "30/05/2025",
+    "Narration": "NEFT-HDFCN52025053061580320-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 658158.61
+  },
+  {
+    "transactionId": "S724895",
+    "Date": "30/05/2025",
+    "Narration": "INF/INFT/040423824971/Salary May 2025/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 24200,
+    "balance": 633958.61
+  },
+  {
+    "transactionId": "S830249",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748031/HDFC0004274/Salary May 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 567058.61
+  },
+  {
+    "transactionId": "S829922",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051747981/HDFC0000041/Salary May 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 490058.61
+  },
+  {
+    "transactionId": "S830687",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748044/KKBK0000430/Salary May 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 53300,
+    "balance": 436758.61
+  },
+  {
+    "transactionId": "S830335",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748058/BARB0VJRABA/Salary May 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 414758.61
+  },
+  {
+    "transactionId": "S830714",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748051/CNRB0001381/Salary May 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 45800,
+    "balance": 368958.61
+  },
+  {
+    "transactionId": "S830032",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748012/KKBK0000811/Salary May 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 349958.61
+  },
+  {
+    "transactionId": "S830360",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748065/HDFC0000367/Salary May 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 319958.61
+  },
+  {
+    "transactionId": "S830837",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748078/SBIN0040392/Salary May 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 21000,
+    "balance": 298958.61
+  },
+  {
+    "transactionId": "S830864",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748093/CNRB0000479/Salary May 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 280958.61
+  },
+  {
+    "transactionId": "S831248",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748204/SBIN0003966/Salary May 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 267458.61
+  },
+  {
+    "transactionId": "S830497",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748215/BARB0VJSIUT/Salary May 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 16000,
+    "balance": 251458.61
+  },
+  {
+    "transactionId": "S830927",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748208/CNRB0001381/Salary May 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 231458.61
+  },
+  {
+    "transactionId": "S830528",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748122/BKID0009249/Salary May 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 11500,
+    "balance": 219958.61
+  },
+  {
+    "transactionId": "S831665",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748222/IDIB000D030/Salary May 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 205958.61
+  },
+  {
+    "transactionId": "S830546",
+    "Date": "30/05/2025",
+    "Narration": "INF/NEFT/ICICN42025053051748128/BKID0009675/Salary May 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 11500,
+    "balance": 194458.61
+  },
+  {
+    "transactionId": "S8339470",
+    "Date": "31/05/2025",
+    "Narration": "NEFT-HDFCN52025053163435988-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 394458.61
+  },
+  {
+    "transactionId": "M3275745",
+    "Date": "31/05/2025",
+    "Narration": "TRF TO FD no. 625413033994",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 294458.61
+  },
+  {
+    "transactionId": "M3276935",
+    "Date": "31/05/2025",
+    "Narration": "TRF TO FD no. 625413033995",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 194458.61
+  },
+  {
+    "transactionId": "S9578068",
+    "Date": "31/05/2025",
+    "Narration": "Mob alrt Chg Apr-25+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 194429.11
+  },
+  {
+    "transactionId": "S38458721",
+    "Date": "03-06-2025",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 470.82,
+    "balance": 193958.29
+  },
+  {
+    "transactionId": "S31159138",
+    "Date": "24/06/2025",
+    "Narration": "INF/NEFT/ICICN42025062455047682/CNRB0001381/Salary Jun 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 45800,
+    "balance": 148158.29
+  },
+  {
+    "transactionId": "S91691036",
+    "Date": "30/06/2025",
+    "Narration": "NEFT-HDFCN52025063021433603-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 548158.29
+  },
+  {
+    "transactionId": "S93081725",
+    "Date": "30/06/2025",
+    "Narration": "INF/INFT/040756825701/Salary Jun 25 /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 24200,
+    "balance": 523958.29
+  },
+  {
+    "transactionId": "S95639237",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159085036/HDFC0004274/Salary Jun 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 457058.29
+  },
+  {
+    "transactionId": "S95639886",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159085011/CNRB0001381/Salary Jun 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 437058.29
+  },
+  {
+    "transactionId": "S95639889",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159085017/BARB0VJSIUT/Salary Jun 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 16000,
+    "balance": 421058.29
+  },
+  {
+    "transactionId": "S95640407",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159085042/IDIB000D030/Salary Jun 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 407058.29
+  },
+  {
+    "transactionId": "S95649950",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159086381/HDFC0000041/Salary Jun 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 330058.29
+  },
+  {
+    "transactionId": "S95649209",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159086382/KKBK0000811/Salary Jun 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 311058.29
+  },
+  {
+    "transactionId": "S95649218",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159086430/SBIN0040392/Salary Jun 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 21000,
+    "balance": 290058.29
+  },
+  {
+    "transactionId": "S95649228",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159086433/CNRB0000479/Salary Jun 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 272058.29
+  },
+  {
+    "transactionId": "S95649791",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159086434/BARB0VJRABA/Salary Jun 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 250058.29
+  },
+  {
+    "transactionId": "S95649970",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159086431/KKBK0000430/Salary Jun 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 53300,
+    "balance": 196758.29
+  },
+  {
+    "transactionId": "S95649798",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159086392/SBIN0003966/Salary Jun 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 183258.29
+  },
+  {
+    "transactionId": "S95650382",
+    "Date": "01-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070159086437/HDFC0000367/Salary Jun 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 153258.29
+  },
+  {
+    "transactionId": "S28028936",
+    "Date": "03-07-2025",
+    "Narration": "GIB/002045060073/DTAX /25070300173089ICIC",
+    "transactionType": "DR",
+    "transactionAmount": 7292,
+    "balance": 145966.29
+  },
+  {
+    "transactionId": "S28046102",
+    "Date": "03-07-2025",
+    "Narration": "GIB/002045060206/DTAX /25070300174167ICIC",
+    "transactionType": "DR",
+    "transactionAmount": 9000,
+    "balance": 136966.29
+  },
+  {
+    "transactionId": "S28058028",
+    "Date": "03-07-2025",
+    "Narration": "GIB/002045060329/DTAX /25070300174963ICIC",
+    "transactionType": "DR",
+    "transactionAmount": 3200,
+    "balance": 133766.29
+  },
+  {
+    "transactionId": "S28072329",
+    "Date": "03-07-2025",
+    "Narration": "GIB/002045060452/DTAX /25070300175832ICIC",
+    "transactionType": "DR",
+    "transactionAmount": 24000,
+    "balance": 109766.29
+  },
+  {
+    "transactionId": "S68601469",
+    "Date": "07-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070756315788/BKID0009675/Salary Jun 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 95766.29
+  },
+  {
+    "transactionId": "S68602009",
+    "Date": "07-07-2025",
+    "Narration": "INF/NEFT/ICICN42025070756315793/BKID0009675/Salary Jun 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 81766.29
+  },
+  {
+    "transactionId": "S53105566",
+    "Date": "28/07/2025",
+    "Narration": "NEFT-HDFCN52025072876051110-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 300000,
+    "balance": 381766.29
+  },
+  {
+    "transactionId": "M3395009",
+    "Date": "28/07/2025",
+    "Narration": "TRF TO FD no. 625413034611",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 281766.29
+  },
+  {
+    "transactionId": "M3396102",
+    "Date": "28/07/2025",
+    "Narration": "TRF TO FD no. 625413034612",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 181766.29
+  },
+  {
+    "transactionId": "M3396974",
+    "Date": "28/07/2025",
+    "Narration": "TRF TO FD no. 625413034613",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 81766.29
+  },
+  {
+    "transactionId": "S89730668",
+    "Date": "31/07/2025",
+    "Narration": "NEFT-HDFCN52025073184068077-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 581766.29
+  },
+  {
+    "transactionId": "S89793515",
+    "Date": "31/07/2025",
+    "Narration": "INF/INFT/041098101061/Salary Jul 25 /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 24200,
+    "balance": 557566.29
+  },
+  {
+    "transactionId": "S92599096",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955119/CNRB0001381/Salary Jul 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 537566.29
+  },
+  {
+    "transactionId": "S92599099",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955070/CNRB0000479/Salary Jul 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 519566.29
+  },
+  {
+    "transactionId": "S92599525",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955072/BKID0009249/Salary Jul 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 505566.29
+  },
+  {
+    "transactionId": "S92600273",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955076/BKID0009249/Salary Jul 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 491566.29
+  },
+  {
+    "transactionId": "S92599532",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955128/IDIB000D030/Salary Jul 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 477566.29
+  },
+  {
+    "transactionId": "S92599827",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955121/BARB0VJSIUT/Salary Jul 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 16000,
+    "balance": 461566.29
+  },
+  {
+    "transactionId": "S92599839",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955086/SBIN0003966/Salary Jul 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 448066.29
+  },
+  {
+    "transactionId": "S92600126",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955759/HDFC0000367/Salary Jul 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 418066.29
+  },
+  {
+    "transactionId": "S92600599",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955763/KKBK0000430/Salary Jul 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 53300,
+    "balance": 364766.29
+  },
+  {
+    "transactionId": "S92600964",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955768/HDFC0000041/Salary Jul 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 287766.29
+  },
+  {
+    "transactionId": "S92600139",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955880/CNRB0001381/Salary Jul 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 45800,
+    "balance": 241966.29
+  },
+  {
+    "transactionId": "S92600957",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955760/KKBK0000811/Salary Jul 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 222966.29
+  },
+  {
+    "transactionId": "S92601440",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955780/BARB0VJRABA/Salary Jul 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 200966.29
+  },
+  {
+    "transactionId": "S92600613",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955774/SBIN0040392/Salary Jul 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 21000,
+    "balance": 179966.29
+  },
+  {
+    "transactionId": "S92601447",
+    "Date": "01-08-2025",
+    "Narration": "INF/NEFT/ICICN42025080153955789/HDFC0004274/Salary Jul 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 113066.29
+  },
+  {
+    "transactionId": "S25344266",
+    "Date": "13/08/2025",
+    "Narration": "NEFT-HDFCN52025081312854614-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 300000,
+    "balance": 413066.29
+  },
+  {
+    "transactionId": "M3383961",
+    "Date": "13/08/2025",
+    "Narration": "TRF TO FD no. 625413034821",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 313066.29
+  },
+  {
+    "transactionId": "M3385804",
+    "Date": "13/08/2025",
+    "Narration": "TRF TO FD no. 625413034822",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 213066.29
+  },
+  {
+    "transactionId": "M3386934",
+    "Date": "13/08/2025",
+    "Narration": "TRF TO FD no. 625413034823",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 113066.29
+  },
+  {
+    "transactionId": "S18194837",
+    "Date": "25/08/2025",
+    "Narration": "INF/NEFT/ICICN42025082556428929/SBIN0004252/Salary Aug 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 99066.29
+  },
+  {
+    "transactionId": "S63920580",
+    "Date": "29/08/2025",
+    "Narration": "NEFT-HDFCN52025082938709307-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 299066.29
+  },
+  {
+    "transactionId": "S63924746",
+    "Date": "29/08/2025",
+    "Narration": "NEFT-HDFCN52025082938707510-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 499066.29
+  },
+  {
+    "transactionId": "S64776818",
+    "Date": "29/08/2025",
+    "Narration": "INF/INFT/041416713891/Salary AUg 2025/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 24200,
+    "balance": 474866.29
+  },
+  {
+    "transactionId": "S66286268",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946470/HDFC0000041/Salary Aug 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 397866.29
+  },
+  {
+    "transactionId": "S66287295",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946451/BKID0009675/Salary Aug 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 383866.29
+  },
+  {
+    "transactionId": "S66287298",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946476/CNRB0001381/Salary Aug 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 363866.29
+  },
+  {
+    "transactionId": "S66287302",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946454/KKBK0000811/Salary Aug 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 344866.29
+  },
+  {
+    "transactionId": "S66286278",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946511/SBIN0040392/Salary Aug 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 21000,
+    "balance": 323866.29
+  },
+  {
+    "transactionId": "S66286469",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946475/SBIN0003966/Salary Aug 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 310366.29
+  },
+  {
+    "transactionId": "S66287310",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946510/CNRB0001381/Salary Aug 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 45800,
+    "balance": 264566.29
+  },
+  {
+    "transactionId": "S66287314",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946484/BARB0VJSIUT/Salary Aug 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 16000,
+    "balance": 248566.29
+  },
+  {
+    "transactionId": "S66286273",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946474/HDFC0000367/Salary Aug 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 218566.29
+  },
+  {
+    "transactionId": "S66287312",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946512/CNRB0000479/Salary Aug 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 200566.29
+  },
+  {
+    "transactionId": "S66286724",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946839/KKBK0000430/Salary Aug 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 53300,
+    "balance": 147266.29
+  },
+  {
+    "transactionId": "S66287617",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946808/IDIB000D030/Salary Aug 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 133266.29
+  },
+  {
+    "transactionId": "S66286729",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946814/HDFC0004274/Salary Aug 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 66366.29
+  },
+  {
+    "transactionId": "S66288146",
+    "Date": "30/08/2025",
+    "Narration": "INF/NEFT/ICICN42025083058946817/BARB0VJRABA/Salary Aug 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 44366.29
+  },
+  {
+    "transactionId": "S99026123",
+    "Date": "02-09-2025",
+    "Narration": "INF/NEFT/ICICN42025090254864741/SBIN0004252/Salary Advance Sept 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 6000,
+    "balance": 38366.29
+  },
+  {
+    "transactionId": "S65827106",
+    "Date": "30/09/2025",
+    "Narration": "RTGS-HDFCR52025093066947144-ADDIT LABS-50200032062102 -HDFC0000240",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 538366.29
+  },
+  {
+    "transactionId": "S65947521",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156536/HDFC0004274/Salary Sep 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 471466.29
+  },
+  {
+    "transactionId": "S65946860",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156472/HDFC0000041/Salary Sep 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 394466.29
+  },
+  {
+    "transactionId": "S65947655",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156489/CNRB0001381/Salary Sep 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 45800,
+    "balance": 348666.29
+  },
+  {
+    "transactionId": "S65948270",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156481/KKBK0000430/Salary Sep 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 53300,
+    "balance": 295366.29
+  },
+  {
+    "transactionId": "S65947680",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156495/BARB0VJRABA/Salary Sep 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 273366.29
+  },
+  {
+    "transactionId": "S65947755",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156509/KKBK0000811/Salary Sep 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 254366.29
+  },
+  {
+    "transactionId": "S65948388",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156564/HDFC0000367/Salary Sep 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 224366.29
+  },
+  {
+    "transactionId": "S65949693",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156513/SBIN0040392/Salary Sep 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 21000,
+    "balance": 203366.29
+  },
+  {
+    "transactionId": "S65948977",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156567/CNRB0000479/Salary Sep 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 185366.29
+  },
+  {
+    "transactionId": "S65949810",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156673/SBIN0003966/Salary Sep 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 171866.29
+  },
+  {
+    "transactionId": "S65947995",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156593/BARB0VJSIUT/Salary Sep 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 16000,
+    "balance": 155866.29
+  },
+  {
+    "transactionId": "S65949861",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156681/CNRB0001381/Salary Sep 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 135866.29
+  },
+  {
+    "transactionId": "S65948749",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156597/IDIB000D030/Salary Sep 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 121866.29
+  },
+  {
+    "transactionId": "S65950250",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156700/BKID0009675/Salary Sep 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 107866.29
+  },
+  {
+    "transactionId": "S65950937",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156706/SBIN0004252/Salary Sep 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 99866.29
+  },
+  {
+    "transactionId": "S65950334",
+    "Date": "30/09/2025",
+    "Narration": "INF/NEFT/ICICN42025093051156707/CNRB0001381/BonusSep 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 89866.29
+  },
+  {
+    "transactionId": "S66071975",
+    "Date": "30/09/2025",
+    "Narration": "INF/INFT/041775187311/Salary Sep 2025/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 24200,
+    "balance": 65666.29
+  },
+  {
+    "transactionId": "S66079244",
+    "Date": "30/09/2025",
+    "Narration": "INF/INFT/041775196191/Bonus Sep 2025 /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 12100,
+    "balance": 53566.29
+  },
+  {
+    "transactionId": "S51784414",
+    "Date": "8/10/2025",
+    "Narration": "INF/NEFT/ICICN42025100851106000/SBIN0004252/Salary Advance Sept 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 3000,
+    "balance": 50566.29
+  },
+  {
+    "transactionId": "S2391778",
+    "Date": "13/10/2025",
+    "Narration": "INF/NEFT/ICICN42025101357646563/CNRB0001381/Dasara Celebration/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 5388,
+    "balance": 45178.29
+  },
+  {
+    "transactionId": "S2392302",
+    "Date": "13/10/2025",
+    "Narration": "INF/NEFT/ICICN42025101357646564/CNRB0001381/Office supplies/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 937,
+    "balance": 44241.29
+  },
+  {
+    "transactionId": "S6597841",
+    "Date": "13/10/2025",
+    "Narration": "INF/NEFT/ICICN42025101358001711/HDFC0000041/Salary Sep 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 3200,
+    "balance": 41041.29
+  },
+  {
+    "transactionId": "S29693875",
+    "Date": "15/10/2025",
+    "Narration": "RTGS-HDFCR52025101572747730-ADDIT LABS-50200032062102 -HDFC0000240",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 241041.29
+  },
+  {
+    "transactionId": "M3654808",
+    "Date": "15/10/2025",
+    "Narration": "TRF TO FD no. 625413035379",
+    "transactionType": "DR",
+    "transactionAmount": 200000,
+    "balance": 41041.29
+  },
+  {
+    "transactionId": "S60037300",
+    "Date": "31/10/2025",
+    "Narration": "INF/NEFT/ICICN42025103159010115/SBIN0004252/Salary Oct 2025/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 10097,
+    "balance": 30944.29
+  },
+  {
+    "transactionId": "S60161694",
+    "Date": "31/10/2025",
+    "Narration": "RTGS-HDFCR52025103178292763-ADDIT LABS-50200032062102 -HDFC0000240",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 430944.29
+  },
+  {
+    "transactionId": "S64774351",
+    "Date": "31/10/2025",
+    "Narration": "NEFT-HDFCN52025103167665949-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 50000,
+    "balance": 480944.29
+  },
+  {
+    "transactionId": "S64799749",
+    "Date": "31/10/2025",
+    "Narration": "INF/INFT/042144198001/Salary Oct 25 /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 24200,
+    "balance": 456744.29
+  },
+  {
+    "transactionId": "S66281642",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159554333/SBIN0040392/Salary Oct 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 21000,
+    "balance": 435744.29
+  },
+  {
+    "transactionId": "S66282106",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159554336/CNRB0000479/Salary Oct 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 417744.29
+  },
+  {
+    "transactionId": "S66281651",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159554400/SBIN0003966/Salary Oct 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 404244.29
+  },
+  {
+    "transactionId": "S66282121",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159554348/CNRB0001381/Salary Oct 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 384244.29
+  },
+  {
+    "transactionId": "S66286759",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555562/BARB0VJSIUT/Salary Oct 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 16000,
+    "balance": 368244.29
+  },
+  {
+    "transactionId": "S66285558",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555570/IDIB000D030/Salary Oct 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 354244.29
+  },
+  {
+    "transactionId": "S66286022",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555566/CNRB0001381/Salary Oct 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 45800,
+    "balance": 308444.29
+  },
+  {
+    "transactionId": "S66286481",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555495/BARB0VJRABA/Salary Oct 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 286444.29
+  },
+  {
+    "transactionId": "S66285567",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555580/HDFC0000041/Salary Oct 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 80200,
+    "balance": 206244.29
+  },
+  {
+    "transactionId": "S66286034",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555574/HDFC0004274/Salary Oct 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 139344.29
+  },
+  {
+    "transactionId": "S66286486",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555573/BKID0009675/Salary Oct 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 125344.29
+  },
+  {
+    "transactionId": "S66286779",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555577/KKBK0000811/Salary Oct 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 106344.29
+  },
+  {
+    "transactionId": "S66286042",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555505/KKBK0000430/Salary Oct 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 53300,
+    "balance": 53044.29
+  },
+  {
+    "transactionId": "S66286488",
+    "Date": "01/11/2025",
+    "Narration": "INF/NEFT/ICICN42025110159555497/HDFC0000367/Salary Oct 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 23044.29
+  },
+  {
+    "transactionId": "S86585327",
+    "Date": "03/11/2025",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 2003.64,
+    "balance": 21040.65
+  },
+  {
+    "transactionId": "S23715142",
+    "Date": "28/11/2025",
+    "Narration": "RTGS-HDFCR52025112888749148-ADDIT LABS-50200032062102  -HDFC0000240",
+    "transactionType": "CR",
+    "transactionAmount": 430000,
+    "balance": 451040.65
+  },
+  {
+    "transactionId": "S29650134",
+    "Date": "29/11/2025",
+    "Narration": "INF/INFT/042464845301/Salary Nov 25  /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 24200,
+    "balance": 426840.65
+  },
+  {
+    "transactionId": "S29653830",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963018/HDFC0004274/Salary Nov 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 359940.65
+  },
+  {
+    "transactionId": "S29652798",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963019/HDFC0000041/Salary Nov 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 80200,
+    "balance": 279740.65
+  },
+  {
+    "transactionId": "S29653861",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963023/BARB0VJRABA/Salary Nov 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 257740.65
+  },
+  {
+    "transactionId": "S29654811",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963020/KKBK0000430/Salary Nov 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 53300,
+    "balance": 204440.65
+  },
+  {
+    "transactionId": "S29654818",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963022/CNRB0001381/Salary Nov 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 45800,
+    "balance": 158640.65
+  },
+  {
+    "transactionId": "S29653869",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963024/HDFC0000367/Salary Nov 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 128640.65
+  },
+  {
+    "transactionId": "S29653872",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963025/KKBK0000811/Salary Nov 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 109640.65
+  },
+  {
+    "transactionId": "S29654845",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963040/CNRB0000479/Salary Nov 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 91640.65
+  },
+  {
+    "transactionId": "S29653457",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963045/BARB0VJSIUT/Salary Nov 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 16000,
+    "balance": 75640.65
+  },
+  {
+    "transactionId": "S29653885",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963043/SBIN0003966/Salary Nov 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 62140.65
+  },
+  {
+    "transactionId": "S29653888",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963044/CNRB0001381/Salary Nov 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 42140.65
+  },
+  {
+    "transactionId": "S29653463",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963046/IDIB000D030/Salary Nov 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 28140.65
+  },
+  {
+    "transactionId": "S29653896",
+    "Date": "29/11/2025",
+    "Narration": "INF/NEFT/IN42533359963048/BKID0009675/Salary Nov 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 14140.65
+  },
+  {
+    "transactionId": "S52382313",
+    "Date": "01/12/2025",
+    "Narration": "NEFT-HDFCH00643780920-ADDIT LABS-0001-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 35000,
+    "balance": 49140.65
+  },
+  {
+    "transactionId": "S52484322",
+    "Date": "01/12/2025",
+    "Narration": "INF/NEFT/IN42533551498147/SBIN0040392/Salary Nov 2025/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 21000,
+    "balance": 28140.65
+  },
+  {
+    "transactionId": "S81577095",
+    "Date": "04/12/2025",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 2009.54,
+    "balance": 26131.11
+  },
+  {
+    "transactionId": "S11850839",
+    "Date": "30/12/2025",
+    "Narration": "RTGS-HDFCR52025123050735532-ADDIT LABS-50200032062102  -HDFC0000240",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 226131.11
+  },
+  {
+    "transactionId": "S11869980",
+    "Date": "30/12/2025",
+    "Narration": "INF/NEFT/IN42536451010088/CNRB0001381/Salary Dec 2025/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 45800,
+    "balance": 180331.11
+  },
+  {
+    "transactionId": "S11869982",
+    "Date": "30/12/2025",
+    "Narration": "INF/NEFT/IN42536451010091/CNRB0001381/Salary Dec 2025/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 160331.11
+  },
+  {
+    "transactionId": "S31149636",
+    "Date": "31/12/2025",
+    "Narration": "RTGS-HDFCR52025123151718179-ADDIT LABS-50200032062102  -HDFC0000240",
+    "transactionType": "CR",
+    "transactionAmount": 250000,
+    "balance": 410331.11
+  },
+  {
+    "transactionId": "S31304259",
+    "Date": "31/12/2025",
+    "Narration": "INF/INFT/042835367991/Salary Dec 2025/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 24200,
+    "balance": 386131.11
+  },
+  {
+    "transactionId": "S31397648",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206282/BKID0009675/Salary Dec 2025/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 372131.11
+  },
+  {
+    "transactionId": "S31401384",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206388/KKBK0000430/Salary Dec 2025/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 53300,
+    "balance": 318831.11
+  },
+  {
+    "transactionId": "S31402016",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206384/HDFC0000041/Salary Dec 2025/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 80200,
+    "balance": 238631.11
+  },
+  {
+    "transactionId": "S31402351",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206382/HDFC0004274/Salary Dec 2025/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 171731.11
+  },
+  {
+    "transactionId": "S31401423",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206392/BARB0VJRABA/Salary Dec 2025/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 149731.11
+  },
+  {
+    "transactionId": "S31402085",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206718/HDFC0000367/Salary Dec 2025/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 119731.11
+  },
+  {
+    "transactionId": "S31402502",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206725/KKBK0000811/Salary Dec 2025/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 100731.11
+  },
+  {
+    "transactionId": "S31402546",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206738/CNRB0000479/Salary Dec 2025/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 82731.11
+  },
+  {
+    "transactionId": "S31403229",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206744/BARB0VJSIUT/Salary Dec 2025/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 16000,
+    "balance": 66731.11
+  },
+  {
+    "transactionId": "S31403646",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206741/SBIN0003966/Salary Dec 2025/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 53231.11
+  },
+  {
+    "transactionId": "S31404338",
+    "Date": "31/12/2025",
+    "Narration": "INF/NEFT/IN42536552206751/IDIB000D030/Salary Dec 2025/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 39231.11
+  }
+]

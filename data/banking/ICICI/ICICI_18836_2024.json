@@ -1,0 +1,1858 @@
+[
+  {
+    "transactionId": "S96858140",
+    "Date": "02/01/2024",
+    "Narration": "ATD/Auto Debit CC1xx6899",
+    "transactionType": "DR",
+    "transactionAmount": 315,
+    "balance": 92372.99
+  },
+  {
+    "transactionId": "S32657425",
+    "Date": "05/01/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 72836.99
+  },
+  {
+    "transactionId": "S51720203",
+    "Date": "06/01/2024",
+    "Narration": "GIB/002013520460/STAX      /63900040601202400294",
+    "transactionType": "DR",
+    "transactionAmount": 600,
+    "balance": 72236.99
+  },
+  {
+    "transactionId": "S74277047",
+    "Date": "09/01/2024",
+    "Narration": "625413024522 FD clos 09-01-2024 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 52550,
+    "balance": 124786.99
+  },
+  {
+    "transactionId": "S74277067",
+    "Date": "09/01/2024",
+    "Narration": "625413024524 FD clos 09-01-2024 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 52550,
+    "balance": 177336.99
+  },
+  {
+    "transactionId": "S74277091",
+    "Date": "09/01/2024",
+    "Narration": "625413024526 FD clos 09-01-2024 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 52550,
+    "balance": 229886.99
+  },
+  {
+    "transactionId": "S99287639",
+    "Date": "22/01/2024",
+    "Narration": "BIL/ONL/000785558976/ICICI Bank/Credit Card Pay",
+    "transactionType": "DR",
+    "transactionAmount": 11000,
+    "balance": 218886.99
+  },
+  {
+    "transactionId": "S85744578",
+    "Date": "31/01/2024",
+    "Narration": "NEFT-N031242857048646-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 618886.99
+  },
+  {
+    "transactionId": "S93843796",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163320851/BARB0VJGABZ/SalaryJan2024/SinchanaRGowda",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 608886.99
+  },
+  {
+    "transactionId": "S93843853",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163320631/BARB0VJSIUT/SalaryJan2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 598886.99
+  },
+  {
+    "transactionId": "S93847005",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321571/HDFC0004274/SalaryJan2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 531986.99
+  },
+  {
+    "transactionId": "S93846637",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321581/HDFC0000041/SalaryJan2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 454986.99
+  },
+  {
+    "transactionId": "S93847183",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321591/CNRB0001381/SalaryJan2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 28000,
+    "balance": 426986.99
+  },
+  {
+    "transactionId": "S93847237",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321611/BARB0VJRABA/SalaryJan2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 411986.99
+  },
+  {
+    "transactionId": "S93847293",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321631/HDFC0000367/SalaryJan2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 387186.99
+  },
+  {
+    "transactionId": "S93847345",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321651/KKBK0000811/SalaryJan2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 375186.99
+  },
+  {
+    "transactionId": "S93847406",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321671/SBIN0040392/SalaryJan2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 362186.99
+  },
+  {
+    "transactionId": "S93847917",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321691/CNRB0000479/SalaryJan2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 352186.99
+  },
+  {
+    "transactionId": "S93847560",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321711/CNRB0001381/SalaryJan2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 337186.99
+  },
+  {
+    "transactionId": "S93847979",
+    "Date": "01/02/2024",
+    "Narration": "INF/NEFT/035163321701/SBIN0003966/SalaryJan2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 323686.99
+  },
+  {
+    "transactionId": "S93969459",
+    "Date": "01/02/2024",
+    "Narration": "INF/INFT/035163339071/Salary Jan 24  /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 308686.99
+  },
+  {
+    "transactionId": "S50231746",
+    "Date": "05/02/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 289150.99
+  },
+  {
+    "transactionId": "S19529554",
+    "Date": "21/02/2024",
+    "Narration": "IPS/HILTON BAR /202402211634/022124051352/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 287950.99
+  },
+  {
+    "transactionId": "S66086381",
+    "Date": "26/02/2024",
+    "Narration": "BIL/ONL/000802184725/AOSMITHIND",
+    "transactionType": "DR",
+    "transactionAmount": 2800,
+    "balance": 285150.99
+  },
+  {
+    "transactionId": "S6524926",
+    "Date": "29/02/2024",
+    "Narration": "NEFT-N060242908535077-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 40000,
+    "balance": 325150.99
+  },
+  {
+    "transactionId": "S6738408",
+    "Date": "29/02/2024",
+    "Narration": "INF/INFT/035462312871/Salary Feb 2024/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 310150.99
+  },
+  {
+    "transactionId": "S6759086",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462324911/HDFC0000041/SalaryFeb2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 233150.99
+  },
+  {
+    "transactionId": "S6759556",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462324901/HDFC0004274/SalaryFeb2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 166250.99
+  },
+  {
+    "transactionId": "S6759123",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462324941/CNRB0001381/SalaryFeb2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 38000,
+    "balance": 128250.99
+  },
+  {
+    "transactionId": "S6759723",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462324951/BARB0VJRABA/SalaryFeb2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 113250.99
+  },
+  {
+    "transactionId": "S6759194",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462324981/HDFC0000367/SalaryFeb2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 88450.99
+  },
+  {
+    "transactionId": "S6759804",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462325001/KKBK0000811/SalaryFeb2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 76450.99
+  },
+  {
+    "transactionId": "S6759278",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462325021/SBIN0040392/SalaryFeb2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 63450.99
+  },
+  {
+    "transactionId": "S6759316",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462325031/CNRB0000479/SalaryFeb2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 53450.99
+  },
+  {
+    "transactionId": "S6759927",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462325441/SBIN0003966/SalaryFeb2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 39950.99
+  },
+  {
+    "transactionId": "S6759979",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462325471/CNRB0001381/SalaryFeb2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 24950.99
+  },
+  {
+    "transactionId": "S6759415",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462325491/BARB0VJGABZ/SalaryFeb2024/SinchanaRGowda",
+    "transactionType": "DR",
+    "transactionAmount": 9655,
+    "balance": 15295.99
+  },
+  {
+    "transactionId": "S6760068",
+    "Date": "29/02/2024",
+    "Narration": "INF/NEFT/035462325511/BARB0VJSIUT/SalaryFeb2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 5295.99
+  },
+  {
+    "transactionId": "S81229548",
+    "Date": "07/03/2024",
+    "Narration": "NEFT-N067242921233214-ADDIT LABS-ACC TRASFER-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 90000,
+    "balance": 95295.99
+  },
+  {
+    "transactionId": "S93693243",
+    "Date": "08/03/2024",
+    "Narration": "LABNGXX23275_PAN_ADDIT LABS",
+    "transactionType": "DR",
+    "transactionAmount": 20178,
+    "balance": 75117.99
+  },
+  {
+    "transactionId": "S14232749",
+    "Date": "11/03/2024",
+    "Narration": "GIB/002017011360/STAX      /63900041103202400028",
+    "transactionType": "DR",
+    "transactionAmount": 600,
+    "balance": 74517.99
+  },
+  {
+    "transactionId": "S24084312",
+    "Date": "11/03/2024",
+    "Narration": "ATD-1xx6899-RTNCHGSMar24GST",
+    "transactionType": "DR",
+    "transactionAmount": 59,
+    "balance": 74458.99
+  },
+  {
+    "transactionId": "S53064200",
+    "Date": "14/03/2024",
+    "Narration": "LABNGXX23275-BOUNCECHGSMAR24GST",
+    "transactionType": "DR",
+    "transactionAmount": 59,
+    "balance": 74399.99
+  },
+  {
+    "transactionId": "S96188084",
+    "Date": "30/03/2024",
+    "Narration": "NEFT-N090242961406279-ADDIT LABS-SALARY MAR 24-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 474399.99
+  },
+  {
+    "transactionId": "S96343599",
+    "Date": "30/03/2024",
+    "Narration": "INF/INFT/035798459281/Salary March 24/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 459399.99
+  },
+  {
+    "transactionId": "S96716755",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799086691/HDFC0004274/Salary Mar 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 392499.99
+  },
+  {
+    "transactionId": "S96716991",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799087091/HDFC0000041/Salary Mar 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 315499.99
+  },
+  {
+    "transactionId": "S96717430",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799087451/CNRB0001381/Salary Mar 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 38000,
+    "balance": 277499.99
+  },
+  {
+    "transactionId": "S96717512",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799087641/BARB0VJRABA/Salary Mar 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 262499.99
+  },
+  {
+    "transactionId": "S96717615",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799088071/HDFC0000367/Salary Mar 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 237699.99
+  },
+  {
+    "transactionId": "S96717263",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799088201/KKBK0000811/Salary Mar 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 225699.99
+  },
+  {
+    "transactionId": "S96717778",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799088531/SBIN0040392/Salary Mar 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 212699.99
+  },
+  {
+    "transactionId": "S96718346",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799088731/CNRB0000479/Salary Mar 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 7097,
+    "balance": 205602.99
+  },
+  {
+    "transactionId": "S96718414",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799088831/SBIN0003966/Salary Mar 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 192102.99
+  },
+  {
+    "transactionId": "S96718499",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799089281/CNRB0001381/Salary Mar 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 177102.99
+  },
+  {
+    "transactionId": "S96718569",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799089391/BARB0VJGABZ/Salary Mar 2024/SinchanaRGowda",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 167102.99
+  },
+  {
+    "transactionId": "S96718619",
+    "Date": "30/03/2024",
+    "Narration": "INF/NEFT/035799089721/BARB0VJSIUT/Salary Mar 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 157102.99
+  },
+  {
+    "transactionId": "S30939222",
+    "Date": "03/04/2024",
+    "Narration": "ATD/Auto Debit CC1xx6899",
+    "transactionType": "DR",
+    "transactionAmount": 39777.28,
+    "balance": 117325.71
+  },
+  {
+    "transactionId": "S49137226",
+    "Date": "04/04/2024",
+    "Narration": "INF/NEFT/035858588131/CNRB0001381/Salary Advance/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 87325.71
+  },
+  {
+    "transactionId": "S57456431",
+    "Date": "05/04/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 67789.71
+  },
+  {
+    "transactionId": "S87370265",
+    "Date": "08/04/2024",
+    "Narration": "GIB/002018660099/STAX      /63900040804202400044",
+    "transactionType": "DR",
+    "transactionAmount": 600,
+    "balance": 67189.71
+  },
+  {
+    "transactionId": "S82708117",
+    "Date": "30/04/2024",
+    "Narration": "MMT/IMPS/412116371823/Salary Apr/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 467189.71
+  },
+  {
+    "transactionId": "S83962380",
+    "Date": "30/04/2024",
+    "Narration": "INF/INFT/036124992191/SALARY APR 24  /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 452189.71
+  },
+  {
+    "transactionId": "S84037351",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125105081/HDFC0004274/Salary Apr 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 385289.71
+  },
+  {
+    "transactionId": "S84037421",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125105261/HDFC0000041/Salary Apr 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 308289.71
+  },
+  {
+    "transactionId": "S84037494",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125105371/KKBK0000430/Salary Apr 2024/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 259889.71
+  },
+  {
+    "transactionId": "S84037957",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125105661/CNRB0001381/Salary Apr 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 25453,
+    "balance": 234436.71
+  },
+  {
+    "transactionId": "S84037638",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125105771/BARB0VJRABA/Salary Apr 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 219436.71
+  },
+  {
+    "transactionId": "S84038227",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125105971/HDFC0000367/Salary Apr 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 194636.71
+  },
+  {
+    "transactionId": "S84038180",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125106321/KKBK0000811/Salary Apr 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 182636.71
+  },
+  {
+    "transactionId": "S84038422",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125106541/SBIN0040392/Salary Apr 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 169636.71
+  },
+  {
+    "transactionId": "S84038508",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125106651/CNRB0000479/Salary Apr 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 159636.71
+  },
+  {
+    "transactionId": "S84038568",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125106941/SBIN0003966/Salary Apr 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 146136.71
+  },
+  {
+    "transactionId": "S84038624",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125107041/CNRB0001381/Salary Apr 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 131136.71
+  },
+  {
+    "transactionId": "S84038688",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125107091/BARB0VJGABZ/Salary Apr 2024/SinchanaRGowda",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 121136.71
+  },
+  {
+    "transactionId": "S84039173",
+    "Date": "30/04/2024",
+    "Narration": "INF/NEFT/036125107291/BARB0VJSIUT/Salary Apr 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 111136.71
+  },
+  {
+    "transactionId": "S38254700",
+    "Date": "06/05/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 91600.71
+  },
+  {
+    "transactionId": "S35480798",
+    "Date": "15/05/2024",
+    "Narration": "GIB/002020875237/STAX      /63900041505202400131",
+    "transactionType": "DR",
+    "transactionAmount": 800,
+    "balance": 90800.71
+  },
+  {
+    "transactionId": "S79119584",
+    "Date": "31/05/2024",
+    "Narration": "MMT/IMPS/415220305425/Salary/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 490800.71
+  },
+  {
+    "transactionId": "S79160209",
+    "Date": "31/05/2024",
+    "Narration": "INF/INFT/036468774151/Salary May 2024/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 475800.71
+  },
+  {
+    "transactionId": "S79233421",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468846101/HDFC0004274/Salary May 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 408900.71
+  },
+  {
+    "transactionId": "S79233446",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468846181/HDFC0000041/Salary May 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 331900.71
+  },
+  {
+    "transactionId": "S79233016",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468846441/KKBK0000430/Salary May 2024/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 283500.71
+  },
+  {
+    "transactionId": "S79233075",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468846581/BARB0VJRABA/Salary May 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 17419,
+    "balance": 266081.71
+  },
+  {
+    "transactionId": "S79233500",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468846501/CNRB0001381/Salary May 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 31800,
+    "balance": 234281.71
+  },
+  {
+    "transactionId": "S79233789",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468846891/HDFC0000367/Salary May 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 206981.71
+  },
+  {
+    "transactionId": "S79233817",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468846911/KKBK0000811/Salary May 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 191981.71
+  },
+  {
+    "transactionId": "S79233845",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468846961/SBIN0040392/Salary May 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 174981.71
+  },
+  {
+    "transactionId": "S79233866",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468847021/CNRB0000479/Salary May 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 160981.71
+  },
+  {
+    "transactionId": "S79233886",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468847131/SBIN0003966/Salary May 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 147481.71
+  },
+  {
+    "transactionId": "S79233912",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468847181/CNRB0001381/Salary May 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 132481.71
+  },
+  {
+    "transactionId": "S79233932",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468847431/BARB0VJGABZ/Salary May 2024/SinchanaRGowda",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 122481.71
+  },
+  {
+    "transactionId": "S79234740",
+    "Date": "31/05/2024",
+    "Narration": "INF/NEFT/036468847501/BARB0VJSIUT/Salary May 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 109481.71
+  },
+  {
+    "transactionId": "S32890295",
+    "Date": "05/06/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 89945.71
+  },
+  {
+    "transactionId": "S85340449",
+    "Date": "22/06/2024",
+    "Narration": "GIB/002023113554/STAX      /63900042206202400046",
+    "transactionType": "DR",
+    "transactionAmount": 800,
+    "balance": 89145.71
+  },
+  {
+    "transactionId": "S40354462",
+    "Date": "28/06/2024",
+    "Narration": "NEFT-N180243117261164-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 600000,
+    "balance": 689145.71
+  },
+  {
+    "transactionId": "S40528869",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765130121/HDFC0000041/Salary Jun 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 612145.71
+  },
+  {
+    "transactionId": "S40529680",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765131001/KKBK0000430/Salary Jun 2024/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 563745.71
+  },
+  {
+    "transactionId": "S40530031",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765132011/CNRB0001381/Salary Jun 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 41800,
+    "balance": 521945.71
+  },
+  {
+    "transactionId": "S40529439",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765134231/HDFC0000367/Salary Jun 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 494645.71
+  },
+  {
+    "transactionId": "S40530090",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765132271/BARB0VJRABA/Salary Jun 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 474645.71
+  },
+  {
+    "transactionId": "S40530225",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765135791/KKBK0000811/Salary Jun 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 459645.71
+  },
+  {
+    "transactionId": "S40530289",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765137451/SBIN0040392/Salary Jun 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 442645.71
+  },
+  {
+    "transactionId": "S40530356",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765138071/CNRB0000479/Salary Jun 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 428645.71
+  },
+  {
+    "transactionId": "S40531142",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765142641/SBIN0003966/Salary Jun 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 415145.71
+  },
+  {
+    "transactionId": "S40531191",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765142821/CNRB0001381/Salary Jun 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 397145.71
+  },
+  {
+    "transactionId": "S40531296",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765144791/BARB0VJSIUT/Salary Jun 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 384145.71
+  },
+  {
+    "transactionId": "S40531590",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765143401/BARB0VJGABZ/Salary Jun 2024/SinchanaRGowda",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 374145.71
+  },
+  {
+    "transactionId": "S40530839",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765145021/HDFC0004274/Bonus FY 2023 24/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 307245.71
+  },
+  {
+    "transactionId": "S40531761",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765145501/HDFC0000041/Bonus FY 2023 24/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 73910,
+    "balance": 233335.71
+  },
+  {
+    "transactionId": "S40542119",
+    "Date": "28/06/2024",
+    "Narration": "INF/NEFT/036765161511/HDFC0004274/Salary Jun 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 166435.71
+  },
+  {
+    "transactionId": "S42926623",
+    "Date": "28/06/2024",
+    "Narration": "INF/INFT/036768285541/Salary Jun 2024/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 144435.71
+  },
+  {
+    "transactionId": "S96871939",
+    "Date": "04/07/2024",
+    "Narration": "ATD/Auto Debit CC1xx8028",
+    "transactionType": "DR",
+    "transactionAmount": 3295,
+    "balance": 141140.71
+  },
+  {
+    "transactionId": "S11067723",
+    "Date": "05/07/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 121604.71
+  },
+  {
+    "transactionId": "S98469034",
+    "Date": "14/07/2024",
+    "Narration": "Mob alrt Chg Mar-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 121575.21
+  },
+  {
+    "transactionId": "S571616",
+    "Date": "14/07/2024",
+    "Narration": "GIB/002024418456/STAX      /63900041407202400081",
+    "transactionType": "DR",
+    "transactionAmount": 800,
+    "balance": 120775.21
+  },
+  {
+    "transactionId": "S46769297",
+    "Date": "31/07/2024",
+    "Narration": "NEFT-N213243178339981-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 520775.21
+  },
+  {
+    "transactionId": "S47267705",
+    "Date": "31/07/2024",
+    "Narration": "INF/INFT/037118155961/Salary Jul 2024/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 498775.21
+  },
+  {
+    "transactionId": "S47291814",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118197601/SBIN0040392/Salary Jul 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 481775.21
+  },
+  {
+    "transactionId": "S47291695",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118197811/CNRB0000479/Salary Jul 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 467775.21
+  },
+  {
+    "transactionId": "S47292750",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118197981/SBIN0003966/Salary Jul 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 454275.21
+  },
+  {
+    "transactionId": "S47292804",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118198341/CNRB0001381/Salary Jul 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 436275.21
+  },
+  {
+    "transactionId": "S47292837",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118198451/BARB0VJSIUT/Salary Jul 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 423275.21
+  },
+  {
+    "transactionId": "S47292887",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118198621/SBIN0003966/Bonus FY 2023 24/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 409775.21
+  },
+  {
+    "transactionId": "S47297062",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118206631/HDFC0004274/Salary Jul 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 342875.21
+  },
+  {
+    "transactionId": "S47297126",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118206781/HDFC0000041/Salary Jul 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 265875.21
+  },
+  {
+    "transactionId": "S47297171",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118206571/KKBK0000430/Salary Jul 2024/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 217475.21
+  },
+  {
+    "transactionId": "S47297304",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118207031/CNRB0001381/Salary Jul 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 31800,
+    "balance": 185675.21
+  },
+  {
+    "transactionId": "S47297775",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118207331/BARB0VJRABA/Salary Jul 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 165675.21
+  },
+  {
+    "transactionId": "S47297853",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118207631/HDFC0000367/Salary Jul 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 138375.21
+  },
+  {
+    "transactionId": "S47297909",
+    "Date": "31/07/2024",
+    "Narration": "INF/NEFT/037118207661/KKBK0000811/Salary Jul 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 123375.21
+  },
+  {
+    "transactionId": "S48474928",
+    "Date": "31/07/2024",
+    "Narration": "NEFT-N213243178986554-ADDIT LABS-INSURANCE-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 600000,
+    "balance": 723375.21
+  },
+  {
+    "transactionId": "S54992844",
+    "Date": "01/08/2024",
+    "Narration": "RTGS/ICICR42024080100512800/DEUT0784BBY/Tata AIGGeneral Insurance Co L",
+    "transactionType": "DR",
+    "transactionAmount": 619500,
+    "balance": 103875.21
+  },
+  {
+    "transactionId": "S94477656",
+    "Date": "05/08/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 84339.21
+  },
+  {
+    "transactionId": "S18037361",
+    "Date": "07/08/2024",
+    "Narration": "Mob alrt Chg Apr-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 84309.71
+  },
+  {
+    "transactionId": "S30196095",
+    "Date": "08/08/2024",
+    "Narration": "BIL/ONL/000882383451/ICICI Bank",
+    "transactionType": "DR",
+    "transactionAmount": 13375.68,
+    "balance": 70934.03
+  },
+  {
+    "transactionId": "S8521458",
+    "Date": "17/08/2024",
+    "Narration": "Mob alrt Chg May-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 70904.53
+  },
+  {
+    "transactionId": "S25645079",
+    "Date": "31/08/2024",
+    "Narration": "NEFT-N244243235897834-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 470904.53
+  },
+  {
+    "transactionId": "S26076858",
+    "Date": "31/08/2024",
+    "Narration": "INF/INFT/037440088331/SALARY AUG24   /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 448904.53
+  },
+  {
+    "transactionId": "S26100877",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109631/HDFC0004274/Salary Aug 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 382004.53
+  },
+  {
+    "transactionId": "S26100889",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109691/HDFC0000041/Salary Aug 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 305004.53
+  },
+  {
+    "transactionId": "S26100910",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109751/CNRB0001381/Salary Aug 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 41800,
+    "balance": 263204.53
+  },
+  {
+    "transactionId": "S26101565",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109701/KKBK0000430/Salary Aug 2024/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 214804.53
+  },
+  {
+    "transactionId": "S26101579",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109771/BARB0VJRABA/Salary Aug 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 19355,
+    "balance": 195449.53
+  },
+  {
+    "transactionId": "S26101589",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109801/HDFC0000367/Salary Aug 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 168149.53
+  },
+  {
+    "transactionId": "S26100398",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109851/SBIN0040392/Salary Aug 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 151149.53
+  },
+  {
+    "transactionId": "S26101310",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109821/KKBK0000811/Salary Aug 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 136149.53
+  },
+  {
+    "transactionId": "S26100962",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109891/SBIN0003966/Salary Aug 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 122649.53
+  },
+  {
+    "transactionId": "S26101325",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109871/CNRB0000479/Salary Aug 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 108649.53
+  },
+  {
+    "transactionId": "S26100988",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109981/IDIB000D030/Salary Aug 2024/VidyaB",
+    "transactionType": "DR",
+    "transactionAmount": 6452,
+    "balance": 102197.53
+  },
+  {
+    "transactionId": "S26101636",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109911/CNRB0001381/Salary Aug 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 84197.53
+  },
+  {
+    "transactionId": "S26101647",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440109951/BARB0VJSIUT/Salary Aug 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 12581,
+    "balance": 71616.53
+  },
+  {
+    "transactionId": "S26101668",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440110221/BKID0009675/Salary Aug 2024/PratikshaPradip",
+    "transactionType": "DR",
+    "transactionAmount": 1935,
+    "balance": 69681.53
+  },
+  {
+    "transactionId": "S26101680",
+    "Date": "31/08/2024",
+    "Narration": "INF/NEFT/037440110231/BKID0009249/Salary Aug 2024/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 1935,
+    "balance": 67746.53
+  },
+  {
+    "transactionId": "S57156338",
+    "Date": "03/09/2024",
+    "Narration": "ATD/Auto Debit CC1xx6899",
+    "transactionType": "DR",
+    "transactionAmount": 35355.88,
+    "balance": 32390.65
+  },
+  {
+    "transactionId": "S79939212",
+    "Date": "05/09/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 12854.65
+  },
+  {
+    "transactionId": "S3825026",
+    "Date": "18/09/2024",
+    "Narration": "Mob alrt Chg Jun-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 12825.15
+  },
+  {
+    "transactionId": "S14497707",
+    "Date": "30/09/2024",
+    "Narration": "MMT/IMPS/427419376165/Salary/ADDIT LABS/HDFC Bank",
+    "transactionType": "CR",
+    "transactionAmount": 450000,
+    "balance": 462825.15
+  },
+  {
+    "transactionId": "S14692613",
+    "Date": "30/09/2024",
+    "Narration": "INF/INFT/037770165521/Salary Sept 202/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 440825.15
+  },
+  {
+    "transactionId": "S14726743",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770198061/HDFC0004274/Salary Sep 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 373925.15
+  },
+  {
+    "transactionId": "S14726814",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770198421/KKBK0000430/Salary Sep 2024/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 325525.15
+  },
+  {
+    "transactionId": "S14727352",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770198131/HDFC0000041/Salary Sep 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 248525.15
+  },
+  {
+    "transactionId": "S14726885",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770198801/BARB0VJRABA/Salary Sep 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 228525.15
+  },
+  {
+    "transactionId": "S14727438",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770198501/CNRB0001381/Salary Sep 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 41800,
+    "balance": 186725.15
+  },
+  {
+    "transactionId": "S14728072",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770198901/KKBK0000811/Salary Sep 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 171725.15
+  },
+  {
+    "transactionId": "S14729020",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770198851/HDFC0000367/Salary Sep 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 144425.15
+  },
+  {
+    "transactionId": "S14728105",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770199391/SBIN0040392/Salary Sep 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 127425.15
+  },
+  {
+    "transactionId": "S14728603",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770199471/CNRB0000479/Salary Sep 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 12133,
+    "balance": 115292.15
+  },
+  {
+    "transactionId": "S14728622",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770199511/SBIN0003966/Salary Sep 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 101792.15
+  },
+  {
+    "transactionId": "S14728643",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770199581/CNRB0001381/Salary Sep 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 83792.15
+  },
+  {
+    "transactionId": "S14728189",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770199821/BARB0VJSIUT/Salary Sep 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 70792.15
+  },
+  {
+    "transactionId": "S14728226",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770199931/BKID0009249/Salary Sep 2024/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 60792.15
+  },
+  {
+    "transactionId": "S14729528",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770200081/IDIB000D030/Salary Sep 2024/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 50792.15
+  },
+  {
+    "transactionId": "S14728247",
+    "Date": "30/09/2024",
+    "Narration": "INF/NEFT/037770200201/BKID0009675/Salary Sep 2024/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 40792.15
+  },
+  {
+    "transactionId": "S68336655",
+    "Date": "05/10/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 21256.15
+  },
+  {
+    "transactionId": "S32983288",
+    "Date": "22/10/2024",
+    "Narration": "Dbt card Chg Jul-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 590,
+    "balance": 20666.15
+  },
+  {
+    "transactionId": "S14004312",
+    "Date": "30/10/2024",
+    "Narration": "NEFT-N304243365239985-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 450000,
+    "balance": 470666.15
+  },
+  {
+    "transactionId": "S14926153",
+    "Date": "30/10/2024",
+    "Narration": "INF/INFT/038126372111/Salary Oct 24  /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 448666.15
+  },
+  {
+    "transactionId": "S15256135",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127058501/HDFC0004274/Salary Oct 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 381766.15
+  },
+  {
+    "transactionId": "S15256181",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127058881/HDFC0000041/Salary Oct 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 304766.15
+  },
+  {
+    "transactionId": "S15256508",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127058981/KKBK0000430/Salary Oct 2024/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 256366.15
+  },
+  {
+    "transactionId": "S15256256",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127059111/CNRB0001381/Salary Oct 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 41800,
+    "balance": 214566.15
+  },
+  {
+    "transactionId": "S15256290",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127059361/BARB0VJRABA/Salary Oct 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 194566.15
+  },
+  {
+    "transactionId": "S15256351",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127059701/HDFC0000367/Salary Oct 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 167266.15
+  },
+  {
+    "transactionId": "S15256399",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127060001/KKBK0000811/Salary Oct 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 152266.15
+  },
+  {
+    "transactionId": "S15256681",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127060141/SBIN0040392/Salary Oct 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 135266.15
+  },
+  {
+    "transactionId": "S15256719",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127060511/CNRB0000479/Salary Oct 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 121266.15
+  },
+  {
+    "transactionId": "S15255972",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127060741/SBIN0003966/Salary Oct 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 107766.15
+  },
+  {
+    "transactionId": "S15256818",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127061281/CNRB0001381/Salary Oct 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 89766.15
+  },
+  {
+    "transactionId": "S15257324",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127061361/BARB0VJSIUT/Salary Oct 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 76766.15
+  },
+  {
+    "transactionId": "S15256990",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127061961/BKID0009249/Salary Oct 2024/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 66766.15
+  },
+  {
+    "transactionId": "S15257409",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127061831/IDIB000D030/Salary Oct 2024/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 56766.15
+  },
+  {
+    "transactionId": "S15257483",
+    "Date": "30/10/2024",
+    "Narration": "INF/NEFT/038127062451/BKID0009675/Salary Oct 2024/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 46766.15
+  },
+  {
+    "transactionId": "S70278381",
+    "Date": "05/11/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 27230.15
+  },
+  {
+    "transactionId": "S2841336",
+    "Date": "08/11/2024",
+    "Narration": "Mob alrt Chg Aug-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 27200.65
+  },
+  {
+    "transactionId": "S90535622",
+    "Date": "29/11/2024",
+    "Narration": "NEFT-N334243422499658-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 420000,
+    "balance": 447200.65
+  },
+  {
+    "transactionId": "S91145886",
+    "Date": "29/11/2024",
+    "Narration": "INF/INFT/038434932521/Salary Nov 24  /MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 425200.65
+  },
+  {
+    "transactionId": "S91171654",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434994401/IDIB000D030/Salary Nov 2024/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 415200.65
+  },
+  {
+    "transactionId": "S91171712",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434994491/BKID0009249/Salary Nov 2024/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 9333,
+    "balance": 405867.65
+  },
+  {
+    "transactionId": "S91171774",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434994791/BKID0009675/Salary Nov 2024/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 395867.65
+  },
+  {
+    "transactionId": "S91174006",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434997081/HDFC0004274/Salary Nov 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 328967.65
+  },
+  {
+    "transactionId": "S91174059",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434997111/HDFC0000041/Salary Nov 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 251967.65
+  },
+  {
+    "transactionId": "S91174118",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434997171/KKBK0000430/Salary Nov 2024/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 203567.65
+  },
+  {
+    "transactionId": "S91174163",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434997661/CNRB0001381/Salary Nov 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 41800,
+    "balance": 161767.65
+  },
+  {
+    "transactionId": "S91174215",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434997761/BARB0VJRABA/Salary Nov 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 141767.65
+  },
+  {
+    "transactionId": "S91174266",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434998041/HDFC0000367/Salary Nov 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 114467.65
+  },
+  {
+    "transactionId": "S91174581",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434998111/KKBK0000811/Salary Nov 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 99467.65
+  },
+  {
+    "transactionId": "S91174370",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434998171/SBIN0040392/Salary Nov 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 82467.65
+  },
+  {
+    "transactionId": "S91174473",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434998491/SBIN0003966/Salary Nov 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 68967.65
+  },
+  {
+    "transactionId": "S91174718",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434998411/CNRB0000479/Salary Nov 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 54967.65
+  },
+  {
+    "transactionId": "S91175030",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434998791/CNRB0001381/Salary Nov 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 36967.65
+  },
+  {
+    "transactionId": "S91175073",
+    "Date": "29/11/2024",
+    "Narration": "INF/NEFT/038434998921/BARB0VJSIUT/Salary Nov 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 23967.65
+  },
+  {
+    "transactionId": "S52552345",
+    "Date": "05/12/2024",
+    "Narration": "Auto Loan XX23275 EMI Addit La",
+    "transactionType": "DR",
+    "transactionAmount": 19536,
+    "balance": 4431.65
+  },
+  {
+    "transactionId": "S52569040",
+    "Date": "27/12/2024",
+    "Narration": "Mob alrt Chg Oct-24+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 4402.15
+  },
+  {
+    "transactionId": "S87267208",
+    "Date": "31/12/2024",
+    "Narration": "NEFT-HDFCN52024123168777608-ADDIT LABS-SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 420000,
+    "balance": 424402.15
+  },
+  {
+    "transactionId": "S87476918",
+    "Date": "31/12/2024",
+    "Narration": "NEFT-HDFCN52024123168796519-ADDIT LABS-FROM HDFC-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 100000,
+    "balance": 524402.15
+  },
+  {
+    "transactionId": "S89439575",
+    "Date": "31/12/2024",
+    "Narration": "INF/INFT/038774935871/MICHAEL",
+    "transactionType": "DR",
+    "transactionAmount": 22000,
+    "balance": 502402.15
+  },
+  {
+    "transactionId": "S89503383",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442604/HDFC0000041/Salary Dec 2024/NagendraBR",
+    "transactionType": "DR",
+    "transactionAmount": 77000,
+    "balance": 425402.15
+  },
+  {
+    "transactionId": "S89501437",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442591/HDFC0004274/Salary Dec 2024/NandanB",
+    "transactionType": "DR",
+    "transactionAmount": 66900,
+    "balance": 358502.15
+  },
+  {
+    "transactionId": "S89502341",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442621/KKBK0000430/Salary Dec 2024/NaveenP",
+    "transactionType": "DR",
+    "transactionAmount": 48400,
+    "balance": 310102.15
+  },
+  {
+    "transactionId": "S89503493",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442627/CNRB0001381/Salary Dec 2024/VaishakP",
+    "transactionType": "DR",
+    "transactionAmount": 41800,
+    "balance": 268302.15
+  },
+  {
+    "transactionId": "S89502392",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442638/BARB0VJRABA/Salary Dec 2024/SHARATHS",
+    "transactionType": "DR",
+    "transactionAmount": 18710,
+    "balance": 249592.15
+  },
+  {
+    "transactionId": "S89502942",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442652/HDFC0000367/Salary Dec 2024/RakeshKadam",
+    "transactionType": "DR",
+    "transactionAmount": 27300,
+    "balance": 222292.15
+  },
+  {
+    "transactionId": "S89504138",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442661/KKBK0000811/Salary Dec 2024/ShashankT",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 207292.15
+  },
+  {
+    "transactionId": "S89502555",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442693/SBIN0040392/Salary Dec 2024/PunyashreeG",
+    "transactionType": "DR",
+    "transactionAmount": 17000,
+    "balance": 190292.15
+  },
+  {
+    "transactionId": "S89503901",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442707/CNRB0000479/Salary Dec 2024/KavyaP",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 176292.15
+  },
+  {
+    "transactionId": "S89504605",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442720/SBIN0003966/Salary Dec 2024/RaghuCS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 162792.15
+  },
+  {
+    "transactionId": "S89504000",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442745/CNRB0001381/Salary Dec 2024/SURAJP",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 144792.15
+  },
+  {
+    "transactionId": "S89504268",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442759/BARB0VJSIUT/Salary Dec 2024/SangeetaNageshN",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 131792.15
+  },
+  {
+    "transactionId": "S89504692",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442777/IDIB000D030/Salary Dec 2024/VidyaR",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 121792.15
+  },
+  {
+    "transactionId": "S89505691",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442786/BKID0009249/Salary Dec 2024/Deepak",
+    "transactionType": "DR",
+    "transactionAmount": 9355,
+    "balance": 112437.15
+  },
+  {
+    "transactionId": "S89505881",
+    "Date": "31/12/2024",
+    "Narration": "INF/NEFT/ICICN42024123151442853/BKID0009675/Salary Dec 2024/Pratheeksha",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 102437.15
+  }
+]
