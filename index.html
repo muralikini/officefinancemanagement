@@ -1152,11 +1152,13 @@ async function scanInvoicesFolder(dirHandle, currentPath) {
       await scanInvoicesFolder(entry, `${currentPath}/${entry.name}`);
     } 
     else if (entry.name.toLowerCase().endsWith('.pdf')) {
-      try {
-        const file = await entry.getFile();
-        const invoice = await extractInvoiceFromPDF(file, entry.name, currentPath);
-        if (invoice) allInvoices.push(invoice);
-      } catch (e) {
+  try {
+    const file = await entry.getFile();
+    const invoice = await extractInvoiceFromPDF(file, entry.name, currentPath);
+    if (invoice && invoice.amount > 0) {   // Only keep invoices with valid amount
+      allInvoices.push(invoice);
+    } 
+}catch (e) {
         console.warn(`Failed to read ${entry.name}`);
       }
     }
@@ -1169,31 +1171,59 @@ async function extractInvoiceFromPDF(file, filename, path) {
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
     let fullText = '';
 
-    for (let i = 1; i <= pdf.numPages; i++) {
+    for (let i = 1; i <= Math.min(pdf.numPages, 3); i++) {  // Limit to first 3 pages
       const page = await pdf.getPage(i);
       const textContent = await page.getTextContent();
-      fullText += textContent.items.map(item => item.str).join(' ') + ' ';
+      fullText += textContent.items.map(item => item.str).join(' ') + '\n';
     }
 
-    // Basic parsing logic - we can make it smarter later
     const yearMatch = path.match(/(\d{4})/);
-    const amountMatch = fullText.match(/₹?\s*([\d,]+(?:\.\d+)?)/);
-    const invoiceNoMatch = fullText.match(/(?:Invoice|Bill|No\.?)\s*[#:]\s*([A-Z0-9-]+)/i);
+    
+    // Improved amount detection - look for ₹ or numbers near "Total", "Amount", "Grand Total" etc.
+    let amount = 0;
+    
+    // Try to find amounts near common invoice keywords
+    const amountRegex = /(?:₹|Rs\.?|Total|Amount|Grand Total|Invoice Value)[\s:₹]*([\d,]+(?:\.\d+)?)/gi;
+    let match;
+    let bestAmount = 0;
+    
+    while ((match = amountRegex.exec(fullText)) !== null) {
+      const candidate = parseFloat(match[1].replace(/,/g, ''));
+      if (candidate > bestAmount && candidate < 100000000) {  // Reasonable upper limit
+        bestAmount = candidate;
+      }
+    }
+    
+    amount = bestAmount;
+
+    // Fallback: find largest reasonable number
+    if (amount === 0) {
+      const allNumbers = fullText.match(/[\d,]+(?:\.\d+)?/g) || [];
+      for (let numStr of allNumbers) {
+        const num = parseFloat(numStr.replace(/,/g, ''));
+        if (num > 100 && num < 100000000 && num > amount) {
+          amount = num;
+        }
+      }
+    }
+
+    const invoiceNoMatch = fullText.match(/(?:Invoice|Bill|No\.?|PO)\s*[#:]\s*([A-Z0-9\-\/]+)/i);
 
     return {
       year: yearMatch ? yearMatch[1] : 'Unknown',
       invoiceNo: invoiceNoMatch ? invoiceNoMatch[1] : filename.replace('.pdf', ''),
-      date: '—', // Can be improved with regex
-      vendor: 'Procurement Vendor', // Will improve later
-      amount: amountMatch ? parseFloat(amountMatch[1].replace(/,/g, '')) : 0,
+      date: '—',
+      vendor: 'Procurement Vendor',
+      amount: amount,
       filename: filename,
       path: path
     };
   } catch (e) {
-    console.warn("PDF parse error:", filename);
+    console.warn("PDF parse error:", filename, e);
     return null;
   }
 }
+
 
 // Placeholder - will need PDF.js for real extraction
 async function extractTextFromPDF(file) {
