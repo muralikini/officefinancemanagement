@@ -1650,24 +1650,44 @@ async function selectSingleInvoice() {
 
 // ==================== CASHFLOW FUNCTIONS ====================
 
+function getFinancialYear(dateStr) {
+  if (!dateStr) return null;
+  try {
+    const parts = dateStr.split(/[\/-]/);
+    if (parts.length !== 3) return null;
+
+    let day = parseInt(parts[0]);
+    let month = parseInt(parts[1]);
+    let year = parseInt(parts[2]);
+
+    // Handle 2-digit year
+    if (year < 100) year += 2000;
+
+    // Indian FY: April (month 3) to March (month 2 next year)
+    if (month >= 4) {
+      return `${year}-${year + 1}`;
+    } else {
+      return `${year - 1}-${year}`;
+    }
+  } catch (e) {
+    return null;
+  }
+}
+
+
 function populateCashflowFY() {
   const select = document.getElementById('cashflowFY');
   const fys = new Set();
 
   allTransactions.forEach(t => {
-    if (!t.date) return;
-    try {
-      const parts = t.date.split(/[\/-]/);
-      if (parts.length === 3) {
-        const d = new Date(parts[2], parts[1] - 1, parts[0]);
-        if (!isNaN(d.getTime())) {
-          const year = d.getFullYear();
-          const month = d.getMonth();
-          const fy = (month < 3 ? year - 1 : year) + '-' + (month < 3 ? year : year + 1);
-          fys.add(fy);
-        }
+    const fy = getFinancialYear(t.date);
+    if (fy) {
+      // Only show reasonable years (2021 onwards)
+      const startYear = parseInt(fy.split('-')[0]);
+      if (startYear >= 2021) {
+        fys.add(fy);
       }
-    } catch (e) {}
+    }
   });
 
   select.innerHTML = '';
@@ -1680,26 +1700,15 @@ function populateCashflowFY() {
 }
 
 function loadCashflow() {
-  const fySelect = document.getElementById('cashflowFY');
-  const fy = fySelect.value;
+  const fy = document.getElementById('cashflowFY').value;
   if (!fy) return;
 
-  // Filter transactions for selected FY
-  const fyTransactions = allTransactions.filter(t => {
-    if (!t.date) return false;
-    try {
-      const parts = t.date.split(/[\/-]/);
-      if (parts.length !== 3) return false;
-      const d = new Date(parts[2], parts[1] - 1, parts[0]);
-      if (isNaN(d.getTime())) return false;
+  const [fyStartYear, fyEndYear] = fy.split('-').map(Number);
 
-      const year = d.getFullYear();
-      const month = d.getMonth();
-      const transFY = (month < 3 ? year - 1 : year) + '-' + (month < 3 ? year : year + 1);
-      return transFY === fy;
-    } catch (e) {
-      return false;
-    }
+  // Filter transactions for selected FY (April to March)
+  const fyTransactions = allTransactions.filter(t => {
+    const transactionFY = getFinancialYear(t.date);
+    return transactionFY === fy;
   });
 
   let totalInflows = 0;
@@ -1712,17 +1721,48 @@ function loadCashflow() {
 
   const netFlow = totalInflows - totalOutflows;
 
+  // Calculate Opening Balance (balance just before start of FY)
+  let openingBalance = 0;
+  let closingBalance = 0;
+
+  // Find the last known balance before April of fyStartYear
+  const beforeFYTransactions = allTransactions.filter(t => {
+    if (!t.date) return false;
+    const parts = t.date.split(/[\/-]/);
+    if (parts.length !== 3) return false;
+
+    let year = parseInt(parts[2]);
+    if (year < 100) year += 2000;
+    let month = parseInt(parts[1]);
+
+    // Before April of fyStartYear
+    return (year < fyStartYear) || (year === fyStartYear && month < 4);
+  });
+
+  if (beforeFYTransactions.length > 0) {
+    // Sort by date and take the last balance
+    beforeFYTransactions.sort((a, b) => {
+      const dateA = a.date.split(/[\/-]/).reverse().join('-');
+      const dateB = b.date.split(/[\/-]/).reverse().join('-');
+      return dateA.localeCompare(dateB);
+    });
+    openingBalance = beforeFYTransactions[beforeFYTransactions.length - 1].balance || 0;
+  }
+
+  // Closing Balance = Opening + Net Flow
+  closingBalance = openingBalance + netFlow;
+
+  // Update UI
+  document.getElementById('cf-opening').textContent = '₹' + openingBalance.toLocaleString('en-IN');
   document.getElementById('cf-inflows').textContent = '₹' + totalInflows.toLocaleString('en-IN');
   document.getElementById('cf-outflows').textContent = '₹' + totalOutflows.toLocaleString('en-IN');
+  document.getElementById('cf-closing').textContent = '₹' + closingBalance.toLocaleString('en-IN');
   document.getElementById('cf-net').textContent = '₹' + netFlow.toLocaleString('en-IN');
   document.getElementById('cf-net').className = `text-3xl font-bold mt-2 ${netFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  // Placeholder for now (we can calculate proper balance later)
-  document.getElementById('cf-opening').textContent = '₹0 (Coming Soon)';
-  document.getElementById('cf-closing').textContent = '₹0 (Coming Soon)';
-
   renderMonthlyCashflow(fyTransactions);
 }
+
 
 function renderMonthlyCashflow(transactions) {
   const container = document.getElementById('cf-monthly-table');
@@ -1730,11 +1770,18 @@ function renderMonthlyCashflow(transactions) {
 
   transactions.forEach(t => {
     if (!t.date) return;
-    const monthKey = t.date.substring(3); // Gets MM-YYYY
+    // Format: Apr-2025, May-2025 etc.
+    const parts = t.date.split(/[\/-]/);
+    if (parts.length !== 3) return;
 
-    if (!monthly[monthKey]) {
-      monthly[monthKey] = { inflow: 0, outflow: 0 };
-    }
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const monthName = monthNames[parseInt(parts[1]) - 1];
+    const year = parts[2].length === 2 ? "20" + parts[2] : parts[2];
+    const monthKey = `${monthName}-${year}`;
+
+    if (!monthly[monthKey]) monthly[monthKey] = { inflow: 0, outflow: 0 };
+
     monthly[monthKey].inflow += t.deposit || 0;
     monthly[monthKey].outflow += t.withdrawal || 0;
   });
