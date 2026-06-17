@@ -2072,33 +2072,24 @@ function loadExpenses() {
   const monthFilter = document.getElementById('expenseMonth').value || "";
   const catFilter = document.getElementById('expenseCategory').value || "";
 
-  console.log(`[Expenses] Filter applied -> FY: ${fy || 'All'}, Month: ${monthFilter || 'All'}, Category: ${catFilter || 'All'}`);
-
   const expenses = allTransactions.filter(t => {
     if (!t.withdrawal || t.withdrawal <= 0) return false;
 
-    // Exclude internal transfers and investments
-    if (isInternalTransfer(t)) return false;
-
-    //const category = categorizeExpense(t.narration);
-    //if (category === "Investment" || category.includes("Inflow") || category.includes("Salary")) {
-      //return false;
-    //}
+    // === STRICT EXCLUSION ===
+    if (isInternalTransfer(t)) return false;           // No interbank transfers
 
     const category = categorizeExpense(t.narration);
-    if (category.includes("Income") || category === "Investment") {
+
+    // Exclude inflows and investments
+    if (category.includes("Income") || category === "Investment" || category === "Salary Credit") {
       return false;
     }
 
     // FY Filter
-    if (fy) {
-      if (getFinancialYear(t.date) !== fy) return false;
-    }
+    if (fy && getFinancialYear(t.date) !== fy) return false;
 
     // Month Filter
-    if (monthFilter && t.date) {
-      if (!t.date.includes(monthFilter)) return false;
-    }
+    if (monthFilter && t.date && !t.date.includes(monthFilter)) return false;
 
     // Category Filter
     if (catFilter && category !== catFilter) return false;
@@ -2106,12 +2097,10 @@ function loadExpenses() {
     return true;
   });
 
-  console.log(`[Expenses] Found ${expenses.length} valid expense records`);
-
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
+
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
 
-  // Average monthly
   const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3) : ''));
   const avgMonthly = uniqueMonths.size > 0 ? Math.round(totalExpense / uniqueMonths.size) : 0;
   document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
@@ -2167,44 +2156,25 @@ function renderExpensesTable(expenses) {
 
 function isInternalTransfer(transaction) {
   if (!transaction.narration) return false;
+  const n = transaction.narration.toLowerCase();
 
-  const narration = transaction.narration.toLowerCase();
-
-  // === NEGATIVE RULES (These should NEVER be treated as internal) ===
-  const clientKeywords = [
-    'home control', 'homecontrol', 'singapore', 'pte ltd',
-    'microsoft', 'client', 'customer', 'invoice', 'payment from'
-  ];
-
-  for (let keyword of clientKeywords) {
-    if (narration.includes(keyword)) {
-      return false; // Legitimate client payment → Do NOT exclude
-    }
-  }
-
-  // === POSITIVE RULES (Likely internal transfers) ===
+  // Strong internal transfer patterns
   const internalPatterns = [
-    'self transfer', 'transfer to self', 'neft to self', 'imps to self',
-    'rtgs to self', 'own account', 'internal transfer',
-    'neft dr.*hdfc', 'neft dr.*icici', 'neft dr.*idfc',
+    'hdfc to icici', 'hdfc to idfc', 'icici to hdfc', 'idfc to hdfc',
+    'neft.*hdfc', 'neft.*icici', 'neft.*idfc',
     'imps.*hdfc', 'imps.*icici', 'imps.*idfc',
-    'funds transfer.*self', 'account transfer.*self'
+    'rtgs.*hdfc', 'rtgs.*icici', 'rtgs.*idfc',
+    'self transfer', 'transfer to self', 'own account'
   ];
 
   for (let pattern of internalPatterns) {
-    if (new RegExp(pattern).test(narration)) {
-      return true;
-    }
+    if (new RegExp(pattern).test(n)) return true;
   }
 
-  // Large round amount transfers between known banks (common in FD breaking)
+  // Large round figure transfers between your 3 banks
   const amount = (transaction.deposit || 0) + (transaction.withdrawal || 0);
-  if (amount >= 500000 && 
-     (narration.includes('neft') || narration.includes('rtgs') || narration.includes('imps')) &&
-     (amount % 100000 === 0 || amount % 50000 === 0)) {
-    
-    // Only if it looks like movement between own accounts
-    if (narration.includes('hdfc') || narration.includes('icici') || narration.includes('idfc')) {
+  if (amount > 100000 && (amount % 10000 === 0 || amount % 50000 === 0)) {
+    if (n.includes('hdfc') && (n.includes('icici') || n.includes('idfc'))) {
       return true;
     }
   }
