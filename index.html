@@ -582,16 +582,18 @@ async function loadSelectedBank() {
     const bank = manifest.banks.find(b => b.bankName === bankName);
     if (!bank) return;
 
-    const fileObj = bank.files.find(f => f.year === year) || bank.files[0];
+    const fileObj = bank.files.find(f => f.year === year) || bank.files[bank.files.length-1];
     if (!fileObj) return;
 
     const res = await fetch(fileObj.filePath);
-    if (!res.ok) throw new Error('Failed to load');
+    if (!res.ok) throw new Error(`Failed to fetch ${fileObj.filePath}`);
 
     const rawData = await res.json();
     currentTransactions = normalizeTransactions(rawData);
 
-    // Apply month filter
+    console.log(`Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
+
+    // Apply month filter if any
     let filtered = currentTransactions;
     if (monthFilter) {
       filtered = currentTransactions.filter(t => t.date && t.date.includes(monthFilter));
@@ -600,8 +602,11 @@ async function loadSelectedBank() {
     renderBankingSummary();
     renderBankingTable(filtered);
     
+    // Refresh month dropdown after data is loaded
+    populateMonthSelect();
+
   } catch (e) {
-    console.error("Load failed:", e);
+    console.error("Bank loading failed:", e);
   }
 }
 
@@ -662,7 +667,7 @@ function populateYearSelect() {
     .then(res => res.json())
     .then(manifest => {
       const bank = manifest.banks.find(b => b.bankName === bankName);
-      if (!bank || !bank.files) return;
+      if (!bank || !bank.files || bank.files.length === 0) return;
 
       yearSelect.innerHTML = '<option value="">All Years</option>';
       
@@ -673,12 +678,11 @@ function populateYearSelect() {
         yearSelect.appendChild(opt);
       });
 
-      if (bank.files.length > 0) {
-        yearSelect.value = bank.files[bank.files.length - 1].year;
-        populateMonthSelect();
-        loadSelectedBank();
-      }
-    });
+      // Auto-select latest year
+      yearSelect.value = bank.files[bank.files.length - 1].year;
+      loadSelectedBank();   // This will also trigger month population
+    })
+    .catch(err => console.error("Failed to load manifest for years", err));
 }
 
 // Populate Month based on selected FY
@@ -688,32 +692,42 @@ function populateMonthSelect() {
 
   monthSelect.innerHTML = '<option value="">All Months</option>';
 
-  if (!year) return;
+  if (!year || currentTransactions.length === 0) return;
 
   const months = new Set();
-  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
   currentTransactions.forEach(t => {
     if (!t.date) return;
-    if (!t.date.includes(year)) return;
-
-    const monthPart = t.date.substring(3); // e.g., "06-2026"
-    if (monthPart) months.add(monthPart);
+    
+    // Support multiple date formats: DD/MM/YYYY, DD-MM-YYYY, etc.
+    if (t.date.includes(year)) {
+      // Extract month part (e.g., "01-2023" or "01/2023")
+      let monthPart = null;
+      
+      if (t.date.includes('/')) {
+        monthPart = t.date.split('/')[1] + '-' + year;   // MM-YYYY
+      } else if (t.date.includes('-')) {
+        monthPart = t.date.split('-')[1] + '-' + year;
+      }
+      
+      if (monthPart) months.add(monthPart);
+    }
   });
 
-  Array.from(months)
-    .sort((a, b) => b.localeCompare(a)) // Newest first
-    .forEach(m => {
-      const [mm, yy] = m.split('-');
-      const monthName = monthNames[parseInt(mm) - 1] || mm;
-      const display = `${monthName}-${yy}`;
+  // Sort newest first and add nice display names
+  Array.from(months).sort().reverse().forEach(m => {
+    const [mm] = m.split('-');
+    const monthName = monthNames[parseInt(mm) - 1] || mm;
+    const displayText = `${monthName}-${year}`;
 
-      const opt = document.createElement('option');
-      opt.value = m;
-      opt.textContent = display;
-      monthSelect.appendChild(opt);
-    });
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = displayText;
+    monthSelect.appendChild(opt);
+  });
+
+  console.log(`✅ Populated ${months.size} months for year ${year}`);
 }
 // ============== DASHBOARD FUNCTIONS ==============
 let allTransactions = [];
