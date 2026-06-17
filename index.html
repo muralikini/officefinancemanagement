@@ -1886,11 +1886,12 @@ function showInternalTransfersSample(internalTransfers) {
 
 function getFinancialYear(dateStr) {
   const d = parseDate(dateStr);
-  if (!d) return null;
+  if (!d || isNaN(d.getTime())) return null;
 
   const year = d.getFullYear();
-  const month = d.getMonth(); // 0 = Jan, 3 = April
+  const month = d.getMonth(); // 0=Jan, 3=Apr
 
+  // Indian FY: April 1 to March 31
   if (month >= 3) { // April onwards
     return `${year}-${year + 1}`;
   } else {
@@ -1898,51 +1899,39 @@ function getFinancialYear(dateStr) {
   }
 }
 
-
 function populateCashflowFY() {
   const select = document.getElementById('cashflowFY');
   const fys = new Set();
 
   allTransactions.forEach(t => {
     const fy = getFinancialYear(t.date);
-    if (fy) {
-      const startYear = parseInt(fy.split('-')[0]);
-      if (startYear >= 2021 && startYear <= 2026) {
-        fys.add(fy);
-      }
-    }
+    if (fy) fys.add(fy);
   });
 
-  select.innerHTML = '';
+  select.innerHTML = '<option value="">All Years</option>';
   Array.from(fys).sort().reverse().forEach(fy => {
     const opt = document.createElement('option');
     opt.value = fy;
     opt.textContent = fy;
     select.appendChild(opt);
   });
+
+  // Default to latest
+  if (fys.size > 0) select.value = Array.from(fys).sort().reverse()[0];
 }
 
 function loadCashflow() {
   const fy = document.getElementById('cashflowFY').value;
   if (!fy) return;
 
-  // Filter transactions for selected FY
-  let fyTransactions = allTransactions.filter(t => {
-    return getFinancialYear(t.date) === fy;
-  });
+  let fyTransactions = allTransactions.filter(t => getFinancialYear(t.date) === fy);
 
-  // Separate internal transfers
   const realTransactions = fyTransactions.filter(t => !isInternalTransfer(t));
   const internalTransfers = fyTransactions.filter(t => isInternalTransfer(t));
 
-  console.log(`[Cashflow] FY ${fy}`);
-  console.log(`→ Total transactions: ${fyTransactions.length}`);
-  console.log(`→ Real transactions: ${realTransactions.length}`);
-  console.log(`→ Internal transfers excluded: ${internalTransfers.length}`);
+  console.log(`[Cashflow ${fy}] Total: ${fyTransactions.length} | Real: ${realTransactions.length} | Internal: ${internalTransfers.length}`);
 
-  let totalInflows = 0;
-  let totalOutflows = 0;
-
+  let totalInflows = 0, totalOutflows = 0;
   realTransactions.forEach(t => {
     totalInflows += t.deposit || 0;
     totalOutflows += t.withdrawal || 0;
@@ -1950,22 +1939,19 @@ function loadCashflow() {
 
   const netFlow = totalInflows - totalOutflows;
 
-  // Show sample internal transfers for verification
-showInternalTransfersSample(internalTransfers);
-
-  // Calculate Opening Balance (using all transactions before FY start)
+  // Opening Balance (last balance before FY start)
   let openingBalance = 0;
-  const [fyStart] = fy.split('-').map(Number);
-
+  const [startYear] = fy.split('-').map(Number);
   const beforeFY = allTransactions.filter(t => {
     const d = parseDate(t.date);
     if (!d) return false;
-    return d.getFullYear() < fyStart || (d.getFullYear() === fyStart && d.getMonth() < 3);
+    return d.getFullYear() < startYear || 
+           (d.getFullYear() === startYear && d.getMonth() < 3); // Before April
   });
 
   if (beforeFY.length > 0) {
-    beforeFY.sort((a, b) => parseDate(a.date) - parseDate(b.date));
-    openingBalance = beforeFY[beforeFY.length - 1].balance || 0;
+    beforeFY.sort((a,b) => parseDate(b.date) - parseDate(a.date));
+    openingBalance = beforeFY[0].balance || 0;
   }
 
   const closingBalance = openingBalance + netFlow;
@@ -1978,10 +1964,10 @@ showInternalTransfersSample(internalTransfers);
   document.getElementById('cf-net').textContent = '₹' + netFlow.toLocaleString('en-IN');
   document.getElementById('cf-net').className = `text-3xl font-bold mt-2 ${netFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  // Show transaction stats
   document.getElementById('cf-tx-count').textContent = realTransactions.length;
   document.getElementById('cf-internal-count').textContent = internalTransfers.length;
 
+  showInternalTransfersSample(internalTransfers);
   renderMonthlyCashflow(realTransactions);
 }
 
