@@ -1,6 +1,6 @@
 [
   {
-    "Date": "01-Jan-2026",
+    "Date": "01/Jan/2026",
     "Narration": "Sweepout FD 10261898455 booked",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "5,000.00",
@@ -8,7 +8,7 @@
     "Closing Balance": "500,889.00"
   },
   {
-    "Date": "09-Jan-2026",
+    "Date": "09/Jan/2026",
     "Narration": "Auto sweep in from 10261898455/Principal:5000/Gross Interest:3/TDS:0/ NEFT/IDFB600959426146/ADDIT LABS/HDFC0000004",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "",
@@ -16,7 +16,7 @@
     "Closing Balance": "505,892.00"
   },
   {
-    "Date": "09-Jan-2026",
+    "Date": "09/Jan/2026",
     "Narration": "Auto sweep in from 10179018817/Principal:294108/ NEFT/IDFB600959426146/ADDIT LABS/HDFC0000004",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "",
@@ -24,7 +24,7 @@
     "Closing Balance": "809,999.00"
   },
   {
-    "Date": "09-Jan-2026",
+    "Date": "09/Jan/2026",
     "Narration": "NEFT/IDFB600959426146/ADDIT LABS/HDFC0000004",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "300,000.00",
@@ -32,7 +32,7 @@
     "Closing Balance": "509,999.00"
   },
   {
-    "Date": "10-Jan-2026",
+    "Date": "10/Jan/2026",
     "Narration": "Sweepout FD 10263379902 booked",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "9,000.00",
@@ -40,7 +40,7 @@
     "Closing Balance": "500,999.00"
   },
   {
-    "Date": "20-Feb-2026",
+    "Date": "20/Feb/2026",
     "Narration": "Auto sweep in from 10263379902/Principal:9000/Gross Interest:30/TDS:3/ NEFT/IDFB605166422681/ADDIT LABS/HDFC0000004",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "",
@@ -48,7 +48,7 @@
     "Closing Balance": "510,026.00"
   },
   {
-    "Date": "20-Feb-2026",
+    "Date": "20/Feb/2026",
     "Narration": "Auto sweep in from 10179018817/Principal:61148/ NEFT/IDFB605166422681/ADDIT LABS/HDFC0000004",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "",
@@ -56,7 +56,7 @@
     "Closing Balance": "573,567.00"
   },
   {
-    "Date": "20-Feb-2026",
+    "Date": "20/Feb/2026",
     "Narration": "Auto sweep in from 10178839095/Principal:426433/ NEFT/IDFB605166422681/ADDIT LABS/HDFC0000004",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "",
@@ -64,7 +64,7 @@
     "Closing Balance": "1,016,740.00"
   },
   {
-    "Date": "20-Feb-2026",
+    "Date": "20/Feb/2026",
     "Narration": "NEFT/IDFB605166422681/ADDIT LABS/HDFC0000004",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "500,000.00",
@@ -72,7 +72,7 @@
     "Closing Balance": "516,740.00"
   },
   {
-    "Date": "21-Feb-2026",
+    "Date": "21/Feb/2026",
     "Narration": "Sweepout FD 10269252131 booked",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "16,000.00",
@@ -80,7 +80,7 @@
     "Closing Balance": "500,740.00"
   },
   {
-    "Date": "27-Feb-2026",
+    "Date": "27/Feb/2026",
     "Narration": "FD 10233316528 maturity :Account credited/Principal:500000//ADDIT LABS 27/02/2026",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "",
@@ -88,7 +88,7 @@
     "Closing Balance": "1,015,268.00"
   },
   {
-    "Date": "27-Feb-2026",
+    "Date": "27/Feb/2026",
     "Narration": "Auto sweep in from 10269252131/Principal:16000/ NEFT/IDFB605867929842/ADDIT LABS/HDFC0000004/Salary funds",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "",
@@ -96,7 +96,7 @@
     "Closing Balance": "1,031,268.00"
   },
   {
-    "Date": "27-Feb-2026",
+    "Date": "27/Feb/2026",
     "Narration": "Auto sweep in from 10178839095/Principal:108673/ NEFT/IDFB605867929842/ADDIT LABS/HDFC0000004/Salary funds",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "",
@@ -104,7 +104,7 @@
     "Closing Balance": "1,144,326.00"
   },
   {
-    "Date": "27-Feb-2026",
+    "Date": "27/Feb/2026",
     "Narration": "Auto sweep in from 10226380605/Principal:2000/ NEFT/IDFB605867929842/ADDIT LABS/HDFC0000004/Salary funds",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "",
@@ -112,7 +112,7 @@
     "Closing Balance": "1,146,414.00"
   },
   {
-    "Date": "27-Feb-2026",
+    "Date": "27/Feb/2026",
     "Narration": "NEFT/IDFB605867929842/ADDIT LABS/HDFC0000004/Salary funds",
     "Chq./Ref.No.": "",
     "Withdrawal Amt.": "900,000.00",
