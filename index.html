@@ -373,6 +373,31 @@
         <h2 class="text-xl font-semibold mb-6">Monthly Cashflow Breakdown</h2>
         <div id="cf-monthly-table" class="overflow-x-auto"></div>
         </div>
+        <div class="bg-gray-900 rounded-2xl p-6">
+        <div class="text-sm text-gray-400">Real Transactions</div>
+        <div id="cf-tx-count" class="text-3xl font-bold mt-2">0</div>
+      </div>
+
+      <div class="bg-gray-900 rounded-2xl p-6">
+        <div class="text-sm text-amber-400">Internal Transfers Excluded</div>
+        <div id="cf-internal-count" class="text-3xl font-bold mt-2">0</div>
+      </div>
+      <!-- Sample Internal Transfers (for verification) -->
+      <div class="mt-8 bg-gray-900 rounded-2xl p-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-semibold">Sample Internal Transfers Excluded</h2>
+          <span class="text-sm text-amber-400">(For verification only)</span>
+        </div>
+        
+        <div id="internal-transfers-sample" class="overflow-x-auto">
+          <!-- Populated by JavaScript -->
+        </div>
+        
+        <p class="text-xs text-gray-500 mt-4">
+          These transactions were detected as internal movements between your HDFC, ICICI, and IDFC accounts and were excluded from the Cashflow.
+        </p>
+      </div>
+              
     </div>
     </div>
 
@@ -1672,6 +1697,56 @@ async function selectSingleInvoice() {
 
 // ==================== CASHFLOW FUNCTIONS ====================
 
+function showInternalTransfersSample(internalTransfers) {
+  const container = document.getElementById('internal-transfers-sample');
+  
+  if (!internalTransfers || internalTransfers.length === 0) {
+    container.innerHTML = `<p class="text-gray-400">No internal transfers detected in this period.</p>`;
+    return;
+  }
+
+  // Show maximum 10 samples
+  const samples = internalTransfers.slice(0, 10);
+
+  let html = `
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="border-b border-gray-700 text-gray-400">
+          <th class="py-3 text-left">Date</th>
+          <th class="py-3 text-left">Narration</th>
+          <th class="py-3 text-right">Amount</th>
+          <th class="py-3 text-center">Type</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-700">
+  `;
+
+  samples.forEach(t => {
+    const amount = t.deposit || t.withdrawal || 0;
+    const type = t.deposit > 0 ? 'Inflow' : 'Outflow';
+    const typeColor = t.deposit > 0 ? 'text-green-400' : 'text-red-400';
+
+    html += `
+      <tr>
+        <td class="py-3">${t.date}</td>
+        <td class="py-3 text-gray-300">${t.narration ? t.narration.substring(0, 70) + '...' : '—'}</td>
+        <td class="py-3 text-right font-medium">₹${amount.toLocaleString('en-IN')}</td>
+        <td class="py-3 text-center">
+          <span class="${typeColor}">${type}</span>
+        </td>
+      </tr>
+    `;
+  });
+
+  html += `</tbody></table>`;
+
+  if (internalTransfers.length > 10) {
+    html += `<p class="text-xs text-gray-500 mt-3">Showing 10 out of ${internalTransfers.length} internal transfers.</p>`;
+  }
+
+  container.innerHTML = html;
+}
+
 function getFinancialYear(dateStr) {
   const d = parseDate(dateStr);
   if (!d) return null;
@@ -1714,26 +1789,36 @@ function loadCashflow() {
   const fy = document.getElementById('cashflowFY').value;
   if (!fy) return;
 
-  const [fyStart] = fy.split('-').map(Number);
-
-  const fyTransactions = allTransactions.filter(t => {
+  // Filter transactions for selected FY
+  let fyTransactions = allTransactions.filter(t => {
     return getFinancialYear(t.date) === fy;
   });
 
-  console.log(`Cashflow: Found ${fyTransactions.length} transactions for FY ${fy}`);
+  // Separate internal transfers
+  const realTransactions = fyTransactions.filter(t => !isInternalTransfer(t));
+  const internalTransfers = fyTransactions.filter(t => isInternalTransfer(t));
+
+  console.log(`[Cashflow] FY ${fy}`);
+  console.log(`→ Total transactions: ${fyTransactions.length}`);
+  console.log(`→ Real transactions: ${realTransactions.length}`);
+  console.log(`→ Internal transfers excluded: ${internalTransfers.length}`);
 
   let totalInflows = 0;
   let totalOutflows = 0;
 
-  fyTransactions.forEach(t => {
+  realTransactions.forEach(t => {
     totalInflows += t.deposit || 0;
     totalOutflows += t.withdrawal || 0;
   });
 
   const netFlow = totalInflows - totalOutflows;
 
-  // Calculate Opening Balance
+  // Show sample internal transfers for verification
+showInternalTransfersSample(internalTransfers);
+
+  // Calculate Opening Balance (using all transactions before FY start)
   let openingBalance = 0;
+  const [fyStart] = fy.split('-').map(Number);
 
   const beforeFY = allTransactions.filter(t => {
     const d = parseDate(t.date);
@@ -1742,11 +1827,7 @@ function loadCashflow() {
   });
 
   if (beforeFY.length > 0) {
-    beforeFY.sort((a, b) => {
-      const da = parseDate(a.date);
-      const db = parseDate(b.date);
-      return da - db;
-    });
+    beforeFY.sort((a, b) => parseDate(a.date) - parseDate(b.date));
     openingBalance = beforeFY[beforeFY.length - 1].balance || 0;
   }
 
@@ -1760,7 +1841,11 @@ function loadCashflow() {
   document.getElementById('cf-net').textContent = '₹' + netFlow.toLocaleString('en-IN');
   document.getElementById('cf-net').className = `text-3xl font-bold mt-2 ${netFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  renderMonthlyCashflow(fyTransactions);
+  // Show transaction stats
+  document.getElementById('cf-tx-count').textContent = realTransactions.length;
+  document.getElementById('cf-internal-count').textContent = internalTransfers.length;
+
+  renderMonthlyCashflow(realTransactions);
 }
 
 
@@ -1820,6 +1905,40 @@ function renderMonthlyCashflow(transactions) {
 
   html += `</tbody></table>`;
   container.innerHTML = html;
+}
+
+// ==================== INTERNAL TRANSFER DETECTION ====================
+
+function isInternalTransfer(transaction) {
+  if (!transaction.narration) return false;
+
+  const narration = transaction.narration.toLowerCase();
+
+  // Common patterns for internal/self transfers in Indian banks
+  const internalKeywords = [
+    'self', 'transfer to self', 'neft to self', 'imps to self',
+    'rtgs to self', 'own account', 'internal transfer',
+    'hdfc', 'icici', 'idfc', 'idfcbank',
+    'fund transfer', 'account transfer'
+  ];
+
+  // Check if narration contains any internal transfer keywords
+  for (let keyword of internalKeywords) {
+    if (narration.includes(keyword)) {
+      return true;
+    }
+  }
+
+  // Additional logic: Large round amounts moving between accounts (common in FD breaking/transfer)
+  const amount = (transaction.deposit || 0) + (transaction.withdrawal || 0);
+  if (amount >= 100000 && (narration.includes('neft') || narration.includes('rtgs') || narration.includes('imps'))) {
+    // Likely internal movement if amount is large and round
+    if (amount % 1000 === 0 || amount % 10000 === 0) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 
