@@ -591,11 +591,9 @@ async function loadSelectedBank() {
     const rawData = await res.json();
     currentTransactions = normalizeTransactions(rawData);
 
-    // Populate months after loading data
-    populateMonthSelect();
-
-    // Apply month filter if selected
+    // Apply filters
     let filtered = currentTransactions;
+
     if (monthFilter) {
       filtered = currentTransactions.filter(t => t.date && t.date.includes(monthFilter));
     }
@@ -698,23 +696,28 @@ function populateMonthSelect() {
 
   if (!year) return;
 
-  // Use all transactions to find months for the selected year
   const months = new Set();
 
   allTransactions.forEach(t => {
     if (t.date && t.date.includes(year)) {
-      const monthPart = t.date.substring(3); // e.g., "01-2025"
+      const monthPart = t.date.substring(3); // "06-2026"
       if (monthPart) months.add(monthPart);
     }
   });
 
-  // Sort months chronologically (newest first)
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
   Array.from(months)
-    .sort((a, b) => b.localeCompare(a))
+    .sort((a, b) => b.localeCompare(a))   // Newest first
     .forEach(m => {
+      const [mm, yy] = m.split('-');
+      const monthName = monthNames[parseInt(mm) - 1] || mm;
+      const display = `${monthName}-${yy}`;
+
       const opt = document.createElement('option');
-      opt.value = m;
-      opt.textContent = m;
+      opt.value = m;           // Keep original format for filtering
+      opt.textContent = display; // Show readable name
       monthSelect.appendChild(opt);
     });
 }
