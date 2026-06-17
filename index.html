@@ -591,6 +591,9 @@ async function loadSelectedBank() {
     const rawData = await res.json();
     currentTransactions = normalizeTransactions(rawData);
 
+    // Populate months after loading data
+    populateMonthSelect();
+
     // Apply month filter if selected
     let filtered = currentTransactions;
     if (monthFilter) {
@@ -677,6 +680,12 @@ function populateYearSelect() {
         populateMonthSelect();
         loadSelectedBank();
       }
+
+      if (bank.files.length > 0) {
+        yearSelect.value = bank.files[bank.files.length - 1].year;
+        populateMonthSelect();   // ← Add this line
+        loadSelectedBank();
+        }
     });
 }
 
@@ -689,22 +698,25 @@ function populateMonthSelect() {
 
   if (!year) return;
 
-  // Get all transactions for this year and extract unique months
+  // Use all transactions to find months for the selected year
   const months = new Set();
 
-  currentTransactions.forEach(t => {
+  allTransactions.forEach(t => {
     if (t.date && t.date.includes(year)) {
-      const monthPart = t.date.substring(3); // e.g., "05-2026"
-      months.add(monthPart);
+      const monthPart = t.date.substring(3); // e.g., "01-2025"
+      if (monthPart) months.add(monthPart);
     }
   });
 
-  Array.from(months).sort().reverse().forEach(m => {
-    const opt = document.createElement('option');
-    opt.value = m;
-    opt.textContent = m;
-    monthSelect.appendChild(opt);
-  });
+  // Sort months chronologically (newest first)
+  Array.from(months)
+    .sort((a, b) => b.localeCompare(a))
+    .forEach(m => {
+      const opt = document.createElement('option');
+      opt.value = m;
+      opt.textContent = m;
+      monthSelect.appendChild(opt);
+    });
 }
 
 // ============== DASHBOARD FUNCTIONS ==============
