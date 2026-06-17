@@ -60,6 +60,13 @@
                 class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl flex items-center gap-2 font-medium">
           <span>↻</span> Refresh All
         </button>
+        <button onclick="loadSelectedBank()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center gap-2">
+  <span>↻</span> Refresh
+        </button>
+        <button onclick="validateCurrentData()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg flex items-center gap-2 ml-2">
+  🔍 Validate
+        </button>
+        
       </div>
     </div>
 
@@ -2346,6 +2353,26 @@ function filterTable() {
     (t.Narration || '').toLowerCase().includes(term)
   );
   renderTable(filtered);
+}
+
+// ==================== DATA VALIDATION HELPER ====================
+function validateCurrentData() {
+  console.group("🔍 Data Validation Report");
+  console.log(`Total transactions loaded: ${currentTransactions.length}`);
+  
+  if (currentTransactions.length > 0) {
+    console.log("Sample first 3 records:");
+    currentTransactions.slice(0, 3).forEach((t, i) => {
+      console.log(`  ${i+1}. Date: ${t.date} | Withdrawal: ${t.withdrawal} | Deposit: ${t.deposit} | Narration: ${t.narration?.substring(0, 60)}...`);
+    });
+  }
+
+  const totalW = currentTransactions.reduce((sum, t) => sum + (t.withdrawal || 0), 0);
+  const totalD = currentTransactions.reduce((sum, t) => sum + (t.deposit || 0), 0);
+  
+  console.log(`Calculated Withdrawals: ₹${totalW.toLocaleString('en-IN')}`);
+  console.log(`Calculated Deposits: ₹${totalD.toLocaleString('en-IN')}`);
+  console.groupEnd();
 }
 
 
