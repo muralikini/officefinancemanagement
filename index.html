@@ -571,7 +571,7 @@ async function loadSelectedBank() {
 
   const bankName = bankSelect.value;
   const year = yearSelect.value;
-  const monthFilter = monthSelect.value;   // e.g., "02-2026"
+  const monthFilter = monthSelect.value;
 
   if (!bankName) return;
 
@@ -582,7 +582,7 @@ async function loadSelectedBank() {
     const bank = manifest.banks.find(b => b.bankName === bankName);
     if (!bank) return;
 
-    const fileObj = bank.files.find(f => f.year === year) || bank.files[bank.files.length - 1];
+    const fileObj = bank.files.find(f => f.year === year) || bank.files[bank.files.length-1];
     if (!fileObj) return;
 
     const res = await fetch(fileObj.filePath);
@@ -593,25 +593,23 @@ async function loadSelectedBank() {
 
     console.log(`Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
 
-    // Apply month filter with better matching
+    // Apply month filter
     let filtered = currentTransactions;
     if (monthFilter) {
       filtered = currentTransactions.filter(t => {
         if (!t.date) return false;
         const dateStr = String(t.date).trim();
-        
-        // Check for month-year match in different formats
         return dateStr.includes(monthFilter) || 
-               dateStr.includes(monthFilter.replace('-', '/')) ||
-               (dateStr.includes(monthFilter.split('-')[0]) && dateStr.includes(monthFilter.split('-')[1]));
+               dateStr.includes(monthFilter.replace('-', '/'));
       });
+      console.log(`Filtered to ${filtered.length} records for month ${monthFilter}`);
     }
 
     renderBankingSummary();
     renderBankingTable(filtered);
     
   } catch (e) {
-    console.error("Bank loading failed:", e);
+    console.error("Load failed:", e);
   }
 }
 
@@ -697,61 +695,51 @@ function populateMonthSelect() {
 
   monthSelect.innerHTML = '<option value="">All Months</option>';
 
-  if (!year || currentTransactions.length === 0) {
-    console.log(`⚠️ No year or data for month population`);
-    return;
-  }
+  if (!year || currentTransactions.length === 0) return;
 
   const months = new Set();
   const monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
   currentTransactions.forEach(t => {
     if (!t.date) return;
-    
     const dateStr = String(t.date).trim();
-    let monthPart = null;
 
-    // === HDFC Format: DD/MM/YY or DD/MM/YYYY ===
+    // Extract MM-YYYY for all formats
+    let monthYear = null;
+
     if (dateStr.includes('/')) {
       const parts = dateStr.split('/');
       if (parts.length === 3) {
-        const month = parts[1].padStart(2, '0');
-        let fullYear = parts[2];
-        if (fullYear.length === 2) fullYear = '20' + fullYear;  // Convert YY to YYYY
-        monthPart = `${month}-${fullYear}`;
+        const mm = parts[1].padStart(2, '0');
+        let yy = parts[2];
+        if (yy.length === 2) yy = '20' + yy;
+        monthYear = `${mm}-${yy}`;
       }
-    } 
-    // === ICICI / IDFC Format: DD-MM-YYYY or similar ===
-    else if (dateStr.includes('-')) {
+    } else if (dateStr.includes('-')) {
       const parts = dateStr.split('-');
       if (parts.length === 3) {
-        const month = parts[1].padStart(2, '0');
-        const fullYear = parts[2].length === 2 ? '20' + parts[2] : parts[2];
-        monthPart = `${month}-${fullYear}`;
+        const mm = parts[1].padStart(2, '0');
+        let yy = parts[2];
+        if (yy.length === 2) yy = '20' + yy;
+        monthYear = `${mm}-${yy}`;
       }
     }
 
-    // Only add if it matches the selected year
-    if (monthPart && monthPart.endsWith('-' + year)) {
-      months.add(monthPart);
+    if (monthYear && monthYear.endsWith(year)) {
+      months.add(monthYear);
     }
   });
 
-  console.log(`✅ Found ${months.size} unique months for year ${year} (HDFC + others)`);
+  console.log(`✅ Found ${months.size} months for year ${year}`);
 
-  // Sort newest first and show nice names
-  Array.from(months)
-    .sort((a, b) => b.localeCompare(a))
-    .forEach(m => {
-      const [mm, yy] = m.split('-');
-      const monthName = monthNames[parseInt(mm) - 1] || mm;
-      const displayText = `${monthName}-${yy}`;
-
-      const opt = document.createElement('option');
-      opt.value = m;
-      opt.textContent = displayText;
-      monthSelect.appendChild(opt);
-    });
+  Array.from(months).sort().reverse().forEach(m => {
+    const [mm, yy] = m.split('-');
+    const monthName = monthNames[parseInt(mm)-1] || mm;
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = `${monthName}-${yy}`;
+    monthSelect.appendChild(opt);
+  });
 }
 // ============== DASHBOARD FUNCTIONS ==============
 let allTransactions = [];
