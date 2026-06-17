@@ -402,6 +402,7 @@
     </div>
     </div>
 
+    
     <!-- ==================== EXPENSES TAB ==================== -->
     <div id="tab-5" class="tab-content hidden">
       <div class="max-w-screen-2xl mx-auto px-6 py-8">
@@ -409,39 +410,38 @@
           <h1 class="text-3xl font-bold">Expense Tracker</h1>
           
           <div class="flex items-center gap-4">
-            <select id="expenseFY" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5">
-              <!-- Populated by JS -->
+            <select id="expenseFY" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-sm">
             </select>
             
-            <select id="expenseMonth" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5">
+            <select id="expenseMonth" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-sm">
               <option value="">All Months</option>
             </select>
             
-            <select id="expenseCategory" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5">
+            <select id="expenseCategory" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-sm">
               <option value="">All Categories</option>
             </select>
           </div>
         </div>
 
-        <!-- Summary -->
+        <!-- Summary Cards -->
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10">
           <div class="bg-gray-900 rounded-2xl p-6">
             <div class="text-sm text-gray-400">Total Expenses</div>
             <div id="total-expenses" class="text-3xl font-bold text-red-400 mt-2">₹0</div>
           </div>
           <div class="bg-gray-900 rounded-2xl p-6">
-            <div class="text-sm text-gray-400">Avg Monthly Expense</div>
+            <div class="text-sm text-gray-400">Average Monthly</div>
             <div id="avg-monthly" class="text-3xl font-bold mt-2">₹0</div>
           </div>
           <div class="bg-gray-900 rounded-2xl p-6">
-            <div class="text-sm text-gray-400">Top Category</div>
+            <div class="text-sm text-gray-400">Top Spending Category</div>
             <div id="top-category" class="text-3xl font-bold mt-2">—</div>
           </div>
         </div>
 
         <!-- Category Breakdown -->
         <div class="bg-gray-900 rounded-2xl p-8 mb-8">
-          <h2 class="text-xl font-semibold mb-6">Expense by Category</h2>
+          <h2 class="text-xl font-semibold mb-6">Expenses by Category</h2>
           <div id="expense-category-breakdown" class="space-y-4"></div>
         </div>
 
@@ -461,7 +461,6 @@
         </div>
       </div>
     </div>
-
 <script>
 // ============== CONFIG ==============
 const MANIFEST_URL = 'manifest.json';
@@ -1973,22 +1972,23 @@ function renderMonthlyCashflow(transactions) {
   container.innerHTML = html;
 }
 
-//===================== EXPENSES TAB ===================================
 
-let expenseCategories = {};
+
+// ==================== EXPENSES TAB FUNCTIONS ====================
 
 function categorizeExpense(narration) {
   if (!narration) return "Others";
   const n = narration.toLowerCase();
 
-  if (n.includes("salary") || n.includes("neft salary")) return "Salary Credit"; // This should be inflow, but keeping for now
-  if (n.includes("fd") || n.includes("rd") || n.includes("fixed deposit")) return "Investment";
-  if (n.includes("home control") || n.includes("singapore")) return "Client Payment"; // Inflow
-  if (n.includes("bill") || n.includes("electricity") || n.includes("water")) return "Utilities";
-  if (n.includes("vps") || n.includes("dmart") || n.includes("amazon")) return "Shopping";
+  if (n.includes("home control") || n.includes("singapore") || n.includes("client")) return "Client Payment (Inflow)";
+  if (n.includes("salary") || n.includes("neft salary")) return "Salary (Inflow)";
+  if (n.includes("fd") || n.includes("rd") || n.includes("fixed deposit") || n.includes("maturity")) return "Investment";
+  if (n.includes("bill") || n.includes("electricity") || n.includes("water") || n.includes("custom")) return "Utilities & Bills";
+  if (n.includes("vps") || n.includes("dmart") || n.includes("amazon") || n.includes("shopping")) return "Shopping";
   if (n.includes("fuel") || n.includes("petrol")) return "Fuel";
   if (n.includes("credit card") || n.includes("cc payment")) return "Credit Card Payment";
-  if (n.includes("salary payment") || n.includes("vendor")) return "Vendor Payment";
+  if (n.includes("vendor") || n.includes("salary payment")) return "Vendor Payment";
+  if (n.includes("rent")) return "Rent";
 
   return "Others";
 }
@@ -1998,16 +1998,11 @@ function loadExpenses() {
   const monthFilter = document.getElementById('expenseMonth').value;
   const catFilter = document.getElementById('expenseCategory').value;
 
-  const filtered = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 0) return false; // Only expenses
+  const expenses = allTransactions.filter(t => {
+    if (!t.withdrawal || t.withdrawal <= 0) return false;
 
     const transactionFY = getFinancialYear(t.date);
     if (fy && transactionFY !== fy) return false;
-
-    if (monthFilter && !t.date.includes(monthFilter)) return false;
-
-    const category = categorizeExpense(t.narration);
-    if (catFilter && category !== catFilter) return false;
 
     // Exclude investments and internal transfers
     if (isInternalTransfer(t) || categorizeExpense(t.narration) === "Investment") {
@@ -2017,24 +2012,24 @@ function loadExpenses() {
     return true;
   });
 
-  // Calculate totals
-  const totalExpense = filtered.reduce((sum, t) => sum + t.withdrawal, 0);
-
+  const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
 
-  // Category breakdown
-  renderExpenseCategoryBreakdown(filtered);
+  // Average monthly (rough)
+  const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3) : ''));
+  const avgMonthly = uniqueMonths.size > 0 ? totalExpense / uniqueMonths.size : 0;
+  document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
 
-  // Table
-  renderExpensesTable(filtered);
+  renderExpenseCategoryBreakdown(expenses);
+  renderExpensesTable(expenses);
 }
 
-function renderExpenseCategoryBreakdown(transactions) {
+function renderExpenseCategoryBreakdown(expenses) {
   const container = document.getElementById('expense-category-breakdown');
   container.innerHTML = '';
 
   const catMap = {};
-  transactions.forEach(t => {
+  expenses.forEach(t => {
     const cat = categorizeExpense(t.narration);
     catMap[cat] = (catMap[cat] || 0) + t.withdrawal;
   });
@@ -2044,8 +2039,8 @@ function renderExpenseCategoryBreakdown(transactions) {
     .forEach(([cat, amt]) => {
       const percent = Math.round((amt / (Object.values(catMap).reduce((a,b)=>a+b,0))) * 100) || 0;
       container.innerHTML += `
-        <div class="flex justify-between items-center py-2">
-          <span class="font-medium">${cat}</span>
+        <div class="flex justify-between items-center py-3 border-b border-gray-700 last:border-0">
+          <span>${cat}</span>
           <div class="text-right">
             <span class="font-semibold">₹${amt.toLocaleString('en-IN')}</span>
             <span class="text-xs text-gray-500 ml-3">(${percent}%)</span>
@@ -2055,16 +2050,16 @@ function renderExpenseCategoryBreakdown(transactions) {
     });
 }
 
-function renderExpensesTable(transactions) {
+function renderExpensesTable(expenses) {
   const tbody = document.getElementById('expenses-table-body');
   tbody.innerHTML = '';
 
-  transactions.sort((a,b) => new Date(b.date) - new Date(a.date)).forEach(t => {
+  expenses.sort((a,b) => new Date(b.date) - new Date(a.date)).forEach(t => {
     const row = document.createElement('tr');
     row.className = 'hover:bg-gray-800';
     row.innerHTML = `
       <td class="px-6 py-4">${t.date || '—'}</td>
-      <td class="px-6 py-4 text-sm">${t.narration ? t.narration.substring(0, 65) + '...' : '—'}</td>
+      <td class="px-6 py-4 text-sm">${t.narration ? t.narration.substring(0, 70) + '...' : '—'}</td>
       <td class="px-6 py-4">${categorizeExpense(t.narration)}</td>
       <td class="px-6 py-4 text-right text-red-400 font-medium">-₹${t.withdrawal.toLocaleString('en-IN')}</td>
     `;
