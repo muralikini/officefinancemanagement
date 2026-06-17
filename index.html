@@ -571,7 +571,7 @@ async function loadSelectedBank() {
 
   const bankName = bankSelect.value;
   const year = yearSelect.value;
-  const monthFilter = monthSelect.value;
+  const monthFilter = monthSelect.value;   // e.g., "02-2026"
 
   if (!bankName) return;
 
@@ -593,18 +593,23 @@ async function loadSelectedBank() {
 
     console.log(`Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
 
-    // Apply month filter if selected
+    // Apply month filter with better matching
     let filtered = currentTransactions;
     if (monthFilter) {
-      filtered = currentTransactions.filter(t => t.date && t.date.includes(monthFilter));
+      filtered = currentTransactions.filter(t => {
+        if (!t.date) return false;
+        const dateStr = String(t.date).trim();
+        
+        // Check for month-year match in different formats
+        return dateStr.includes(monthFilter) || 
+               dateStr.includes(monthFilter.replace('-', '/')) ||
+               (dateStr.includes(monthFilter.split('-')[0]) && dateStr.includes(monthFilter.split('-')[1]));
+      });
     }
 
     renderBankingSummary();
     renderBankingTable(filtered);
     
-    // Refresh month dropdown with actual data
-    populateMonthSelect();
-
   } catch (e) {
     console.error("Bank loading failed:", e);
   }
