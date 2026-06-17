@@ -571,7 +571,7 @@ async function loadSelectedBank() {
 
   const bankName = bankSelect.value;
   const year = yearSelect.value;
-  const monthFilter = monthSelect.value;   // e.g., "06-2026"
+  const monthFilter = monthSelect.value;
 
   if (!bankName || !year) return;
 
@@ -586,31 +586,28 @@ async function loadSelectedBank() {
     if (!fileObj) return;
 
     const res = await fetch(fileObj.filePath);
-    if (!res.ok) throw new Error('Failed to load file');
+    if (!res.ok) throw new Error('Failed to load');
 
     const rawData = await res.json();
     currentTransactions = normalizeTransactions(rawData);
 
     console.log(`✅ Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
 
-    // === APPLY FILTERS ===
     let filtered = currentTransactions;
 
     if (monthFilter) {
       filtered = currentTransactions.filter(t => {
         if (!t.date) return false;
         const dateStr = String(t.date).trim();
-        // Check for "MM-2026" pattern in DD/MM/YYYY dates
         return dateStr.includes(monthFilter);
       });
       console.log(`🔍 Filtered to ${filtered.length} records for ${monthFilter}`);
     }
 
-    renderBankingSummary(filtered);   // Pass filtered data
+    renderBankingSummary(filtered);
     renderBankingTable(filtered);
 
-    // Re-populate months (in case needed)
-    populateMonthSelect();
+    populateMonthSelect();   // Refresh months after load
 
   } catch (e) {
     console.error("❌ Load failed:", e);
@@ -1076,9 +1073,10 @@ function renderBankingSummary(filteredData = currentTransactions) {
   const totalDeposits = filteredData.reduce((sum, t) => sum + (t.deposit || 0), 0);
   const netFlow = totalDeposits - totalWithdrawals;
 
+  // Use correct IDs from HTML
   document.getElementById('total-withdrawals').textContent = `₹${totalWithdrawals.toLocaleString('en-IN')}`;
   document.getElementById('total-deposits').textContent = `₹${totalDeposits.toLocaleString('en-IN')}`;
-  document.getElementById('net-flow').textContent = `₹${netFlow.toLocaleString('en-IN')}`;
+  document.getElementById('net-flow-banking').textContent = `₹${netFlow.toLocaleString('en-IN')}`;
   document.getElementById('transaction-count').textContent = filteredData.length;
 }
 
