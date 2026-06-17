@@ -131,8 +131,8 @@
       </button>
     </div>
 
-    <!-- Filters -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+   <!-- Banking Tab Filters -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
       <div>
         <label class="block text-sm text-gray-400 mb-1">Bank Account</label>
         <select id="bankSelect" onchange="populateYearSelect(); loadSelectedBank()" 
@@ -140,16 +140,23 @@
         </select>
       </div>
       <div>
-        <label class="block text-sm text-gray-400 mb-1">Year</label>
-        <select id="yearSelect" onchange="loadSelectedBank()" 
+        <label class="block text-sm text-gray-400 mb-1">Financial Year</label>
+        <select id="yearSelect" onchange="populateMonthSelect(); loadSelectedBank()" 
                 class="w-full bg-gray-900 border border-gray-700 rounded-xl p-3">
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm text-gray-400 mb-1">Month</label>
+        <select id="monthSelect" onchange="loadSelectedBank()" 
+                class="w-full bg-gray-900 border border-gray-700 rounded-xl p-3">
+          <option value="">All Months</option>
         </select>
       </div>
       <div>
         <label class="block text-sm text-gray-400 mb-1">Search</label>
         <input id="searchInput" type="text" placeholder="Search narration..." 
-               onkeyup="filterBankingTable()" 
-               class="w-full bg-gray-900 border border-gray-700 rounded-xl p-3">
+              onkeyup="filterBankingTable()" 
+              class="w-full bg-gray-900 border border-gray-700 rounded-xl p-3">
       </div>
     </div>
 
@@ -556,13 +563,15 @@ function filterBankingTable() {
   renderBankingTable(filtered);
 }
 
-/// Main load function for selected bank
+// Updated load function with month filter
 async function loadSelectedBank() {
   const bankSelect = document.getElementById('bankSelect');
   const yearSelect = document.getElementById('yearSelect');
-  
+  const monthSelect = document.getElementById('monthSelect');
+
   const bankName = bankSelect.value;
   const year = yearSelect.value;
+  const monthFilter = monthSelect.value;
 
   if (!bankName) return;
 
@@ -571,29 +580,28 @@ async function loadSelectedBank() {
     const manifest = await manifestRes.json();
     
     const bank = manifest.banks.find(b => b.bankName === bankName);
-    if (!bank) {
-      console.error("Bank not found in manifest");
-      return;
-    }
+    if (!bank) return;
 
     const fileObj = bank.files.find(f => f.year === year) || bank.files[0];
-    if (!fileObj || !fileObj.filePath) {
-      console.error("File path not found");
-      return;
-    }
+    if (!fileObj) return;
 
     const res = await fetch(fileObj.filePath);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) throw new Error('Failed to load');
 
     const rawData = await res.json();
     currentTransactions = normalizeTransactions(rawData);
 
+    // Apply month filter if selected
+    let filtered = currentTransactions;
+    if (monthFilter) {
+      filtered = currentTransactions.filter(t => t.date && t.date.includes(monthFilter));
+    }
+
     renderBankingSummary();
-    renderBankingTable(currentTransactions);
+    renderBankingTable(filtered);
     
   } catch (e) {
     console.error("Load failed:", e);
-    // alert("Could not load data for this bank/year.");
   }
 }
 
@@ -642,40 +650,61 @@ function getAvailableFYs() {
   return Array.from(fys).sort().reverse();
 }
 
+// Populate FY based on selected bank
 function populateYearSelect() {
   const bankSelect = document.getElementById('bankSelect');
   const yearSelect = document.getElementById('yearSelect');
-  
   const bankName = bankSelect.value;
+
   if (!bankName) return;
 
-  try {
-    // We'll load manifest here to avoid timing issues
-    fetch('manifest.json')
-      .then(res => res.json())
-      .then(manifest => {
-        const bank = manifest.banks.find(b => b.bankName === bankName);
-        if (!bank || !bank.files) {
-          yearSelect.innerHTML = '<option value="">No years available</option>';
-          return;
-        }
+  fetch('manifest.json')
+    .then(res => res.json())
+    .then(manifest => {
+      const bank = manifest.banks.find(b => b.bankName === bankName);
+      if (!bank || !bank.files) return;
 
-        yearSelect.innerHTML = '';
-        bank.files.forEach(file => {
-          const option = document.createElement('option');
-          option.value = file.year;
-          option.textContent = file.year;
-          yearSelect.appendChild(option);
-        });
-
-        // Auto load the first year
-        if (bank.files.length > 0) {
-          loadSelectedBank();
-        }
+      yearSelect.innerHTML = '<option value="">All Years</option>';
+      bank.files.forEach(file => {
+        const opt = document.createElement('option');
+        opt.value = file.year;
+        opt.textContent = file.year;
+        yearSelect.appendChild(opt);
       });
-  } catch (e) {
-    console.error("Failed to populate years", e);
-  }
+
+      if (bank.files.length > 0) {
+        yearSelect.value = bank.files[bank.files.length - 1].year; // Latest year
+        populateMonthSelect();
+        loadSelectedBank();
+      }
+    });
+}
+
+// Populate Month based on selected FY
+function populateMonthSelect() {
+  const monthSelect = document.getElementById('monthSelect');
+  const year = document.getElementById('yearSelect').value;
+
+  monthSelect.innerHTML = '<option value="">All Months</option>';
+
+  if (!year) return;
+
+  // Get all transactions for this year and extract unique months
+  const months = new Set();
+
+  currentTransactions.forEach(t => {
+    if (t.date && t.date.includes(year)) {
+      const monthPart = t.date.substring(3); // e.g., "05-2026"
+      months.add(monthPart);
+    }
+  });
+
+  Array.from(months).sort().reverse().forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = m;
+    monthSelect.appendChild(opt);
+  });
 }
 
 // ============== DASHBOARD FUNCTIONS ==============
