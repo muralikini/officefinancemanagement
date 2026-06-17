@@ -593,16 +593,18 @@ async function loadSelectedBank() {
 
     console.log(`Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
 
-    // Apply month filter
     let filtered = currentTransactions;
+
     if (monthFilter) {
       filtered = currentTransactions.filter(t => {
         if (!t.date) return false;
         const dateStr = String(t.date).trim();
+        // Multiple format matching
         return dateStr.includes(monthFilter) || 
-               dateStr.includes(monthFilter.replace('-', '/'));
+               dateStr.includes(monthFilter.replace('-', '/')) ||
+               dateStr.includes(monthFilter.split('-')[0]); // fallback month only
       });
-      console.log(`Filtered to ${filtered.length} records for month ${monthFilter}`);
+      console.log(`Filtered to ${filtered.length} records for ${monthFilter}`);
     }
 
     renderBankingSummary();
@@ -670,7 +672,7 @@ function populateYearSelect() {
     .then(res => res.json())
     .then(manifest => {
       const bank = manifest.banks.find(b => b.bankName === bankName);
-      if (!bank || !bank.files || bank.files.length === 0) return;
+      if (!bank || !bank.files) return;
 
       yearSelect.innerHTML = '<option value="">All Years</option>';
       
@@ -681,11 +683,11 @@ function populateYearSelect() {
         yearSelect.appendChild(opt);
       });
 
-      // Auto-select latest year
-      yearSelect.value = bank.files[bank.files.length - 1].year;
-      loadSelectedBank();   // This will also trigger month population
-    })
-    .catch(err => console.error("Failed to load manifest for years", err));
+      if (bank.files.length > 0) {
+        yearSelect.value = bank.files[bank.files.length - 1].year;
+        loadSelectedBank();   // Triggers data + month population
+      }
+    });
 }
 
 // Populate Month based on selected FY
@@ -704,9 +706,9 @@ function populateMonthSelect() {
     if (!t.date) return;
     const dateStr = String(t.date).trim();
 
-    // Extract MM-YYYY for all formats
     let monthYear = null;
 
+    // HDFC: DD/MM/YY or DD/MM/YYYY
     if (dateStr.includes('/')) {
       const parts = dateStr.split('/');
       if (parts.length === 3) {
@@ -715,7 +717,9 @@ function populateMonthSelect() {
         if (yy.length === 2) yy = '20' + yy;
         monthYear = `${mm}-${yy}`;
       }
-    } else if (dateStr.includes('-')) {
+    } 
+    // ICICI/IDFC: DD-MM-YYYY
+    else if (dateStr.includes('-')) {
       const parts = dateStr.split('-');
       if (parts.length === 3) {
         const mm = parts[1].padStart(2, '0');
