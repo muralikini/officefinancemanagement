@@ -513,6 +513,7 @@ function switchTab(n) {
   }
   if (n === 5) { // Expenses Tab
   setTimeout(() => {
+    populateExpenseFilters();
     loadExpenses();
   }, 150);
 }
@@ -1975,6 +1976,58 @@ function renderMonthlyCashflow(transactions) {
 
 
 // ==================== EXPENSES TAB FUNCTIONS ====================
+
+function populateExpenseFilters() {
+  const fySelect = document.getElementById('expenseFY');
+  const monthSelect = document.getElementById('expenseMonth');
+  const catSelect = document.getElementById('expenseCategory');
+
+  const fys = new Set();
+  const months = new Set();
+  const categories = new Set();
+
+  allTransactions.forEach(t => {
+    if (t.withdrawal && t.withdrawal > 0) {
+      const fy = getFinancialYear(t.date);
+      if (fy) fys.add(fy);
+
+      if (t.date) {
+        const m = t.date.substring(3); // MM-YYYY
+        months.add(m);
+      }
+
+      const cat = categorizeExpense(t.narration);
+      categories.add(cat);
+    }
+  });
+
+  // Populate FY
+  fySelect.innerHTML = '<option value="">All Years</option>';
+  Array.from(fys).sort().reverse().forEach(fy => {
+    const opt = document.createElement('option');
+    opt.value = fy;
+    opt.textContent = fy;
+    fySelect.appendChild(opt);
+  });
+
+  // Populate Months
+  monthSelect.innerHTML = '<option value="">All Months</option>';
+  Array.from(months).sort().reverse().forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = m;
+    monthSelect.appendChild(opt);
+  });
+
+  // Populate Categories
+  catSelect.innerHTML = '<option value="">All Categories</option>';
+  Array.from(categories).sort().forEach(cat => {
+    const opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = cat;
+    catSelect.appendChild(opt);
+  });
+}
 
 function categorizeExpense(narration) {
   if (!narration) return "Others";
