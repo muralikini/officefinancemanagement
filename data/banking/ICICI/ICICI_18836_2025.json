@@ -1,7 +1,7 @@
 [
   {
     "transactionId": "S22568173",
-    "Date": "03-01-2025",
+    "Date": "03/01/2025",
     "Narration": "ATD/Auto Debit CC1xx6899",
     "transactionType": "DR",
     "transactionAmount": 12055.54,
@@ -9,7 +9,7 @@
   },
   {
     "transactionId": "S46286863",
-    "Date": "05-01-2025",
+    "Date": "05/01/2025",
     "Narration": "Auto Loan XX23275 EMI Addit La",
     "transactionType": "DR",
     "transactionAmount": 19536,
@@ -169,7 +169,7 @@
   },
   {
     "transactionId": "S21169693",
-    "Date": "04-02-2025",
+    "Date": "04/02/2025",
     "Narration": "Mob alrt Chg Dec-24+GST",
     "transactionType": "DR",
     "transactionAmount": 29.5,
@@ -177,7 +177,7 @@
   },
   {
     "transactionId": "S32482014",
-    "Date": "05-02-2025",
+    "Date": "05/02/2025",
     "Narration": "Auto Loan XX23275 EMI Addit La",
     "transactionType": "DR",
     "transactionAmount": 19536,
@@ -321,7 +321,7 @@
   },
   {
     "transactionId": "S2767124",
-    "Date": "05-03-2025",
+    "Date": "05/03/2025",
     "Narration": "Auto Loan XX23275 EMI Addit La",
     "transactionType": "DR",
     "transactionAmount": 19536,
@@ -329,7 +329,7 @@
   },
   {
     "transactionId": "S68180246",
-    "Date": "11-03-2025",
+    "Date": "11/03/2025",
     "Narration": "Mob alrt Chg Jan-25+GST",
     "transactionType": "DR",
     "transactionAmount": 29.5,
@@ -481,7 +481,7 @@
   },
   {
     "transactionId": "S7383466",
-    "Date": "05-04-2025",
+    "Date": "05/04/2025",
     "Narration": "Auto Loan XX23275 EMI Addit La",
     "transactionType": "DR",
     "transactionAmount": 19536,
@@ -761,7 +761,7 @@
   },
   {
     "transactionId": "S73833674",
-    "Date": "05-05-2025",
+    "Date": "05/05/2025",
     "Narration": "Auto Loan XX23275 EMI Addit La",
     "transactionType": "DR",
     "transactionAmount": 19502,
@@ -937,7 +937,7 @@
   },
   {
     "transactionId": "S38458721",
-    "Date": "03-06-2025",
+    "Date": "03/06/2025",
     "Narration": "ATD/Auto Debit CC1xx8028",
     "transactionType": "DR",
     "transactionAmount": 470.82,
@@ -969,7 +969,7 @@
   },
   {
     "transactionId": "S95639237",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159085036/HDFC0004274/Salary Jun 2025/NandanB",
     "transactionType": "DR",
     "transactionAmount": 66900,
@@ -977,7 +977,7 @@
   },
   {
     "transactionId": "S95639886",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159085011/CNRB0001381/Salary Jun 2025/SURAJP",
     "transactionType": "DR",
     "transactionAmount": 20000,
@@ -985,7 +985,7 @@
   },
   {
     "transactionId": "S95639889",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159085017/BARB0VJSIUT/Salary Jun 2025/SangeetaNageshN",
     "transactionType": "DR",
     "transactionAmount": 16000,
@@ -993,7 +993,7 @@
   },
   {
     "transactionId": "S95640407",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159085042/IDIB000D030/Salary Jun 2025/VidyaR",
     "transactionType": "DR",
     "transactionAmount": 14000,
@@ -1001,7 +1001,7 @@
   },
   {
     "transactionId": "S95649950",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159086381/HDFC0000041/Salary Jun 2025/NagendraBR",
     "transactionType": "DR",
     "transactionAmount": 77000,
@@ -1009,7 +1009,7 @@
   },
   {
     "transactionId": "S95649209",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159086382/KKBK0000811/Salary Jun 2025/ShashankT",
     "transactionType": "DR",
     "transactionAmount": 19000,
@@ -1017,7 +1017,7 @@
   },
   {
     "transactionId": "S95649218",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159086430/SBIN0040392/Salary Jun 2025/PunyashreeG",
     "transactionType": "DR",
     "transactionAmount": 21000,
@@ -1025,7 +1025,7 @@
   },
   {
     "transactionId": "S95649228",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159086433/CNRB0000479/Salary Jun 2025/KavyaP",
     "transactionType": "DR",
     "transactionAmount": 18000,
@@ -1033,7 +1033,7 @@
   },
   {
     "transactionId": "S95649791",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159086434/BARB0VJRABA/Salary Jun 2025/SHARATHS",
     "transactionType": "DR",
     "transactionAmount": 22000,
@@ -1041,7 +1041,7 @@
   },
   {
     "transactionId": "S95649970",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159086431/KKBK0000430/Salary Jun 2025/NaveenP",
     "transactionType": "DR",
     "transactionAmount": 53300,
@@ -1049,7 +1049,7 @@
   },
   {
     "transactionId": "S95649798",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159086392/SBIN0003966/Salary Jun 2025/RaghuCS",
     "transactionType": "DR",
     "transactionAmount": 13500,
@@ -1057,7 +1057,7 @@
   },
   {
     "transactionId": "S95650382",
-    "Date": "01-07-2025",
+    "Date": "01/07/2025",
     "Narration": "INF/NEFT/ICICN42025070159086437/HDFC0000367/Salary Jun 2025/RakeshKadam",
     "transactionType": "DR",
     "transactionAmount": 30000,
@@ -1065,7 +1065,7 @@
   },
   {
     "transactionId": "S28028936",
-    "Date": "03-07-2025",
+    "Date": "03/07/2025",
     "Narration": "GIB/002045060073/DTAX /25070300173089ICIC",
     "transactionType": "DR",
     "transactionAmount": 7292,
@@ -1073,7 +1073,7 @@
   },
   {
     "transactionId": "S28046102",
-    "Date": "03-07-2025",
+    "Date": "03/07/2025",
     "Narration": "GIB/002045060206/DTAX /25070300174167ICIC",
     "transactionType": "DR",
     "transactionAmount": 9000,
@@ -1081,7 +1081,7 @@
   },
   {
     "transactionId": "S28058028",
-    "Date": "03-07-2025",
+    "Date": "03/07/2025",
     "Narration": "GIB/002045060329/DTAX /25070300174963ICIC",
     "transactionType": "DR",
     "transactionAmount": 3200,
@@ -1089,7 +1089,7 @@
   },
   {
     "transactionId": "S28072329",
-    "Date": "03-07-2025",
+    "Date": "03/07/2025",
     "Narration": "GIB/002045060452/DTAX /25070300175832ICIC",
     "transactionType": "DR",
     "transactionAmount": 24000,
@@ -1097,7 +1097,7 @@
   },
   {
     "transactionId": "S68601469",
-    "Date": "07-07-2025",
+    "Date": "07/07/2025",
     "Narration": "INF/NEFT/ICICN42025070756315788/BKID0009675/Salary Jun 2025/Deepak",
     "transactionType": "DR",
     "transactionAmount": 14000,
@@ -1105,7 +1105,7 @@
   },
   {
     "transactionId": "S68602009",
-    "Date": "07-07-2025",
+    "Date": "07/07/2025",
     "Narration": "INF/NEFT/ICICN42025070756315793/BKID0009675/Salary Jun 2025/Pratheeksha",
     "transactionType": "DR",
     "transactionAmount": 14000,
@@ -1161,7 +1161,7 @@
   },
   {
     "transactionId": "S92599096",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955119/CNRB0001381/Salary Jul 2025/SURAJP",
     "transactionType": "DR",
     "transactionAmount": 20000,
@@ -1169,7 +1169,7 @@
   },
   {
     "transactionId": "S92599099",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955070/CNRB0000479/Salary Jul 2025/KavyaP",
     "transactionType": "DR",
     "transactionAmount": 18000,
@@ -1177,7 +1177,7 @@
   },
   {
     "transactionId": "S92599525",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955072/BKID0009249/Salary Jul 2025/Deepak",
     "transactionType": "DR",
     "transactionAmount": 14000,
@@ -1185,7 +1185,7 @@
   },
   {
     "transactionId": "S92600273",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955076/BKID0009249/Salary Jul 2025/Pratheeksha",
     "transactionType": "DR",
     "transactionAmount": 14000,
@@ -1193,7 +1193,7 @@
   },
   {
     "transactionId": "S92599532",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955128/IDIB000D030/Salary Jul 2025/VidyaR",
     "transactionType": "DR",
     "transactionAmount": 14000,
@@ -1201,7 +1201,7 @@
   },
   {
     "transactionId": "S92599827",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955121/BARB0VJSIUT/Salary Jul 2025/SangeetaNageshN",
     "transactionType": "DR",
     "transactionAmount": 16000,
@@ -1209,7 +1209,7 @@
   },
   {
     "transactionId": "S92599839",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955086/SBIN0003966/Salary Jul 2025/RaghuCS",
     "transactionType": "DR",
     "transactionAmount": 13500,
@@ -1217,7 +1217,7 @@
   },
   {
     "transactionId": "S92600126",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955759/HDFC0000367/Salary Jul 2025/RakeshKadam",
     "transactionType": "DR",
     "transactionAmount": 30000,
@@ -1225,7 +1225,7 @@
   },
   {
     "transactionId": "S92600599",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955763/KKBK0000430/Salary Jul 2025/NaveenP",
     "transactionType": "DR",
     "transactionAmount": 53300,
@@ -1233,7 +1233,7 @@
   },
   {
     "transactionId": "S92600964",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955768/HDFC0000041/Salary Jul 2025/NagendraBR",
     "transactionType": "DR",
     "transactionAmount": 77000,
@@ -1241,7 +1241,7 @@
   },
   {
     "transactionId": "S92600139",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955880/CNRB0001381/Salary Jul 2025/VaishakP",
     "transactionType": "DR",
     "transactionAmount": 45800,
@@ -1249,7 +1249,7 @@
   },
   {
     "transactionId": "S92600957",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955760/KKBK0000811/Salary Jul 2025/ShashankT",
     "transactionType": "DR",
     "transactionAmount": 19000,
@@ -1257,7 +1257,7 @@
   },
   {
     "transactionId": "S92601440",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955780/BARB0VJRABA/Salary Jul 2025/SHARATHS",
     "transactionType": "DR",
     "transactionAmount": 22000,
@@ -1265,7 +1265,7 @@
   },
   {
     "transactionId": "S92600613",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955774/SBIN0040392/Salary Jul 2025/PunyashreeG",
     "transactionType": "DR",
     "transactionAmount": 21000,
@@ -1273,7 +1273,7 @@
   },
   {
     "transactionId": "S92601447",
-    "Date": "01-08-2025",
+    "Date": "01/08/2025",
     "Narration": "INF/NEFT/ICICN42025080153955789/HDFC0004274/Salary Jul 2025/NandanB",
     "transactionType": "DR",
     "transactionAmount": 66900,
@@ -1457,7 +1457,7 @@
   },
   {
     "transactionId": "S99026123",
-    "Date": "02-09-2025",
+    "Date": "02/09/2025",
     "Narration": "INF/NEFT/ICICN42025090254864741/SBIN0004252/Salary Advance Sept 2025/Deepak",
     "transactionType": "DR",
     "transactionAmount": 6000,
