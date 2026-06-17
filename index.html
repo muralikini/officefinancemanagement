@@ -1987,18 +1987,22 @@ function populateExpenseFilters() {
   const categories = new Set();
 
   allTransactions.forEach(t => {
-    if (t.withdrawal && t.withdrawal > 0) {
-      const fy = getFinancialYear(t.date);
-      if (fy) fys.add(fy);
+    if (!t.withdrawal || t.withdrawal <= 0) return;
 
-      if (t.date) {
-        const m = t.date.substring(3); // MM-YYYY
-        months.add(m);
-      }
+    // Skip internal transfers and investments
+    if (isInternalTransfer(t)) return;
+    const cat = categorizeExpense(t.narration);
+    if (cat === "Investment" || cat.includes("Inflow")) return;
 
-      const cat = categorizeExpense(t.narration);
-      categories.add(cat);
+    const fy = getFinancialYear(t.date);
+    if (fy) fys.add(fy);
+
+    if (t.date) {
+      const m = t.date.substring(3); // e.g., "04-2025"
+      if (m && m.length > 4) months.add(m);
     }
+
+    categories.add(cat);
   });
 
   // Populate FY
@@ -2033,10 +2037,10 @@ function categorizeExpense(narration) {
   if (!narration) return "Others";
   const n = narration.toLowerCase();
 
-  if (n.includes("home control") || n.includes("singapore") || n.includes("client")) return "Client Payment (Inflow)";
-  if (n.includes("salary") || n.includes("neft salary")) return "Salary (Inflow)";
+  if (n.includes("home control") || n.includes("singapore") || n.includes("client payment")) return "Client Payment";
+  if (n.includes("salary") || n.includes("neft salary")) return "Salary Credit"; 
   if (n.includes("fd") || n.includes("rd") || n.includes("fixed deposit") || n.includes("maturity")) return "Investment";
-  if (n.includes("bill") || n.includes("electricity") || n.includes("water") || n.includes("custom")) return "Utilities & Bills";
+  if (n.includes("bill") || n.includes("electricity") || n.includes("water") || n.includes("custom duty")) return "Utilities & Bills";
   if (n.includes("vps") || n.includes("dmart") || n.includes("amazon") || n.includes("shopping")) return "Shopping";
   if (n.includes("fuel") || n.includes("petrol")) return "Fuel";
   if (n.includes("credit card") || n.includes("cc payment")) return "Credit Card Payment";
@@ -2045,6 +2049,7 @@ function categorizeExpense(narration) {
 
   return "Others";
 }
+
 
 function loadExpenses() {
   const fy = document.getElementById('expenseFY').value;
