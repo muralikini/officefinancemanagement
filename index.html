@@ -693,7 +693,7 @@ function populateMonthSelect() {
   monthSelect.innerHTML = '<option value="">All Months</option>';
 
   if (!year || currentTransactions.length === 0) {
-    console.log(`⚠️ No data or year selected for month population`);
+    console.log(`⚠️ No year or data for month population`);
     return;
   }
 
@@ -704,30 +704,37 @@ function populateMonthSelect() {
     if (!t.date) return;
     
     const dateStr = String(t.date).trim();
-    
-    // Extract month and year from common formats: DD/MM/YYYY or DD-MM-YYYY
     let monthPart = null;
-    
+
+    // === HDFC Format: DD/MM/YY or DD/MM/YYYY ===
     if (dateStr.includes('/')) {
       const parts = dateStr.split('/');
       if (parts.length === 3) {
-        monthPart = parts[1] + '-' + parts[2];   // MM-YYYY
+        const month = parts[1].padStart(2, '0');
+        let fullYear = parts[2];
+        if (fullYear.length === 2) fullYear = '20' + fullYear;  // Convert YY to YYYY
+        monthPart = `${month}-${fullYear}`;
       }
-    } else if (dateStr.includes('-')) {
+    } 
+    // === ICICI / IDFC Format: DD-MM-YYYY or similar ===
+    else if (dateStr.includes('-')) {
       const parts = dateStr.split('-');
       if (parts.length === 3) {
-        monthPart = parts[1] + '-' + parts[2];
+        const month = parts[1].padStart(2, '0');
+        const fullYear = parts[2].length === 2 ? '20' + parts[2] : parts[2];
+        monthPart = `${month}-${fullYear}`;
       }
     }
 
-    if (monthPart && monthPart.includes(year)) {
+    // Only add if it matches the selected year
+    if (monthPart && monthPart.endsWith('-' + year)) {
       months.add(monthPart);
     }
   });
 
-  console.log(`✅ Found ${months.size} unique months for year ${year}`);
+  console.log(`✅ Found ${months.size} unique months for year ${year} (HDFC + others)`);
 
-  // Sort newest first and create nice display names
+  // Sort newest first and show nice names
   Array.from(months)
     .sort((a, b) => b.localeCompare(a))
     .forEach(m => {
