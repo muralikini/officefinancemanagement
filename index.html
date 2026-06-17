@@ -2037,15 +2037,31 @@ function categorizeExpense(narration) {
   if (!narration) return "Others";
   const n = narration.toLowerCase();
 
-  if (n.includes("home control") || n.includes("singapore") || n.includes("client payment")) return "Client Payment";
-  if (n.includes("salary") || n.includes("neft salary")) return "Salary Credit"; 
-  if (n.includes("fd") || n.includes("rd") || n.includes("fixed deposit") || n.includes("maturity")) return "Investment";
-  if (n.includes("bill") || n.includes("electricity") || n.includes("water") || n.includes("custom duty")) return "Utilities & Bills";
-  if (n.includes("vps") || n.includes("dmart") || n.includes("amazon") || n.includes("shopping")) return "Shopping";
+  // === REAL EXPENSES (Outflows) ===
+  if (n.includes("salary payment") || n.includes("employee salary") || n.includes("sal to")) {
+    return "Salary to Employees";
+  }
+  if (n.includes("bill") || n.includes("electricity") || n.includes("water") || n.includes("custom duty")) {
+    return "Utilities & Bills";
+  }
+  if (n.includes("vps") || n.includes("dmart") || n.includes("amazon") || n.includes("shopping")) {
+    return "Shopping";
+  }
   if (n.includes("fuel") || n.includes("petrol")) return "Fuel";
   if (n.includes("credit card") || n.includes("cc payment")) return "Credit Card Payment";
-  if (n.includes("vendor") || n.includes("salary payment")) return "Vendor Payment";
+  if (n.includes("vendor") || n.includes("supplier")) return "Vendor Payment";
   if (n.includes("rent")) return "Rent";
+
+  // === INFLOWS (Should be excluded) ===
+  if (n.includes("salary") && !n.includes("payment")) return "Salary Credit (Income)";
+  if (n.includes("home control") || n.includes("singapore") || n.includes("client")) {
+    return "Client Payment (Income)";
+  }
+
+  // === INVESTMENTS ===
+  if (n.includes("fd") || n.includes("rd") || n.includes("fixed deposit") || n.includes("maturity")) {
+    return "Investment";
+  }
 
   return "Others";
 }
@@ -2064,8 +2080,13 @@ function loadExpenses() {
     // Exclude internal transfers and investments
     if (isInternalTransfer(t)) return false;
 
+    //const category = categorizeExpense(t.narration);
+    //if (category === "Investment" || category.includes("Inflow") || category.includes("Salary")) {
+      //return false;
+    //}
+
     const category = categorizeExpense(t.narration);
-    if (category === "Investment" || category.includes("Inflow") || category.includes("Salary")) {
+    if (category.includes("Income") || category === "Investment") {
       return false;
     }
 
