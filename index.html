@@ -571,7 +571,7 @@ async function loadSelectedBank() {
 
   const bankName = bankSelect.value;
   const year = yearSelect.value;
-  const monthFilter = monthSelect.value;
+  const monthFilter = monthSelect.value;   // e.g. "06-2026"
 
   if (!bankName || !year) return;
 
@@ -596,10 +596,22 @@ async function loadSelectedBank() {
     let filtered = currentTransactions;
 
     if (monthFilter) {
+      const [targetMonth, targetYear] = monthFilter.split('-');
       filtered = currentTransactions.filter(t => {
         if (!t.date) return false;
         const dateStr = String(t.date).trim();
-        return dateStr.includes(monthFilter);
+        
+        // Handle DD/MM/YYYY format
+        if (dateStr.includes('/')) {
+          const parts = dateStr.split('/');
+          if (parts.length === 3) {
+            const month = parts[1].padStart(2, '0');
+            const yearPart = parts[2];
+            return month === targetMonth && yearPart === targetYear;
+          }
+        }
+        // Fallback: simple includes
+        return dateStr.includes(monthFilter) || dateStr.includes(monthFilter.replace('-', '/'));
       });
       console.log(`🔍 Filtered to ${filtered.length} records for ${monthFilter}`);
     }
@@ -607,7 +619,7 @@ async function loadSelectedBank() {
     renderBankingSummary(filtered);
     renderBankingTable(filtered);
 
-    populateMonthSelect();   // Refresh months after load
+    populateMonthSelect();
 
   } catch (e) {
     console.error("❌ Load failed:", e);
