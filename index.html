@@ -571,7 +571,7 @@ async function loadSelectedBank() {
 
   const bankName = bankSelect.value;
   const year = yearSelect.value;
-  const monthFilter = monthSelect.value;
+  const monthFilter = monthSelect.value;   // e.g., "06-2026"
 
   if (!bankName || !year) return;
 
@@ -586,28 +586,34 @@ async function loadSelectedBank() {
     if (!fileObj) return;
 
     const res = await fetch(fileObj.filePath);
-    if (!res.ok) throw new Error('Failed to load');
+    if (!res.ok) throw new Error('Failed to load file');
 
     const rawData = await res.json();
     currentTransactions = normalizeTransactions(rawData);
 
     console.log(`✅ Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
 
-    // Apply month filter if selected
+    // === APPLY FILTERS ===
     let filtered = currentTransactions;
+
     if (monthFilter) {
-      filtered = currentTransactions.filter(t => t.date && t.date.includes(monthFilter));
-      console.log(`Filtered to ${filtered.length} records for ${monthFilter}`);
+      filtered = currentTransactions.filter(t => {
+        if (!t.date) return false;
+        const dateStr = String(t.date).trim();
+        // Check for "MM-2026" pattern in DD/MM/YYYY dates
+        return dateStr.includes(monthFilter);
+      });
+      console.log(`🔍 Filtered to ${filtered.length} records for ${monthFilter}`);
     }
 
-    renderBankingSummary();
+    renderBankingSummary(filtered);   // Pass filtered data
     renderBankingTable(filtered);
 
-    // Refresh month dropdown AFTER data is loaded
+    // Re-populate months (in case needed)
     populateMonthSelect();
 
   } catch (e) {
-    console.error("Load failed:", e);
+    console.error("❌ Load failed:", e);
   }
 }
 
@@ -1065,14 +1071,15 @@ function renderExpenseBreakdown(transactions) {
 
 
 
-function renderBankingSummary() {
-  const totalWithdrawal = currentTransactions.reduce((sum, t) => sum + (t.withdrawal || 0), 0);
-  const totalDeposit = currentTransactions.reduce((sum, t) => sum + (t.deposit || 0), 0);
-  
-  document.getElementById('total-withdrawals').textContent = '₹' + totalWithdrawal.toLocaleString('en-IN');
-  document.getElementById('total-deposits').textContent = '₹' + totalDeposit.toLocaleString('en-IN');
-  document.getElementById('net-flow-banking').textContent = '₹' + (totalDeposit - totalWithdrawal).toLocaleString('en-IN');
-  document.getElementById('transaction-count').textContent = currentTransactions.length;
+function renderBankingSummary(filteredData = currentTransactions) {
+  const totalWithdrawals = filteredData.reduce((sum, t) => sum + (t.withdrawal || 0), 0);
+  const totalDeposits = filteredData.reduce((sum, t) => sum + (t.deposit || 0), 0);
+  const netFlow = totalDeposits - totalWithdrawals;
+
+  document.getElementById('total-withdrawals').textContent = `₹${totalWithdrawals.toLocaleString('en-IN')}`;
+  document.getElementById('total-deposits').textContent = `₹${totalDeposits.toLocaleString('en-IN')}`;
+  document.getElementById('net-flow').textContent = `₹${netFlow.toLocaleString('en-IN')}`;
+  document.getElementById('transaction-count').textContent = filteredData.length;
 }
 
 function renderBankingTable(transactions) {
