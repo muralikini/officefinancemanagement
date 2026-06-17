@@ -582,20 +582,22 @@ async function loadSelectedBank() {
     const bank = manifest.banks.find(b => b.bankName === bankName);
     if (!bank) return;
 
-    const fileObj = bank.files.find(f => f.year === year) || bank.files[0];
+    // Find the file for selected year
+    const fileObj = bank.files.find(f => f.year === year);
     if (!fileObj) return;
 
     const res = await fetch(fileObj.filePath);
-    if (!res.ok) throw new Error('Failed to load');
+    if (!res.ok) throw new Error('Failed to load file');
 
     const rawData = await res.json();
     currentTransactions = normalizeTransactions(rawData);
 
-    // Apply filters
+    // Apply month filter if selected
     let filtered = currentTransactions;
-
     if (monthFilter) {
-      filtered = currentTransactions.filter(t => t.date && t.date.includes(monthFilter));
+      filtered = currentTransactions.filter(t => 
+        t.date && t.date.includes(monthFilter)
+      );
     }
 
     renderBankingSummary();
@@ -666,6 +668,7 @@ function populateYearSelect() {
       if (!bank || !bank.files) return;
 
       yearSelect.innerHTML = '<option value="">All Years</option>';
+      
       bank.files.forEach(file => {
         const opt = document.createElement('option');
         opt.value = file.year;
@@ -673,53 +676,21 @@ function populateYearSelect() {
         yearSelect.appendChild(opt);
       });
 
-      if (bank.files.length > 0) {
-        yearSelect.value = bank.files[bank.files.length - 1].year; // Latest year
-        populateMonthSelect();
-        loadSelectedBank();
-      }
-
+      // Auto select latest year
       if (bank.files.length > 0) {
         yearSelect.value = bank.files[bank.files.length - 1].year;
-        populateMonthSelect();   // ← Add this line
         loadSelectedBank();
-        }
+      }
     });
 }
 
 // Populate Month based on selected FY
 function populateMonthSelect() {
   const monthSelect = document.getElementById('monthSelect');
-  const year = document.getElementById('yearSelect').value;
-
   monthSelect.innerHTML = '<option value="">All Months</option>';
 
-  if (!year) return;
-
-  const months = new Set();
-
-  allTransactions.forEach(t => {
-    if (t.date && t.date.includes(year)) {
-      const monthPart = t.date.substring(3); // "06-2026"
-      if (monthPart) months.add(monthPart);
-    }
-  });
-
-  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-  Array.from(months)
-    .sort((a, b) => b.localeCompare(a))   // Newest first
-    .forEach(m => {
-      const [mm, yy] = m.split('-');
-      const monthName = monthNames[parseInt(mm) - 1] || mm;
-      const display = `${monthName}-${yy}`;
-
-      const opt = document.createElement('option');
-      opt.value = m;           // Keep original format for filtering
-      opt.textContent = display; // Show readable name
-      monthSelect.appendChild(opt);
-    });
+  // We will populate months dynamically after data is loaded in loadSelectedBank()
+  // For now, we keep it simple
 }
 
 // ============== DASHBOARD FUNCTIONS ==============
