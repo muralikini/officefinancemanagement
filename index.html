@@ -38,6 +38,7 @@
             <button onclick="switchTab(2)" class="tab-btn tab-active px-6 py-3">Savings</button>
             <button onclick="switchTab(3)" class="tab-btn px-6 py-3">Invoices</button>
             <button onclick="switchTab(4)" class="tab-btn px-6 py-3">Cashflow</button>
+            <button onclick="switchTab(5)" class="tab-btn px-6 py-3">Expenses</button>
         </div>
     </div>
 
@@ -401,6 +402,66 @@
     </div>
     </div>
 
+    <!-- ==================== EXPENSES TAB ==================== -->
+    <div id="tab-5" class="tab-content hidden">
+      <div class="max-w-screen-2xl mx-auto px-6 py-8">
+        <div class="flex justify-between items-center mb-8">
+          <h1 class="text-3xl font-bold">Expense Tracker</h1>
+          
+          <div class="flex items-center gap-4">
+            <select id="expenseFY" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5">
+              <!-- Populated by JS -->
+            </select>
+            
+            <select id="expenseMonth" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5">
+              <option value="">All Months</option>
+            </select>
+            
+            <select id="expenseCategory" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5">
+              <option value="">All Categories</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+          <div class="bg-gray-900 rounded-2xl p-6">
+            <div class="text-sm text-gray-400">Total Expenses</div>
+            <div id="total-expenses" class="text-3xl font-bold text-red-400 mt-2">₹0</div>
+          </div>
+          <div class="bg-gray-900 rounded-2xl p-6">
+            <div class="text-sm text-gray-400">Avg Monthly Expense</div>
+            <div id="avg-monthly" class="text-3xl font-bold mt-2">₹0</div>
+          </div>
+          <div class="bg-gray-900 rounded-2xl p-6">
+            <div class="text-sm text-gray-400">Top Category</div>
+            <div id="top-category" class="text-3xl font-bold mt-2">—</div>
+          </div>
+        </div>
+
+        <!-- Category Breakdown -->
+        <div class="bg-gray-900 rounded-2xl p-8 mb-8">
+          <h2 class="text-xl font-semibold mb-6">Expense by Category</h2>
+          <div id="expense-category-breakdown" class="space-y-4"></div>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="bg-gray-900 rounded-2xl overflow-hidden">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b border-gray-700 text-gray-400">
+                <th class="px-6 py-4 text-left">Date</th>
+                <th class="px-6 py-4 text-left">Narration</th>
+                <th class="px-6 py-4 text-left">Category</th>
+                <th class="px-6 py-4 text-right">Amount</th>
+              </tr>
+            </thead>
+            <tbody id="expenses-table-body" class="divide-y divide-gray-700"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
 <script>
 // ============== CONFIG ==============
 const MANIFEST_URL = 'manifest.json';
@@ -449,6 +510,11 @@ function switchTab(n) {
   setTimeout(() => {
     populateCashflowFY();
     loadCashflow();
+  }, 150);
+  }
+  if (n === 5) { // Expenses Tab
+  setTimeout(() => {
+    loadExpenses();
   }, 150);
 }
 }
@@ -1905,6 +1971,105 @@ function renderMonthlyCashflow(transactions) {
 
   html += `</tbody></table>`;
   container.innerHTML = html;
+}
+
+//===================== EXPENSES TAB ===================================
+
+let expenseCategories = {};
+
+function categorizeExpense(narration) {
+  if (!narration) return "Others";
+  const n = narration.toLowerCase();
+
+  if (n.includes("salary") || n.includes("neft salary")) return "Salary Credit"; // This should be inflow, but keeping for now
+  if (n.includes("fd") || n.includes("rd") || n.includes("fixed deposit")) return "Investment";
+  if (n.includes("home control") || n.includes("singapore")) return "Client Payment"; // Inflow
+  if (n.includes("bill") || n.includes("electricity") || n.includes("water")) return "Utilities";
+  if (n.includes("vps") || n.includes("dmart") || n.includes("amazon")) return "Shopping";
+  if (n.includes("fuel") || n.includes("petrol")) return "Fuel";
+  if (n.includes("credit card") || n.includes("cc payment")) return "Credit Card Payment";
+  if (n.includes("salary payment") || n.includes("vendor")) return "Vendor Payment";
+
+  return "Others";
+}
+
+function loadExpenses() {
+  const fy = document.getElementById('expenseFY').value;
+  const monthFilter = document.getElementById('expenseMonth').value;
+  const catFilter = document.getElementById('expenseCategory').value;
+
+  const filtered = allTransactions.filter(t => {
+    if (!t.withdrawal || t.withdrawal <= 0) return false; // Only expenses
+
+    const transactionFY = getFinancialYear(t.date);
+    if (fy && transactionFY !== fy) return false;
+
+    if (monthFilter && !t.date.includes(monthFilter)) return false;
+
+    const category = categorizeExpense(t.narration);
+    if (catFilter && category !== catFilter) return false;
+
+    // Exclude investments and internal transfers
+    if (isInternalTransfer(t) || categorizeExpense(t.narration) === "Investment") {
+      return false;
+    }
+
+    return true;
+  });
+
+  // Calculate totals
+  const totalExpense = filtered.reduce((sum, t) => sum + t.withdrawal, 0);
+
+  document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
+
+  // Category breakdown
+  renderExpenseCategoryBreakdown(filtered);
+
+  // Table
+  renderExpensesTable(filtered);
+}
+
+function renderExpenseCategoryBreakdown(transactions) {
+  const container = document.getElementById('expense-category-breakdown');
+  container.innerHTML = '';
+
+  const catMap = {};
+  transactions.forEach(t => {
+    const cat = categorizeExpense(t.narration);
+    catMap[cat] = (catMap[cat] || 0) + t.withdrawal;
+  });
+
+  Object.entries(catMap)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([cat, amt]) => {
+      const percent = Math.round((amt / (Object.values(catMap).reduce((a,b)=>a+b,0))) * 100) || 0;
+      container.innerHTML += `
+        <div class="flex justify-between items-center py-2">
+          <span class="font-medium">${cat}</span>
+          <div class="text-right">
+            <span class="font-semibold">₹${amt.toLocaleString('en-IN')}</span>
+            <span class="text-xs text-gray-500 ml-3">(${percent}%)</span>
+          </div>
+        </div>
+      `;
+    });
+}
+
+function renderExpensesTable(transactions) {
+  const tbody = document.getElementById('expenses-table-body');
+  tbody.innerHTML = '';
+
+  transactions.sort((a,b) => new Date(b.date) - new Date(a.date)).forEach(t => {
+    const row = document.createElement('tr');
+    row.className = 'hover:bg-gray-800';
+    row.innerHTML = `
+      <td class="px-6 py-4">${t.date || '—'}</td>
+      <td class="px-6 py-4 text-sm">${t.narration ? t.narration.substring(0, 65) + '...' : '—'}</td>
+      <td class="px-6 py-4">${categorizeExpense(t.narration)}</td>
+      <td class="px-6 py-4 text-right text-red-400 font-medium">-₹${t.withdrawal.toLocaleString('en-IN')}</td>
+    `;
+    tbody.appendChild(row);
+  });
 }
 
 // ==================== INTERNAL TRANSFER DETECTION ====================
