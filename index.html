@@ -1914,33 +1914,47 @@ function isInternalTransfer(transaction) {
 
   const narration = transaction.narration.toLowerCase();
 
-  // Common patterns for internal/self transfers in Indian banks
-  const internalKeywords = [
-    'self', 'transfer to self', 'neft to self', 'imps to self',
-    'rtgs to self', 'own account', 'internal transfer',
-    'hdfc', 'icici', 'idfc', 'idfcbank',
-    'fund transfer', 'account transfer'
+  // === NEGATIVE RULES (These should NEVER be treated as internal) ===
+  const clientKeywords = [
+    'home control', 'homecontrol', 'singapore', 'pte ltd',
+    'microsoft', 'client', 'customer', 'invoice', 'payment from'
   ];
 
-  // Check if narration contains any internal transfer keywords
-  for (let keyword of internalKeywords) {
+  for (let keyword of clientKeywords) {
     if (narration.includes(keyword)) {
+      return false; // Legitimate client payment → Do NOT exclude
+    }
+  }
+
+  // === POSITIVE RULES (Likely internal transfers) ===
+  const internalPatterns = [
+    'self transfer', 'transfer to self', 'neft to self', 'imps to self',
+    'rtgs to self', 'own account', 'internal transfer',
+    'neft dr.*hdfc', 'neft dr.*icici', 'neft dr.*idfc',
+    'imps.*hdfc', 'imps.*icici', 'imps.*idfc',
+    'funds transfer.*self', 'account transfer.*self'
+  ];
+
+  for (let pattern of internalPatterns) {
+    if (new RegExp(pattern).test(narration)) {
       return true;
     }
   }
 
-  // Additional logic: Large round amounts moving between accounts (common in FD breaking/transfer)
+  // Large round amount transfers between known banks (common in FD breaking)
   const amount = (transaction.deposit || 0) + (transaction.withdrawal || 0);
-  if (amount >= 100000 && (narration.includes('neft') || narration.includes('rtgs') || narration.includes('imps'))) {
-    // Likely internal movement if amount is large and round
-    if (amount % 1000 === 0 || amount % 10000 === 0) {
+  if (amount >= 500000 && 
+     (narration.includes('neft') || narration.includes('rtgs') || narration.includes('imps')) &&
+     (amount % 100000 === 0 || amount % 50000 === 0)) {
+    
+    // Only if it looks like movement between own accounts
+    if (narration.includes('hdfc') || narration.includes('icici') || narration.includes('idfc')) {
       return true;
     }
   }
 
   return false;
 }
-
 
 // ============== NORMALIZE ALL FORMATS ==============
 function normalizeTransactions(data) {
