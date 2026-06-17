@@ -573,7 +573,7 @@ async function loadSelectedBank() {
   const year = yearSelect.value;
   const monthFilter = monthSelect.value;
 
-  if (!bankName) return;
+  if (!bankName || !year) return;
 
   try {
     const manifestRes = await fetch('manifest.json');
@@ -582,7 +582,7 @@ async function loadSelectedBank() {
     const bank = manifest.banks.find(b => b.bankName === bankName);
     if (!bank) return;
 
-    const fileObj = bank.files.find(f => f.year === year) || bank.files[bank.files.length-1];
+    const fileObj = bank.files.find(f => f.year === year);
     if (!fileObj) return;
 
     const res = await fetch(fileObj.filePath);
@@ -591,20 +591,21 @@ async function loadSelectedBank() {
     const rawData = await res.json();
     currentTransactions = normalizeTransactions(rawData);
 
-    console.log(`Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
+    console.log(`✅ Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
 
+    // Apply month filter if selected
     let filtered = currentTransactions;
     if (monthFilter) {
-      filtered = currentTransactions.filter(t => {
-        if (!t.date) return false;
-        return t.date.includes(monthFilter);
-      });
-      console.log(`Filtered to ${filtered.length} records for month ${monthFilter}`);
+      filtered = currentTransactions.filter(t => t.date && t.date.includes(monthFilter));
+      console.log(`Filtered to ${filtered.length} records for ${monthFilter}`);
     }
 
     renderBankingSummary();
     renderBankingTable(filtered);
-    
+
+    // Refresh month dropdown AFTER data is loaded
+    populateMonthSelect();
+
   } catch (e) {
     console.error("Load failed:", e);
   }
@@ -692,7 +693,10 @@ function populateMonthSelect() {
 
   monthSelect.innerHTML = '<option value="">All Months</option>';
 
-  if (!year || currentTransactions.length === 0) return;
+  if (!year || currentTransactions.length === 0) {
+    console.log(`⚠️ No data loaded yet for year ${year}`);
+    return;
+  }
 
   const months = new Set();
   const monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -700,8 +704,8 @@ function populateMonthSelect() {
   currentTransactions.forEach(t => {
     if (!t.date) return;
     const dateStr = String(t.date).trim();
-    
-    // New normalized format: DD/MM/YYYY
+
+    // Support DD/MM/YYYY format (after normalization)
     if (dateStr.includes('/') && dateStr.includes(year)) {
       const parts = dateStr.split('/');
       if (parts.length === 3) {
