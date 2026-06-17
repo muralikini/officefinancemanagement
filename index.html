@@ -515,7 +515,7 @@ function switchTab(n) {
   setTimeout(() => {
     populateExpenseFilters();
     loadExpenses();
-  }, 150);
+  }, 200);
 }
 }
 
@@ -2052,30 +2052,47 @@ function categorizeExpense(narration) {
 
 
 function loadExpenses() {
-  const fy = document.getElementById('expenseFY').value;
-  const monthFilter = document.getElementById('expenseMonth').value;
-  const catFilter = document.getElementById('expenseCategory').value;
+  const fy = document.getElementById('expenseFY').value || "";
+  const monthFilter = document.getElementById('expenseMonth').value || "";
+  const catFilter = document.getElementById('expenseCategory').value || "";
+
+  console.log(`[Expenses] Filter applied -> FY: ${fy || 'All'}, Month: ${monthFilter || 'All'}, Category: ${catFilter || 'All'}`);
 
   const expenses = allTransactions.filter(t => {
     if (!t.withdrawal || t.withdrawal <= 0) return false;
 
-    const transactionFY = getFinancialYear(t.date);
-    if (fy && transactionFY !== fy) return false;
+    // Exclude internal transfers and investments
+    if (isInternalTransfer(t)) return false;
 
-    // Exclude investments and internal transfers
-    if (isInternalTransfer(t) || categorizeExpense(t.narration) === "Investment") {
+    const category = categorizeExpense(t.narration);
+    if (category === "Investment" || category.includes("Inflow") || category.includes("Salary")) {
       return false;
     }
+
+    // FY Filter
+    if (fy) {
+      if (getFinancialYear(t.date) !== fy) return false;
+    }
+
+    // Month Filter
+    if (monthFilter && t.date) {
+      if (!t.date.includes(monthFilter)) return false;
+    }
+
+    // Category Filter
+    if (catFilter && category !== catFilter) return false;
 
     return true;
   });
 
+  console.log(`[Expenses] Found ${expenses.length} valid expense records`);
+
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
 
-  // Average monthly (rough)
+  // Average monthly
   const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3) : ''));
-  const avgMonthly = uniqueMonths.size > 0 ? totalExpense / uniqueMonths.size : 0;
+  const avgMonthly = uniqueMonths.size > 0 ? Math.round(totalExpense / uniqueMonths.size) : 0;
   document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
 
   renderExpenseCategoryBreakdown(expenses);
