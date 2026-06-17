@@ -594,17 +594,12 @@ async function loadSelectedBank() {
     console.log(`Loaded ${currentTransactions.length} transactions for ${bankName} ${year}`);
 
     let filtered = currentTransactions;
-
     if (monthFilter) {
       filtered = currentTransactions.filter(t => {
         if (!t.date) return false;
-        const dateStr = String(t.date).trim();
-        // Multiple format matching
-        return dateStr.includes(monthFilter) || 
-               dateStr.includes(monthFilter.replace('-', '/')) ||
-               dateStr.includes(monthFilter.split('-')[0]); // fallback month only
+        return t.date.includes(monthFilter);
       });
-      console.log(`Filtered to ${filtered.length} records for ${monthFilter}`);
+      console.log(`Filtered to ${filtered.length} records for month ${monthFilter}`);
     }
 
     renderBankingSummary();
@@ -705,43 +700,26 @@ function populateMonthSelect() {
   currentTransactions.forEach(t => {
     if (!t.date) return;
     const dateStr = String(t.date).trim();
-
-    let monthYear = null;
-
-    // HDFC: DD/MM/YY or DD/MM/YYYY
-    if (dateStr.includes('/')) {
+    
+    // New normalized format: DD/MM/YYYY
+    if (dateStr.includes('/') && dateStr.includes(year)) {
       const parts = dateStr.split('/');
       if (parts.length === 3) {
         const mm = parts[1].padStart(2, '0');
-        let yy = parts[2];
-        if (yy.length === 2) yy = '20' + yy;
-        monthYear = `${mm}-${yy}`;
+        const monthYear = `${mm}-${year}`;
+        months.add(monthYear);
       }
-    } 
-    // ICICI/IDFC: DD-MM-YYYY
-    else if (dateStr.includes('-')) {
-      const parts = dateStr.split('-');
-      if (parts.length === 3) {
-        const mm = parts[1].padStart(2, '0');
-        let yy = parts[2];
-        if (yy.length === 2) yy = '20' + yy;
-        monthYear = `${mm}-${yy}`;
-      }
-    }
-
-    if (monthYear && monthYear.endsWith(year)) {
-      months.add(monthYear);
     }
   });
 
   console.log(`✅ Found ${months.size} months for year ${year}`);
 
   Array.from(months).sort().reverse().forEach(m => {
-    const [mm, yy] = m.split('-');
-    const monthName = monthNames[parseInt(mm)-1] || mm;
+    const [mm] = m.split('-');
+    const monthName = monthNames[parseInt(mm) - 1] || mm;
     const opt = document.createElement('option');
     opt.value = m;
-    opt.textContent = `${monthName}-${yy}`;
+    opt.textContent = `${monthName}-${year}`;
     monthSelect.appendChild(opt);
   });
 }
