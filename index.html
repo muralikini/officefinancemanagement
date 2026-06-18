@@ -134,7 +134,7 @@
   <div class="max-w-screen-2xl mx-auto px-6 py-8">
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-bold">Banking Transactions</h1>
-      <button onclick="exportExpensesToExcel()" 
+      <button onclick="exportBankingToExcel()" 
            class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
            <i class="fas fa-file-excel"></i>
             Export to Excel
@@ -222,7 +222,7 @@
   <div class="max-w-screen-2xl mx-auto px-6 py-8">
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-bold">Savings (FD & RD)</h1>
-      <button onclick="exportExpensesToExcel()" 
+      <button onclick="exportSavingsToExcel()" 
         class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
   <i class="fas fa-file-excel mr-2"></i>
   Export to Excel
@@ -294,7 +294,7 @@
   <div class="max-w-screen-2xl mx-auto px-6 py-8">
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-bold">Procurement Invoices</h1>
-      <button onclick="exportExpensesToExcel()" 
+      <button onclick="exportInvoicesToExcel()" 
            class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
            <i class="fas fa-file-excel"></i>
             Export to Excel
@@ -364,7 +364,7 @@
     <div class="max-w-screen-2xl mx-auto px-6 py-8">
         <div class="flex justify-between items-center mb-8">
         <h1 class="text-3xl font-bold">Cashflow Statement</h1>
-        <button onclick="exportExpensesToExcel()" 
+        <button onclick="exportCashflowToExcel()" 
            class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
            <i class="fas fa-file-excel"></i>
             Export to Excel
@@ -2518,19 +2518,38 @@ function exportBankingToExcel() {
 }
 
 function exportSavingsToExcel() {
-  const dataToExport = savings.map(s => ({
-    ID: s.id,
-    Type: s.type,
-    Bank: s.bankName,
-    Principal: s.principal,
-    Current_Value: s.currentValue,
-    Interest_Rate: s.interestRate,
-    Start_Date: s.startDate,
-    Maturity_Date: s.maturityDate,
-    Status: s.status
-  }));
+  const tbody = document.getElementById('savings-table-body');
+  if (!tbody) {
+    alert("Savings table not found");
+    return;
+  }
 
-  exportToExcel(dataToExport, `Savings_${new Date().toISOString().split('T')[0]}.xlsx`, "Savings");
+  const rows = tbody.querySelectorAll('tr');
+  if (rows.length === 0) {
+    alert("No savings records found to export");
+    return;
+  }
+
+  const data = [];
+
+  rows.forEach(row => {
+    const cells = row.querySelectorAll('td');
+    if (cells.length >= 9) {
+      data.push({
+        ID: cells[0].textContent.trim(),
+        Type: cells[1].textContent.trim(),
+        Bank: cells[2].textContent.trim(),
+        Principal_Deposited: cells[3].textContent.trim(),
+        Interest_Rate: cells[4].textContent.trim(),
+        Start_Date: cells[5].textContent.trim(),
+        Maturity_End_Date: cells[6].textContent.trim(),
+        Current_Value: cells[7].textContent.trim(),
+        Status: cells[8].textContent.trim()
+      });
+    }
+  });
+
+  exportToExcel(data, `Savings_${new Date().toISOString().split('T')[0]}.xlsx`, "Savings");
 }
 
 function exportCashflowToExcel() {
