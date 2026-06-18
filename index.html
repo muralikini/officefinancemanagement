@@ -43,83 +43,86 @@
     </div>
 
     <!-- DASHBOARD TAB -->
+   
     <div id="tab-0" class="tab-content">
-  <div class="max-w-screen-2xl mx-auto px-6 py-8">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-      <h1 class="text-3xl font-bold">Office Finance Overview</h1>
-      
-      <div class="flex items-center gap-4">
-        <div>
-          <label class="block text-xs text-gray-400 mb-1">Financial Year</label>
-          <select id="fySelect" onchange="loadDashboard()" 
-                  class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-sm">
-            <!-- Populated by JS -->
-          </select>
-        </div>
-        <button onclick="refreshDashboard()" 
-                class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl flex items-center gap-2 font-medium">
-          <span>↻</span> Refresh All
-        </button>
-        
-        
-      </div>
-    </div>
-
-    <!-- Key Metrics -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-10">
-      <div class="bg-gradient-to-br from-green-900 to-emerald-900 rounded-3xl p-6 shadow-xl">
-        <div class="text-emerald-300 text-sm">Total Income (Current FY)</div>
-        <div id="dash-total-income" class="text-4xl font-bold mt-3">₹0</div>
-      </div>
-      <div class="bg-gradient-to-br from-red-900 to-rose-900 rounded-3xl p-6 shadow-xl">
-        <div class="text-rose-300 text-sm">Total Expenses (Current FY)</div>
-        <div id="dash-total-expenses" class="text-4xl font-bold mt-3">₹0</div>
-      </div>
-      <div class="bg-gradient-to-br from-blue-900 to-cyan-900 rounded-3xl p-6 shadow-xl">
-        <div class="text-cyan-300 text-sm">Net Cash Flow</div>
-        <div id="dash-net-flow" class="text-4xl font-bold mt-3">₹0</div>
-      </div>
-      <div class="bg-gradient-to-br from-purple-900 to-violet-900 rounded-3xl p-6 shadow-xl">
-        <div class="text-violet-300 text-sm">Total Savings</div>
-        <div id="dash-total-savings" class="text-4xl font-bold mt-3">₹0</div>
-      </div>
-      <div class="bg-gray-900 rounded-3xl p-6">
-        <div class="text-gray-400 text-sm">Active FD/RD</div>
-        <div id="dash-active-savings" class="text-4xl font-bold text-amber-400 mt-3">0</div>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <!-- Expense Breakdown -->
-      <div class="bg-gray-900 rounded-3xl p-8">
-        <h2 class="text-xl font-semibold mb-6">Expense Breakdown (Current FY)</h2>
-        <div id="dash-expense-breakdown" class="space-y-5"></div>
-      </div>
-
-      <!-- Savings Composition -->
-      <div class="bg-gray-900 rounded-3xl p-8">
-        <h2 class="text-xl font-semibold mb-6">Savings Portfolio</h2>
-        <div class="grid grid-cols-2 gap-6">
-          <div class="text-center">
-            <div class="text-5xl font-bold text-green-400" id="dash-fd-count">0</div>
-            <div class="text-sm text-gray-400 mt-1">Fixed Deposits</div>
-            <div id="dash-fd-value" class="text-2xl font-medium mt-2">₹0</div>
-          </div>
-          <div class="text-center">
-            <div class="text-5xl font-bold text-amber-400" id="dash-rd-count">0</div>
-            <div class="text-sm text-gray-400 mt-1">Recurring Deposits</div>
-            <div id="dash-rd-value" class="text-2xl font-medium mt-2">₹0</div>
+      <div class="max-w-screen-2xl mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+          <h1 class="text-4xl font-bold tracking-tight">Office Finance Overview</h1>
+          
+          <div class="flex items-center gap-4">
+            <div>
+              <label class="block text-xs text-gray-400 mb-1">Financial Year</label>
+              <select id="fySelect" onchange="loadDashboard()" 
+                      class="bg-gray-900 border border-gray-700 rounded-2xl px-5 py-3 text-sm font-medium focus:ring-2 focus:ring-blue-500">
+                <!-- Populated by JS -->
+              </select>
+            </div>
+            <button onclick="refreshDashboard()" 
+                    class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-6 py-3 rounded-2xl flex items-center gap-2 font-semibold shadow-lg">
+              <span class="text-lg">↻</span> Refresh All
+            </button>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Recent Transactions -->
-    <div class="mt-10 bg-gray-900 rounded-3xl p-8">
-      <h2 class="text-xl font-semibold mb-6">Recent Transactions</h2>
-      <div id="dash-recent-transactions" class="overflow-x-auto"></div>
-    </div>
-  </div>
+        <!-- Key Metrics - Modern Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+          <div class="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl p-6 text-white shadow-xl">
+            <div class="text-emerald-100 text-sm font-medium">Total Income (Current FY)</div>
+            <div id="dash-total-income" class="text-4xl font-bold mt-3">₹0</div>
+          </div>
+          <div class="bg-gradient-to-br from-rose-500 to-red-600 rounded-3xl p-6 text-white shadow-xl">
+            <div class="text-rose-100 text-sm font-medium">Total Expenses (Current FY)</div>
+            <div id="dash-total-expenses" class="text-4xl font-bold mt-3">₹0</div>
+          </div>
+          <div class="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl p-6 text-white shadow-xl">
+            <div class="text-cyan-100 text-sm font-medium">Net Cash Flow</div>
+            <div id="dash-net-flow" class="text-4xl font-bold mt-3">₹0</div>
+          </div>
+          <div class="bg-gradient-to-br from-violet-500 to-purple-600 rounded-3xl p-6 text-white shadow-xl">
+            <div class="text-violet-100 text-sm font-medium">Total Savings</div>
+            <div id="dash-total-savings" class="text-4xl font-bold mt-3">₹0</div>
+          </div>
+          <div class="bg-gray-900 rounded-3xl p-6 border border-amber-500/30">
+            <div class="text-amber-400 text-sm font-medium">Active FD/RD</div>
+            <div id="dash-active-savings" class="text-5xl font-bold text-amber-400 mt-3">0</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Expense Breakdown -->
+          <div class="bg-gray-900 rounded-3xl p-8 shadow-inner">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <span class="text-rose-400">📉</span> Expense Breakdown (Current FY)
+            </h2>
+            <div id="dash-expense-breakdown" class="space-y-6"></div>
+          </div>
+
+          <!-- Savings Portfolio -->
+          <div class="bg-gray-900 rounded-3xl p-8 shadow-inner">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <span class="text-emerald-400">🏦</span> Savings Portfolio
+            </h2>
+            <div class="grid grid-cols-2 gap-8">
+              <div class="text-center bg-gray-800/50 rounded-2xl p-6">
+                <div class="text-6xl font-bold text-emerald-400" id="dash-fd-count">0</div>
+                <div class="text-sm text-gray-400 mt-2">Fixed Deposits</div>
+                <div id="dash-fd-value" class="text-2xl font-medium mt-3 text-emerald-300">₹0</div>
+              </div>
+              <div class="text-center bg-gray-800/50 rounded-2xl p-6">
+                <div class="text-6xl font-bold text-amber-400" id="dash-rd-count">0</div>
+                <div class="text-sm text-gray-400 mt-2">Recurring Deposits</div>
+                <div id="dash-rd-value" class="text-2xl font-medium mt-3 text-amber-300">₹0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="mt-12 bg-gray-900 rounded-3xl p-8 shadow-inner">
+          <h2 class="text-2xl font-semibold mb-6">Recent Transactions</h2>
+          <div id="dash-recent-transactions" class="overflow-x-auto"></div>
+        </div>
+      </div>
     </div>
 
     <!-- Banking Tab -->
