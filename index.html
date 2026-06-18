@@ -2131,9 +2131,18 @@ function loadExpenses() {
   const monthFilter = document.getElementById('expenseMonth').value || "";
   const catFilter = document.getElementById('expenseCategory').value || "";
 
-  const expenses = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 50) return false;   // Very small threshold
+  // === DEBUG: Check ICICI dates ===
+  const iciciDec = allTransactions.filter(t => 
+    t.bank === 'ICICI' && t.date && t.date.includes('12/2025')
+  );
+  console.log(`ICICI Dec 2025 transactions found in allTransactions: ${iciciDec.length}`);
+  if (iciciDec.length > 0) {
+    console.log("Sample ICICI dates:", iciciDec.slice(0,5).map(t => t.date));
+  }
 
+  const expenses = allTransactions.filter(t => {
+    if (!t.withdrawal || t.withdrawal <= 50) return false;
+    
     // Only exclude CLEAR internal transfers
     if (isInternalTransfer(t)) {
       console.log("Excluded as internal:", t.narration);
