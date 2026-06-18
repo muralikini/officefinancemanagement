@@ -2474,34 +2474,36 @@ function validateCurrentData() {
 }
 
 function exportExpensesToExcel() {
-  const table = document.querySelector('#expenses-table'); // Make sure your table has this ID
+  const table = document.getElementById('expenses-table');
   if (!table) {
     alert("Expense table not found");
     return;
   }
 
-  const rows = table.querySelectorAll('tbody tr');
-  if (rows.length === 0) {
-    alert("No data to export");
+  // Find all actual transaction rows (they are inside nested tables)
+  const transactionRows = table.querySelectorAll('tbody tr.bank-group td table tbody tr');
+  
+  if (transactionRows.length === 0) {
+    alert("No expense records found to export");
     return;
   }
 
   const data = [];
 
-  rows.forEach(row => {
+  transactionRows.forEach(row => {
     const cells = row.querySelectorAll('td');
-    if (cells.length >= 5) {
+    if (cells.length >= 4) {
       data.push({
         Date: cells[0].textContent.trim(),
-        Bank: cells[1].textContent.trim(),
-        Narration: cells[2].textContent.trim(),
-        Category: cells[3].textContent.trim(),
-        Amount: cells[4].textContent.trim()
+        Narration: cells[1].textContent.trim(),
+        Category: cells[2].textContent.trim(),
+        Amount: cells[3].textContent.trim()
       });
     }
   });
 
   exportToExcel(data, `Expenses_${new Date().toISOString().split('T')[0]}.xlsx`, "Expenses");
+  console.log(`Exported ${data.length} records to Excel`);
 }
 
 function exportBankingToExcel() {
