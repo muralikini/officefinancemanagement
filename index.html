@@ -2131,47 +2131,42 @@ function loadExpenses() {
   const monthFilter = document.getElementById('expenseMonth').value || "";
   const catFilter = document.getElementById('expenseCategory').value || "";
 
-  // === DEBUG: Check ICICI dates ===
-  const iciciDec = allTransactions.filter(t => 
-    t.bank === 'ICICI' && t.date && t.date.includes('12/2025')
-  );
-  console.log(`ICICI Dec 2025 transactions found in allTransactions: ${iciciDec.length}`);
-  if (iciciDec.length > 0) {
-    console.log("Sample ICICI dates:", iciciDec.slice(0,5).map(t => t.date));
+  // === DEBUG ICICI Dec 2025 ===
+  if (monthFilter === "12-2025") {
+    const iciciDec = allTransactions.filter(t => t.bank === "ICICI" && t.date && t.date.includes("12/2025"));
+    console.log(`DEBUG: ICICI Dec 2025 transactions in allTransactions: ${iciciDec.length}`);
+    if (iciciDec.length > 0) {
+      console.log("Sample dates:", iciciDec.slice(0, 8).map(t => ({date: t.date, withdrawal: t.withdrawal})));
+    }
   }
 
   const expenses = allTransactions.filter(t => {
     if (!t.withdrawal || t.withdrawal <= 50) return false;
-    
-    // Only exclude CLEAR internal transfers
-    if (isInternalTransfer(t)) {
-      console.log("Excluded as internal:", t.narration);
-      return false;
-    }
+
+    // Skip internal transfers (very lenient for now)
+    if (isInternalTransfer(t)) return false;
 
     const category = categorizeExpense(t.narration);
-
-    // Be very lenient — only exclude obvious income
-    if (category.includes("Income") || category.includes("Salary Credit")) {
-      return false;
-    }
+    if (category.includes("Income") || category.includes("Salary Credit")) return false;
 
     // FY Filter
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
-    // Month Filter
+    // Month Filter - Very flexible
     if (monthFilter && t.date) {
-      const dateStr = String(t.date).trim().replace(/\//g, '-');
-      if (!dateStr.includes(monthFilter)) return false;
+      const dateStr = String(t.date).trim();
+      const normalized = dateStr.replace(/\//g, '-');
+      if (!normalized.includes(monthFilter)) {
+        return false;
+      }
     }
 
-    // Category Filter
     if (catFilter && category !== catFilter) return false;
 
     return true;
   });
 
-  console.log(`Expenses Tab → Showing ${expenses.length} records for selected filters`);
+  console.log(`Expenses Tab → Showing ${expenses.length} records (Month: ${monthFilter || 'All'})`);
 
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
