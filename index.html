@@ -2291,23 +2291,17 @@ function isInternalTransfer(transaction) {
   if (!transaction.narration) return false;
   const n = transaction.narration.toLowerCase();
 
-  // Only very obvious bank-to-bank internal movements
-  if (/hdfc to (icici|idfc)|icici to (hdfc|idfc)|idfc to (hdfc|icici)/.test(n)) {
+  // Very conservative internal detection
+  const isInternal = 
+    /hdfc to (icici|idfc)|icici to (hdfc|idfc)|idfc to (hdfc|icici)/.test(n) ||
+    /(neft|rtgs|imps).*?(hdfc|icici|idfc).*?(hdfc|icici|idfc)/.test(n);
+
+  if (isInternal) {
+    console.log("🚫 Excluded as INTERNAL:", transaction.narration);
     return true;
   }
 
-  if (/(neft|rtgs|imps).*?(hdfc|icici|idfc).*?(hdfc|icici|idfc)/.test(n)) {
-    return true;
-  }
-
-  // Large round figure transfers between your banks only
-  const amount = (transaction.deposit || 0) + (transaction.withdrawal || 0);
-  if (amount > 200000 && (amount % 50000 === 0 || amount % 100000 === 0)) {
-    if (n.includes('hdfc') && (n.includes('icici') || n.includes('idfc'))) {
-      return true;
-    }
-  }
-
+  // Allow almost everything else for now (we can tighten later)
   return false;
 }
 // ============== NORMALIZE ALL FORMATS ==============
