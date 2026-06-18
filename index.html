@@ -2141,15 +2141,14 @@ function loadExpenses() {
 
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
-    // Strict Month Filter
+    // Precise Month + Year Filter
     if (monthFilter && t.date) {
       const dateStr = String(t.date).trim();
-      const hasCorrectMonth = 
-        dateStr.includes(`/${monthFilter.split('-')[0]}/`) ||
-        dateStr.includes(`-${monthFilter.split('-')[0]}-`) ||
-        dateStr.includes(monthFilter);
+      const target = monthFilter; // e.g. "12-2025"
 
-      if (!hasCorrectMonth) return false;
+      if (!dateStr.includes(target) && !dateStr.includes(target.replace('-', '/'))) {
+        return false;
+      }
     }
 
     if (catFilter && category !== catFilter) return false;
