@@ -2107,31 +2107,20 @@ function categorizeExpense(narration) {
   if (!narration) return "Others";
   const n = narration.toLowerCase();
 
-  // === REAL EXPENSES (Outflows) ===
   if (n.includes("salary payment") || n.includes("employee salary") || n.includes("sal to")) {
     return "Salary to Employees";
   }
-  if (n.includes("bill") || n.includes("electricity") || n.includes("water") || n.includes("custom duty")) {
+  if (n.includes("bill") || n.includes("electricity") || n.includes("water") || n.includes("gst") || n.includes("cgst")) {
     return "Utilities & Bills";
   }
-  if (n.includes("vps") || n.includes("dmart") || n.includes("amazon") || n.includes("shopping")) {
-    return "Shopping";
-  }
+  if (n.includes("rent")) return "Rent";
   if (n.includes("fuel") || n.includes("petrol")) return "Fuel";
   if (n.includes("credit card") || n.includes("cc payment")) return "Credit Card Payment";
   if (n.includes("vendor") || n.includes("supplier")) return "Vendor Payment";
-  if (n.includes("rent")) return "Rent";
 
-  // === INFLOWS (Should be excluded) ===
+  // Income patterns (exclude)
   if (n.includes("salary") && !n.includes("payment")) return "Salary Credit (Income)";
-  if (n.includes("home control") || n.includes("singapore") || n.includes("client")) {
-    return "Client Payment (Income)";
-  }
-
-  // === INVESTMENTS ===
-  if (n.includes("fd") || n.includes("rd") || n.includes("fixed deposit") || n.includes("maturity")) {
-    return "Investment";
-  }
+  if (n.includes("neft") && (n.includes("hdfc") || n.includes("addit labs"))) return "Client Payment (Income)";
 
   return "Others";
 }
@@ -2143,29 +2132,28 @@ function loadExpenses() {
   const catFilter = document.getElementById('expenseCategory').value || "";
 
   const expenses = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 100) return false;
+    if (!t.withdrawal || t.withdrawal <= 50) return false;   // Very small threshold
 
-    if (isInternalTransfer(t)) return false;
+    // Only exclude CLEAR internal transfers
+    if (isInternalTransfer(t)) {
+      console.log("Excluded as internal:", t.narration);
+      return false;
+    }
 
     const category = categorizeExpense(t.narration);
-    if (category.includes("Income") || category === "Investment" || 
-        category.includes("Salary Credit")) {
+
+    // Be very lenient — only exclude obvious income
+    if (category.includes("Income") || category.includes("Salary Credit")) {
       return false;
     }
 
     // FY Filter
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
-    // Month Filter - More Reliable
+    // Month Filter
     if (monthFilter && t.date) {
-      const dateStr = String(t.date).trim().replace(/\//g, '-'); // Normalize / to -
-      const monthKey = monthFilter; // e.g. "05-2026"
-      
-      // Check both formats
-      if (!dateStr.includes(monthKey) && 
-          !dateStr.includes(monthKey.replace('-', '/'))) {
-        return false;
-      }
+      const dateStr = String(t.date).trim().replace(/\//g, '-');
+      if (!dateStr.includes(monthFilter)) return false;
     }
 
     // Category Filter
@@ -2174,7 +2162,7 @@ function loadExpenses() {
     return true;
   });
 
-  console.log(`Expenses Tab → Showing ${expenses.length} records (Month: ${monthFilter || 'All'})`);
+  console.log(`Expenses Tab → Showing ${expenses.length} records for selected filters`);
 
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
