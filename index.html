@@ -2131,18 +2131,11 @@ function loadExpenses() {
   const monthFilter = document.getElementById('expenseMonth').value || "";
   const catFilter = document.getElementById('expenseCategory').value || "";
 
-  let expenses = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 0) return false;
+  const expenses = allTransactions.filter(t => {
+    // Only consider HDFC as master
+    if (t.bank !== "HDFC") return false;
 
-    // Special handling for ICICI Dec 2025
-    if (t.bank === "ICICI" && monthFilter === "12-2025") {
-      const dateStr = String(t.date).trim();
-      if (dateStr.includes("12/2025") || dateStr.includes("12-2025")) {
-        return true;
-      }
-    }
-
-    if (isInternalTransfer(t)) return false;
+    if (!t.withdrawal || t.withdrawal <= 50) return false;
 
     const category = categorizeExpense(t.narration || "");
     if (category.includes("Income") || category.includes("Salary Credit")) return false;
@@ -2161,10 +2154,7 @@ function loadExpenses() {
     return true;
   });
 
-  // Deduplicate
-  expenses = [...new Map(expenses.map(item => [`${item.date}-${item.narration.substring(0,50)}`, item])).values()];
-
-  console.log(`Expenses Tab → Showing ${expenses.length} unique records (Month: ${monthFilter || 'All'})`);
+  console.log(`Expenses Tab → Showing ${expenses.length} HDFC expense records (Month: ${monthFilter || 'All'})`);
 
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
