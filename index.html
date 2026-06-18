@@ -832,66 +832,62 @@ async function loadAllDataForDashboard() {
 
 function loadDashboard() {
   const selectedFY = document.getElementById('fySelect').value;
-  
-  let filteredTrans = allTransactions;
-  
+
+  // Filter only HDFC transactions
+  let filteredTrans = allTransactions.filter(t => t.bank === "HDFC");
+
+  // Apply FY filter if not "All"
   if (selectedFY !== "All") {
-    filteredTrans = allTransactions.filter(t => {
+    filteredTrans = filteredTrans.filter(t => {
       if (!t.date) return false;
-      let dateStr = String(t.date).trim();
-      let d = null;
-
-      try {
-        if (dateStr.includes('/')) {
-          const parts = dateStr.split(/[\/-]/);
-          if (parts.length === 3) {
-            d = new Date(parts[2], parts[1]-1, parts[0]);
-          }
-        } else {
-          d = new Date(dateStr);
-        }
-
-        if (!d || isNaN(d.getTime())) return false;
-
-        const year = d.getFullYear();
-        if (year < 2020 || year > 2027) return false;   // Extra safety
-
-        const month = d.getMonth();
-        const transFY = (month < 3 ? year-1 : year) + '-' + (month < 3 ? year : year+1);
-        return transFY === selectedFY;
-      } catch(e) {
-        return false;
-      }
+      return getFinancialYear(t.date) === selectedFY;
     });
   }
 
-  // Rest of your calculations (Income, Expenses, etc.)
-  const totalIncome = filteredTrans.reduce((sum, t) => sum + (t.deposit || 0), 0);
-  const totalExpense = filteredTrans.reduce((sum, t) => sum + (t.withdrawal || 0), 0);
+  // Further refine: Exclude FD/RD investments and interbank transfers
+  const refinedTransactions = filteredTrans.filter(t => {
+    const narration = (t.narration || "").toLowerCase();
 
+    // Exclude FD and RD investments
+    if (isFDorRDInvestment(narration)) return false;
+
+    // For income calculation, exclude interbank transfers
+    if (t.deposit > 0 && isInterbankTransferFromOtherBank(narration)) {
+      return false;
+    }
+
+    return true;
+  });
+
+  // === CALCULATIONS ===
+  const totalIncome = refinedTransactions.reduce((sum, t) => sum + (t.deposit || 0), 0);
+  const totalExpense = refinedTransactions.reduce((sum, t) => sum + (t.withdrawal || 0), 0);
+  const netFlow = totalIncome - totalExpense;
+
+  // Update Summary Cards
   document.getElementById('dash-total-income').textContent = '₹' + totalIncome.toLocaleString('en-IN');
   document.getElementById('dash-total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
-  
-  const net = totalIncome - totalExpense;
-  const netEl = document.getElementById('dash-net-flow');
-  netEl.textContent = '₹' + net.toLocaleString('en-IN');
-  netEl.className = `text-4xl font-bold mt-3 ${net >= 0 ? 'text-emerald-400' : 'text-red-400'}`;
 
-  // Savings (unchanged by FY)
+  const netEl = document.getElementById('dash-net-flow');
+  netEl.textContent = '₹' + netFlow.toLocaleString('en-IN');
+  netEl.className = `text-4xl font-bold mt-4 ${netFlow >= 0 ? 'text-emerald-400' : 'text-red-400'}`;
+
+  // Savings section (unchanged - as it's separate)
   const fds = savingsData.savings.filter(s => s.type === 'FD');
   const rds = savingsData.savings.filter(s => s.type === 'RD');
-  const totalSavings = fds.concat(rds).reduce((sum, s) => sum + (parseFloat(s.principal)||0), 0);
+  const totalSavings = [...fds, ...rds].reduce((sum, s) => sum + (parseFloat(s.principal) || 0), 0);
 
   document.getElementById('dash-total-savings').textContent = '₹' + totalSavings.toLocaleString('en-IN');
   document.getElementById('dash-active-savings').textContent = savingsData.savings.filter(s => s.status === 'Active').length;
-  
-  document.getElementById('dash-fd-count').textContent = fds.length;
-  document.getElementById('dash-fd-value').textContent = '₹' + fds.reduce((sum, s) => sum + (parseFloat(s.principal)||0), 0).toLocaleString('en-IN');
-  
-  document.getElementById('dash-rd-count').textContent = rds.length;
-  document.getElementById('dash-rd-value').textContent = '₹' + rds.reduce((sum, s) => sum + (parseFloat(s.principal)||0), 0).toLocaleString('en-IN');
 
-  renderDashExpenseBreakdown(filteredTrans);
+  document.getElementById('dash-fd-count').textContent = fds.length;
+  document.getElementById('dash-fd-value').textContent = '₹' + fds.reduce((sum, s) => sum + (parseFloat(s.principal) || 0), 0).toLocaleString('en-IN');
+
+  document.getElementById('dash-rd-count').textContent = rds.length;
+  document.getElementById('dash-rd-value').textContent = '₹' + rds.reduce((sum, s) => sum + (parseFloat(s.principal) || 0), 0).toLocaleString('en-IN');
+
+  // Refined Expense Breakdown
+  renderDashExpenseBreakdown(refinedTransactions);
   renderDashRecentTransactions();
 }
 
@@ -931,13 +927,11 @@ function renderDashExpenseBreakdown(transactions) {
   const categories = {};
 
   transactions.forEach(t => {
-    // Only consider actual outflows (withdrawals)
     if (!t.withdrawal || t.withdrawal <= 100) return;
 
-    // Use the improved categorization function
     const cat = categorizeExpense(t.narration || '');
-    
-    // Skip income categories in expense breakdown
+
+    // Skip income categories
     if (cat.includes("Income") || cat.includes("Client Payment")) return;
 
     categories[cat] = (categories[cat] || 0) + t.withdrawal;
@@ -945,7 +939,6 @@ function renderDashExpenseBreakdown(transactions) {
 
   const totalExp = Object.values(categories).reduce((a, b) => a + b, 0) || 1;
 
-  // Sort by amount (highest first)
   Object.entries(categories)
     .sort((a, b) => b[1] - a[1])
     .forEach(([cat, amt]) => {
@@ -956,7 +949,7 @@ function renderDashExpenseBreakdown(transactions) {
           <div class="flex-1 pr-4">
             <div class="text-sm font-medium">${cat}</div>
             <div class="h-2 bg-gray-700 rounded-full mt-1.5 overflow-hidden">
-              <div class="h-2 bg-violet-500 rounded-full transition-all" style="width: ${percent}%"></div>
+              <div class="h-2 bg-violet-500 rounded-full" style="width: ${percent}%"></div>
             </div>
           </div>
           <div class="text-right min-w-[110px]">
@@ -967,7 +960,6 @@ function renderDashExpenseBreakdown(transactions) {
       `;
     });
 
-  // Show message if no expenses
   if (Object.keys(categories).length === 0) {
     container.innerHTML = `<p class="text-gray-400 text-sm">No expense data available for selected period.</p>`;
   }
