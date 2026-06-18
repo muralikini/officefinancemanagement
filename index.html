@@ -2048,24 +2048,24 @@ function populateExpenseFilters() {
 
   allTransactions.forEach(t => {
     if (!t.withdrawal || t.withdrawal <= 0) return;
-
     if (isInternalTransfer(t)) return;
 
     const category = categorizeExpense(t.narration);
-    if (category === "Investment" || category.includes("Income") || category.includes("Salary Credit")) return;
+    if (category.includes("Income") || category === "Investment") return;
 
     const fy = getFinancialYear(t.date);
     if (fy) fys.add(fy);
 
     if (t.date) {
-      const m = t.date.substring(3); // e.g., "04-2025"
-      if (m && m.length >= 5) months.add(m);
+      // Support both DD/MM/YYYY and DD-MM-YYYY
+      let monthKey = t.date.substring(3, 10); // e.g., "05/2026" or "05-2026"
+      if (monthKey) months.add(monthKey.replace('/', '-')); // standardize to MM-YYYY
     }
 
     categories.add(category);
   });
 
-  // Populate FY (sorted descending)
+  // Populate FY
   fySelect.innerHTML = '<option value="">All Years</option>';
   Array.from(fys).sort().reverse().forEach(fy => {
     const opt = document.createElement('option');
@@ -2074,7 +2074,7 @@ function populateExpenseFilters() {
     fySelect.appendChild(opt);
   });
 
-  // Populate Months - Sorted Chronologically (Newest First)
+  // Populate Months - Properly Sorted (Newest First)
   monthSelect.innerHTML = '<option value="">All Months</option>';
   
   Array.from(months)
@@ -2084,13 +2084,16 @@ function populateExpenseFilters() {
       return (yb - ya) || (mb - ma);   // Year first, then month
     })
     .forEach(m => {
+      const [mm, yy] = m.split('-');
+      const monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      const display = `${monthNames[parseInt(mm)-1] || mm} ${yy}`;
       const opt = document.createElement('option');
       opt.value = m;
-      opt.textContent = m;
+      opt.textContent = display;
       monthSelect.appendChild(opt);
     });
 
-  // Populate Categories
+  // Categories
   catSelect.innerHTML = '<option value="">All Categories</option>';
   Array.from(categories).sort().forEach(cat => {
     const opt = document.createElement('option');
@@ -2140,14 +2143,14 @@ function loadExpenses() {
   const catFilter = document.getElementById('expenseCategory').value || "";
 
   const expenses = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 0) return false;           // Must be an outflow
+    if (!t.withdrawal || t.withdrawal <= 100) return false;   // Smallest expense threshold
 
-    // === EXCLUDE INTERNAL TRANSFERS ===
+    // Only exclude clear internal transfers
     if (isInternalTransfer(t)) return false;
 
     const category = categorizeExpense(t.narration);
 
-    // Exclude obvious income and investments
+    // Be less aggressive — only exclude obvious income/investments
     if (category.includes("Income") || category === "Investment" || 
         category.includes("Salary Credit")) {
       return false;
@@ -2156,9 +2159,9 @@ function loadExpenses() {
     // FY Filter
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
-    // Month Filter (more robust)
+    // Month Filter
     if (monthFilter && t.date) {
-      const dateStr = String(t.date).trim();
+      const dateStr = String(t.date).trim().replace('/', '-');
       if (!dateStr.includes(monthFilter)) return false;
     }
 
@@ -2168,13 +2171,12 @@ function loadExpenses() {
     return true;
   });
 
-  console.log(`✅ Expenses Tab: Showing ${expenses.length} records for selected filters`);
+  console.log(`Expenses Tab → ${expenses.length} records shown`);
 
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
-
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
 
-  const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3,10) : ''));
+  const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3,10).replace('/', '-') : ''));
   const avgMonthly = uniqueMonths.size > 0 ? Math.round(totalExpense / uniqueMonths.size) : 0;
   document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
 
