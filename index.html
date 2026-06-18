@@ -2132,7 +2132,15 @@ function loadExpenses() {
   const catFilter = document.getElementById('expenseCategory').value || "";
 
   let expenses = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 50) return false;
+    if (!t.withdrawal || t.withdrawal <= 0) return false;
+
+    // Special handling for ICICI Dec 2025
+    if (t.bank === "ICICI" && monthFilter === "12-2025") {
+      const dateStr = String(t.date).trim();
+      if (dateStr.includes("12/2025") || dateStr.includes("12-2025")) {
+        return true;
+      }
+    }
 
     if (isInternalTransfer(t)) return false;
 
@@ -2153,8 +2161,8 @@ function loadExpenses() {
     return true;
   });
 
-  // Deduplicate by date + narration
-  expenses = [...new Map(expenses.map(item => [`${item.date}-${item.narration}`, item])).values()];
+  // Deduplicate
+  expenses = [...new Map(expenses.map(item => [`${item.date}-${item.narration.substring(0,50)}`, item])).values()];
 
   console.log(`Expenses Tab → Showing ${expenses.length} unique records (Month: ${monthFilter || 'All'})`);
 
