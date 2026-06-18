@@ -510,6 +510,7 @@ const MANIFEST_URL = 'manifest.json';
 
 let manifest = {};
 let currentTransactions = [];
+let currentExpenses = [];   // Add this line
 
 // ============== LOGIN ==============
 function login() {
@@ -2188,6 +2189,8 @@ function loadExpenses() {
     return true;
   });
 
+  currentExpenses = expenses;
+
   // Deduplicate
   //expenses = [...new Map(expenses.map(item => [`${item.date}-${(item.narration || '').substring(0,80)}`, item])).values()];
 
@@ -2473,36 +2476,20 @@ function validateCurrentData() {
 }
 
 function exportExpensesToExcel() {
-  const table = document.getElementById('expenses-table');
-  if (!table) {
-    alert("Expense table not found");
-    return;
-  }
-
-  // Find all actual transaction rows (they are inside nested tables)
-  const transactionRows = table.querySelectorAll('tbody tr.bank-group td table tbody tr');
-  
-  if (transactionRows.length === 0) {
+  if (!currentExpenses || currentExpenses.length === 0) {
     alert("No expense records found to export");
     return;
   }
 
-  const data = [];
-
-  transactionRows.forEach(row => {
-    const cells = row.querySelectorAll('td');
-    if (cells.length >= 4) {
-      data.push({
-        Date: cells[0].textContent.trim(),
-        Narration: cells[1].textContent.trim(),
-        Category: cells[2].textContent.trim(),
-        Amount: cells[3].textContent.trim()
-      });
-    }
-  });
+  const data = currentExpenses.map(t => ({
+    Date: t.date,
+    Bank: t.bank,
+    Narration: t.narration,
+    Category: t.category || categorizeExpense(t.narration),
+    Amount: t.withdrawal
+  }));
 
   exportToExcel(data, `Expenses_${new Date().toISOString().split('T')[0]}.xlsx`, "Expenses");
-  console.log(`Exported ${data.length} records to Excel`);
 }
 
 function exportBankingToExcel() {
