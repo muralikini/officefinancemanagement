@@ -2139,17 +2139,26 @@ function loadExpenses() {
     const category = categorizeExpense(t.narration);
     if (category.includes("Income") || category.includes("Salary Credit")) return false;
 
-    // FY Filter
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
-    // Month Filter - Robust version
+    // Month Filter - Reliable Version
     if (monthFilter && t.date) {
       const dateStr = String(t.date).trim();
-      const normalized = dateStr.replace(/\//g, '-'); // DD/MM/YYYY → DD-MM-YYYY
+      const normalized = dateStr.replace(/\//g, '-');
 
-      // Match MM-YYYY or MM/YYYY
-      if (!normalized.includes(monthFilter) && 
-          !dateStr.includes(monthFilter.replace('-', '/'))) {
+      let transactionMonthYear = '';
+
+      if (normalized.match(/^\d{2}-\d{2}-\d{4}$/)) {
+        const parts = normalized.split('-');
+        transactionMonthYear = `${parts[1]}-${parts[2]}`;
+      } else if (dateStr.includes('/')) {
+        const parts = dateStr.split('/');
+        if (parts.length === 3) {
+          transactionMonthYear = `${parts[1]}-${parts[2]}`;
+        }
+      }
+
+      if (transactionMonthYear !== monthFilter) {
         return false;
       }
     }
