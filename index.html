@@ -2291,22 +2291,19 @@ function isInternalTransfer(transaction) {
   if (!transaction.narration) return false;
   const n = transaction.narration.toLowerCase();
 
-  // Only very clear internal bank-to-bank transfers
-  const clearInternal = [
-    'hdfc to icici', 'hdfc to idfc', 'icici to hdfc', 'idfc to hdfc',
-    'neft.*hdfc.*icici', 'neft.*hdfc.*idfc', 'rtgs.*hdfc.*icici',
-    'imps.*hdfc.*icici', 'imps.*hdfc.*idfc'
-  ];
-
-  for (let pattern of clearInternal) {
-    if (new RegExp(pattern).test(n)) return true;
+  // Only very obvious bank-to-bank internal movements
+  if (/hdfc to (icici|idfc)|icici to (hdfc|idfc)|idfc to (hdfc|icici)/.test(n)) {
+    return true;
   }
 
-  // Large round figure internal movements between your 3 banks
+  if (/(neft|rtgs|imps).*?(hdfc|icici|idfc).*?(hdfc|icici|idfc)/.test(n)) {
+    return true;
+  }
+
+  // Large round figure transfers between your banks only
   const amount = (transaction.deposit || 0) + (transaction.withdrawal || 0);
-  if (amount > 100000 && (amount % 10000 === 0 || amount % 50000 === 0)) {
-    if ((n.includes('hdfc') && (n.includes('icici') || n.includes('idfc'))) ||
-        (n.includes('icici') && n.includes('idfc'))) {
+  if (amount > 200000 && (amount % 50000 === 0 || amount % 100000 === 0)) {
+    if (n.includes('hdfc') && (n.includes('icici') || n.includes('idfc'))) {
       return true;
     }
   }
