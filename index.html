@@ -2129,48 +2129,35 @@ function categorizeExpense(narration) {
 function loadExpenses() {
   const fy = document.getElementById('expenseFY').value || "";
   const monthFilter = document.getElementById('expenseMonth').value || "";
+  const catFilter = document.getElementById('expenseCategory').value || "";
 
-  // DEBUG: Check ICICI Dec 2025 data
+  // DEBUG for ICICI Dec 2025
   if (monthFilter === "12-2025") {
-    const iciciDec = allTransactions.filter(t => 
-      t.bank === "ICICI" && t.date && t.date.includes("12/2025")
-    );
-    console.log(`DEBUG: Found ${iciciDec.length} ICICI transactions with 12/2025 in date`);
-    if (iciciDec.length > 0) {
-      console.log("Sample:", iciciDec.slice(0,5).map(t => t.date));
-    } else {
-      console.log("No ICICI Dec 2025 dates found. Checking all ICICI dates...");
-      const allIcici = allTransactions.filter(t => t.bank === "ICICI");
-      console.log("Total ICICI records:", allIcici.length);
-      console.log("Sample ICICI dates:", allIcici.slice(0,10).map(t => t.date));
-    }
+    const iciciDec = allTransactions.filter(t => t.bank === "ICICI" && t.date && t.date.includes("12/2025"));
+    console.log(`DEBUG: Found ${iciciDec.length} ICICI transactions with 12/2025`);
   }
 
-  let expenses = [];
+  const expenses = allTransactions.filter(t => {
+    if (!t.withdrawal || t.withdrawal <= 50) return false;
 
-  // Process each bank separately
-  allTransactions.forEach(t => {
-    if (!t.withdrawal || t.withdrawal <= 50) return;
+    if (isInternalTransfer(t)) return false;
 
-    const bank = (t.bank || '').toUpperCase();
-
-    // Bank-specific filtering
-    if (bank === 'ICICI') {
-      if (!shouldIncludeICICIExpense(t, monthFilter, fy)) return;
-    } else if (bank === 'HDFC') {
-      if (!shouldIncludeHDFCExpense(t, monthFilter, fy)) return;
-    } else if (bank === 'IDFC') {
-      if (!shouldIncludeIDFCExpense(t, monthFilter, fy)) return;
-    } else {
-      if (!shouldIncludeGeneralExpense(t, monthFilter, fy)) return;
-    }
-
-    const category = categorizeExpense(t.narration);
+    const category = categorizeExpense(t.narration || "");
     if (category.includes("Income") || category.includes("Salary Credit")) return false;
+
+    if (fy && getFinancialYear(t.date) !== fy) return false;
+
+    if (monthFilter && t.date) {
+      const dateStr = String(t.date).trim();
+      if (dateStr.includes('/12/2025') || dateStr.includes('-12-2025') || dateStr.includes('12/2025')) {
+        // For Dec 2025, allow all ICICI
+        if (t.bank === "ICICI") return true;
+      }
+    }
 
     if (catFilter && category !== catFilter) return false;
 
-    expenses.push(t);
+    return true;
   });
 
   console.log(`Expenses Tab → Showing ${expenses.length} records (Month: ${monthFilter || 'All'})`);
