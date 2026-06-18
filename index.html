@@ -2288,17 +2288,7 @@ function toggleBankGroup(bankKey) {
 // ==================== INTERNAL TRANSFER DETECTION ====================
 
 function isInternalTransfer(transaction) {
-  if (!transaction.narration) return false;
-  const n = transaction.narration.toLowerCase();
-
-  // TEMPORARY: Only exclude VERY obvious cases
-  if (n.includes("hdfc to icici") || n.includes("hdfc to idfc") || 
-      n.includes("icici to hdfc") || n.includes("idfc to hdfc")) {
-    console.log("🚫 Excluded as INTERNAL:", transaction.narration);
-    return true;
-  }
-
-  // For now, allow everything else (we'll tighten later)
+  // TEMPORARY: DISABLE ALL INTERNAL EXCLUSION FOR DEBUGGING
   return false;
 }
 // ============== NORMALIZE ALL FORMATS ==============
