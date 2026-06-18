@@ -768,7 +768,7 @@ async function loadAllDataForDashboard() {
           const res = await fetch(file.filePath);
           if (res.ok) {
             const rawData = await res.json();
-            const normalized = normalizeTransactions(rawData);
+            const normalized = normalizeTransactions(rawData, bank.bankName);
             allTransactions = allTransactions.concat(normalized);
           }
         } catch (e) {
@@ -2261,14 +2261,11 @@ function normalizeTransactions(rawData, bankName = '') {
     let deposit = 0;
     let balance = 0;
 
-    // HDFC / IDFC style
     if (t['Withdrawal Amt.'] !== undefined) {
       withdrawal = cleanNum(t['Withdrawal Amt.']);
       deposit = cleanNum(t['Deposit Amt.']);
       balance = cleanNum(t['Closing Balance']);
-    } 
-    // ICICI style
-    else if (t.transactionType) {
+    } else if (t.transactionType) {
       const amount = cleanNum(t.transactionAmount);
       if (t.transactionType === 'DR') withdrawal = amount;
       else deposit = amount;
@@ -2278,11 +2275,11 @@ function normalizeTransactions(rawData, bankName = '') {
     return {
       date: t.Date || t.date || '',
       narration: t.Narration || t.narration || '',
-      bank: bankName || 'Unknown',           // ← Added Bank field
+      bank: bankName || 'Unknown',
       withdrawal: withdrawal,
       deposit: deposit,
       balance: balance,
-      category: ''  // Will be filled later in expense categorization
+      category: ''
     };
   });
 }
