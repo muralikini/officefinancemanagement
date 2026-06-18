@@ -1959,88 +1959,77 @@ function loadCashflow() {
   const fy = document.getElementById('cashflowFY').value;
   if (!fy) return;
 
-  // Only consider HDFC transactions
-  let hdfcTransactions = allTransactions.filter(t => {
-    if (t.bank !== "HDFC") return false;
-    return getFinancialYear(t.date) === fy;
-  });
+  // Only HDFC transactions
+  const hdfcTxns = allTransactions.filter(t => 
+    t.bank === "HDFC" && getFinancialYear(t.date) === fy
+  );
 
   let totalIncome = 0;
   let totalExpense = 0;
   let ignoredInterbank = 0;
-  let ignoredFD_RD = 0;
+  let ignoredInvestments = 0;
 
-  hdfcTransactions.forEach(t => {
+  hdfcTxns.forEach(t => {
     const narration = (t.narration || "").toLowerCase();
 
-    // === DEPOSITS into HDFC ===
+    // === DEPOSITS ===
     if (t.deposit > 0) {
-    
-    if (isInterbankTransferFromOtherBank(narration)) {
+      if (isInterbankTransferFromOtherBank(narration)) {
         ignoredInterbank += t.deposit;
-        return; // Don't count as income
-    }
-
-    // Everything else = Income (including foreign remittances like INW)
-    totalIncome += t.deposit;
-}
-
-    // === WITHDRAWALS from HDFC ===
-    if (t.withdrawal > 0) {
-      // Ignore FD and RD investments
-      if (isFDorRDInvestment(narration)) {
-        ignoredFD_RD += t.withdrawal;
         return;
       }
+      totalIncome += t.deposit;           // Genuine income
+    }
 
-      // Normal spending = Expense
-      totalExpense += t.withdrawal;
+    // === WITHDRAWALS ===
+    if (t.withdrawal > 0) {
+      if (isFDorRDInvestment(narration)) {
+        ignoredInvestments += t.withdrawal;
+        return;
+      }
+      totalExpense += t.withdrawal;       // Normal business expense
     }
   });
 
   const netCashFlow = totalIncome - totalExpense;
 
-  // Calculate Opening Balance
+  // Opening Balance calculation (same as before)
   let openingBalance = 0;
   const [startYear] = fy.split('-').map(Number);
 
-  const beforeThisFY = allTransactions.filter(t => {
+  const beforeFY = allTransactions.filter(t => {
     if (t.bank !== "HDFC") return false;
     const d = parseDate(t.date);
-    if (!d) return false;
-    return d.getFullYear() < startYear || (d.getFullYear() === startYear && d.getMonth() < 3);
+    return d && (d.getFullYear() < startYear || (d.getFullYear() === startYear && d.getMonth() < 3));
   });
 
-  if (beforeThisFY.length > 0) {
-    beforeThisFY.sort((a, b) => parseDate(b.date) - parseDate(a.date));
-    openingBalance = beforeThisFY[0].balance || 0;
+  if (beforeFY.length > 0) {
+    beforeFY.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    openingBalance = beforeFY[0].balance || 0;
   }
 
   const closingBalance = openingBalance + netCashFlow;
 
-  // Update UI Summary Cards
+  // Update UI
   document.getElementById('cf-opening').textContent = '₹' + openingBalance.toLocaleString('en-IN');
   document.getElementById('cf-inflows').textContent = '₹' + totalIncome.toLocaleString('en-IN');
   document.getElementById('cf-outflows').textContent = '₹' + totalExpense.toLocaleString('en-IN');
   document.getElementById('cf-closing').textContent = '₹' + closingBalance.toLocaleString('en-IN');
-  
+
   const netEl = document.getElementById('cf-net');
   netEl.textContent = '₹' + netCashFlow.toLocaleString('en-IN');
   netEl.className = `text-3xl font-bold mt-2 ${netCashFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  // Update info cards
-  document.getElementById('cf-tx-count').textContent = hdfcTransactions.length;
-  document.getElementById('cf-internal-count').textContent = ignoredInterbank; // You can rename this label to "Interbank Transfers Ignored"
+  document.getElementById('cf-tx-count').textContent = hdfcTxns.length;
+  document.getElementById('cf-internal-count').textContent = ignoredInterbank + ignoredInvestments;
 
-  // Render Monthly Breakdown (excluding FD/RD and interbank)
-  const filteredForMonthly = hdfcTransactions.filter(t => {
+  // Monthly breakdown (excluding investments & interbank)
+  const filteredTxns = hdfcTxns.filter(t => {
     const narr = (t.narration || "").toLowerCase();
-    const isInterbank = isInterbankTransferFromOtherBank(narr);
-    const isInvestment = isFDorRDInvestment(narr);
-    return !isInterbank && !isInvestment;
+    return !isInterbankTransferFromOtherBank(narr) && !isFDorRDInvestment(narr);
   });
 
-  renderMonthlyCashflow(filteredForMonthly);
+  renderMonthlyCashflow(filteredTxns);
 }
 
 function isInterbankTransferFromOtherBank(narration) {
@@ -2307,33 +2296,33 @@ function loadExpenses() {
   const catFilter = document.getElementById('expenseCategory').value || "";
 
   let expenses = allTransactions.filter(t => {
-    // Only HDFC outflows are considered expenses
-    if (t.bank !== "HDFC") return false;
+  if (t.bank !== "HDFC") return false;
 
-    if (!t.withdrawal || t.withdrawal <= 1) return false;
+  const withdrawalAmount = Math.abs(t.withdrawal || 0);
+  if (withdrawalAmount <= 1) return false;
 
-    const category = categorizeExpense(t.narration || "");
+  const narration = (t.narration || "").toLowerCase();
 
-    // Exclude clear income
-    
-    if (category.includes("Salary Credit") && !t.narration.toLowerCase().includes("salary")) {
-      console.log("Excluded income:", t.narration.substring(0, 60));
+  // ✅ Exclude FD and RD investments from Expenses
+  if (isFDorRDInvestment(narration)) return false;
+
+  const category = categorizeExpense(t.narration || "");
+
+  if (category.includes("Income") || category.includes("Salary Credit")) return false;
+
+  if (fy && getFinancialYear(t.date) !== fy) return false;
+
+  if (monthFilter && t.date) {
+    const dateStr = String(t.date).trim();
+    if (!dateStr.includes(monthFilter) && !dateStr.includes(monthFilter.replace('-', '/'))) {
       return false;
     }
+  }
 
-    if (fy && getFinancialYear(t.date) !== fy) return false;
+  if (catFilter && category !== catFilter) return false;
 
-    if (monthFilter && t.date) {
-      const dateStr = String(t.date).trim();
-      if (!dateStr.includes(monthFilter) && !dateStr.includes(monthFilter.replace('-', '/'))) {
-        return false;
-      }
-    }
-
-    if (catFilter && category !== catFilter) return false;
-
-    return true;
-  });
+  return true;
+});
 
   currentExpenses = expenses;
 
