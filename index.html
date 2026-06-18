@@ -2329,12 +2329,8 @@ function toggleBankGroup(bankKey) {
 // ==================== INTERNAL TRANSFER DETECTION ====================
 
 function isInternalTransfer(transaction) {
-  if (!transaction.narration) return false;
-  const n = transaction.narration.toLowerCase();
-
-  // Only clear inter-bank transfers
-  return /hdfc to (icici|idfc)|icici to (hdfc|idfc)|idfc to (hdfc|icici)/.test(n) ||
-         /(neft|rtgs|imps).*?(hdfc|icici|idfc).*?(hdfc|icici|idfc)/.test(n);
+  // Not used much since we only consider HDFC
+  return false;
 }
 // ============== NORMALIZE ALL FORMATS ==============
 function normalizeTransactions(rawData, bankName = '') {
