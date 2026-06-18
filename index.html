@@ -2132,21 +2132,20 @@ function loadExpenses() {
   const catFilter = document.getElementById('expenseCategory').value || "";
 
   const expenses = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 50) return false;
+    if (!t.withdrawal || t.withdrawal <= 0) return false; // Only withdrawals, but allow small ones for now
 
-    if (isInternalTransfer(t)) return false;
+    // Temporarily relaxed internal transfer
+    if (isInternalTransfer(t) && t.bank !== "ICICI") return false; // Only exclude obvious for HDFC/IDFC
 
     const category = categorizeExpense(t.narration || "");
-    if (category.includes("Income") || category.includes("Salary Credit")) return false;
+    if (category.includes("Income") && t.bank !== "ICICI") return false; // Allow more for ICICI
 
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
-    // Precise Month + Year Filter
+    // Month Filter
     if (monthFilter && t.date) {
       const dateStr = String(t.date).trim();
-      const target = monthFilter; // e.g. "12-2025"
-
-      if (!dateStr.includes(target) && !dateStr.includes(target.replace('-', '/'))) {
+      if (!dateStr.includes(monthFilter) && !dateStr.includes(monthFilter.replace('-', '/'))) {
         return false;
       }
     }
@@ -2156,7 +2155,7 @@ function loadExpenses() {
     return true;
   });
 
-  console.log(`Expenses Tab → Showing ${expenses.length} records (Month: ${monthFilter || 'All'})`);
+  console.log(`Expenses Tab → Showing ${expenses.length} records for ${monthFilter}`);
 
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
