@@ -2142,20 +2142,100 @@ function categorizeExpense(narration) {
   if (!narration) return "Others";
   const n = narration.toLowerCase();
 
-  if (n.includes("salary payment") || n.includes("employee salary") || n.includes("sal to")) {
+  // === HIGH PRIORITY CATEGORIES ===
+
+  // Salary & Payroll
+  if (n.includes("salary payment") || n.includes("employee salary") || 
+      n.includes("sal to") || n.includes("salary to")) {
     return "Salary to Employees";
   }
-  if (n.includes("bill") || n.includes("electricity") || n.includes("water") || n.includes("gst") || n.includes("cgst")) {
+
+  // Rent
+  if (n.includes("rent") || n.includes("house rent")) {
+    return "Rent";
+  }
+
+  // Credit Card Payments
+  if (n.includes("credit card") || n.includes("cc payment") || 
+      n.includes("cc autopay") || n.includes("card payment")) {
+    return "Credit Card Payment";
+  }
+
+  // Fuel / Petrol / Diesel
+  if (n.includes("fuel") || n.includes("petrol") || n.includes("diesel") || 
+      n.includes("bpcl") || n.includes("hpcl") || n.includes("ioc")) {
+    return "Fuel";
+  }
+
+  // Utilities & Bills
+  if (n.includes("electricity") || n.includes("eb bill") || n.includes("bescom") ||
+      n.includes("water bill") || n.includes("internet") || n.includes("broadband") ||
+      n.includes("airtel") || n.includes("jio") || n.includes("act") ||
+      n.includes("gst") || n.includes("cgst") || n.includes("igst") || n.includes("bill desk")) {
     return "Utilities & Bills";
   }
-  if (n.includes("rent")) return "Rent";
-  if (n.includes("fuel") || n.includes("petrol")) return "Fuel";
-  if (n.includes("credit card") || n.includes("cc payment")) return "Credit Card Payment";
-  if (n.includes("vendor") || n.includes("supplier")) return "Vendor Payment";
 
-  // Income patterns (exclude)
-  if (n.includes("salary") && !n.includes("payment")) return "Salary Credit (Income)";
-  if (n.includes("neft") && (n.includes("hdfc") || n.includes("addit labs"))) return "Client Payment (Income)";
+  // Vendor / Supplier Payments
+  if (n.includes("vendor") || n.includes("supplier") || n.includes("purchase") ||
+      n.includes("payment to") || n.includes("neft") && n.includes("labs")) {
+    return "Vendor / Supplier Payment";
+  }
+
+  // Office Supplies & Stationery
+  if (n.includes("stationery") || n.includes("office supply") || n.includes("dmart") ||
+      n.includes("bigbasket") || n.includes("more") || n.includes("reliance retail")) {
+    return "Office Supplies";
+  }
+
+  // Travel & Conveyance
+  if (n.includes("travel") || n.includes("taxi") || n.includes("uber") || 
+      n.includes("ola") || n.includes("auto") || n.includes("cab") ||
+      n.includes("train") || n.includes("flight") || n.includes("irctc")) {
+    return "Travel & Conveyance";
+  }
+
+  // Professional Fees / Consulting
+  if (n.includes("consult") || n.includes("professional fee") || 
+      n.includes("ca ") || n.includes("chartered accountant") || 
+      n.includes("legal") || n.includes("advocate")) {
+    return "Professional Fees";
+  }
+
+  // Maintenance & Repairs
+  if (n.includes("maintenance") || n.includes("repair") || n.includes("service") ||
+      n.includes("amc") || n.includes("annual maintenance")) {
+    return "Maintenance & Repairs";
+  }
+
+  // Software / Subscriptions
+  if (n.includes("software") || n.includes("subscription") || n.includes("saas") ||
+      n.includes("microsoft") || n.includes("adobe") || n.includes("google workspace") ||
+      n.includes("zoom") || n.includes("aws") || n.includes("hosting")) {
+    return "Software & Subscriptions";
+  }
+
+  // Insurance
+  if (n.includes("insurance") || n.includes("premium") || n.includes("lic")) {
+    return "Insurance";
+  }
+
+  // Taxes & Government Payments
+  if (n.includes("income tax") || n.includes("tds") || n.includes("gst payment") ||
+      n.includes("professional tax") || n.includes("property tax")) {
+    return "Taxes & Government Dues";
+  }
+
+  // Marketing & Advertising
+  if (n.includes("marketing") || n.includes("advertisement") || n.includes("promo") ||
+      n.includes("facebook ads") || n.includes("google ads")) {
+    return "Marketing & Advertising";
+  }
+
+  // === INCOME (to be excluded) ===
+  if ((n.includes("salary") && !n.includes("payment")) || 
+      n.includes("neft") && (n.includes("hdfc") || n.includes("addit labs") || n.includes("client"))) {
+    return "Client Payment (Income)";
+  }
 
   return "Others";
 }
