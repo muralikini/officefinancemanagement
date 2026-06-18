@@ -2131,41 +2131,31 @@ function loadExpenses() {
   const monthFilter = document.getElementById('expenseMonth').value || "";
   const catFilter = document.getElementById('expenseCategory').value || "";
 
-  const expenses = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 50) return false;
+  let expenses = [];
 
-    if (isInternalTransfer(t)) return false;
+  // Process each bank separately
+  allTransactions.forEach(t => {
+    if (!t.withdrawal || t.withdrawal <= 50) return;
+
+    const bank = (t.bank || '').toUpperCase();
+
+    // Bank-specific filtering
+    if (bank === 'ICICI') {
+      if (!shouldIncludeICICIExpense(t, monthFilter, fy)) return;
+    } else if (bank === 'HDFC') {
+      if (!shouldIncludeHDFCExpense(t, monthFilter, fy)) return;
+    } else if (bank === 'IDFC') {
+      if (!shouldIncludeIDFCExpense(t, monthFilter, fy)) return;
+    } else {
+      if (!shouldIncludeGeneralExpense(t, monthFilter, fy)) return;
+    }
 
     const category = categorizeExpense(t.narration);
     if (category.includes("Income") || category.includes("Salary Credit")) return false;
 
-    if (fy && getFinancialYear(t.date) !== fy) return false;
-
-    // Month Filter - Reliable Version
-    if (monthFilter && t.date) {
-      const dateStr = String(t.date).trim();
-      const normalized = dateStr.replace(/\//g, '-');
-
-      let transactionMonthYear = '';
-
-      if (normalized.match(/^\d{2}-\d{2}-\d{4}$/)) {
-        const parts = normalized.split('-');
-        transactionMonthYear = `${parts[1]}-${parts[2]}`;
-      } else if (dateStr.includes('/')) {
-        const parts = dateStr.split('/');
-        if (parts.length === 3) {
-          transactionMonthYear = `${parts[1]}-${parts[2]}`;
-        }
-      }
-
-      if (transactionMonthYear !== monthFilter) {
-        return false;
-      }
-    }
-
     if (catFilter && category !== catFilter) return false;
 
-    return true;
+    expenses.push(t);
   });
 
   console.log(`Expenses Tab → Showing ${expenses.length} records (Month: ${monthFilter || 'All'})`);
@@ -2179,6 +2169,53 @@ function loadExpenses() {
 
   renderExpenseCategoryBreakdown(expenses);
   renderExpensesTable(expenses);
+}
+
+// ==================== BANK-SPECIFIC FILTERS ====================
+
+function shouldIncludeICICIExpense(t, monthFilter, fy) {
+  // ICICI specific logic - very lenient for now
+  if (fy && getFinancialYear(t.date) !== fy) return false;
+
+  if (monthFilter && t.date) {
+    const dateStr = String(t.date).trim().replace(/\//g, '-');
+    if (!dateStr.includes(monthFilter)) return false;
+  }
+
+  return true;
+}
+
+function shouldIncludeHDFCExpense(t, monthFilter, fy) {
+  if (fy && getFinancialYear(t.date) !== fy) return false;
+
+  if (monthFilter && t.date) {
+    const dateStr = String(t.date).trim().replace(/\//g, '-');
+    if (!dateStr.includes(monthFilter)) return false;
+  }
+
+  return true;
+}
+
+function shouldIncludeIDFCExpense(t, monthFilter, fy) {
+  if (fy && getFinancialYear(t.date) !== fy) return false;
+
+  if (monthFilter && t.date) {
+    const dateStr = String(t.date).trim().replace(/\//g, '-');
+    if (!dateStr.includes(monthFilter)) return false;
+  }
+
+  return true;
+}
+
+function shouldIncludeGeneralExpense(t, monthFilter, fy) {
+  if (fy && getFinancialYear(t.date) !== fy) return false;
+
+  if (monthFilter && t.date) {
+    const dateStr = String(t.date).trim().replace(/\//g, '-');
+    if (!dateStr.includes(monthFilter)) return false;
+  }
+
+  return true;
 }
 
 function renderExpenseCategoryBreakdown(expenses) {
