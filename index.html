@@ -2131,7 +2131,7 @@ function loadExpenses() {
   const monthFilter = document.getElementById('expenseMonth').value || "";
   const catFilter = document.getElementById('expenseCategory').value || "";
 
-  const expenses = allTransactions.filter(t => {
+  let expenses = allTransactions.filter(t => {
     if (!t.withdrawal || t.withdrawal <= 50) return false;
 
     if (isInternalTransfer(t)) return false;
@@ -2153,6 +2153,9 @@ function loadExpenses() {
     return true;
   });
 
+  // Deduplicate by date + narration
+  expenses = [...new Map(expenses.map(item => [`${item.date}-${item.narration}`, item])).values()];
+
   console.log(`Expenses Tab → Showing ${expenses.length} unique records (Month: ${monthFilter || 'All'})`);
 
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
@@ -2163,7 +2166,7 @@ function loadExpenses() {
   document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
 
   renderExpenseCategoryBreakdown(expenses);
-  renderExpensesTable(expenses);   // Make sure this is called only once
+  renderExpensesTable(expenses);
 }
 // ==================== BANK-SPECIFIC FILTERS ====================
 
@@ -2323,8 +2326,9 @@ function toggleBankGroup(bankKey) {
 // ==================== INTERNAL TRANSFER DETECTION ====================
 
 function isInternalTransfer(transaction) {
-  // TEMPORARY: DISABLE ALL INTERNAL EXCLUSION FOR DEBUGGING
-  return false;
+  if (!transaction.narration) return false;
+  const n = transaction.narration.toLowerCase();
+  return /hdfc to (icici|idfc)|icici to (hdfc|idfc)/.test(n);
 }
 // ============== NORMALIZE ALL FORMATS ==============
 function normalizeTransactions(rawData, bankName = '') {
