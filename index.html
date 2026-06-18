@@ -2131,12 +2131,6 @@ function loadExpenses() {
   const monthFilter = document.getElementById('expenseMonth').value || "";
   const catFilter = document.getElementById('expenseCategory').value || "";
 
-  // DEBUG for ICICI Dec 2025
-  if (monthFilter === "12-2025") {
-    const iciciDec = allTransactions.filter(t => t.bank === "ICICI" && t.date && t.date.includes("12/2025"));
-    console.log(`DEBUG: Found ${iciciDec.length} ICICI transactions with 12/2025`);
-  }
-
   const expenses = allTransactions.filter(t => {
     if (!t.withdrawal || t.withdrawal <= 50) return false;
 
@@ -2147,12 +2141,15 @@ function loadExpenses() {
 
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
+    // Strict Month Filter
     if (monthFilter && t.date) {
       const dateStr = String(t.date).trim();
-      if (dateStr.includes('/12/2025') || dateStr.includes('-12-2025') || dateStr.includes('12/2025')) {
-        // For Dec 2025, allow all ICICI
-        if (t.bank === "ICICI") return true;
-      }
+      const hasCorrectMonth = 
+        dateStr.includes(`/${monthFilter.split('-')[0]}/`) ||
+        dateStr.includes(`-${monthFilter.split('-')[0]}-`) ||
+        dateStr.includes(monthFilter);
+
+      if (!hasCorrectMonth) return false;
     }
 
     if (catFilter && category !== catFilter) return false;
