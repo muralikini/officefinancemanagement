@@ -2131,16 +2131,19 @@ function loadExpenses() {
   const monthFilter = document.getElementById('expenseMonth').value || "";
   const catFilter = document.getElementById('expenseCategory').value || "";
 
-  const expenses = allTransactions.filter(t => {
-    // Only consider HDFC outflows (including interbank transfers)
+  let expenses = allTransactions.filter(t => {
     if (t.bank !== "HDFC") return false;
 
-    if (!t.withdrawal || t.withdrawal <= 50) return false;
+    if (!t.withdrawal || t.withdrawal <= 10) {  // Lower threshold
+      console.log("Excluded small amount:", t.withdrawal, t.narration.substring(0, 60));
+      return false;
+    }
 
-    // Allow interbank transfers as expense
-    // Only exclude clear income
     const category = categorizeExpense(t.narration || "");
-    if (category.includes("Income") || category.includes("Salary Credit")) return false;
+    if (category.includes("Income") || category.includes("Salary Credit")) {
+      console.log("Excluded income:", t.narration.substring(0, 60));
+      return false;
+    }
 
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
@@ -2156,14 +2159,10 @@ function loadExpenses() {
     return true;
   });
 
-  console.log(`Expenses Tab → Showing ${expenses.length} HDFC outflows (Month: ${monthFilter || 'All'})`);
+  console.log(`Expenses Tab → Showing ${expenses.length} HDFC outflows for ${monthFilter}`);
 
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
-
-  const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3,10).replace('/', '-') : ''));
-  const avgMonthly = uniqueMonths.size > 0 ? Math.round(totalExpense / uniqueMonths.size) : 0;
-  document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
 
   renderExpenseCategoryBreakdown(expenses);
   renderExpensesTable(expenses);
