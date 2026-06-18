@@ -2174,31 +2174,36 @@ function loadExpenses() {
 // ==================== BANK-SPECIFIC FILTERS ====================
 
 function shouldIncludeICICIExpense(t, monthFilter, fy) {
+  console.log("ICICI transaction checked:", t.date, t.withdrawal, t.narration.substring(0, 50));
+
   if (fy && getFinancialYear(t.date) !== fy) return false;
 
   if (monthFilter && t.date) {
     const dateStr = String(t.date).trim();
+    console.log("  → Date string:", dateStr, " | Looking for month:", monthFilter);
     
-    // ICICI often uses DD/MM/YYYY or other formats
+    const normalized = dateStr.replace(/\//g, '-');
     let transactionMonthYear = '';
 
-    if (dateStr.includes('/')) {
+    if (normalized.match(/^\d{2}-\d{2}-\d{4}$/)) {
+      const parts = normalized.split('-');
+      transactionMonthYear = `${parts[1]}-${parts[2]}`;
+    } else if (dateStr.includes('/')) {
       const parts = dateStr.split('/');
-      if (parts.length === 3) {
-        transactionMonthYear = `${parts[1]}-${parts[2]}`; // MM-YYYY
-      }
-    } else if (dateStr.includes('-')) {
-      const parts = dateStr.split('-');
       if (parts.length === 3) {
         transactionMonthYear = `${parts[1]}-${parts[2]}`;
       }
     }
 
+    console.log("  → Parsed month-year:", transactionMonthYear);
+
     if (transactionMonthYear !== monthFilter) {
+      console.log("  → FILTERED OUT by month");
       return false;
     }
   }
 
+  console.log("  → INCLUDED");
   return true;
 }
 function shouldIncludeHDFCExpense(t, monthFilter, fy) {
