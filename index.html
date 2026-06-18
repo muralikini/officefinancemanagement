@@ -2168,19 +2168,6 @@ function loadExpenses() {
   renderExpenseCategoryBreakdown(expenses);
   renderExpensesTable(expenses);
 }
-
-  console.log(`Expenses Tab → Showing ${expenses.length} HDFC expense records (Month: ${monthFilter || 'All'})`);
-
-  const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
-  document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
-
-  const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3,10).replace('/', '-') : ''));
-  const avgMonthly = uniqueMonths.size > 0 ? Math.round(totalExpense / uniqueMonths.size) : 0;
-  document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
-
-  renderExpenseCategoryBreakdown(expenses);
-  renderExpensesTable(expenses);
-}
 // ==================== BANK-SPECIFIC FILTERS ====================
 
 function shouldIncludeICICIExpense(t, monthFilter, fy) {
