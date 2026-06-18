@@ -6,6 +6,7 @@
   <title>Office Finance Manager</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     body { font-family: 'Segoe UI', system-ui, sans-serif; }
@@ -47,7 +48,11 @@
   <div class="max-w-screen-2xl mx-auto px-6 py-8">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
       <h1 class="text-4xl font-bold tracking-tight">Office Finance Overview</h1>
-      
+      <button onclick="exportExpensesToExcel()" 
+           class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
+           <i class="fas fa-file-excel"></i>
+            Export to Excel
+          </button>
       <div class="flex items-center gap-4">
         <div>
           <label class="block text-xs text-gray-400 mb-1">Financial Year</label>
@@ -129,6 +134,11 @@
   <div class="max-w-screen-2xl mx-auto px-6 py-8">
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-bold">Banking Transactions</h1>
+      <button onclick="exportExpensesToExcel()" 
+           class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
+           <i class="fas fa-file-excel"></i>
+            Export to Excel
+          </button>
       <button onclick="loadSelectedBank()" 
               class="bg-blue-600 hover:bg-blue-700 px-5 py-2.5 rounded-xl flex items-center gap-2">
         <span>↻</span> Refresh
@@ -212,6 +222,11 @@
   <div class="max-w-screen-2xl mx-auto px-6 py-8">
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-bold">Savings (FD & RD)</h1>
+      <button onclick="exportExpensesToExcel()" 
+           class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
+           <i class="fas fa-file-excel"></i>
+            Export to Excel
+          </button>
       <div class="flex gap-3">
   <button onclick="showAddSavingsModal()" 
           class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl flex items-center gap-2">
@@ -279,6 +294,11 @@
   <div class="max-w-screen-2xl mx-auto px-6 py-8">
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-bold">Procurement Invoices</h1>
+      <button onclick="exportExpensesToExcel()" 
+           class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
+           <i class="fas fa-file-excel"></i>
+            Export to Excel
+          </button>
       <button onclick="selectSingleInvoice()" 
               class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-xl flex items-center gap-2">
         📄 Select Single Invoice (PDF)
@@ -344,7 +364,11 @@
     <div class="max-w-screen-2xl mx-auto px-6 py-8">
         <div class="flex justify-between items-center mb-8">
         <h1 class="text-3xl font-bold">Cashflow Statement</h1>
-        
+        <button onclick="exportExpensesToExcel()" 
+           class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
+           <i class="fas fa-file-excel"></i>
+            Export to Excel
+          </button>
         <div class="flex items-center gap-4">
             <div>
             <label class="block text-xs text-gray-400 mb-1">Financial Year</label>
@@ -423,6 +447,12 @@
         <div class="flex justify-between items-center mb-8">
           <h1 class="text-3xl font-bold">Expense Tracker</h1>
           
+          <button onclick="exportExpensesToExcel()" 
+           class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center gap-2">
+           <i class="fas fa-file-excel"></i>
+            Export to Excel
+          </button>
+
           <div class="flex items-center gap-4">
             <select id="expenseFY" onchange="loadExpenses()" class="bg-gray-900 border border-gray-700 rounded-xl px-4 py-2.5 text-sm">
             </select>
@@ -2442,6 +2472,83 @@ function validateCurrentData() {
   console.log(`Calculated Withdrawals: ₹${totalW.toLocaleString('en-IN')}`);
   console.log(`Calculated Deposits: ₹${totalD.toLocaleString('en-IN')}`);
   console.groupEnd();
+}
+
+function exportExpensesToExcel() {
+  // Use the currently filtered expenses array
+  const dataToExport = expenses.map(t => ({
+    Date: t.date,
+    Bank: t.bank,
+    Narration: t.narration,
+    Category: t.category || categorizeExpense(t.narration),
+    Amount: t.withdrawal
+  }));
+
+  exportToExcel(dataToExport, `Expenses_${new Date().toISOString().split('T')[0]}.xlsx`, "Expenses");
+}
+
+function exportBankingToExcel() {
+  const dataToExport = currentTransactions.map(t => ({
+    Date: t.date,
+    Narration: t.narration,
+    Withdrawal: t.withdrawal || 0,
+    Deposit: t.deposit || 0,
+    Balance: t.balance || 0
+  }));
+
+  exportToExcel(dataToExport, `Banking_${new Date().toISOString().split('T')[0]}.xlsx`, "Bank Transactions");
+}
+
+function exportSavingsToExcel() {
+  const dataToExport = savings.map(s => ({
+    ID: s.id,
+    Type: s.type,
+    Bank: s.bankName,
+    Principal: s.principal,
+    Current_Value: s.currentValue,
+    Interest_Rate: s.interestRate,
+    Start_Date: s.startDate,
+    Maturity_Date: s.maturityDate,
+    Status: s.status
+  }));
+
+  exportToExcel(dataToExport, `Savings_${new Date().toISOString().split('T')[0]}.xlsx`, "Savings");
+}
+
+function exportCashflowToExcel() {
+  // Assuming you have a cashflowData array or build it from current view
+  const dataToExport = cashflowData || []; // Replace with your actual cashflow array
+
+  exportToExcel(dataToExport, `Cashflow_${new Date().toISOString().split('T')[0]}.xlsx`, "Cashflow");
+}
+
+function exportDashboardToExcel() {
+  const summaryData = [
+    { Metric: "Total Income", Value: document.getElementById('dash-total-income').textContent },
+    { Metric: "Total Expenses", Value: document.getElementById('dash-total-expense').textContent },
+    { Metric: "Net Cashflow", Value: document.getElementById('dash-net-cashflow').textContent },
+    // Add more rows as needed
+  ];
+
+  exportToExcel(summaryData, `Dashboard_Summary_${new Date().toISOString().split('T')[0]}.xlsx`, "Dashboard");
+}
+
+// Reusable Export to Excel Function
+function exportToExcel(data, filename = "export.xlsx", sheetName = "Data") {
+  if (!data || data.length === 0) {
+    alert("No data available to export");
+    return;
+  }
+
+  try {
+    const ws = XLSX.utils.json_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, sheetName);
+    XLSX.writeFile(wb, filename);
+  } catch (e) {
+    console.error("Export failed:", e);
+    alert("Failed to export. Please try again.");
+  }
 }
 
 
