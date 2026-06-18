@@ -2140,23 +2140,27 @@ function loadExpenses() {
   const catFilter = document.getElementById('expenseCategory').value || "";
 
   const expenses = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 0) return false;
+    if (!t.withdrawal || t.withdrawal <= 0) return false;           // Must be an outflow
 
-    // === STRICT EXCLUSION ===
-    if (isInternalTransfer(t)) return false;           // No interbank transfers
+    // === EXCLUDE INTERNAL TRANSFERS ===
+    if (isInternalTransfer(t)) return false;
 
     const category = categorizeExpense(t.narration);
 
-    // Exclude inflows and investments
-    if (category.includes("Income") || category === "Investment" || category === "Salary Credit") {
+    // Exclude obvious income and investments
+    if (category.includes("Income") || category === "Investment" || 
+        category.includes("Salary Credit")) {
       return false;
     }
 
     // FY Filter
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
-    // Month Filter
-    if (monthFilter && t.date && !t.date.includes(monthFilter)) return false;
+    // Month Filter (more robust)
+    if (monthFilter && t.date) {
+      const dateStr = String(t.date).trim();
+      if (!dateStr.includes(monthFilter)) return false;
+    }
 
     // Category Filter
     if (catFilter && category !== catFilter) return false;
@@ -2164,11 +2168,13 @@ function loadExpenses() {
     return true;
   });
 
+  console.log(`✅ Expenses Tab: Showing ${expenses.length} records for selected filters`);
+
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
 
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
 
-  const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3) : ''));
+  const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3,10) : ''));
   const avgMonthly = uniqueMonths.size > 0 ? Math.round(totalExpense / uniqueMonths.size) : 0;
   document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
 
@@ -2228,23 +2234,21 @@ function isInternalTransfer(transaction) {
   if (!transaction.narration) return false;
   const n = transaction.narration.toLowerCase();
 
-  // Strong internal transfer patterns
-  const internalPatterns = [
+  // Very specific internal transfer patterns
+  const strongPatterns = [
     'hdfc to icici', 'hdfc to idfc', 'icici to hdfc', 'idfc to hdfc',
-    'neft.*hdfc', 'neft.*icici', 'neft.*idfc',
-    'imps.*hdfc', 'imps.*icici', 'imps.*idfc',
-    'rtgs.*hdfc', 'rtgs.*icici', 'rtgs.*idfc',
-    'self transfer', 'transfer to self', 'own account'
+    'neft.*hdfc.*icici', 'neft.*hdfc.*idfc', 'rtgs.*hdfc.*icici'
   ];
 
-  for (let pattern of internalPatterns) {
+  for (let pattern of strongPatterns) {
     if (new RegExp(pattern).test(n)) return true;
   }
 
-  // Large round figure transfers between your 3 banks
+  // Large round transfers between your known banks
   const amount = (transaction.deposit || 0) + (transaction.withdrawal || 0);
-  if (amount > 100000 && (amount % 10000 === 0 || amount % 50000 === 0)) {
-    if (n.includes('hdfc') && (n.includes('icici') || n.includes('idfc'))) {
+  if (amount > 50000 && (amount % 10000 === 0 || amount % 50000 === 0)) {
+    if ((n.includes('hdfc') && (n.includes('icici') || n.includes('idfc'))) ||
+        (n.includes('icici') && n.includes('idfc'))) {
       return true;
     }
   }
