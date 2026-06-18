@@ -2291,17 +2291,14 @@ function isInternalTransfer(transaction) {
   if (!transaction.narration) return false;
   const n = transaction.narration.toLowerCase();
 
-  // ONLY exclude very clear inter-bank transfers
-  const isClearlyInternal = 
-    /hdfc to (icici|idfc)|icici to (hdfc|idfc)|idfc to (hdfc|icici)/.test(n) ||
-    /(neft|rtgs|imps).*?(hdfc|icici|idfc).*?(hdfc|icici|idfc)/.test(n);
-
-  if (isClearlyInternal) {
+  // TEMPORARY: Only exclude VERY obvious cases
+  if (n.includes("hdfc to icici") || n.includes("hdfc to idfc") || 
+      n.includes("icici to hdfc") || n.includes("idfc to hdfc")) {
     console.log("🚫 Excluded as INTERNAL:", transaction.narration);
     return true;
   }
 
-  // Allow salary, vendor, bill payments, etc.
+  // For now, allow everything else (we'll tighten later)
   return false;
 }
 // ============== NORMALIZE ALL FORMATS ==============
