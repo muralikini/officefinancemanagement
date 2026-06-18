@@ -1975,15 +1975,15 @@ function loadCashflow() {
 
     // === DEPOSITS into HDFC ===
     if (t.deposit > 0) {
-      // Ignore money coming from ICICI or IDFC (interbank transfer)
-      if (isInterbankTransferFromOtherBank(narration)) {
+    
+    if (isInterbankTransferFromOtherBank(narration)) {
         ignoredInterbank += t.deposit;
-        return;
-      }
-
-      // All other deposits into HDFC = Income
-      totalIncome += t.deposit;
+        return; // Don't count as income
     }
+
+    // Everything else = Income (including foreign remittances like INW)
+    totalIncome += t.deposit;
+}
 
     // === WITHDRAWALS from HDFC ===
     if (t.withdrawal > 0) {
@@ -2044,9 +2044,17 @@ function loadCashflow() {
 }
 
 function isInterbankTransferFromOtherBank(narration) {
+  if (!narration) return false;
   const n = narration.toLowerCase();
-  return n.includes("icici") || n.includes("idfc") || 
-         n.includes("from icici") || n.includes("from idfc");
+
+  return n.includes("icici") || 
+         n.includes("idfc") ||
+         n.includes("rtgs dr-icic") ||
+         n.includes("rtgs dr-idfb") ||
+         n.includes("icic0006254") ||
+         n.includes("idfb0080184") ||
+         n.includes("from icici") ||
+         n.includes("from idfc");
 }
 
 function renderMonthlyCashflow(transactions) {
@@ -2107,11 +2115,18 @@ function renderMonthlyCashflow(transactions) {
   container.innerHTML = html;
 }
 
+// Improved function to detect FD and RD investments
 function isFDorRDInvestment(narration) {
+  if (!narration) return false;
   const n = narration.toLowerCase();
-  return n.includes("fd") || n.includes("fixed deposit") || 
-         n.includes("rd") || n.includes("recurring deposit") ||
-         n.includes("trf to fd") || n.includes("trf to rd");
+
+  return n.includes("-fd") ||                    // Catches "-FD..." at the end
+         n.includes("fd ") ||
+         n.includes("fixed deposit") ||
+         n.includes("rd installment") ||         // Catches RD transactions
+         n.includes("recurring deposit") ||
+         n.includes("trf to fd") ||
+         n.includes("trf to rd");
 }
 
 
