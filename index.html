@@ -2217,20 +2217,84 @@ function renderExpensesTable(expenses) {
   const tbody = document.getElementById('expenses-table-body');
   tbody.innerHTML = '';
 
-  expenses.sort((a,b) => new Date(b.date) - new Date(a.date)).forEach(t => {
-    const row = document.createElement('tr');
-    row.className = 'hover:bg-gray-800';
-    row.innerHTML = `
-      <tr class="border-b border-gray-700 hover:bg-gray-800">
-    <td class="px-6 py-4">${t.date || '—'}</td>
-    <td class="px-6 py-4 font-medium text-blue-400">${t.bank || '—'}</td>
-    <td class="px-6 py-4 text-sm">${(t.narration || '').substring(0, 60)}${(t.narration || '').length > 60 ? '...' : ''}</td>
-    <td class="px-6 py-4">${t.category || 'Others'}</td>
-    <td class="px-6 py-4 text-right font-medium text-red-400">-₹${Math.abs(t.withdrawal || 0).toLocaleString('en-IN')}</td>
-  </tr>
-`;
-    tbody.appendChild(row);
+  // Sort: Bank (A-Z) then Date (oldest to newest)
+  const sortedExpenses = [...expenses].sort((a, b) => {
+    const bankA = (a.bank || '').toUpperCase();
+    const bankB = (b.bank || '').toUpperCase();
+    if (bankA !== bankB) return bankA.localeCompare(bankB);
+    
+    const dateA = parseDate(a.date) || new Date(0);
+    const dateB = parseDate(b.date) || new Date(0);
+    return dateA - dateB;
   });
+
+  // Group by Bank
+  const grouped = {};
+  sortedExpenses.forEach(t => {
+    const bank = t.bank || 'Unknown';
+    if (!grouped[bank]) grouped[bank] = [];
+    grouped[bank].push(t);
+  });
+
+  Object.keys(grouped).forEach(bank => {
+    const transactions = grouped[bank];
+    const bankTotal = transactions.reduce((sum, t) => sum + t.withdrawal, 0);
+
+    const bankRow = document.createElement('tr');
+    bankRow.className = 'bg-gray-800 hover:bg-gray-700 cursor-pointer';
+    bankRow.innerHTML = `
+      <td colspan="5" class="px-6 py-4 font-semibold text-blue-400 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-xl transition-transform" id="arrow-${bank.replace(/\s/g,'')}">▼</span>
+          <span>${bank}</span>
+          <span class="text-sm text-gray-400">(${transactions.length} transactions)</span>
+        </div>
+        <span class="text-red-400">-₹${bankTotal.toLocaleString('en-IN')}</span>
+      </td>
+    `;
+
+    // Click to toggle
+    bankRow.onclick = () => toggleBankGroup(bank);
+
+    tbody.appendChild(bankRow);
+
+    // Transactions for this bank (initially visible)
+    const contentRow = document.createElement('tr');
+    contentRow.id = `group-${bank.replace(/\s/g,'')}`;
+    contentRow.className = 'bank-group';
+    contentRow.style.display = 'table-row'; // visible by default
+
+    let html = '<td colspan="5" class="p-0"><table class="w-full"><tbody>';
+
+    transactions.forEach(t => {
+      html += `
+        <tr class="hover:bg-gray-800 border-b border-gray-700 last:border-0">
+          <td class="px-10 py-3 text-sm">${t.date || '—'}</td>
+          <td class="px-6 py-3 text-sm break-words">${(t.narration || '').substring(0, 70)}${(t.narration || '').length > 70 ? '...' : ''}</td>
+          <td class="px-6 py-3">${t.category || 'Others'}</td>
+          <td class="px-6 py-3 text-right font-medium text-red-400">-₹${Math.abs(t.withdrawal || 0).toLocaleString('en-IN')}</td>
+        </tr>
+      `;
+    });
+
+    html += '</tbody></table></td>';
+    contentRow.innerHTML = html;
+    tbody.appendChild(contentRow);
+  });
+}
+
+// Toggle function
+function toggleBankGroup(bankKey) {
+  const group = document.getElementById(`group-${bankKey.replace(/\s/g,'')}`);
+  const arrow = document.getElementById(`arrow-${bankKey.replace(/\s/g,'')}`);
+  
+  if (group.style.display === 'none') {
+    group.style.display = 'table-row';
+    arrow.textContent = '▼';
+  } else {
+    group.style.display = 'none';
+    arrow.textContent = '▶';
+  }
 }
 
 // ==================== INTERNAL TRANSFER DETECTION ====================
