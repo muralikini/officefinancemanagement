@@ -2174,17 +2174,33 @@ function loadExpenses() {
 // ==================== BANK-SPECIFIC FILTERS ====================
 
 function shouldIncludeICICIExpense(t, monthFilter, fy) {
-  // ICICI specific logic - very lenient for now
   if (fy && getFinancialYear(t.date) !== fy) return false;
 
   if (monthFilter && t.date) {
-    const dateStr = String(t.date).trim().replace(/\//g, '-');
-    if (!dateStr.includes(monthFilter)) return false;
+    const dateStr = String(t.date).trim();
+    
+    // ICICI often uses DD/MM/YYYY or other formats
+    let transactionMonthYear = '';
+
+    if (dateStr.includes('/')) {
+      const parts = dateStr.split('/');
+      if (parts.length === 3) {
+        transactionMonthYear = `${parts[1]}-${parts[2]}`; // MM-YYYY
+      }
+    } else if (dateStr.includes('-')) {
+      const parts = dateStr.split('-');
+      if (parts.length === 3) {
+        transactionMonthYear = `${parts[1]}-${parts[2]}`;
+      }
+    }
+
+    if (transactionMonthYear !== monthFilter) {
+      return false;
+    }
   }
 
   return true;
 }
-
 function shouldIncludeHDFCExpense(t, monthFilter, fy) {
   if (fy && getFinancialYear(t.date) !== fy) return false;
 
