@@ -1959,53 +1959,95 @@ function loadCashflow() {
   const fy = document.getElementById('cashflowFY').value;
   if (!fy) return;
 
-  let fyTransactions = allTransactions.filter(t => getFinancialYear(t.date) === fy);
-
-  const realTransactions = fyTransactions.filter(t => !isInternalTransfer(t));
-  const internalTransfers = fyTransactions.filter(t => isInternalTransfer(t));
-
-  console.log(`[Cashflow ${fy}] Total: ${fyTransactions.length} | Real: ${realTransactions.length} | Internal: ${internalTransfers.length}`);
-
-  let totalInflows = 0, totalOutflows = 0;
-  realTransactions.forEach(t => {
-    totalInflows += t.deposit || 0;
-    totalOutflows += t.withdrawal || 0;
+  // Only consider HDFC transactions
+  let hdfcTransactions = allTransactions.filter(t => {
+    if (t.bank !== "HDFC") return false;
+    return getFinancialYear(t.date) === fy;
   });
 
-  const netFlow = totalInflows - totalOutflows;
+  let totalIncome = 0;
+  let totalExpense = 0;
+  let ignoredInterbank = 0;
+  let ignoredFD_RD = 0;
 
-  // Opening Balance (last balance before FY start)
+  hdfcTransactions.forEach(t => {
+    const narration = (t.narration || "").toLowerCase();
+
+    // === DEPOSITS into HDFC ===
+    if (t.deposit > 0) {
+      // Ignore money coming from ICICI or IDFC (interbank transfer)
+      if (isInterbankTransferFromOtherBank(narration)) {
+        ignoredInterbank += t.deposit;
+        return;
+      }
+
+      // All other deposits into HDFC = Income
+      totalIncome += t.deposit;
+    }
+
+    // === WITHDRAWALS from HDFC ===
+    if (t.withdrawal > 0) {
+      // Ignore FD and RD investments
+      if (isFDorRDInvestment(narration)) {
+        ignoredFD_RD += t.withdrawal;
+        return;
+      }
+
+      // Normal spending = Expense
+      totalExpense += t.withdrawal;
+    }
+  });
+
+  const netCashFlow = totalIncome - totalExpense;
+
+  // Calculate Opening Balance
   let openingBalance = 0;
   const [startYear] = fy.split('-').map(Number);
-  const beforeFY = allTransactions.filter(t => {
+
+  const beforeThisFY = allTransactions.filter(t => {
+    if (t.bank !== "HDFC") return false;
     const d = parseDate(t.date);
     if (!d) return false;
-    return d.getFullYear() < startYear || 
-           (d.getFullYear() === startYear && d.getMonth() < 3); // Before April
+    return d.getFullYear() < startYear || (d.getFullYear() === startYear && d.getMonth() < 3);
   });
 
-  if (beforeFY.length > 0) {
-    beforeFY.sort((a,b) => parseDate(b.date) - parseDate(a.date));
-    openingBalance = beforeFY[0].balance || 0;
+  if (beforeThisFY.length > 0) {
+    beforeThisFY.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    openingBalance = beforeThisFY[0].balance || 0;
   }
 
-  const closingBalance = openingBalance + netFlow;
+  const closingBalance = openingBalance + netCashFlow;
 
-  // Update UI
+  // Update UI Summary Cards
   document.getElementById('cf-opening').textContent = '₹' + openingBalance.toLocaleString('en-IN');
-  document.getElementById('cf-inflows').textContent = '₹' + totalInflows.toLocaleString('en-IN');
-  document.getElementById('cf-outflows').textContent = '₹' + totalOutflows.toLocaleString('en-IN');
+  document.getElementById('cf-inflows').textContent = '₹' + totalIncome.toLocaleString('en-IN');
+  document.getElementById('cf-outflows').textContent = '₹' + totalExpense.toLocaleString('en-IN');
   document.getElementById('cf-closing').textContent = '₹' + closingBalance.toLocaleString('en-IN');
-  document.getElementById('cf-net').textContent = '₹' + netFlow.toLocaleString('en-IN');
-  document.getElementById('cf-net').className = `text-3xl font-bold mt-2 ${netFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
+  
+  const netEl = document.getElementById('cf-net');
+  netEl.textContent = '₹' + netCashFlow.toLocaleString('en-IN');
+  netEl.className = `text-3xl font-bold mt-2 ${netCashFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  document.getElementById('cf-tx-count').textContent = realTransactions.length;
-  document.getElementById('cf-internal-count').textContent = internalTransfers.length;
+  // Update info cards
+  document.getElementById('cf-tx-count').textContent = hdfcTransactions.length;
+  document.getElementById('cf-internal-count').textContent = ignoredInterbank; // You can rename this label to "Interbank Transfers Ignored"
 
-  showInternalTransfersSample(internalTransfers);
-  renderMonthlyCashflow(realTransactions);
+  // Render Monthly Breakdown (excluding FD/RD and interbank)
+  const filteredForMonthly = hdfcTransactions.filter(t => {
+    const narr = (t.narration || "").toLowerCase();
+    const isInterbank = isInterbankTransferFromOtherBank(narr);
+    const isInvestment = isFDorRDInvestment(narr);
+    return !isInterbank && !isInvestment;
+  });
+
+  renderMonthlyCashflow(filteredForMonthly);
 }
 
+function isInterbankTransferFromOtherBank(narration) {
+  const n = narration.toLowerCase();
+  return n.includes("icici") || n.includes("idfc") || 
+         n.includes("from icici") || n.includes("from idfc");
+}
 
 function renderMonthlyCashflow(transactions) {
   const container = document.getElementById('cf-monthly-table');
@@ -2065,6 +2107,12 @@ function renderMonthlyCashflow(transactions) {
   container.innerHTML = html;
 }
 
+function isFDorRDInvestment(narration) {
+  const n = narration.toLowerCase();
+  return n.includes("fd") || n.includes("fixed deposit") || 
+         n.includes("rd") || n.includes("recurring deposit") ||
+         n.includes("trf to fd") || n.includes("trf to rd");
+}
 
 
 // ==================== EXPENSES TAB FUNCTIONS ====================
