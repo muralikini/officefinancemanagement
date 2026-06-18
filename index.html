@@ -2132,11 +2132,13 @@ function loadExpenses() {
   const catFilter = document.getElementById('expenseCategory').value || "";
 
   const expenses = allTransactions.filter(t => {
-    // Only consider HDFC as master
+    // Only consider HDFC outflows (including interbank transfers)
     if (t.bank !== "HDFC") return false;
 
     if (!t.withdrawal || t.withdrawal <= 50) return false;
 
+    // Allow interbank transfers as expense
+    // Only exclude clear income
     const category = categorizeExpense(t.narration || "");
     if (category.includes("Income") || category.includes("Salary Credit")) return false;
 
@@ -2153,6 +2155,19 @@ function loadExpenses() {
 
     return true;
   });
+
+  console.log(`Expenses Tab → Showing ${expenses.length} HDFC outflows (Month: ${monthFilter || 'All'})`);
+
+  const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
+  document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
+
+  const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3,10).replace('/', '-') : ''));
+  const avgMonthly = uniqueMonths.size > 0 ? Math.round(totalExpense / uniqueMonths.size) : 0;
+  document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
+
+  renderExpenseCategoryBreakdown(expenses);
+  renderExpensesTable(expenses);
+}
 
   console.log(`Expenses Tab → Showing ${expenses.length} HDFC expense records (Month: ${monthFilter || 'All'})`);
 
