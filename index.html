@@ -90,7 +90,7 @@
         <div id="dash-active-savings" class="text-5xl font-bold text-amber-400 mt-4">0</div>
       </div>
     </div>
-
+    
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <!-- Expense Breakdown -->
       <div class="bg-gray-900 rounded-3xl p-8">
@@ -119,6 +119,29 @@
         </div>
       </div>
     </div>
+
+    <!-- Year-wise Cashflow Summary -->
+<div class="bg-gray-900 rounded-3xl p-8 mb-12">
+  <h2 class="text-2xl font-semibold mb-6">📅 Year-wise Cashflow Summary</h2>
+  
+  <div class="overflow-x-auto">
+    <table class="w-full">
+      <thead>
+        <tr class="border-b border-gray-700 text-gray-400 text-sm">
+          <th class="py-4 text-left">Financial Year</th>
+          <th class="py-4 text-right">Opening Balance</th>
+          <th class="py-4 text-right">Inflows</th>
+          <th class="py-4 text-right">Outflows</th>
+          <th class="py-4 text-right">Net Cash Flow</th>
+          <th class="py-4 text-right">Closing Balance</th>
+        </tr>
+      </thead>
+      <tbody id="year-wise-cashflow-body" class="divide-y divide-gray-700 text-sm">
+        <!-- Populated by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+</div>
 
     <!-- Recent Transactions -->
     <div class="mt-12 bg-gray-900 rounded-3xl p-8">
@@ -888,6 +911,7 @@ function loadDashboard() {
 
   // Refined Expense Breakdown
   renderDashExpenseBreakdown(refinedTransactions);
+  renderYearWiseCashflowSummary();
   renderDashRecentTransactions();
 }
 
@@ -2580,6 +2604,150 @@ function filterTable() {
     (t.Narration || '').toLowerCase().includes(term)
   );
   renderTable(filtered);
+}
+
+function renderYearWiseCashflowSummary() {
+  const container = document.getElementById('year-wise-cashflow-body');
+  container.innerHTML = '';
+
+  // Get all HDFC transactions
+  const allHdfc = allTransactions.filter(t => t.bank === "HDFC");
+
+  // Group by Financial Year
+  const yearGroups = {};
+
+  allHdfc.forEach(t => {
+    const fy = getFinancialYear(t.date);
+    if (!fy) return;
+
+    if (!yearGroups[fy]) yearGroups[fy] = [];
+    yearGroups[fy].push(t);
+  });
+
+  const sortedYears = Object.keys(yearGroups).sort();
+
+  let previousClosingBalance = 0;
+
+  sortedYears.forEach((fy, index) => {
+    const txns = yearGroups[fy];
+
+    // Apply refined filters
+    const refined = txns.filter(t => {
+      const narration = (t.narration || "").toLowerCase();
+      if (isFDorRDInvestment(narration)) return false;
+      if (t.deposit > 0 && isInterbankTransferFromOtherBank(narration)) return false;
+      return true;
+    });
+
+    let inflows = 0;
+    let outflows = 0;
+
+    refined.forEach(t => {
+      if (t.deposit > 0) inflows += t.deposit;
+      if (t.withdrawal > 0) outflows += t.withdrawal;
+    });
+
+    const netFlow = inflows - outflows;
+
+    // Opening Balance
+    let openingBalance = 0;
+    if (index === 0) {
+      // First year - take balance of oldest transaction
+      const sorted = [...refined].sort((a, b) => parseDate(a.date) - parseDate(b.date));
+      openingBalance = sorted.length > 0 ? (sorted[0].balance || 0) : 0;
+    } else {
+      openingBalance = previousClosingBalance;
+    }
+
+    const closingBalance = openingBalance + netFlow;
+    previousClosingBalance = closingBalance;
+
+    // Add row to table
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td class="py-4 font-medium">${fy}</td>
+      <td class="py-4 text-right">₹${openingBalance.toLocaleString('en-IN')}</td>
+      <td class="py-4 text-right text-emerald-400">₹${inflows.toLocaleString('en-IN')}</td>
+      <td class="py-4 text-right text-red-400">₹${outflows.toLocaleString('en-IN')}</td>
+      <td class="py-4 text-right font-semibold ${netFlow >= 0 ? 'text-emerald-400' : 'text-red-400'}">
+        ₹${netFlow.toLocaleString('en-IN')}
+      </td>
+      <td class="py-4 text-right font-medium">₹${closingBalance.toLocaleString('en-IN')}</td>
+    `;
+    container.appendChild(row);
+  });
+}
+
+function renderYearWiseCashflowSummary() {
+  const container = document.getElementById('year-wise-cashflow-body');
+  container.innerHTML = '';
+
+  // Get all HDFC transactions
+  const allHdfc = allTransactions.filter(t => t.bank === "HDFC");
+
+  // Group by Financial Year
+  const yearGroups = {};
+
+  allHdfc.forEach(t => {
+    const fy = getFinancialYear(t.date);
+    if (!fy) return;
+
+    if (!yearGroups[fy]) yearGroups[fy] = [];
+    yearGroups[fy].push(t);
+  });
+
+  const sortedYears = Object.keys(yearGroups).sort();
+
+  let previousClosingBalance = 0;
+
+  sortedYears.forEach((fy, index) => {
+    const txns = yearGroups[fy];
+
+    // Apply refined filters
+    const refined = txns.filter(t => {
+      const narration = (t.narration || "").toLowerCase();
+      if (isFDorRDInvestment(narration)) return false;
+      if (t.deposit > 0 && isInterbankTransferFromOtherBank(narration)) return false;
+      return true;
+    });
+
+    let inflows = 0;
+    let outflows = 0;
+
+    refined.forEach(t => {
+      if (t.deposit > 0) inflows += t.deposit;
+      if (t.withdrawal > 0) outflows += t.withdrawal;
+    });
+
+    const netFlow = inflows - outflows;
+
+    // Opening Balance
+    let openingBalance = 0;
+    if (index === 0) {
+      // First year - take balance of oldest transaction
+      const sorted = [...refined].sort((a, b) => parseDate(a.date) - parseDate(b.date));
+      openingBalance = sorted.length > 0 ? (sorted[0].balance || 0) : 0;
+    } else {
+      openingBalance = previousClosingBalance;
+    }
+
+    const closingBalance = openingBalance + netFlow;
+    previousClosingBalance = closingBalance;
+
+    // Add row to table
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td class="py-4 font-medium">${fy}</td>
+      <td class="py-4 text-right">₹${openingBalance.toLocaleString('en-IN')}</td>
+      <td class="py-4 text-right text-emerald-400">₹${inflows.toLocaleString('en-IN')}</td>
+      <td class="py-4 text-right text-red-400">₹${outflows.toLocaleString('en-IN')}</td>
+      <td class="py-4 text-right font-semibold ${netFlow >= 0 ? 'text-emerald-400' : 'text-red-400'}">
+        ₹${netFlow.toLocaleString('en-IN')}
+      </td>
+      <td class="py-4 text-right font-medium">₹${closingBalance.toLocaleString('en-IN')}</td>
+    `;
+    container.appendChild(row);
+  });
 }
 
 // ==================== DATA VALIDATION HELPER ====================
