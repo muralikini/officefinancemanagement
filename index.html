@@ -2178,23 +2178,18 @@ function shouldIncludeICICIExpense(t, monthFilter, fy) {
 
   if (monthFilter && t.date) {
     const dateStr = String(t.date).trim();
-    console.log("  → Raw date:", dateStr, " | Looking for:", monthFilter);
-
+    
+    // Handle DD/MM/YYYY format like "01/12/2025"
     let transactionMonthYear = '';
 
-    // Handle DD/MM/YYYY format (most common for ICICI)
     if (dateStr.includes('/')) {
       const parts = dateStr.split('/');
       if (parts.length === 3) {
-        const day = parts[0].padStart(2, '0');
         const month = parts[1].padStart(2, '0');
         const year = parts[2];
         transactionMonthYear = `${month}-${year}`;
-        console.log("  → Parsed as DD/MM/YYYY →", transactionMonthYear);
       }
-    } 
-    // Handle DD-MM-YYYY
-    else if (dateStr.includes('-')) {
+    } else if (dateStr.includes('-')) {
       const parts = dateStr.split('-');
       if (parts.length === 3) {
         const month = parts[1].padStart(2, '0');
@@ -2203,14 +2198,12 @@ function shouldIncludeICICIExpense(t, monthFilter, fy) {
       }
     }
 
-    if (transactionMonthYear !== monthFilter) {
-      console.log("  → FILTERED OUT by month");
-      return false;
+    if (transactionMonthYear === monthFilter) {
+      return true;
     }
   }
 
-  console.log("  → INCLUDED");
-  return true;
+  return false;
 }
 
 
