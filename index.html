@@ -2174,35 +2174,11 @@ function loadExpenses() {
 // ==================== BANK-SPECIFIC FILTERS ====================
 
 function shouldIncludeICICIExpense(t, monthFilter, fy) {
-  if (fy && getFinancialYear(t.date) !== fy) return false;
-
-  if (monthFilter && t.date) {
-    const dateStr = String(t.date).trim();
-    
-    // Handle DD/MM/YYYY format like "01/12/2025"
-    let transactionMonthYear = '';
-
-    if (dateStr.includes('/')) {
-      const parts = dateStr.split('/');
-      if (parts.length === 3) {
-        const month = parts[1].padStart(2, '0');
-        const year = parts[2];
-        transactionMonthYear = `${month}-${year}`;
-      }
-    } else if (dateStr.includes('-')) {
-      const parts = dateStr.split('-');
-      if (parts.length === 3) {
-        const month = parts[1].padStart(2, '0');
-        const year = parts[2];
-        transactionMonthYear = `${month}-${year}`;
-      }
-    }
-
-    if (transactionMonthYear === monthFilter) {
-      return true;
-    }
+  // TEMPORARY FORCE INCLUDE ALL ICICI EXPENSES FOR TESTING
+  if (t.withdrawal && t.withdrawal > 50) {
+    console.log("✅ FORCE INCLUDED ICICI:", t.date, t.withdrawal);
+    return true;
   }
-
   return false;
 }
 
