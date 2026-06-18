@@ -2143,14 +2143,11 @@ function loadExpenses() {
   const catFilter = document.getElementById('expenseCategory').value || "";
 
   const expenses = allTransactions.filter(t => {
-    if (!t.withdrawal || t.withdrawal <= 100) return false;   // Smallest expense threshold
+    if (!t.withdrawal || t.withdrawal <= 100) return false;
 
-    // Only exclude clear internal transfers
     if (isInternalTransfer(t)) return false;
 
     const category = categorizeExpense(t.narration);
-
-    // Be less aggressive — only exclude obvious income/investments
     if (category.includes("Income") || category === "Investment" || 
         category.includes("Salary Credit")) {
       return false;
@@ -2159,10 +2156,16 @@ function loadExpenses() {
     // FY Filter
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
-    // Month Filter
+    // Month Filter - More Reliable
     if (monthFilter && t.date) {
-      const dateStr = String(t.date).trim().replace('/', '-');
-      if (!dateStr.includes(monthFilter)) return false;
+      const dateStr = String(t.date).trim().replace(/\//g, '-'); // Normalize / to -
+      const monthKey = monthFilter; // e.g. "05-2026"
+      
+      // Check both formats
+      if (!dateStr.includes(monthKey) && 
+          !dateStr.includes(monthKey.replace('-', '/'))) {
+        return false;
+      }
     }
 
     // Category Filter
@@ -2171,7 +2174,7 @@ function loadExpenses() {
     return true;
   });
 
-  console.log(`Expenses Tab → ${expenses.length} records shown`);
+  console.log(`Expenses Tab → Showing ${expenses.length} records (Month: ${monthFilter || 'All'})`);
 
   const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
