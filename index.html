@@ -2129,7 +2129,22 @@ function categorizeExpense(narration) {
 function loadExpenses() {
   const fy = document.getElementById('expenseFY').value || "";
   const monthFilter = document.getElementById('expenseMonth').value || "";
-  const catFilter = document.getElementById('expenseCategory').value || "";
+
+  // DEBUG: Check ICICI Dec 2025 data
+  if (monthFilter === "12-2025") {
+    const iciciDec = allTransactions.filter(t => 
+      t.bank === "ICICI" && t.date && t.date.includes("12/2025")
+    );
+    console.log(`DEBUG: Found ${iciciDec.length} ICICI transactions with 12/2025 in date`);
+    if (iciciDec.length > 0) {
+      console.log("Sample:", iciciDec.slice(0,5).map(t => t.date));
+    } else {
+      console.log("No ICICI Dec 2025 dates found. Checking all ICICI dates...");
+      const allIcici = allTransactions.filter(t => t.bank === "ICICI");
+      console.log("Total ICICI records:", allIcici.length);
+      console.log("Sample ICICI dates:", allIcici.slice(0,10).map(t => t.date));
+    }
+  }
 
   let expenses = [];
 
