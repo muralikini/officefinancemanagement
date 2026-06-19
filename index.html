@@ -2833,10 +2833,33 @@ function exportSavingsToExcel() {
 }
 
 function exportCashflowToExcel() {
-  // Assuming you have a cashflowData array or build it from current view
-  const dataToExport = cashflowData || []; // Replace with your actual cashflow array
+  const table = document.getElementById('cf-monthly-table');
+  if (!table) {
+    alert("Cashflow monthly table not found");
+    return;
+  }
 
-  exportToExcel(dataToExport, `Cashflow_${new Date().toISOString().split('T')[0]}.xlsx`, "Cashflow");
+  const rows = table.querySelectorAll('tbody tr');
+  if (rows.length === 0) {
+    alert("No cashflow data to export");
+    return;
+  }
+
+  const data = [];
+
+  rows.forEach(row => {
+    const cells = row.querySelectorAll('td');
+    if (cells.length >= 4) {
+      data.push({
+        Month: cells[0].textContent.trim(),
+        Inflows: cells[1].textContent.trim(),
+        Outflows: cells[2].textContent.trim(),
+        Net_Cash_Flow: cells[3].textContent.trim()
+      });
+    }
+  });
+
+  exportToExcel(data, `Cashflow_${new Date().toISOString().split('T')[0]}.xlsx`, "Cashflow");
 }
 
 function exportDashboardToExcel() {
