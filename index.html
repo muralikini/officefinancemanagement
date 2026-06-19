@@ -1985,33 +1985,24 @@ function loadCashflow() {
 
   let totalIncome = 0;
   let totalExpense = 0;
-  let ignoredInterbankIn = 0;
-  let ignoredInvestments = 0;
 
   hdfcTxns.forEach(t => {
     const narration = (t.narration || "").toLowerCase();
 
     if (t.deposit > 0) {
-      if (isInterbankTransferFromOtherBank(narration)) {
-        ignoredInterbankIn += t.deposit;
-        return;
-      }
+      if (isInterbankTransferFromOtherBank(narration)) return;
       totalIncome += t.deposit;
     }
 
     if (t.withdrawal > 0) {
-      if (isFDorRDInvestment(narration)) {
-        ignoredInvestments += t.withdrawal;
-        return;
-      }
+      if (isFDorRDInvestment(narration)) return;
       totalExpense += t.withdrawal;
     }
   });
 
   const netCashFlow = totalIncome - totalExpense;
 
-  // === Robust Opening Balance: Last known balance before or on 31 March ===
-  let openingBalance = 0;
+  // === CORRECTED: Get the LAST transaction on or before 31 March ===
   const beforeFY = allTransactions.filter(t => {
     if (t.bank !== "HDFC") return false;
     const d = parseDate(t.date);
@@ -2019,9 +2010,12 @@ function loadCashflow() {
     return d <= parseDate(previousFYEndStr);
   });
 
+  let openingBalance = 0;
   if (beforeFY.length > 0) {
-    // Sort by date descending and take the most recent balance
+    // Sort by date descending → first item = most recent transaction
     beforeFY.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    
+    // Use the balance of the most recent transaction
     openingBalance = beforeFY[0].balance || 0;
   }
 
