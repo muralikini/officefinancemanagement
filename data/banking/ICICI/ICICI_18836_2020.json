@@ -1,0 +1,4474 @@
+[
+  {
+    "transactionId": "S29000944",
+    "Date": "01-01-2020",
+    "Narration": "VPS/NAMDHARI AG/202001011118/000105064972/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 88,
+    "balance": 5710.01
+  },
+  {
+    "transactionId": "S7957482",
+    "Date": "06-01-2020",
+    "Narration": "BIL/ONL/001889114472/ZAAK PAY",
+    "transactionType": "DR",
+    "transactionAmount": 1500,
+    "balance": 4210.01
+  },
+  {
+    "transactionId": "S8430993",
+    "Date": "06-01-2020",
+    "Narration": "VPS/NAMDHARI AG/202001061056/000605350038/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 66,
+    "balance": 4144.01
+  },
+  {
+    "transactionId": "S30093127",
+    "Date": "07-01-2020",
+    "Narration": "GIB/000044656040/STAX /63900040701202000195",
+    "transactionType": "DR",
+    "transactionAmount": 800,
+    "balance": 3344.01
+  },
+  {
+    "transactionId": "S75855529",
+    "Date": "10-01-2020",
+    "Narration": "VPS/NAMDHARI AG/202001101124/001005075349/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 88,
+    "balance": 3256.01
+  },
+  {
+    "transactionId": "M3255582",
+    "Date": "10-01-2020",
+    "Narration": "625413011719: Closure Proceeds",
+    "transactionType": "CR",
+    "transactionAmount": 201899,
+    "balance": 205155.01
+  },
+  {
+    "transactionId": "M3256539",
+    "Date": "10-01-2020",
+    "Narration": "625413011720: Closure Proceeds",
+    "transactionType": "CR",
+    "transactionAmount": 201899,
+    "balance": 407054.01
+  },
+  {
+    "transactionId": "M3257451",
+    "Date": "10-01-2020",
+    "Narration": "625413011721: Closure Proceeds",
+    "transactionType": "CR",
+    "transactionAmount": 201899,
+    "balance": 608953.01
+  },
+  {
+    "transactionId": "M3257855",
+    "Date": "10-01-2020",
+    "Narration": "625413011458: Closure Proceeds",
+    "transactionType": "CR",
+    "transactionAmount": 202881,
+    "balance": 811834.01
+  },
+  {
+    "transactionId": "M3258210",
+    "Date": "10-01-2020",
+    "Narration": "625413011459: Closure Proceeds",
+    "transactionType": "CR",
+    "transactionAmount": 202599,
+    "balance": 1014433
+  },
+  {
+    "transactionId": "S26740798",
+    "Date": "13-01-2020",
+    "Narration": "NFS/NBAN7251/CASH WDL/13-01-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 1004409.4
+  },
+  {
+    "transactionId": "S33786418",
+    "Date": "14-01-2020",
+    "Narration": "BIL/ONL/001895982977/RAZORPAY",
+    "transactionType": "DR",
+    "transactionAmount": 2360,
+    "balance": 1002049.4
+  },
+  {
+    "transactionId": "S38976260",
+    "Date": "14-01-2020",
+    "Narration": "BIL/ONL/001896243813/PAYU INDIA",
+    "transactionType": "DR",
+    "transactionAmount": 1670,
+    "balance": 1000379.4
+  },
+  {
+    "transactionId": "S39272539",
+    "Date": "14-01-2020",
+    "Narration": "INF/NEFT/021892462191/HDFC0001752/Addit HDFC /AL",
+    "transactionType": "DR",
+    "transactionAmount": 400000,
+    "balance": 600379.41
+  },
+  {
+    "transactionId": "S62692824",
+    "Date": "16-01-2020",
+    "Narration": "VPS/NAMDHARI AG/202001161101/001605038520/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 66,
+    "balance": 600313.41
+  },
+  {
+    "transactionId": "S85283471",
+    "Date": "17-01-2020",
+    "Narration": "VPS/DMART GARUD/202001171944/001714038608/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 2730.52,
+    "balance": 597582.89
+  },
+  {
+    "transactionId": "S95592384",
+    "Date": "18-01-2020",
+    "Narration": "INF/NEFT/021905211531/SBIN0017060/Office Chairs /ChairsHub",
+    "transactionType": "DR",
+    "transactionAmount": 5000,
+    "balance": 592582.89
+  },
+  {
+    "transactionId": "S6145318",
+    "Date": "19-01-2020",
+    "Narration": "INF/NEFT/021906869381/SBIN0017060/Chairs /ChairsHub",
+    "transactionType": "DR",
+    "transactionAmount": 25200,
+    "balance": 567382.89
+  },
+  {
+    "transactionId": "S18291779",
+    "Date": "20-01-2020",
+    "Narration": "BIL/ONL/001900212502/PAYTM MOBILE SOLUTION/INternet",
+    "transactionType": "DR",
+    "transactionAmount": 49560,
+    "balance": 517822.89
+  },
+  {
+    "transactionId": "S19997677",
+    "Date": "20-01-2020",
+    "Narration": "VPS/DMART GARUD/202001201421/002008110019/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3256,
+    "balance": 514566.89
+  },
+  {
+    "transactionId": "S26551659",
+    "Date": "20-01-2020",
+    "Narration": "VPS/FUTURA DIGI/202001202040/002015515604/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 258,
+    "balance": 514308.89
+  },
+  {
+    "transactionId": "S26996814",
+    "Date": "20-01-2020",
+    "Narration": "VPS/M K PARADIS/202001202107/002015089920/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 480,
+    "balance": 513828.89
+  },
+  {
+    "transactionId": "S28660946",
+    "Date": "21-01-2020",
+    "Narration": "Int on FD/RD XXX0896 Tds:0.Int:1036 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1036,
+    "balance": 514864.89
+  },
+  {
+    "transactionId": "S28660946",
+    "Date": "21-01-2020",
+    "Narration": "Int on FD/RD XXX0897 Tds:0.Int:1077 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1077,
+    "balance": 515941.89
+  },
+  {
+    "transactionId": "S28660946",
+    "Date": "21-01-2020",
+    "Narration": "Int on FD/RD XXX0898 Tds:0.Int:1127 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1127,
+    "balance": 517068.89
+  },
+  {
+    "transactionId": "S47572764",
+    "Date": "22-01-2020",
+    "Narration": "INF/NEFT/021916024091/SBIN0017060/Chairs Service /ChairsHub",
+    "transactionType": "DR",
+    "transactionAmount": 5000,
+    "balance": 512068.89
+  },
+  {
+    "transactionId": "S53006137",
+    "Date": "22-01-2020",
+    "Narration": "ATM/S1CNP449/CASH WDL/22-01-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 492068.89
+  },
+  {
+    "transactionId": "S57471740",
+    "Date": "23-01-2020",
+    "Narration": "INF/INFT/021918489321/Monitors /SRINIVASLAPT",
+    "transactionType": "DR",
+    "transactionAmount": 26000,
+    "balance": 466068.89
+  },
+  {
+    "transactionId": "S57478585",
+    "Date": "23-01-2020",
+    "Narration": "INF/NEFT/021918489571/SBIN0017060/Chair service /ChairsHub",
+    "transactionType": "DR",
+    "transactionAmount": 520,
+    "balance": 465548.89
+  },
+  {
+    "transactionId": "S60800283",
+    "Date": "23-01-2020",
+    "Narration": "INF/INFT/021919178601/Insurance Premi/ICICILOMBARD",
+    "transactionType": "DR",
+    "transactionAmount": 60000,
+    "balance": 405548.89
+  },
+  {
+    "transactionId": "S96156899",
+    "Date": "25-01-2020",
+    "Narration": "NFS/NBAN7251/CASH WDL/25-01-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 395525.29
+  },
+  {
+    "transactionId": "S61422622",
+    "Date": "30-01-2020",
+    "Narration": "VPS/FAST SURGIC/202001301445/003009514310/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 2500,
+    "balance": 393025.29
+  },
+  {
+    "transactionId": "S62130749",
+    "Date": "30-01-2020",
+    "Narration": "VPS/BALAJI MEDI/202001301531/003010253888/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 1280,
+    "balance": 391745.29
+  },
+  {
+    "transactionId": "S63959140",
+    "Date": "30-01-2020",
+    "Narration": "IPS/DHL EXPRESS/202001301716/000000001483/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 8669,
+    "balance": 383076.29
+  },
+  {
+    "transactionId": "S72186022",
+    "Date": "31-01-2020",
+    "Narration": "BIL/ONL/001908060049/BILL DESK",
+    "transactionType": "DR",
+    "transactionAmount": 2297.78,
+    "balance": 380778.51
+  },
+  {
+    "transactionId": "S73118619",
+    "Date": "31-01-2020",
+    "Narration": "NEFT-N031201049710986-ADDIT LABS-FOR SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 150000,
+    "balance": 530778.51
+  },
+  {
+    "transactionId": "S75104066",
+    "Date": "31-01-2020",
+    "Narration": "BIL/ONL/001908256305/BILL DESK /Azure Bill",
+    "transactionType": "DR",
+    "transactionAmount": 60227.09,
+    "balance": 470551.42
+  },
+  {
+    "transactionId": "S77113636",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943842371/HDFC0009068/3PR3n4eoyR by S/Rahul Thyagara",
+    "transactionType": "DR",
+    "transactionAmount": 29800,
+    "balance": 440751.42
+  },
+  {
+    "transactionId": "S77122805",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943844211/HDFC0004274/rGi1hj9Hq4 by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 44400,
+    "balance": 396351.42
+  },
+  {
+    "transactionId": "S77129263",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943845421/HDFC0000041/Cm7QkumWUD by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 70136.93,
+    "balance": 326214.49
+  },
+  {
+    "transactionId": "S77130390",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943845591/HDFC0009068/6NOWRu3Wp8 by S/Vidya M R",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 314214.49
+  },
+  {
+    "transactionId": "S77135835",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943846501/HDFC0001752/Fe5ry9tc9V by S/Reena Kundekar",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 302214.49
+  },
+  {
+    "transactionId": "S77136955",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943846891/HDFC0004183/oXlfCIQ0b8 by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 290214.49
+  },
+  {
+    "transactionId": "S77143399",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943848131/HDFC0004183/lNymrNwrao by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 276214.49
+  },
+  {
+    "transactionId": "S77145653",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943847991/HDFC0004183/g68qchnCkv by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 261214.49
+  },
+  {
+    "transactionId": "S77153334",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943849701/UTIB0000009/fI7k7lmRnL by S/Sahana D",
+    "transactionType": "DR",
+    "transactionAmount": 53966.67,
+    "balance": 207247.82
+  },
+  {
+    "transactionId": "S77154692",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943849851/CNRB0000786/fgHHYEeKcf by S/Raghavendra S",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 199247.82
+  },
+  {
+    "transactionId": "S77161149",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943851251/HDFC0001752/V1hjv1TLdq by S/Gagana G K",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 191247.82
+  },
+  {
+    "transactionId": "S77167430",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943852271/KKBK0000430/jrgqqxmXkR by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 151447.82
+  },
+  {
+    "transactionId": "S77169799",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943852771/HDFC0000509/6Ek0vkcR7Q by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 45633.33,
+    "balance": 105814.49
+  },
+  {
+    "transactionId": "S77177931",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943853981/HDFC0004183/O39wOvhFCA by S/Lalit Senapati",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 93814.49
+  },
+  {
+    "transactionId": "S77178563",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943853991/SYNB0000486/Tksj4RJc32 by S/Megha B M",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 83814.49
+  },
+  {
+    "transactionId": "S77185885",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943855561/CNRB0001381/nFieLtthrT by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 75814.49
+  },
+  {
+    "transactionId": "S77186405",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943855381/CNRB0000406/lOQwosvp26 by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 67814.49
+  },
+  {
+    "transactionId": "S77193871",
+    "Date": "31-01-2020",
+    "Narration": "INF/NEFT/021943857111/SBIN0003966/SSjA3Um0zp by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 54314.49
+  },
+  {
+    "transactionId": "S29494218",
+    "Date": "03-02-2020",
+    "Narration": "GIB/000045508253/STAX /63900040302202000060",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 53314.49
+  },
+  {
+    "transactionId": "S33307742",
+    "Date": "03-02-2020",
+    "Narration": "BIL/ONL/001911931124/EMVANTAGE PAYMENTS",
+    "transactionType": "DR",
+    "transactionAmount": 2499,
+    "balance": 50815.49
+  },
+  {
+    "transactionId": "S74777577",
+    "Date": "06-02-2020",
+    "Narration": "BIL/ONL/001914480752/BILL DESK /Customsduty",
+    "transactionType": "DR",
+    "transactionAmount": 1596.15,
+    "balance": 49219.34
+  },
+  {
+    "transactionId": "S77993151",
+    "Date": "06-02-2020",
+    "Narration": "VPS/NAMDHARI AG/202002061123/003705070337/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 133,
+    "balance": 49086.34
+  },
+  {
+    "transactionId": "S95060593",
+    "Date": "07-02-2020",
+    "Narration": "BIL/ONL/001915594271/RAZORPAY",
+    "transactionType": "DR",
+    "transactionAmount": 2360,
+    "balance": 46726.34
+  },
+  {
+    "transactionId": "S99502038",
+    "Date": "07-02-2020",
+    "Narration": "VIN/Flipkart In/202002071442/003809374216/",
+    "transactionType": "DR",
+    "transactionAmount": 12999,
+    "balance": 33727.34
+  },
+  {
+    "transactionId": "S6790619",
+    "Date": "07-02-2020",
+    "Narration": "NFS/NBAN7251/CASH WDL/07-02-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 23703.74
+  },
+  {
+    "transactionId": "S16106166",
+    "Date": "08-02-2020",
+    "Narration": "ATM/S1CNC179/CASH WDL/08-02-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 3703.74
+  },
+  {
+    "transactionId": "S29379677",
+    "Date": "09-02-2020",
+    "Narration": "BIL/ONL/001917535709/ZAAK PAY",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 2703.74
+  },
+  {
+    "transactionId": "S33826833",
+    "Date": "10-02-2020",
+    "Narration": "NEFT-N040201059577453-ADDIT LABS-DAILY EXPENSES-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 50000,
+    "balance": 52703.74
+  },
+  {
+    "transactionId": "S45423486",
+    "Date": "10-02-2020",
+    "Narration": "NEFT-N041201060904560-ADDIT LABS-FUND-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 552703.74
+  },
+  {
+    "transactionId": "S93683466",
+    "Date": "13-02-2020",
+    "Narration": "VPS/SRI CHOWD E/202002131559/004410587862/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 200,
+    "balance": 552503.74
+  },
+  {
+    "transactionId": "S56480383",
+    "Date": "17-02-2020",
+    "Narration": "VPS REF SRI CHOWD ESWARI PETRO",
+    "transactionType": "CR",
+    "transactionAmount": 1.5,
+    "balance": 552505.24
+  },
+  {
+    "transactionId": "S63851827",
+    "Date": "18-02-2020",
+    "Narration": "IPS/IOCL MAHASH/202002181116/000000010015/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1954,
+    "balance": 550551.24
+  },
+  {
+    "transactionId": "S92920781",
+    "Date": "20-02-2020",
+    "Narration": "INF/INFT/022015065161/MonitorandHDD /SRINIVASLAPT",
+    "transactionType": "DR",
+    "transactionAmount": 6916,
+    "balance": 543635.24
+  },
+  {
+    "transactionId": "S98533135",
+    "Date": "20-02-2020",
+    "Narration": "Surcharge Dt:18/02/20 MCC 5541",
+    "transactionType": "DR",
+    "transactionAmount": 9.22,
+    "balance": 543626.02
+  },
+  {
+    "transactionId": "S1572903",
+    "Date": "20-02-2020",
+    "Narration": "IPS REF DT 19 02 2020 023068 IOCL 0 75 CASHLESS IN",
+    "transactionType": "CR",
+    "transactionAmount": 14.65,
+    "balance": 543640.67
+  },
+  {
+    "transactionId": "S43646212",
+    "Date": "21-02-2020",
+    "Narration": "Int on FD/RD XXX0896 Tds:0.Int:1036 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1036,
+    "balance": 544676.67
+  },
+  {
+    "transactionId": "S43646212",
+    "Date": "21-02-2020",
+    "Narration": "Int on FD/RD XXX0897 Tds:0.Int:1077 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1077,
+    "balance": 545753.67
+  },
+  {
+    "transactionId": "S43646212",
+    "Date": "21-02-2020",
+    "Narration": "Int on FD/RD XXX0898 Tds:0.Int:1127 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1127,
+    "balance": 546880.67
+  },
+  {
+    "transactionId": "S71281104",
+    "Date": "25-02-2020",
+    "Narration": "INF/NEFT/022031364511/SBIN0070835/ConsultantChrgD/APARNA KALRA",
+    "transactionType": "DR",
+    "transactionAmount": 36000,
+    "balance": 510880.67
+  },
+  {
+    "transactionId": "S71286829",
+    "Date": "25-02-2020",
+    "Narration": "INF/NEFT/022031366071/SBIN0070835/ConsultantChrgJ/APARNA KALRA",
+    "transactionType": "DR",
+    "transactionAmount": 36000,
+    "balance": 474880.67
+  },
+  {
+    "transactionId": "S91522883",
+    "Date": "26-02-2020",
+    "Narration": "BIL/ONL/001930160181/ZAAK PAY",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 473880.67
+  },
+  {
+    "transactionId": "S21727465",
+    "Date": "28-02-2020",
+    "Narration": "IPS REF DT 27 02 2020 025144 DHL EXPRESS INDIA PVT",
+    "transactionType": "CR",
+    "transactionAmount": 8669,
+    "balance": 482549.67
+  },
+  {
+    "transactionId": "S39440575",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047032571/HDFC0009068/sqhNQVsQ9e by S/Rahul Thyagara",
+    "transactionType": "DR",
+    "transactionAmount": 23593.1,
+    "balance": 458956.57
+  },
+  {
+    "transactionId": "S39451028",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047035261/HDFC0004274/jdy1ck7Ioq by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 44400,
+    "balance": 414556.57
+  },
+  {
+    "transactionId": "S39455668",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047036261/HDFC0000041/dDK49irPJa by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 70136.93,
+    "balance": 344419.64
+  },
+  {
+    "transactionId": "S39457288",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047036431/SBIN0070835/Luouh4wr9T by S/Aparna Kalra",
+    "transactionType": "DR",
+    "transactionAmount": 27000,
+    "balance": 317419.64
+  },
+  {
+    "transactionId": "S39460040",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047037081/HDFC0009068/nVdyfFO0Rx by S/Vidya M R",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 305419.64
+  },
+  {
+    "transactionId": "S39465308",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047038961/HDFC0004183/7C64rqWf2W by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 293419.64
+  },
+  {
+    "transactionId": "S39467714",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047039951/HDFC0001752/OmqaFsbp8R by S/Reena Kundekar",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 281419.64
+  },
+  {
+    "transactionId": "S39473534",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047042031/HDFC0004183/Ra2iI24dWt by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 13517.24,
+    "balance": 267902.4
+  },
+  {
+    "transactionId": "S39475772",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047042551/HDFC0004183/2YQ31RbIiu by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 252902.4
+  },
+  {
+    "transactionId": "S39479112",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047043631/CNRB0000406/SGditS1v8R by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 244902.4
+  },
+  {
+    "transactionId": "S39481832",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047044361/UTIB0000009/oTWQZhTvr0 by S/Sahana D",
+    "transactionType": "DR",
+    "transactionAmount": 52098.85,
+    "balance": 192803.55
+  },
+  {
+    "transactionId": "S39485700",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047045571/HDFC0004183/RbGKiFxPtQ by S/Lalit Senapati",
+    "transactionType": "DR",
+    "transactionAmount": 11586.21,
+    "balance": 181217.34
+  },
+  {
+    "transactionId": "S39486998",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047046071/HDFC0000509/vxhAAi3stn by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 45633.33,
+    "balance": 135584.01
+  },
+  {
+    "transactionId": "S39493999",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047048481/KKBK0000430/3dHG8XjX4e by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39800,
+    "balance": 95784.01
+  },
+  {
+    "transactionId": "S39494897",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047048761/HDFC0001752/oWTefmir07 by S/Gagana G K",
+    "transactionType": "DR",
+    "transactionAmount": 7448.28,
+    "balance": 88335.73
+  },
+  {
+    "transactionId": "S39497213",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047049621/SBIN0003966/7KJCI83ciU by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 74835.73
+  },
+  {
+    "transactionId": "S39502580",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047051371/CNRB0001381/9CVcFcz0Fm by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 66835.73
+  },
+  {
+    "transactionId": "S39502616",
+    "Date": "29-02-2020",
+    "Narration": "INF/NEFT/022047051491/SYNB0000486/RvduzbKQ6S by S/Megha B M",
+    "transactionType": "DR",
+    "transactionAmount": 8965.52,
+    "balance": 57870.21
+  },
+  {
+    "transactionId": "S55280223",
+    "Date": "01-03-2020",
+    "Narration": "NFS/NBAN7251/CASH WDL/01-03-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 5023.6,
+    "balance": 52846.61
+  },
+  {
+    "transactionId": "S63220754",
+    "Date": "01-03-2020",
+    "Narration": "INF/NEFT/022048200631/KARB0000724/SalaryFeb20 /TANUJA BS",
+    "transactionType": "DR",
+    "transactionAmount": 4414,
+    "balance": 48432.61
+  },
+  {
+    "transactionId": "S75813011",
+    "Date": "02-03-2020",
+    "Narration": "INF/NEFT/022053476711/HDFC0004183/SalaryFeb20 /Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 4800,
+    "balance": 43632.61
+  },
+  {
+    "transactionId": "S83072203",
+    "Date": "03-03-2020",
+    "Narration": "VPS/BALAJI MEDI/202003030836/006303832225/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 185,
+    "balance": 43447.61
+  },
+  {
+    "transactionId": "S83132748",
+    "Date": "03-03-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/03-03-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 23447.61
+  },
+  {
+    "transactionId": "S90944988",
+    "Date": "03-03-2020",
+    "Narration": "VPS/NAMDHARI AG/202003031536/006310009647/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 90,
+    "balance": 23357.61
+  },
+  {
+    "transactionId": "S10678748",
+    "Date": "04-03-2020",
+    "Narration": "VPS/DARSHAN AUT/202003041745/006412518430/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 200,
+    "balance": 23157.61
+  },
+  {
+    "transactionId": "S52707924",
+    "Date": "07-03-2020",
+    "Narration": "Int on FD/RD XXX0896 Tds:0.Int:511 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 511,
+    "balance": 23668.61
+  },
+  {
+    "transactionId": "S52924384",
+    "Date": "07-03-2020",
+    "Narration": "625410020896 FD clos 07-03-2020 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 223668.61
+  },
+  {
+    "transactionId": "S84899714",
+    "Date": "08-03-2020",
+    "Narration": "VPS/DMART GARUD/202003082126/006815161155/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4506,
+    "balance": 219162.61
+  },
+  {
+    "transactionId": "S97026800",
+    "Date": "09-03-2020",
+    "Narration": "GIB/000046837546/STAX /63900040903202000167",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 217962.61
+  },
+  {
+    "transactionId": "S11977990",
+    "Date": "10-03-2020",
+    "Narration": "VPS/NAMDHARI AG/202003101511/007009058048/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 80,
+    "balance": 217882.61
+  },
+  {
+    "transactionId": "S15065465",
+    "Date": "10-03-2020",
+    "Narration": "NFS/NBAN7251/CASH WDL/10-03-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 207859.01
+  },
+  {
+    "transactionId": "S19829885",
+    "Date": "11-03-2020",
+    "Narration": "BIL/ONL/001943307478/BILL DESK /Customsduty",
+    "transactionType": "DR",
+    "transactionAmount": 1388.15,
+    "balance": 206470.86
+  },
+  {
+    "transactionId": "S31664847",
+    "Date": "11-03-2020",
+    "Narration": "VPS REF DARSHAN AUTO SERVICE",
+    "transactionType": "CR",
+    "transactionAmount": 1.5,
+    "balance": 206472.36
+  },
+  {
+    "transactionId": "S59881891",
+    "Date": "13-03-2020",
+    "Narration": "VPS/NAMDHARI AG/202003131125/007305070555/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 77.41,
+    "balance": 206394.95
+  },
+  {
+    "transactionId": "S60602386",
+    "Date": "13-03-2020",
+    "Narration": "INF/NEFT/022097293191/SBIN0007631/USBBOARDPCB /MicronEms",
+    "transactionType": "DR",
+    "transactionAmount": 32733.5,
+    "balance": 173661.45
+  },
+  {
+    "transactionId": "S2863849",
+    "Date": "16-03-2020",
+    "Narration": "VPS/SHREE CHAIT/202003160915/007603052319/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 220,
+    "balance": 173441.45
+  },
+  {
+    "transactionId": "S26715556",
+    "Date": "17-03-2020",
+    "Narration": "VPS/AVENUE SUPE/202003171920/007713069134/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3425.7,
+    "balance": 170015.75
+  },
+  {
+    "transactionId": "S55415374",
+    "Date": "19-03-2020",
+    "Narration": "BIL/ONL/001949510452/RAZORPAY",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 169015.75
+  },
+  {
+    "transactionId": "S56551460",
+    "Date": "19-03-2020",
+    "Narration": "VPS/NAMDHARI AG/202003191040/007905011446/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 72,
+    "balance": 168943.75
+  },
+  {
+    "transactionId": "S85113842",
+    "Date": "21-03-2020",
+    "Narration": "Int on FD/RD XXX0897 Tds:0.Int:1077 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1077,
+    "balance": 170020.75
+  },
+  {
+    "transactionId": "S85113842",
+    "Date": "21-03-2020",
+    "Narration": "Int on FD/RD XXX0898 Tds:0.Int:1127 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1127,
+    "balance": 171147.75
+  },
+  {
+    "transactionId": "S88395133",
+    "Date": "21-03-2020",
+    "Narration": "VPS/NAMDHARI AG/202003211125/008105087129/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 328.18,
+    "balance": 170819.57
+  },
+  {
+    "transactionId": "S82201825",
+    "Date": "30-03-2020",
+    "Narration": "625413011457 FD clos 29-03-2020 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 201440,
+    "balance": 372259.57
+  },
+  {
+    "transactionId": "S3280625",
+    "Date": "31-03-2020",
+    "Narration": "NEFT-N091201106633233-ADDIT LABS-SALARYMAR2020-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 572259.57
+  },
+  {
+    "transactionId": "S6073243",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149385671/HDFC0009068/oFvmMX4Kwi by S/Rahul Thyagara",
+    "transactionType": "DR",
+    "transactionAmount": 29200,
+    "balance": 543059.57
+  },
+  {
+    "transactionId": "S6075702",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149386421/HDFC0004274/AQEqnRZd5n by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 44400,
+    "balance": 498659.57
+  },
+  {
+    "transactionId": "S6080642",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149388061/HDFC0000041/3JKKUQSgMJ by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 70136.92,
+    "balance": 428522.65
+  },
+  {
+    "transactionId": "S6081900",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149388831/HDFC0009068/1VL9fbpYWy by S/Vidya M R",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 416522.65
+  },
+  {
+    "transactionId": "S6081925",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149388851/HDFC0004183/Si5jIY50wE by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 404522.65
+  },
+  {
+    "transactionId": "S6088205",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149390421/HDFC0001752/MtTFUMvKUg by S/Reena Kundekar",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 392522.65
+  },
+  {
+    "transactionId": "S6088351",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149390551/HDFC0004183/VuMhX5Hth6 by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 378522.65
+  },
+  {
+    "transactionId": "S6093078",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149392331/HDFC0004183/0WDzeXGm7n by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 358722.65
+  },
+  {
+    "transactionId": "S6093099",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149392151/UTIB0000009/4WhlNFV5Oe by S/Sahana D",
+    "transactionType": "DR",
+    "transactionAmount": 53166.67,
+    "balance": 305555.98
+  },
+  {
+    "transactionId": "S6094122",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149392911/KKBK0000430/GbzwRw23nD by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 266555.98
+  },
+  {
+    "transactionId": "S6098041",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149394631/HDFC0001752/phPMu7MijH by S/Gagana G K",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 258555.98
+  },
+  {
+    "transactionId": "S6098432",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149394981/HDFC0004183/Mid812GRpF by S/Lalit Senapati",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 246555.98
+  },
+  {
+    "transactionId": "S6098998",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149395231/CNRB0001381/gwskm9rLGp by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 238555.98
+  },
+  {
+    "transactionId": "S6102973",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149396531/KARB0000724/P3yMmoADG5 by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 230555.98
+  },
+  {
+    "transactionId": "S6103997",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149397281/SBIN0003966/TZHx7WhCzo by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 217055.98
+  },
+  {
+    "transactionId": "S6104645",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149397141/CNRB0000406/E3FS6UkD3s by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 209055.98
+  },
+  {
+    "transactionId": "S6108817",
+    "Date": "31-03-2020",
+    "Narration": "INF/NEFT/022149398911/HDFC0000509/x3d68kNSOF by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 164422.65
+  },
+  {
+    "transactionId": "C40950299",
+    "Date": "01-04-2020",
+    "Narration": "VPS/NAMDHARI AG/202004010917/009203018059/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 445,
+    "balance": 163977.65
+  },
+  {
+    "transactionId": "S85040861",
+    "Date": "07-04-2020",
+    "Narration": "NFS/NBAN7251/CASH WDL/07-04-20",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 153977.65
+  },
+  {
+    "transactionId": "S8444805",
+    "Date": "09-04-2020",
+    "Narration": "VPS/NAMDHARI AG/202004091511/010009016264/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1112.42,
+    "balance": 152865.23
+  },
+  {
+    "transactionId": "S51630698",
+    "Date": "13-04-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/13-04-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 132865.23
+  },
+  {
+    "transactionId": "S51655385",
+    "Date": "13-04-2020",
+    "Narration": "ATM/S1CNC179/CASH WDL/13-04-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 112865.23
+  },
+  {
+    "transactionId": "S51679553",
+    "Date": "13-04-2020",
+    "Narration": "ATM/S1CNC179/CASH WDL/13-04-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 92865.23
+  },
+  {
+    "transactionId": "S76480005",
+    "Date": "15-04-2020",
+    "Narration": "GIB/000048314288/STAX /63900041504202000202",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 91665.23
+  },
+  {
+    "transactionId": "S10307789",
+    "Date": "18-04-2020",
+    "Narration": "VPS/NAMDHARI AG/202004180848/010903007708/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1171.63,
+    "balance": 90493.6
+  },
+  {
+    "transactionId": "S33119768",
+    "Date": "20-04-2020",
+    "Narration": "VPS/NAMDHARI AG/202004201048/011105014146/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 51,
+    "balance": 90442.6
+  },
+  {
+    "transactionId": "S42128097",
+    "Date": "21-04-2020",
+    "Narration": "Int on FD/RD XXX0897 Tds:0.Int:1039 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1039,
+    "balance": 91481.6
+  },
+  {
+    "transactionId": "S42128097",
+    "Date": "21-04-2020",
+    "Narration": "Int on FD/RD XXX0898 Tds:0.Int:1087 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1087,
+    "balance": 92568.6
+  },
+  {
+    "transactionId": "S57685475",
+    "Date": "22-04-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/22-04-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 72568.6
+  },
+  {
+    "transactionId": "S57709058",
+    "Date": "22-04-2020",
+    "Narration": "ATM/S1CNC178/CASH WDL/22-04-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 52568.6
+  },
+  {
+    "transactionId": "S57732780",
+    "Date": "22-04-2020",
+    "Narration": "ATM/S1CNC178/CASH WDL/22-04-20",
+    "transactionType": "DR",
+    "transactionAmount": 18000,
+    "balance": 34568.6
+  },
+  {
+    "transactionId": "S65760229",
+    "Date": "23-04-2020",
+    "Narration": "VPS/NAMDHARI AG/202004230837/011403002994/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 205.39,
+    "balance": 34363.21
+  },
+  {
+    "transactionId": "S78200176",
+    "Date": "24-04-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/24-04-20",
+    "transactionType": "DR",
+    "transactionAmount": 5500,
+    "balance": 28863.21
+  },
+  {
+    "transactionId": "S83348731",
+    "Date": "24-04-2020",
+    "Narration": "VPS/PAY Sri Vin/202004242256/011517011978/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 700,
+    "balance": 28163.21
+  },
+  {
+    "transactionId": "S12601167",
+    "Date": "27-04-2020",
+    "Narration": "VPS/NAMDHARI AG/202004271359/011808024809/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 130,
+    "balance": 28033.21
+  },
+  {
+    "transactionId": "S44226877",
+    "Date": "30-04-2020",
+    "Narration": "NEFT-N121201124055874-ADDIT LABS-APRIL SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 600000,
+    "balance": 628033.21
+  },
+  {
+    "transactionId": "S50497175",
+    "Date": "30-04-2020",
+    "Narration": "VPS/NAMDHARI AG/202004301424/012108032718/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 503,
+    "balance": 627530.21
+  },
+  {
+    "transactionId": "S51706630",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211758661/HDFC0009068/8Cp0wbxeUw by S/Rahul Thyagara",
+    "transactionType": "DR",
+    "transactionAmount": 29200,
+    "balance": 598330.21
+  },
+  {
+    "transactionId": "S51710876",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211759301/HDFC0004274/e3cmSxP242 by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 44400,
+    "balance": 553930.21
+  },
+  {
+    "transactionId": "S51717478",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211760581/HDFC0009068/Kn435cVVX5 by S/Vidya M R",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 541930.21
+  },
+  {
+    "transactionId": "S51718021",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211760421/HDFC0000041/i5sxtpYak0 by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 70137,
+    "balance": 471793.21
+  },
+  {
+    "transactionId": "S51724354",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211761401/HDFC0001752/tCKH1HkvNt by S/Reena Kundekar",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 459793.21
+  },
+  {
+    "transactionId": "S51725373",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211761581/HDFC0004183/mA4krod4C1 by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 447793.21
+  },
+  {
+    "transactionId": "S51731568",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211762501/HDFC0004183/SH4lUe528Q by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 433793.21
+  },
+  {
+    "transactionId": "S51731669",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211762531/HDFC0004183/PEAIhRd3nF by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 413993.21
+  },
+  {
+    "transactionId": "S51737992",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211763301/UTIB0000009/8YaQI4UQUO by S/Sahana D",
+    "transactionType": "DR",
+    "transactionAmount": 53166.67,
+    "balance": 360826.54
+  },
+  {
+    "transactionId": "S51738358",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211763491/KKBK0000430/bSA4MAy2HT by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 321826.54
+  },
+  {
+    "transactionId": "S51742969",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211764341/CNRB0000406/sJe8mEFdnx by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 313826.54
+  },
+  {
+    "transactionId": "S51745418",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211764781/HDFC0000509/DnWLxYzBwb by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 269193.21
+  },
+  {
+    "transactionId": "S51748586",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211765591/KARB0000724/bAcPACeH2V by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 261193.21
+  },
+  {
+    "transactionId": "S51751327",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211765911/HDFC0001752/WmO8NcjeSe by S/Gagana G K",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 253193.21
+  },
+  {
+    "transactionId": "S51753346",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211766241/SBIN0003966/uOoVQsPGA1 by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 239693.21
+  },
+  {
+    "transactionId": "S51754414",
+    "Date": "30-04-2020",
+    "Narration": "INF/NEFT/022211766811/CNRB0001381/DHXqp7qgRc by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 229693.21
+  },
+  {
+    "transactionId": "S82074258",
+    "Date": "02-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005021750/012312011782/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 267.13,
+    "balance": 229426.08
+  },
+  {
+    "transactionId": "S82742896",
+    "Date": "02-05-2020",
+    "Narration": "VPS/PAY Sri Vin/202005030005/012318938804/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1500,
+    "balance": 227926.08
+  },
+  {
+    "transactionId": "S88849302",
+    "Date": "03-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005031022/012404037118/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 2214.29,
+    "balance": 225711.79
+  },
+  {
+    "transactionId": "S91862822",
+    "Date": "03-05-2020",
+    "Narration": "VPS/M/S LAKSHM/202005031927/012413735210/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 500,
+    "balance": 225211.79
+  },
+  {
+    "transactionId": "S30548107",
+    "Date": "06-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005060830/012703000289/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 225163.79
+  },
+  {
+    "transactionId": "S31267715",
+    "Date": "06-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005060928/012703031003/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 100,
+    "balance": 225063.79
+  },
+  {
+    "transactionId": "S36764473",
+    "Date": "06-05-2020",
+    "Narration": "IPS/MOHANS SPIR/202005061424/000000019146/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 6405,
+    "balance": 218658.79
+  },
+  {
+    "transactionId": "S198631",
+    "Date": "11-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005110920/013203024449/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 218610.79
+  },
+  {
+    "transactionId": "S18169388",
+    "Date": "12-05-2020",
+    "Narration": "GIB/000048672361/STAX /63900041205202000088",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 217410.79
+  },
+  {
+    "transactionId": "S30173261",
+    "Date": "13-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005131019/013404037008/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 217362.79
+  },
+  {
+    "transactionId": "S48216071",
+    "Date": "14-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005141447/013509013157/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 24,
+    "balance": 217338.79
+  },
+  {
+    "transactionId": "S64405225",
+    "Date": "15-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005151718/013611048067/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 113.33,
+    "balance": 217225.46
+  },
+  {
+    "transactionId": "S97284770",
+    "Date": "18-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005181144/013906018265/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 58,
+    "balance": 217167.46
+  },
+  {
+    "transactionId": "S10995605",
+    "Date": "19-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005191142/014006016062/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 42,
+    "balance": 217125.46
+  },
+  {
+    "transactionId": "S26630973",
+    "Date": "20-05-2020",
+    "Narration": "VPS/DMART GARUD/202005201345/014108018322/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3585.48,
+    "balance": 213539.98
+  },
+  {
+    "transactionId": "S28237085",
+    "Date": "20-05-2020",
+    "Narration": "VPS/5613 DMART /202005201533/014110003316/BENGALURU",
+    "transactionType": "DR",
+    "transactionAmount": 2750,
+    "balance": 210789.98
+  },
+  {
+    "transactionId": "S28845844",
+    "Date": "20-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005201620/014110045023/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 21,
+    "balance": 210768.98
+  },
+  {
+    "transactionId": "S34145337",
+    "Date": "21-05-2020",
+    "Narration": "Int on FD/RD XXX0897 Tds:0.Int:1077 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1077,
+    "balance": 211845.98
+  },
+  {
+    "transactionId": "S34145337",
+    "Date": "21-05-2020",
+    "Narration": "Int on FD/RD XXX0898 Tds:0.Int:1127 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1127,
+    "balance": 212972.98
+  },
+  {
+    "transactionId": "S35830867",
+    "Date": "21-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005210912/014203019522/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 24,
+    "balance": 212948.98
+  },
+  {
+    "transactionId": "S51323419",
+    "Date": "22-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005221135/014306007148/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 144,
+    "balance": 212804.98
+  },
+  {
+    "transactionId": "S87335139",
+    "Date": "25-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005251148/014606026794/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 54,
+    "balance": 212750.98
+  },
+  {
+    "transactionId": "S99182055",
+    "Date": "26-05-2020",
+    "Narration": "VPS/NAMDHARI AG/202005261131/014706002523/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 154,
+    "balance": 212596.98
+  },
+  {
+    "transactionId": "S14410140",
+    "Date": "27-05-2020",
+    "Narration": "GIB/000048851058/STAX /63900042705202000299",
+    "transactionType": "DR",
+    "transactionAmount": 3000,
+    "balance": 209596.98
+  },
+  {
+    "transactionId": "S46868195",
+    "Date": "29-05-2020",
+    "Narration": "VPS/BURHAN HOME/202005291614/015010043170/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 530,
+    "balance": 209066.98
+  },
+  {
+    "transactionId": "S49686367",
+    "Date": "29-05-2020",
+    "Narration": "VPS/PF MSW S S /202005300023/015018597947/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 1160,
+    "balance": 207906.98
+  },
+  {
+    "transactionId": "S49780498",
+    "Date": "29-05-2020",
+    "Narration": "VPS/PF Madhu el/202005300029/015018592953/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 880,
+    "balance": 207026.98
+  },
+  {
+    "transactionId": "S62388426",
+    "Date": "30-05-2020",
+    "Narration": "NEFT-N151201146120136-ADDIT LABS-TOICICI-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 707026.98
+  },
+  {
+    "transactionId": "S62693123",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297525031/HDFC0009068/tf9u3ZpJ1y by S/Rahul Thyagara",
+    "transactionType": "DR",
+    "transactionAmount": 29200,
+    "balance": 677826.98
+  },
+  {
+    "transactionId": "S62697381",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297525861/HDFC0004274/KHryY8xspE by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 44400,
+    "balance": 633426.98
+  },
+  {
+    "transactionId": "S62699868",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297526321/HDFC0000041/lqlfMnLxRj by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 70137,
+    "balance": 563289.98
+  },
+  {
+    "transactionId": "S62701751",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297526891/HDFC0009068/gxDyHSm9Mt by S/Vidya M R",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 551289.98
+  },
+  {
+    "transactionId": "S62702736",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297527041/HDFC0004183/7smOQsUR7n by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 539289.98
+  },
+  {
+    "transactionId": "S62703700",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297527451/HDFC0001752/wTOaC4BNVq by S/Reena Kundekar",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 527289.98
+  },
+  {
+    "transactionId": "S62705017",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297527741/HDFC0004183/hoD1799A8E by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 513289.98
+  },
+  {
+    "transactionId": "S62704989",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297527991/HDFC0004183/bteGZe1eJW by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 493489.98
+  },
+  {
+    "transactionId": "S62706478",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297528231/UTIB0000009/Fd64Of9hF2 by S/Sahana D",
+    "transactionType": "DR",
+    "transactionAmount": 53166.67,
+    "balance": 440323.31
+  },
+  {
+    "transactionId": "S62706784",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297528451/KKBK0000430/QRI2aKGcr0 by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 401323.31
+  },
+  {
+    "transactionId": "S62708550",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297528721/HDFC0000509/7kfmQ0WHZC by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 356689.98
+  },
+  {
+    "transactionId": "S62710356",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297529461/CNRB0001381/ryyRqdqoHg by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 346689.98
+  },
+  {
+    "transactionId": "S62710649",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297529481/HDFC0001752/9xhPQiBUlp by S/Gagana G K",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 338689.98
+  },
+  {
+    "transactionId": "S62712915",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297529891/CNRB0000406/D1s686eEfS by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 330689.98
+  },
+  {
+    "transactionId": "S62713771",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297530391/SBIN0003966/QolxCfSIDo by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13500,
+    "balance": 317189.98
+  },
+  {
+    "transactionId": "S62715539",
+    "Date": "30-05-2020",
+    "Narration": "INF/NEFT/022297530591/KARB0000724/Z1z4x3cLeq by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 309189.98
+  },
+  {
+    "transactionId": "S85090527",
+    "Date": "01-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006011001/015304023569/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 162,
+    "balance": 309027.98
+  },
+  {
+    "transactionId": "S3726486",
+    "Date": "02-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006021042/015405012615/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 308979.98
+  },
+  {
+    "transactionId": "S19886227",
+    "Date": "03-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006031015/015504034975/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 308931.98
+  },
+  {
+    "transactionId": "S34407693",
+    "Date": "04-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006041045/015605014807/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 308883.98
+  },
+  {
+    "transactionId": "S53650632",
+    "Date": "05-06-2020",
+    "Narration": "GIB/000049006839/STAX /63900040506202000135",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 307683.98
+  },
+  {
+    "transactionId": "S54932754",
+    "Date": "05-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006051404/015708039591/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 24,
+    "balance": 307659.98
+  },
+  {
+    "transactionId": "S57503897",
+    "Date": "05-06-2020",
+    "Narration": "IPS/D MART /202006051637/000000011567/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4077,
+    "balance": 303582.98
+  },
+  {
+    "transactionId": "M320265",
+    "Date": "05-06-2020",
+    "Narration": "TRF TO FD no. 625413013826",
+    "transactionType": "DR",
+    "transactionAmount": 25000,
+    "balance": 278582.98
+  },
+  {
+    "transactionId": "M324035",
+    "Date": "06-06-2020",
+    "Narration": "TRF TO FD no. 625413013828",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 178582.98
+  },
+  {
+    "transactionId": "M324055",
+    "Date": "06-06-2020",
+    "Narration": "TRF TO FD no. 625413013829",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 78582.98
+  },
+  {
+    "transactionId": "S65516756",
+    "Date": "06-06-2020",
+    "Narration": "NEFT-N158201152758078-ADDIT LABS-SAVINGS-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 578582.98
+  },
+  {
+    "transactionId": "S66315693",
+    "Date": "06-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006060928/015803029040/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 24,
+    "balance": 578558.98
+  },
+  {
+    "transactionId": "S74990324",
+    "Date": "06-06-2020",
+    "Narration": "VPS/FUTURA DIGI/202006061655/015811036701/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 460,
+    "balance": 578098.98
+  },
+  {
+    "transactionId": "S75307755",
+    "Date": "06-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006061712/015811064214/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 120,
+    "balance": 577978.98
+  },
+  {
+    "transactionId": "M393141",
+    "Date": "06-06-2020",
+    "Narration": "TRF TO FD no. 625413013842",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 477978.98
+  },
+  {
+    "transactionId": "M393148",
+    "Date": "06-06-2020",
+    "Narration": "TRF TO FD no. 625413013843",
+    "transactionType": "DR",
+    "transactionAmount": 100000,
+    "balance": 377978.98
+  },
+  {
+    "transactionId": "S98939900",
+    "Date": "08-06-2020",
+    "Narration": "VPS/FUTURA DIGI/202006081049/016005020712/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 811,
+    "balance": 377167.98
+  },
+  {
+    "transactionId": "S99721510",
+    "Date": "08-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006081130/016006000519/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 377119.98
+  },
+  {
+    "transactionId": "S16473930",
+    "Date": "09-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006091104/016105035689/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 377071.98
+  },
+  {
+    "transactionId": "S22700446",
+    "Date": "09-06-2020",
+    "Narration": "VPS/FUTURA DIGI/202006091655/016111251132/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 142,
+    "balance": 376929.98
+  },
+  {
+    "transactionId": "S33355140",
+    "Date": "10-06-2020",
+    "Narration": "VPS/FUTURA DIGI/202006101058/016205030473/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 189,
+    "balance": 376740.98
+  },
+  {
+    "transactionId": "S33693825",
+    "Date": "10-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006101116/016205051266/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 78,
+    "balance": 376662.98
+  },
+  {
+    "transactionId": "S55292714",
+    "Date": "11-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006111558/016310028458/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 34,
+    "balance": 376628.98
+  },
+  {
+    "transactionId": "S70989175",
+    "Date": "12-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006121545/016410016447/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 376580.98
+  },
+  {
+    "transactionId": "S78477329",
+    "Date": "13-06-2020",
+    "Narration": "NFS/P1DCBU28/CASH WDL/13-06-20",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 366580.98
+  },
+  {
+    "transactionId": "S86032987",
+    "Date": "13-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006131730/016512001062/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 98,
+    "balance": 366482.98
+  },
+  {
+    "transactionId": "S87058045",
+    "Date": "13-06-2020",
+    "Narration": "INF/NEFT/022352506391/SBIN0032294/GreenHouse and /MyDreamGarden",
+    "transactionType": "DR",
+    "transactionAmount": 67010,
+    "balance": 299472.98
+  },
+  {
+    "transactionId": "S2838751",
+    "Date": "15-06-2020",
+    "Narration": "Int on FD/RD XXX0897 Tds:0.Int:886 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 886,
+    "balance": 300358.98
+  },
+  {
+    "transactionId": "S3054765",
+    "Date": "15-06-2020",
+    "Narration": "625410020897 FD clos 15-06-2020 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 500358.98
+  },
+  {
+    "transactionId": "S7211286",
+    "Date": "15-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006151055/016705026115/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 500310.98
+  },
+  {
+    "transactionId": "S21776253",
+    "Date": "16-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006160822/016802250325/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 500262.98
+  },
+  {
+    "transactionId": "S38952336",
+    "Date": "17-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006171018/016904034622/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 500214.98
+  },
+  {
+    "transactionId": "S54558101",
+    "Date": "18-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006181055/017005024345/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 500166.98
+  },
+  {
+    "transactionId": "S78926963",
+    "Date": "19-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006192059/017115019761/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 74,
+    "balance": 500092.98
+  },
+  {
+    "transactionId": "S83811220",
+    "Date": "20-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006201115/017205053127/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 81,
+    "balance": 500011.98
+  },
+  {
+    "transactionId": "S5388560",
+    "Date": "21-06-2020",
+    "Narration": "Int on FD/RD XXX0898 Tds:0.Int:1127 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1127,
+    "balance": 501138.98
+  },
+  {
+    "transactionId": "S8357441",
+    "Date": "22-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006221027/017404044202/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 56.32,
+    "balance": 501082.66
+  },
+  {
+    "transactionId": "S24472010",
+    "Date": "23-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006231111/017505041524/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 198,
+    "balance": 500884.66
+  },
+  {
+    "transactionId": "S39186300",
+    "Date": "24-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006241056/017605025457/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 243,
+    "balance": 500641.66
+  },
+  {
+    "transactionId": "S45549288",
+    "Date": "24-06-2020",
+    "Narration": "VPS/RELIANCE DI/202006241711/017611454747/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1451,
+    "balance": 499190.66
+  },
+  {
+    "transactionId": "S46839172",
+    "Date": "24-06-2020",
+    "Narration": "INF/NEFT/022393584021/SBIN0007631/USBBOARD /MicronEms",
+    "transactionType": "DR",
+    "transactionAmount": 32733.5,
+    "balance": 466457.16
+  },
+  {
+    "transactionId": "S48170898",
+    "Date": "24-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006241946/017614020034/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 377,
+    "balance": 466080.16
+  },
+  {
+    "transactionId": "S57523600",
+    "Date": "25-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006251350/017708022465/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 24,
+    "balance": 466056.16
+  },
+  {
+    "transactionId": "S69557789",
+    "Date": "26-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006261105/017805033317/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 466008.16
+  },
+  {
+    "transactionId": "S83417768",
+    "Date": "27-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006271030/017905000711/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 224,
+    "balance": 465784.16
+  },
+  {
+    "transactionId": "S87571366",
+    "Date": "27-06-2020",
+    "Narration": "VPS/DMART GARUD/202006271457/017909034299/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4062,
+    "balance": 461722.16
+  },
+  {
+    "transactionId": "S9869136",
+    "Date": "29-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006291111/018105042845/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 461674.16
+  },
+  {
+    "transactionId": "S27065565",
+    "Date": "30-06-2020",
+    "Narration": "VPS/NAMDHARI AG/202006301104/018205034561/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 461626.16
+  },
+  {
+    "transactionId": "S30735699",
+    "Date": "30-06-2020",
+    "Narration": "ATM/SACWE773/CASH WDL/30-06-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 441626.16
+  },
+  {
+    "transactionId": "S31334237",
+    "Date": "30-06-2020",
+    "Narration": "VPS/BALAJI MEDI/202006301413/018208959811/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 1100,
+    "balance": 440526.16
+  },
+  {
+    "transactionId": "S37033535",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415173991/HDFC0009068/1gL8ksQsPS by S/Rahul Thyagara",
+    "transactionType": "DR",
+    "transactionAmount": 29200,
+    "balance": 411326.16
+  },
+  {
+    "transactionId": "S37035670",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415174241/HDFC0000041/H5J41QDGQi by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 70137,
+    "balance": 341189.16
+  },
+  {
+    "transactionId": "S37035937",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415174471/HDFC0004183/SsNykvz0Xb by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 329189.16
+  },
+  {
+    "transactionId": "S37036676",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415174351/HDFC0009068/Zfpvq1Yydw by S/Vidya M R",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 317189.16
+  },
+  {
+    "transactionId": "S37037055",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415174561/HDFC0004183/EgEWPmdjJ5 by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 7933.33,
+    "balance": 309255.83
+  },
+  {
+    "transactionId": "S37037313",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415174591/HDFC0004183/sm9Jkgykt0 by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 289455.83
+  },
+  {
+    "transactionId": "S37037404",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415174621/KKBK0000430/nZ2RwIQ9rk by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 250455.83
+  },
+  {
+    "transactionId": "S37037727",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415174821/HDFC0000509/Equ5UpOuiW by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 205822.5
+  },
+  {
+    "transactionId": "S37037777",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415174731/CNRB0001381/ZdGHzRqXH9 by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 191822.5
+  },
+  {
+    "transactionId": "S37037918",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415174911/CNRB0000406/GwN8476SMO by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 181822.5
+  },
+  {
+    "transactionId": "S37038616",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415175081/KARB0000724/xz9nfSc1Op by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 171822.5
+  },
+  {
+    "transactionId": "S37039395",
+    "Date": "30-06-2020",
+    "Narration": "INF/INFT/022415175121/0VBswo1qRq by S/PALLAVI HEGD",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 159822.5
+  },
+  {
+    "transactionId": "S37039682",
+    "Date": "30-06-2020",
+    "Narration": "INF/NEFT/022415175421/SBIN0003966/XzoZXDHjXC by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13875,
+    "balance": 145947.5
+  },
+  {
+    "transactionId": "S45643282",
+    "Date": "01-07-2020",
+    "Narration": "INF/NEFT/022416222841/HDFC0004274/ConsultantChrgJ/NANDAN B",
+    "transactionType": "DR",
+    "transactionAmount": 23150,
+    "balance": 122797.5
+  },
+  {
+    "transactionId": "S46565272",
+    "Date": "01-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007011044/018305014904/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 88,
+    "balance": 122709.5
+  },
+  {
+    "transactionId": "S63659640",
+    "Date": "02-07-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/02-07-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 102709.5
+  },
+  {
+    "transactionId": "S64898162",
+    "Date": "02-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007021042/018405011416/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 113,
+    "balance": 102596.5
+  },
+  {
+    "transactionId": "S65838158",
+    "Date": "02-07-2020",
+    "Narration": "GIB/000049788813/STAX /63900040207202000011",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 101396.5
+  },
+  {
+    "transactionId": "S83129536",
+    "Date": "03-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007031105/018505035831/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 101348.5
+  },
+  {
+    "transactionId": "S69131624",
+    "Date": "08-07-2020",
+    "Narration": "VPS/SRI CHOWD E/202007081238/019007052252/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 200,
+    "balance": 101148.5
+  },
+  {
+    "transactionId": "S2911864",
+    "Date": "10-07-2020",
+    "Narration": "IPS/Annapoorna /202007101223/000000013787/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 889,
+    "balance": 100259.5
+  },
+  {
+    "transactionId": "S16152709",
+    "Date": "11-07-2020",
+    "Narration": "BIL/ONL/002027698142/BILL DESK /Custom dutu",
+    "transactionType": "DR",
+    "transactionAmount": 3369.89,
+    "balance": 96889.61
+  },
+  {
+    "transactionId": "S45374080",
+    "Date": "13-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007131121/019505060410/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 96841.61
+  },
+  {
+    "transactionId": "S46145928",
+    "Date": "13-07-2020",
+    "Narration": "BIL/ONL/002028970365/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 3447.17,
+    "balance": 93394.44
+  },
+  {
+    "transactionId": "S62186605",
+    "Date": "14-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007141043/019605012358/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 93346.44
+  },
+  {
+    "transactionId": "S62213286",
+    "Date": "14-07-2020",
+    "Narration": "VPS/PAYMNT RVSL/NAMDHARI AG/202007141043/019605012358/",
+    "transactionType": "CR",
+    "transactionAmount": 48,
+    "balance": 93394.44
+  },
+  {
+    "transactionId": "S62212913",
+    "Date": "14-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007141045/019605013758/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 57.31,
+    "balance": 93337.13
+  },
+  {
+    "transactionId": "S64003338",
+    "Date": "14-07-2020",
+    "Narration": "NFS/P1DCBU28/CASH WDL/14-07-20",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 83337.13
+  },
+  {
+    "transactionId": "S66844999",
+    "Date": "14-07-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/14-07-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 63337.13
+  },
+  {
+    "transactionId": "S66866995",
+    "Date": "14-07-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/14-07-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 43337.13
+  },
+  {
+    "transactionId": "S66885138",
+    "Date": "14-07-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/14-07-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 23337.13
+  },
+  {
+    "transactionId": "S67274230",
+    "Date": "14-07-2020",
+    "Narration": "NEFT-N196201187022552-ADDIT LABS-INTERNAL TRANSFER-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 223337.13
+  },
+  {
+    "transactionId": "S70915271",
+    "Date": "14-07-2020",
+    "Narration": "VPS REF SRI CHOWD ESWARI PETRO",
+    "transactionType": "CR",
+    "transactionAmount": 1.5,
+    "balance": 223338.63
+  },
+  {
+    "transactionId": "S93040971",
+    "Date": "16-07-2020",
+    "Narration": "BIL/ONL/002031005396/BILL DESK",
+    "transactionType": "DR",
+    "transactionAmount": 2899.7,
+    "balance": 220438.93
+  },
+  {
+    "transactionId": "S93065678",
+    "Date": "16-07-2020",
+    "Narration": "BIL/ONL/002031006606/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 2749.65,
+    "balance": 217689.28
+  },
+  {
+    "transactionId": "S62569349",
+    "Date": "21-07-2020",
+    "Narration": "Int on FD/RD XXX0898 Tds:0.Int:1127 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1127,
+    "balance": 218816.28
+  },
+  {
+    "transactionId": "S72696179",
+    "Date": "21-07-2020",
+    "Narration": "INF/NEFT/022504830041/HDFC0002375/UIUXDesign /RajivKalarmoon",
+    "transactionType": "DR",
+    "transactionAmount": 12025,
+    "balance": 206791.28
+  },
+  {
+    "transactionId": "S80930874",
+    "Date": "22-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007221035/020405005281/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 206743.28
+  },
+  {
+    "transactionId": "S88966934",
+    "Date": "22-07-2020",
+    "Narration": "INF/INFT/022509561741/GroupInsurance /ICICILOMBARD",
+    "transactionType": "DR",
+    "transactionAmount": 187118,
+    "balance": 19625.28
+  },
+  {
+    "transactionId": "S89594507",
+    "Date": "22-07-2020",
+    "Narration": "NEFT-N204201193635798-ADDIT LABS-INTERNAL TRANSFER-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 519625.28
+  },
+  {
+    "transactionId": "S95676329",
+    "Date": "23-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007231019/020504032065/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 519577.28
+  },
+  {
+    "transactionId": "S133386",
+    "Date": "23-07-2020",
+    "Narration": "BIL/ONL/002035516753/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 2899.73,
+    "balance": 516677.55
+  },
+  {
+    "transactionId": "S151661",
+    "Date": "23-07-2020",
+    "Narration": "BIL/ONL/002035517133/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 2899.73,
+    "balance": 513777.82
+  },
+  {
+    "transactionId": "S10970490",
+    "Date": "24-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007241051/020605019387/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 48,
+    "balance": 513729.82
+  },
+  {
+    "transactionId": "S16185884",
+    "Date": "24-07-2020",
+    "Narration": "VPS/NAMDHARI AG/202007241544/020610014624/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 149.9,
+    "balance": 513579.92
+  },
+  {
+    "transactionId": "S52386707",
+    "Date": "27-07-2020",
+    "Narration": "INF/NEFT/022524223191/UTIB0000009/FinalSettlement/Sahana D",
+    "transactionType": "DR",
+    "transactionAmount": 28705,
+    "balance": 484874.92
+  },
+  {
+    "transactionId": "S56313670",
+    "Date": "27-07-2020",
+    "Narration": "VPS/DMART GARUD/202007271449/020909019872/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 2578.39,
+    "balance": 482296.53
+  },
+  {
+    "transactionId": "S25562298",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547361971/HDFC0009068/Ptk6Mx1x1Q by S/Rahul Thyagara",
+    "transactionType": "DR",
+    "transactionAmount": 29200,
+    "balance": 453096.53
+  },
+  {
+    "transactionId": "S25563249",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547362891/HDFC0004274/r7kQqmroG2 by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 45650,
+    "balance": 407446.53
+  },
+  {
+    "transactionId": "S25563435",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547363111/HDFC0000041/VhkRzm8Edk by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 70137,
+    "balance": 337309.53
+  },
+  {
+    "transactionId": "S25564780",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547363801/HDFC0004183/25gcK0hKkV by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 325309.53
+  },
+  {
+    "transactionId": "S25564791",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547363811/HDFC0004183/xFPOCm206K by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 311309.53
+  },
+  {
+    "transactionId": "S25564993",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547363941/HDFC0004183/GsbfOWMAyt by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 291509.53
+  },
+  {
+    "transactionId": "S25565725",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547364171/KKBK0000430/ijQoW9XWAH by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 252509.53
+  },
+  {
+    "transactionId": "S25566019",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547364541/HDFC0000509/l31H9oyrvn by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 207876.2
+  },
+  {
+    "transactionId": "S25566264",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547364941/CNRB0001381/xOJbfskkp6 by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 193876.2
+  },
+  {
+    "transactionId": "S25566461",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547365301/CNRB0000406/ymFA8oz47s by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 183876.2
+  },
+  {
+    "transactionId": "S25567548",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547365671/KARB0000724/btTPcNb2Oa by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 173876.2
+  },
+  {
+    "transactionId": "S25567726",
+    "Date": "31-07-2020",
+    "Narration": "INF/INFT/022547366211/TvVvDrzAdc by S/PALLAVI HEGD",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 161876.2
+  },
+  {
+    "transactionId": "S25568119",
+    "Date": "31-07-2020",
+    "Narration": "INF/NEFT/022547366451/SBIN0003966/vyqfpNTn53 by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13875,
+    "balance": 148001.2
+  },
+  {
+    "transactionId": "S35172764",
+    "Date": "01-08-2020",
+    "Narration": "BIL/ONL/002041566169/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 1118.57,
+    "balance": 146882.63
+  },
+  {
+    "transactionId": "S42849149",
+    "Date": "01-08-2020",
+    "Narration": "VPS/NAMDHARI AG/202008011631/021411002574/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 272.85,
+    "balance": 146609.78
+  },
+  {
+    "transactionId": "S43072544",
+    "Date": "07-08-2020",
+    "Narration": "GIB/000050878424/STAX /63900040708202000151",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 145609.78
+  },
+  {
+    "transactionId": "S43636379",
+    "Date": "07-08-2020",
+    "Narration": "INF/NEFT/022576687721/HDFC0004183/SalaryJul20 /Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 5000,
+    "balance": 140609.78
+  },
+  {
+    "transactionId": "S43636900",
+    "Date": "07-08-2020",
+    "Narration": "INF/NEFT/022576687941/HDFC0001300/SalaryJul20 /Ranjith N",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 130609.78
+  },
+  {
+    "transactionId": "S58176972",
+    "Date": "08-08-2020",
+    "Narration": "VPS/NAMDHARI AG/202008081025/022104043965/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 24,
+    "balance": 130585.78
+  },
+  {
+    "transactionId": "S17381697",
+    "Date": "11-08-2020",
+    "Narration": "BIL/ONL/002050470728/ZAAK PAY",
+    "transactionType": "DR",
+    "transactionAmount": 366.97,
+    "balance": 130218.81
+  },
+  {
+    "transactionId": "S49183512",
+    "Date": "13-08-2020",
+    "Narration": "BIL/ONL/002051777522/BILL DESK",
+    "transactionType": "DR",
+    "transactionAmount": 1280,
+    "balance": 128938.81
+  },
+  {
+    "transactionId": "S49203982",
+    "Date": "13-08-2020",
+    "Narration": "BIL/ONL/002051778096/BILL DESK",
+    "transactionType": "DR",
+    "transactionAmount": 1037,
+    "balance": 127901.81
+  },
+  {
+    "transactionId": "S70356193",
+    "Date": "14-08-2020",
+    "Narration": "BIL/ONL/002052567052/PAYTM MOBILE SOLUTION/Internet Bill",
+    "transactionType": "DR",
+    "transactionAmount": 49560,
+    "balance": 78341.81
+  },
+  {
+    "transactionId": "S8741637",
+    "Date": "17-08-2020",
+    "Narration": "BIL/REV PMT ID 2051778096",
+    "transactionType": "CR",
+    "transactionAmount": 1037,
+    "balance": 79378.81
+  },
+  {
+    "transactionId": "S8741637",
+    "Date": "17-08-2020",
+    "Narration": "BIL/REV PMT ID 2051777522",
+    "transactionType": "CR",
+    "transactionAmount": 1280,
+    "balance": 80658.81
+  },
+  {
+    "transactionId": "S15686307",
+    "Date": "17-08-2020",
+    "Narration": "BIL/ONL/002054333227/RAZORPAY",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 79658.81
+  },
+  {
+    "transactionId": "S45636726",
+    "Date": "19-08-2020",
+    "Narration": "IPS/D MART /202008191626/000000010024/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4030.5,
+    "balance": 75628.31
+  },
+  {
+    "transactionId": "S69661703",
+    "Date": "21-08-2020",
+    "Narration": "Int on FD/RD XXX0898 Tds:0.Int:1127 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1127,
+    "balance": 76755.31
+  },
+  {
+    "transactionId": "S77835368",
+    "Date": "21-08-2020",
+    "Narration": "IPS/MOHANS SPIR/202008211502/000000000197/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 6859,
+    "balance": 69896.31
+  },
+  {
+    "transactionId": "S92303350",
+    "Date": "22-08-2020",
+    "Narration": "IPS/WOOD LINE /202008221438/000000000057/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 200,
+    "balance": 69696.31
+  },
+  {
+    "transactionId": "S92577652",
+    "Date": "22-08-2020",
+    "Narration": "VPS/NAMDHARI AG/202008221459/023509031940/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 35.5,
+    "balance": 69660.81
+  },
+  {
+    "transactionId": "S15496572",
+    "Date": "24-08-2020",
+    "Narration": "VPS/NAMDHARI AG/202008241055/023705025907/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 327.21,
+    "balance": 69333.6
+  },
+  {
+    "transactionId": "S16695707",
+    "Date": "24-08-2020",
+    "Narration": "BIL/ONL/002058204233/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 1503.65,
+    "balance": 67829.95
+  },
+  {
+    "transactionId": "S21869573",
+    "Date": "24-08-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/24-08-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 47829.95
+  },
+  {
+    "transactionId": "S30120544",
+    "Date": "25-08-2020",
+    "Narration": "BIL/ONL/002058755713/BILL DESK /CustomsDutu",
+    "transactionType": "DR",
+    "transactionAmount": 3297.39,
+    "balance": 44532.56
+  },
+  {
+    "transactionId": "S30162311",
+    "Date": "25-08-2020",
+    "Narration": "BIL/ONL/002058756170/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 3297.39,
+    "balance": 41235.17
+  },
+  {
+    "transactionId": "S42289904",
+    "Date": "25-08-2020",
+    "Narration": "BIL/ONL/002059219944/BILL DESK BPC /ElectricityBill",
+    "transactionType": "DR",
+    "transactionAmount": 10969,
+    "balance": 30266.17
+  },
+  {
+    "transactionId": "S70615565",
+    "Date": "27-08-2020",
+    "Narration": "Dbt card Chg Jul-20+GST",
+    "transactionType": "DR",
+    "transactionAmount": 885,
+    "balance": 29381.17
+  },
+  {
+    "transactionId": "S5152709",
+    "Date": "29-08-2020",
+    "Narration": "VPS/AVENUE /202008291519/024209928392/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1489.3,
+    "balance": 27891.87
+  },
+  {
+    "transactionId": "S22078948",
+    "Date": "30-08-2020",
+    "Narration": "VPS/NAMDHARI AG/202008301837/024313010541/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 548.2,
+    "balance": 27343.67
+  },
+  {
+    "transactionId": "S42186809",
+    "Date": "31-08-2020",
+    "Narration": "NEFT-N244201229083813-ADDIT LABS-ICICI ACC-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 527343.67
+  },
+  {
+    "transactionId": "S45394404",
+    "Date": "31-08-2020",
+    "Narration": "INF/NEFT/022682394241/HDFC0004274/2bPrilEG81 by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 45650,
+    "balance": 481693.67
+  },
+  {
+    "transactionId": "S45398126",
+    "Date": "31-08-2020",
+    "Narration": "INF/NEFT/022682394741/HDFC0000041/eVcjCCuWvY by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 74200,
+    "balance": 407493.67
+  },
+  {
+    "transactionId": "S45397452",
+    "Date": "31-08-2020",
+    "Narration": "INF/NEFT/022682394751/HDFC0004183/gakY9lU3yY by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 387693.67
+  },
+  {
+    "transactionId": "S45398506",
+    "Date": "31-08-2020",
+    "Narration": "INF/NEFT/022682394881/HDFC0004183/yHzwHxBID5 by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 373693.67
+  },
+  {
+    "transactionId": "S45399028",
+    "Date": "31-08-2020",
+    "Narration": "INF/NEFT/022682394801/HDFC0004183/ZZ3OS3phNj by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 348893.67
+  },
+  {
+    "transactionId": "S45400335",
+    "Date": "31-08-2020",
+    "Narration": "INF/INFT/022682395031/SRyfWicJS8 by S/PALLAVI HEGD",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 336893.67
+  },
+  {
+    "transactionId": "S48931745",
+    "Date": "01-09-2020",
+    "Narration": "INF/NEFT/022682965111/KKBK0000430/XjAQbTJ1ZQ by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 297893.67
+  },
+  {
+    "transactionId": "S48931782",
+    "Date": "01-09-2020",
+    "Narration": "INF/NEFT/022682965171/SBIN0003966/3r0fPIqbb9 by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13875,
+    "balance": 284018.67
+  },
+  {
+    "transactionId": "S48931408",
+    "Date": "01-09-2020",
+    "Narration": "INF/NEFT/022682965301/HDFC0003782/WDFJuAkg2h by S/Ramanand Praja",
+    "transactionType": "DR",
+    "transactionAmount": 7741.94,
+    "balance": 276276.73
+  },
+  {
+    "transactionId": "S48931853",
+    "Date": "01-09-2020",
+    "Narration": "INF/NEFT/022682965261/HDFC0000509/1kOoTkjy25 by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 231643.4
+  },
+  {
+    "transactionId": "S48931927",
+    "Date": "01-09-2020",
+    "Narration": "INF/NEFT/022682965401/HDFC0001300/hqHVQsuRN0 by S/Ranjith N",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 221643.4
+  },
+  {
+    "transactionId": "S48931493",
+    "Date": "01-09-2020",
+    "Narration": "INF/NEFT/022682965541/KARB0000724/VihxrwfgOu by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 211643.4
+  },
+  {
+    "transactionId": "S48931962",
+    "Date": "01-09-2020",
+    "Narration": "INF/NEFT/022682965471/CNRB0000406/C1iJRy8yWm by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 201643.4
+  },
+  {
+    "transactionId": "S48932057",
+    "Date": "01-09-2020",
+    "Narration": "INF/NEFT/022682965591/CNRB0001381/lvjMbA8Eah by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 187643.4
+  },
+  {
+    "transactionId": "S74047742",
+    "Date": "02-09-2020",
+    "Narration": "INF/NEFT/022689422761/HDFC0009068/TX9W7xwAhR by S/Rahul Thyagara",
+    "transactionType": "DR",
+    "transactionAmount": 29200,
+    "balance": 158443.4
+  },
+  {
+    "transactionId": "S74924976",
+    "Date": "02-09-2020",
+    "Narration": "BIL/ONL/002065135678/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 4122.71,
+    "balance": 154320.69
+  },
+  {
+    "transactionId": "S75851039",
+    "Date": "02-09-2020",
+    "Narration": "INF/NEFT/022689896401/BOFA0MM6205/CustomDuty /FedEx",
+    "transactionType": "DR",
+    "transactionAmount": 11070,
+    "balance": 143250.69
+  },
+  {
+    "transactionId": "S81363770",
+    "Date": "02-09-2020",
+    "Narration": "VPS/MSW NAMDHAR/202009022109/024615904254/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 40,
+    "balance": 143210.69
+  },
+  {
+    "transactionId": "S92479321",
+    "Date": "03-09-2020",
+    "Narration": "BIL/ONL/002065975448/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 3065.55,
+    "balance": 140145.14
+  },
+  {
+    "transactionId": "S93080996",
+    "Date": "03-09-2020",
+    "Narration": "BIL/ONL/002066003828/ATOM TECH /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 2789,
+    "balance": 137356.14
+  },
+  {
+    "transactionId": "S93114570",
+    "Date": "03-09-2020",
+    "Narration": "BIL/ONL/002066005241/ATOM TECH /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 2170,
+    "balance": 135186.14
+  },
+  {
+    "transactionId": "S94817460",
+    "Date": "03-09-2020",
+    "Narration": "BIL/ONL/002066089490/EMVANTAGE PAYMENTS",
+    "transactionType": "DR",
+    "transactionAmount": 299,
+    "balance": 134887.14
+  },
+  {
+    "transactionId": "S11378358",
+    "Date": "04-09-2020",
+    "Narration": "BIL/ONL/002066875109/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 10444.59,
+    "balance": 124442.55
+  },
+  {
+    "transactionId": "S14739726",
+    "Date": "04-09-2020",
+    "Narration": "GIB/000051659063/STAX /63900040409202000015",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 123242.55
+  },
+  {
+    "transactionId": "S21493779",
+    "Date": "04-09-2020",
+    "Narration": "BIL/ONL/002067335781/PAYU INDIA /Job Hiring ICICI BANK NODA",
+    "transactionType": "DR",
+    "transactionAmount": 2242,
+    "balance": 121000.55
+  },
+  {
+    "transactionId": "S27103595",
+    "Date": "04-09-2020",
+    "Narration": "VPS/NAMDHARI AG/202009042118/024815049152/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 24,
+    "balance": 120976.55
+  },
+  {
+    "transactionId": "S94073977",
+    "Date": "08-09-2020",
+    "Narration": "VPS/AVENUE SUPE/202009082007/025214313442/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3269,
+    "balance": 117707.55
+  },
+  {
+    "transactionId": "S21340440",
+    "Date": "10-09-2020",
+    "Narration": "BIL/ONL/002072046463/BILL DESK /CustomDuty",
+    "transactionType": "DR",
+    "transactionAmount": 2946.6,
+    "balance": 114760.95
+  },
+  {
+    "transactionId": "S41434443",
+    "Date": "11-09-2020",
+    "Narration": "BIL/ONL/002072830780/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 5637.98,
+    "balance": 109122.97
+  },
+  {
+    "transactionId": "S59206338",
+    "Date": "12-09-2020",
+    "Narration": "BIL/ONL/002073521088/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 2979.24,
+    "balance": 106143.73
+  },
+  {
+    "transactionId": "S5044608",
+    "Date": "14-09-2020",
+    "Narration": "VPS/MSW NAMDHAR/202009150213/025820381880/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 40,
+    "balance": 106103.73
+  },
+  {
+    "transactionId": "S7968870",
+    "Date": "15-09-2020",
+    "Narration": "BIL/ONL/002075438270/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 3412.97,
+    "balance": 102690.76
+  },
+  {
+    "transactionId": "S15651088",
+    "Date": "15-09-2020",
+    "Narration": "BIL/ONL/002075723281/RAZORPAY",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 101690.76
+  },
+  {
+    "transactionId": "S60365537",
+    "Date": "18-09-2020",
+    "Narration": "VPS/NAMDHARI AG/202009181119/026205050544/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 24.6,
+    "balance": 101666.16
+  },
+  {
+    "transactionId": "S65709502",
+    "Date": "18-09-2020",
+    "Narration": "INF/NEFT/022774447391/DLXB0000189/Vehicle Service/TOYOTASERVICE",
+    "transactionType": "DR",
+    "transactionAmount": 35664,
+    "balance": 66002.16
+  },
+  {
+    "transactionId": "S68588520",
+    "Date": "18-09-2020",
+    "Narration": "VPS/MSW NAMDHAR/202009190005/026218845363/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 130,
+    "balance": 65872.16
+  },
+  {
+    "transactionId": "S3737753",
+    "Date": "21-09-2020",
+    "Narration": "Int on FD/RD XXX0898 Tds:0.Int:1127 and TAX:0.",
+    "transactionType": "CR",
+    "transactionAmount": 1127,
+    "balance": 66999.16
+  },
+  {
+    "transactionId": "S3861458",
+    "Date": "21-09-2020",
+    "Narration": "625410020898 FD clos 21-09-2020 ADDIT LABS",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 266999.16
+  },
+  {
+    "transactionId": "S17528063",
+    "Date": "21-09-2020",
+    "Narration": "VPS/RAMKRISHNA /202009211853/026513041554/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3891,
+    "balance": 263108.16
+  },
+  {
+    "transactionId": "S65320056",
+    "Date": "24-09-2020",
+    "Narration": "NEFT-N268201253848423-ADDIT LABS-TOICICI-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 763108.16
+  },
+  {
+    "transactionId": "S67442480",
+    "Date": "24-09-2020",
+    "Narration": "IPS/D MART /202009241800/000000033691/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3647.74,
+    "balance": 759460.42
+  },
+  {
+    "transactionId": "S67537864",
+    "Date": "24-09-2020",
+    "Narration": "IPS/D MART /202009241805/000000033692/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1153,
+    "balance": 758307.42
+  },
+  {
+    "transactionId": "S74037615",
+    "Date": "25-09-2020",
+    "Narration": "BIL/ONL/002082097677/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 846.9,
+    "balance": 757460.52
+  },
+  {
+    "transactionId": "S83123221",
+    "Date": "25-09-2020",
+    "Narration": "INF/INFT/022807413691/LaptopMac /MarutiComp",
+    "transactionType": "DR",
+    "transactionAmount": 29000,
+    "balance": 728460.52
+  },
+  {
+    "transactionId": "S94146155",
+    "Date": "26-09-2020",
+    "Narration": "ATM/SFCNM562/CASH WDL/26-09-20",
+    "transactionType": "DR",
+    "transactionAmount": 4500,
+    "balance": 723960.52
+  },
+  {
+    "transactionId": "S94164246",
+    "Date": "26-09-2020",
+    "Narration": "ATM/SFCNM562/CASH WDL/26-09-20",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 708960.52
+  },
+  {
+    "transactionId": "S97158125",
+    "Date": "26-09-2020",
+    "Narration": "VPS/RELIANCE DI/202009261505/027009032570/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 10999,
+    "balance": 697961.52
+  },
+  {
+    "transactionId": "S97690003",
+    "Date": "26-09-2020",
+    "Narration": "VPS/NAMDHARI AG/202009261543/027010019867/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 129.12,
+    "balance": 697832.4
+  },
+  {
+    "transactionId": "S6703498",
+    "Date": "27-09-2020",
+    "Narration": "BIL/ONL/002083452661/EMVANTAGE PAYMENTS/Testing",
+    "transactionType": "DR",
+    "transactionAmount": 179,
+    "balance": 697653.4
+  },
+  {
+    "transactionId": "S6806135",
+    "Date": "27-09-2020",
+    "Narration": "BIL/ONL/002083456161/EMVANTAGE PAYMENTS/Laptop",
+    "transactionType": "DR",
+    "transactionAmount": 729,
+    "balance": 696924.4
+  },
+  {
+    "transactionId": "S6849389",
+    "Date": "27-09-2020",
+    "Narration": "BIL/ONL/002083457594/EMVANTAGE PAYMENTS/Testing",
+    "transactionType": "DR",
+    "transactionAmount": 699,
+    "balance": 696225.4
+  },
+  {
+    "transactionId": "S50539467",
+    "Date": "29-09-2020",
+    "Narration": "VPS/NAMDHARI AG/202009291824/027312078337/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1234,
+    "balance": 694991.4
+  },
+  {
+    "transactionId": "S64598824",
+    "Date": "30-09-2020",
+    "Narration": "BIL/ONL/002085859013/EMVANTAGE PAYMENTS/Laptop Mouse",
+    "transactionType": "DR",
+    "transactionAmount": 799,
+    "balance": 694192.4
+  },
+  {
+    "transactionId": "S65113262",
+    "Date": "30-09-2020",
+    "Narration": "INF/INFT/022828116621/MacBook /SRINIVASLAPT",
+    "transactionType": "DR",
+    "transactionAmount": 13000,
+    "balance": 681192.4
+  },
+  {
+    "transactionId": "S70482803",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830891581/IOBA0000310/ihts7SYmj8 by S/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 800,
+    "balance": 680392.4
+  },
+  {
+    "transactionId": "S70483774",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830891751/HDFC0004274/pxTcEIBWj1 by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 45650,
+    "balance": 634742.4
+  },
+  {
+    "transactionId": "S70484100",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830892011/HDFC0000041/1HQtUq2lt0 by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 74200,
+    "balance": 560542.4
+  },
+  {
+    "transactionId": "S70484658",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830892061/HDFC0004183/w0oY7tqPsU by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 540742.4
+  },
+  {
+    "transactionId": "S70484480",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830892151/HDFC0004183/eVktyGZ7E3 by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 526742.4
+  },
+  {
+    "transactionId": "S70484956",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830892181/HDFC0004183/AgfxdpaL5A by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 501942.4
+  },
+  {
+    "transactionId": "S70485869",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830892611/HDFC0000509/RpcQQrXtnd by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 457309.07
+  },
+  {
+    "transactionId": "S70486347",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830892741/CNRB0001381/WxXiHehku4 by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 443309.07
+  },
+  {
+    "transactionId": "S70508760",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830907361/KARB0000724/yFmIglmBlS by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 433309.07
+  },
+  {
+    "transactionId": "S70509144",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830907341/CNRB0000406/HRTHHkuGPU by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 423309.07
+  },
+  {
+    "transactionId": "S70508761",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830907251/HDFC0001300/6dme8GEBoL by S/Ranjith N",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 413309.07
+  },
+  {
+    "transactionId": "S70508763",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830907241/HDFC0003782/0FvZQuvq2s by S/Ramanand Praja",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 393509.07
+  },
+  {
+    "transactionId": "S70508765",
+    "Date": "30-09-2020",
+    "Narration": "INF/INFT/022830907371/QdPjmAScmp by S/PALLAVI HEGD",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 381509.07
+  },
+  {
+    "transactionId": "S70509151",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022830907351/SBIN0003966/cT2bxntsaj by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13875,
+    "balance": 367634.07
+  },
+  {
+    "transactionId": "S72225672",
+    "Date": "30-09-2020",
+    "Narration": "INF/NEFT/022831459051/KKBK0000430/Y4JyvKiYW4 by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 328634.07
+  },
+  {
+    "transactionId": "S85201598",
+    "Date": "01-10-2020",
+    "Narration": "BIL/ONL/002087084583/EMVANTAGE PAYMENTS/Laptop Connecto",
+    "transactionType": "DR",
+    "transactionAmount": 299,
+    "balance": 328335.07
+  },
+  {
+    "transactionId": "S79574337",
+    "Date": "06-10-2020",
+    "Narration": "VPS/MSW NAMDHAR/202010061412/028008058341/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 72,
+    "balance": 328263.07
+  },
+  {
+    "transactionId": "S3528552",
+    "Date": "07-10-2020",
+    "Narration": "VPS/NAMDHARI AG/202010071122/028105054971/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 154,
+    "balance": 328109.07
+  },
+  {
+    "transactionId": "S20729764",
+    "Date": "08-10-2020",
+    "Narration": "BIL/ONL/002093432304/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 812.15,
+    "balance": 327296.92
+  },
+  {
+    "transactionId": "S30278660",
+    "Date": "08-10-2020",
+    "Narration": "INF/NEFT/022876045871/HDFC0009068/xjQVcSt8sn by S/Rahul Thyagara",
+    "transactionType": "DR",
+    "transactionAmount": 26200,
+    "balance": 301096.92
+  },
+  {
+    "transactionId": "S31261206",
+    "Date": "08-10-2020",
+    "Narration": "BIL/ONL/002093892586/EMVANTAGE PAYMENTS",
+    "transactionType": "DR",
+    "transactionAmount": 475.02,
+    "balance": 300621.9
+  },
+  {
+    "transactionId": "S31537698",
+    "Date": "08-10-2020",
+    "Narration": "NFS/P1DCBU35/CASH WDL/08-10-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 290598.3
+  },
+  {
+    "transactionId": "S39095779",
+    "Date": "08-10-2020",
+    "Narration": "BIL/ONL/002094159396/RAZORPAY /Office supplies",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 289598.3
+  },
+  {
+    "transactionId": "S44984026",
+    "Date": "09-10-2020",
+    "Narration": "BIL/ONL/002094439988/PAYTM MOBILE SOLUTION/Teamlunch",
+    "transactionType": "DR",
+    "transactionAmount": 2171,
+    "balance": 287427.3
+  },
+  {
+    "transactionId": "S50817232",
+    "Date": "09-10-2020",
+    "Narration": "VPS/MAHAVIR DCO/202010091546/028310508311/BENGALURU",
+    "transactionType": "DR",
+    "transactionAmount": 1641,
+    "balance": 285786.3
+  },
+  {
+    "transactionId": "S62887791",
+    "Date": "10-10-2020",
+    "Narration": "ATM/SPCNC958/CASH WDL/10-10-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 265786.3
+  },
+  {
+    "transactionId": "S62917434",
+    "Date": "10-10-2020",
+    "Narration": "ATM/SPCNC958/CASH WDL/10-10-20",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 255786.3
+  },
+  {
+    "transactionId": "S69342849",
+    "Date": "10-10-2020",
+    "Narration": "VPS/AVENUE SUPE/202010102051/028415176173/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1786,
+    "balance": 254000.3
+  },
+  {
+    "transactionId": "S69407223",
+    "Date": "10-10-2020",
+    "Narration": "VPS/AVENUE SUPE/202010102054/028415185601/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3316,
+    "balance": 250684.3
+  },
+  {
+    "transactionId": "S95422799",
+    "Date": "12-10-2020",
+    "Narration": "BIL/ONL/002096462322/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 10981.74,
+    "balance": 239702.56
+  },
+  {
+    "transactionId": "S581737",
+    "Date": "12-10-2020",
+    "Narration": "GIB/000053271740/STAX /63900041210202000077",
+    "transactionType": "DR",
+    "transactionAmount": 1400,
+    "balance": 238302.56
+  },
+  {
+    "transactionId": "S53329276",
+    "Date": "15-10-2020",
+    "Narration": "INF/NEFT/022911414281/SBIN0003286/Audit /CGSCO",
+    "transactionType": "DR",
+    "transactionAmount": 30830,
+    "balance": 207472.56
+  },
+  {
+    "transactionId": "S54647633",
+    "Date": "15-10-2020",
+    "Narration": "NFS/S1ANBL82/CASH WDL/15-10-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 197448.96
+  },
+  {
+    "transactionId": "S54663848",
+    "Date": "15-10-2020",
+    "Narration": "NFS/S1ANBL82/CASH WDL/15-10-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 187425.36
+  },
+  {
+    "transactionId": "S73188481",
+    "Date": "16-10-2020",
+    "Narration": "NFS/S1ANBL82/CASH WDL/16-10-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 177401.76
+  },
+  {
+    "transactionId": "S73208345",
+    "Date": "16-10-2020",
+    "Narration": "NFS/S1ANBL82/CASH WDL/16-10-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 167378.16
+  },
+  {
+    "transactionId": "S83249220",
+    "Date": "16-10-2020",
+    "Narration": "BIL/ONL/002099936425/EMVANTAGE PAYMENTS/OfficeStationar",
+    "transactionType": "DR",
+    "transactionAmount": 529,
+    "balance": 166849.16
+  },
+  {
+    "transactionId": "S57219943",
+    "Date": "27-10-2020",
+    "Narration": "BIL/ONL/002106607696/RAZORPAY /Office supplies",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 165849.16
+  },
+  {
+    "transactionId": "S96270083",
+    "Date": "29-10-2020",
+    "Narration": "NFS/S1ANBL82/CASH WDL/29-10-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 155825.56
+  },
+  {
+    "transactionId": "S96296581",
+    "Date": "29-10-2020",
+    "Narration": "NFS/S1ANBL82/CASH WDL/29-10-20/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 145801.96
+  },
+  {
+    "transactionId": "S23141241",
+    "Date": "30-10-2020",
+    "Narration": "INF/NEFT/022987207951/HDFC0004183/hVmrsWKVM7 by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 126001.96
+  },
+  {
+    "transactionId": "S23141846",
+    "Date": "30-10-2020",
+    "Narration": "INF/NEFT/022987208061/HDFC0004183/G8fFwoHWY5 by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 112001.96
+  },
+  {
+    "transactionId": "S23142514",
+    "Date": "30-10-2020",
+    "Narration": "INF/NEFT/022987208181/HDFC0004183/4bJiJpFjyT by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 87201.96
+  },
+  {
+    "transactionId": "S23142301",
+    "Date": "30-10-2020",
+    "Narration": "INF/NEFT/022987208371/CNRB0001381/fZVnYr2tNa by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 73201.96
+  },
+  {
+    "transactionId": "S23142818",
+    "Date": "30-10-2020",
+    "Narration": "INF/NEFT/022987208241/CNRB0000406/k6NabQklJt by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 63201.96
+  },
+  {
+    "transactionId": "S23143171",
+    "Date": "30-10-2020",
+    "Narration": "INF/INFT/022987208511/wnWcMKuBPf by S/PALLAVI HEGD",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 51201.96
+  },
+  {
+    "transactionId": "S23234593",
+    "Date": "30-10-2020",
+    "Narration": "NEFT-N304201290600729-ADDIT LABS-SALARY FUNDS-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 199999,
+    "balance": 251200.96
+  },
+  {
+    "transactionId": "S23260065",
+    "Date": "30-10-2020",
+    "Narration": "NEFT-N304201290595040-ADDIT LABS-SALARY FUNDS-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 200000,
+    "balance": 451200.96
+  },
+  {
+    "transactionId": "S23741591",
+    "Date": "30-10-2020",
+    "Narration": "IPS/MOHANS SPIR/202010301730/000000004891/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 760,
+    "balance": 450440.96
+  },
+  {
+    "transactionId": "S31670493",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989098401/IOBA0000310/vYXOq7iKtr by S/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 442440.96
+  },
+  {
+    "transactionId": "S31670697",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989098261/KARB0000724/XoLX0cc7d3 by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 432440.96
+  },
+  {
+    "transactionId": "S31671057",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989098541/HDFC0001300/vR5BCJcodI by S/Ranjith N",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 422440.96
+  },
+  {
+    "transactionId": "S31670873",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989098551/BARB0VJRABA/0VhLPDqVtm by S/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 6451.61,
+    "balance": 415989.35
+  },
+  {
+    "transactionId": "S31702896",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989121571/HDFC0004274/epXnSu9jvj by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 45650,
+    "balance": 370339.35
+  },
+  {
+    "transactionId": "S31702946",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989121611/SBIN0003966/ju0NjgH5rh by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13875,
+    "balance": 356464.35
+  },
+  {
+    "transactionId": "S31702983",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989121671/KKBK0000430/s8RG5NN8y7 by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 317464.35
+  },
+  {
+    "transactionId": "S31703559",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989121761/HDFC0000041/Rlu8EeKjTb by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 74200,
+    "balance": 243264.35
+  },
+  {
+    "transactionId": "S31703470",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989121901/HDFC0003782/qid15osMvz by S/Ramanand Praja",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 223464.35
+  },
+  {
+    "transactionId": "S31703849",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022989122161/HDFC0000509/i9VepS4krw by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 178831.02
+  },
+  {
+    "transactionId": "S50003422",
+    "Date": "31-10-2020",
+    "Narration": "INF/NEFT/022994788901/SIBL0000402/DeveloperPaymen/KRISHNADAS",
+    "transactionType": "DR",
+    "transactionAmount": 30000,
+    "balance": 148831.02
+  },
+  {
+    "transactionId": "S8712191",
+    "Date": "03-11-2020",
+    "Narration": "VPS/DMART GARUD/202011031737/030812012665/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 2488.3,
+    "balance": 146342.72
+  },
+  {
+    "transactionId": "S62997447",
+    "Date": "06-11-2020",
+    "Narration": "VPS/NAMDHARI AG/202011061014/031104032323/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 55,
+    "balance": 146287.72
+  },
+  {
+    "transactionId": "S63831850",
+    "Date": "06-11-2020",
+    "Narration": "CAM/00532SRY/CASH WDL/06-11-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 126287.72
+  },
+  {
+    "transactionId": "S63863489",
+    "Date": "06-11-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/06-11-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 106287.72
+  },
+  {
+    "transactionId": "S63930912",
+    "Date": "06-11-2020",
+    "Narration": "ATM/S1CNC179/CASH WDL/06-11-20",
+    "transactionType": "DR",
+    "transactionAmount": 18500,
+    "balance": 87787.72
+  },
+  {
+    "transactionId": "S35155874",
+    "Date": "09-11-2020",
+    "Narration": "VPS/DHL EXPRESS/202011091614/031410714708/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4944,
+    "balance": 82843.72
+  },
+  {
+    "transactionId": "S38056591",
+    "Date": "09-11-2020",
+    "Narration": "INF/NEFT/023047746231/DEUT0784BBY/PurchaseShipmen/DHLExpress",
+    "transactionType": "DR",
+    "transactionAmount": 4999.39,
+    "balance": 77844.33
+  },
+  {
+    "transactionId": "S48406007",
+    "Date": "10-11-2020",
+    "Narration": "ATM/SPCNC958/CASH WDL/10-11-20",
+    "transactionType": "DR",
+    "transactionAmount": 7000,
+    "balance": 70844.33
+  },
+  {
+    "transactionId": "S48433280",
+    "Date": "10-11-2020",
+    "Narration": "ATM/SPCNC958/CASH WDL/10-11-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 50844.33
+  },
+  {
+    "transactionId": "S99642809",
+    "Date": "12-11-2020",
+    "Narration": "GIB/000054516645/STAX /63900041211202000061",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 49644.33
+  },
+  {
+    "transactionId": "S7289426",
+    "Date": "12-11-2020",
+    "Narration": "VPS/THE NURSERY/202011121610/031710075918/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 5000,
+    "balance": 44644.33
+  },
+  {
+    "transactionId": "S7505437",
+    "Date": "12-11-2020",
+    "Narration": "VPS/THE NURSERY/202011121618/031710091771/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 330,
+    "balance": 44314.33
+  },
+  {
+    "transactionId": "S11019987",
+    "Date": "12-11-2020",
+    "Narration": "BIL/ONL/002121028501/PAYU INDIA ICICI BANK NODA",
+    "transactionType": "DR",
+    "transactionAmount": 742,
+    "balance": 43572.33
+  },
+  {
+    "transactionId": "S25569667",
+    "Date": "13-11-2020",
+    "Narration": "VPS/MSW NAMDHAR/202011131802/031812549970/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 297,
+    "balance": 43275.33
+  },
+  {
+    "transactionId": "S33558214",
+    "Date": "13-11-2020",
+    "Narration": "BIL/ONL/002121749522/RAZORPAY",
+    "transactionType": "DR",
+    "transactionAmount": 952,
+    "balance": 42323.33
+  },
+  {
+    "transactionId": "S80193982",
+    "Date": "16-11-2020",
+    "Narration": "MMT/IMPS/032112086829/OfficeInteriorP/PANDU /SBIN0016225",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 27323.33
+  },
+  {
+    "transactionId": "S84372702",
+    "Date": "16-11-2020",
+    "Narration": "VPS/MSW NAMDHAR/202011162114/032115073565/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 233.1,
+    "balance": 27090.23
+  },
+  {
+    "transactionId": "S1509852",
+    "Date": "17-11-2020",
+    "Narration": "BIL/ONL/002123929058/BILL DESK /CustomsDuty",
+    "transactionType": "DR",
+    "transactionAmount": 6306.4,
+    "balance": 20783.83
+  },
+  {
+    "transactionId": "S3186208",
+    "Date": "17-11-2020",
+    "Narration": "INF/INFT/023093347941/CofeRouter /Kwality",
+    "transactionType": "DR",
+    "transactionAmount": 2242,
+    "balance": 18541.83
+  },
+  {
+    "transactionId": "S36470996",
+    "Date": "19-11-2020",
+    "Narration": "VPS/DHL EXPRESS/202011191045/032405549432/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 2584,
+    "balance": 15957.83
+  },
+  {
+    "transactionId": "S37006594",
+    "Date": "19-11-2020",
+    "Narration": "INF/NEFT/023101590931/SBIN0016225/OfficePartition/PANDU",
+    "transactionType": "DR",
+    "transactionAmount": 7000,
+    "balance": 8957.83
+  },
+  {
+    "transactionId": "S52638680",
+    "Date": "20-11-2020",
+    "Narration": "BIL/ONL/002125649193/RAZORPAY",
+    "transactionType": "DR",
+    "transactionAmount": 1000,
+    "balance": 7957.83
+  },
+  {
+    "transactionId": "S56500100",
+    "Date": "20-11-2020",
+    "Narration": "VPS/MSW NAMDHAR/202011201633/032511536952/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 38,
+    "balance": 7919.83
+  },
+  {
+    "transactionId": "S26568877",
+    "Date": "24-11-2020",
+    "Narration": "VPS/NAMDHARI AG/202011241115/032905045838/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 38,
+    "balance": 7881.83
+  },
+  {
+    "transactionId": "S46531208",
+    "Date": "25-11-2020",
+    "Narration": "IPS/OM TECHNOLO/202011251206/000000004024/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 763,
+    "balance": 7118.83
+  },
+  {
+    "transactionId": "S53625130",
+    "Date": "25-11-2020",
+    "Narration": "VPS/DMART GARUD/202011251724/033011077166/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 3286.18,
+    "balance": 3832.65
+  },
+  {
+    "transactionId": "S47378643",
+    "Date": "30-11-2020",
+    "Narration": "NEFT-N335201323452133-ADDIT LABS-FOR SALARY-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 500000,
+    "balance": 503832.65
+  },
+  {
+    "transactionId": "S48227182",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155829501/HDFC0004274/iz6I8RIkKM by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 45650,
+    "balance": 458182.65
+  },
+  {
+    "transactionId": "S48227804",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155829611/HDFC0000041/nvkfjBwmlY by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 74200,
+    "balance": 383982.65
+  },
+  {
+    "transactionId": "S48228428",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155829661/HDFC0004183/U8Hcp7Nfwu by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 364182.65
+  },
+  {
+    "transactionId": "S48228794",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155830081/HDFC0004183/HUGKB40Nfp by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 350182.65
+  },
+  {
+    "transactionId": "S48229468",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155829991/HDFC0004183/PHMVQQHU2J by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 325382.65
+  },
+  {
+    "transactionId": "S48230116",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155830281/KKBK0000430/sVjabzrlCe by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 286382.65
+  },
+  {
+    "transactionId": "S48230408",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155830421/HDFC0000509/1EK93XsKPU by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 241749.32
+  },
+  {
+    "transactionId": "S48230409",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155830201/CNRB0001381/92qbEyvkKk by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 227749.32
+  },
+  {
+    "transactionId": "S48231674",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155830611/CNRB0000406/24M37iEXIf by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 217749.32
+  },
+  {
+    "transactionId": "S48231308",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155830691/KARB0000724/rz4bGHrc8p by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 207749.32
+  },
+  {
+    "transactionId": "S48231833",
+    "Date": "30-11-2020",
+    "Narration": "INF/INFT/023155830661/MqX571V0en by S/PALLAVI HEGD",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 195749.32
+  },
+  {
+    "transactionId": "S48232536",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155830931/HDFC0001300/MG4jlBdZLA by S/Ranjith N",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 185749.32
+  },
+  {
+    "transactionId": "S48232233",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155831041/HDFC0003782/8dEmKvAHik by S/Ramanand Praja",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 165949.32
+  },
+  {
+    "transactionId": "S48232476",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155830791/IOBA0000310/SlLHvRwqBC by S/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 157949.32
+  },
+  {
+    "transactionId": "S48233178",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155830821/BARB0VJRABA/Nsk0vI48Ct by S/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 149949.32
+  },
+  {
+    "transactionId": "S48233675",
+    "Date": "30-11-2020",
+    "Narration": "INF/NEFT/023155831311/SBIN0003966/FJYloD4dad by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13875,
+    "balance": 136074.32
+  },
+  {
+    "transactionId": "S8477822",
+    "Date": "03-12-2020",
+    "Narration": "VPS/MSW NAMDHAR/202012031619/033810287087/Bangalore",
+    "transactionType": "DR",
+    "transactionAmount": 36,
+    "balance": 136038.32
+  },
+  {
+    "transactionId": "S28190758",
+    "Date": "04-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012040917/033903192536/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 95,
+    "balance": 135943.32
+  },
+  {
+    "transactionId": "S32896766",
+    "Date": "04-12-2020",
+    "Narration": "BIL/ONL/002136726328/PAYTM MOBILE SOLUTION",
+    "transactionType": "DR",
+    "transactionAmount": 1057,
+    "balance": 134886.32
+  },
+  {
+    "transactionId": "C36579569",
+    "Date": "05-12-2020",
+    "Narration": "VPS/BUFFALO WIL/202012050030/033919000015/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 5217,
+    "balance": 129669.32
+  },
+  {
+    "transactionId": "S98915571",
+    "Date": "07-12-2020",
+    "Narration": "GIB/000055422647/STAX /63900040712202000215",
+    "transactionType": "DR",
+    "transactionAmount": 1200,
+    "balance": 128469.32
+  },
+  {
+    "transactionId": "S16694148",
+    "Date": "08-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012081112/034305484354/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 38,
+    "balance": 128431.32
+  },
+  {
+    "transactionId": "S21454604",
+    "Date": "08-12-2020",
+    "Narration": "ATM/S1CNC179/CASH WDL/08-12-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 108431.32
+  },
+  {
+    "transactionId": "S21489962",
+    "Date": "08-12-2020",
+    "Narration": "ATM/S1CNC179/CASH WDL/08-12-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 88431.32
+  },
+  {
+    "transactionId": "S37148997",
+    "Date": "09-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012091104/034405129735/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 38,
+    "balance": 88393.32
+  },
+  {
+    "transactionId": "S57965432",
+    "Date": "10-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012100938/034504827991/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 38,
+    "balance": 88355.32
+  },
+  {
+    "transactionId": "S58284828",
+    "Date": "10-12-2020",
+    "Narration": "BIL/ONL/002141754699/BILL DESK /CustomDuty",
+    "transactionType": "DR",
+    "transactionAmount": 3623.01,
+    "balance": 84732.31
+  },
+  {
+    "transactionId": "S58373194",
+    "Date": "10-12-2020",
+    "Narration": "BIL/ONL/002141758525/BILL DESK /CustomDuty",
+    "transactionType": "DR",
+    "transactionAmount": 3623.01,
+    "balance": 81109.3
+  },
+  {
+    "transactionId": "S65573466",
+    "Date": "10-12-2020",
+    "Narration": "VPS/DMART GARUD/202012101441/034509015830/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1897.5,
+    "balance": 79211.8
+  },
+  {
+    "transactionId": "S81111116",
+    "Date": "11-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012111032/034605583250/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 50,
+    "balance": 79161.8
+  },
+  {
+    "transactionId": "S36457231",
+    "Date": "14-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012140903/034903104238/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 38,
+    "balance": 79123.8
+  },
+  {
+    "transactionId": "S59746589",
+    "Date": "15-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012151001/035004829471/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 338,
+    "balance": 78785.8
+  },
+  {
+    "transactionId": "S86621275",
+    "Date": "21-12-2020",
+    "Narration": "VPS/DMART GARUD/202012211550/035610027584/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 1907,
+    "balance": 76878.8
+  },
+  {
+    "transactionId": "S47272222",
+    "Date": "24-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012241619/035910210009/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 232.5,
+    "balance": 76646.3
+  },
+  {
+    "transactionId": "S48997070",
+    "Date": "24-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012241732/035912291263/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 309,
+    "balance": 76337.3
+  },
+  {
+    "transactionId": "S11978610",
+    "Date": "28-12-2020",
+    "Narration": "Mob alrt Chg Nov-20+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 76307.8
+  },
+  {
+    "transactionId": "S16808446",
+    "Date": "28-12-2020",
+    "Narration": "VPS/DHL EXPRESS/202012281506/036309661809/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 4954,
+    "balance": 71353.8
+  },
+  {
+    "transactionId": "S17113002",
+    "Date": "28-12-2020",
+    "Narration": "CAM/00531ARY/CASH WDL/28-12-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 51353.8
+  },
+  {
+    "transactionId": "S17152043",
+    "Date": "28-12-2020",
+    "Narration": "ATM/S1CNC061/CASH WDL/28-12-20",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 31353.8
+  },
+  {
+    "transactionId": "S21438585",
+    "Date": "28-12-2020",
+    "Narration": "BIL/ONL/000006543615/RAZORPAY",
+    "transactionType": "DR",
+    "transactionAmount": 282,
+    "balance": 31071.8
+  },
+  {
+    "transactionId": "S30279666",
+    "Date": "29-12-2020",
+    "Narration": "BIL/ONL/000006872395/RAZORPAY",
+    "transactionType": "DR",
+    "transactionAmount": 500,
+    "balance": 30571.8
+  },
+  {
+    "transactionId": "S30447743",
+    "Date": "29-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012291002/036404162962/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 37,
+    "balance": 30534.8
+  },
+  {
+    "transactionId": "S44670752",
+    "Date": "29-12-2020",
+    "Narration": "VPS/SIMPLI NAMD/202012291954/036414705200/BANGALORE",
+    "transactionType": "DR",
+    "transactionAmount": 215,
+    "balance": 30319.8
+  },
+  {
+    "transactionId": "S76300877",
+    "Date": "31-12-2020",
+    "Narration": "NEFT-N366201356536865-ADDIT LABS-FOR DEC20 SAL-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 400000,
+    "balance": 430319.8
+  },
+  {
+    "transactionId": "S83352562",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332835201/HDFC0004274/hn9u3NYkgN by S/Nandan B",
+    "transactionType": "DR",
+    "transactionAmount": 45650,
+    "balance": 384669.8
+  },
+  {
+    "transactionId": "S83354081",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332835861/HDFC0000041/ZMZSlX8bcr by S/Nagendra B R",
+    "transactionType": "DR",
+    "transactionAmount": 74200,
+    "balance": 310469.8
+  },
+  {
+    "transactionId": "S83354298",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332836151/HDFC0004183/R4XAQ7fxZP by S/Toufeeq Khan",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 290669.8
+  },
+  {
+    "transactionId": "S83355072",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332836211/HDFC0004183/jO2uqm8EYM by S/Delish Mathew",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 276669.8
+  },
+  {
+    "transactionId": "S83355721",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332836741/HDFC0004183/rcBZY9nRQH by S/Mahesha P",
+    "transactionType": "DR",
+    "transactionAmount": 24800,
+    "balance": 251869.8
+  },
+  {
+    "transactionId": "S83356212",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332836661/KKBK0000430/iACf3lXYvs by S/Naveen P",
+    "transactionType": "DR",
+    "transactionAmount": 39000,
+    "balance": 212869.8
+  },
+  {
+    "transactionId": "S83356731",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332837001/HDFC0000509/NUNi4SoC5a by S/Md Basha",
+    "transactionType": "DR",
+    "transactionAmount": 44633.33,
+    "balance": 168236.47
+  },
+  {
+    "transactionId": "S83358140",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332837551/CNRB0001381/ACnovTLnHB by S/Vaishak P",
+    "transactionType": "DR",
+    "transactionAmount": 14000,
+    "balance": 154236.47
+  },
+  {
+    "transactionId": "S83357867",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332837611/CNRB0000406/URFWeboANb by S/Pradeep H M",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 144236.47
+  },
+  {
+    "transactionId": "S83358649",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332837941/KARB0000724/Gdp9jwTI5t by S/Thanuja BS",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 134236.47
+  },
+  {
+    "transactionId": "S83360181",
+    "Date": "31-12-2020",
+    "Narration": "INF/INFT/023332838291/saQJEzYOj0 by S/PALLAVI HEGD",
+    "transactionType": "DR",
+    "transactionAmount": 12000,
+    "balance": 122236.47
+  },
+  {
+    "transactionId": "S83362177",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332838881/HDFC0001300/miXR7pnLpf by S/Ranjith N",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 112236.47
+  },
+  {
+    "transactionId": "S83361937",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332838911/IOBA0000310/wU6dPjNTKX by S/Lavanya K S",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 104236.47
+  },
+  {
+    "transactionId": "S83361940",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332838921/BARB0VJRABA/qvRqHcQhur by S/SHARATH S",
+    "transactionType": "DR",
+    "transactionAmount": 8000,
+    "balance": 96236.47
+  },
+  {
+    "transactionId": "S83361999",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332838951/HDFC0003782/Ej8Uod7boa by S/Ramanand Praja",
+    "transactionType": "DR",
+    "transactionAmount": 19800,
+    "balance": 76436.47
+  },
+  {
+    "transactionId": "S83364503",
+    "Date": "31-12-2020",
+    "Narration": "INF/NEFT/023332839581/SBIN0003966/F1IRkjmHNw by S/Raghu CS",
+    "transactionType": "DR",
+    "transactionAmount": 13875,
+    "balance": 62561.47
+  }
+]

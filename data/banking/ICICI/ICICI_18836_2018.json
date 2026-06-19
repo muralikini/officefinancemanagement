@@ -1,0 +1,330 @@
+[
+  {
+    "transactionId": "S39051090",
+    "Date": "06/07/2018",
+    "Narration": "CLG/HDFC/000018/HDF/02.07.2018",
+    "transactionType": "CR",
+    "transactionAmount": 25000,
+    "balance": 25000
+  },
+  {
+    "transactionId": "S21752318",
+    "Date": "18/07/2018",
+    "Narration": "MMT/IMPS/819914836764/For purchasing /HDFC0000367",
+    "transactionType": "DR",
+    "transactionAmount": 194,
+    "balance": 24806
+  },
+  {
+    "transactionId": "S57318118",
+    "Date": "20/08/2018",
+    "Narration": "Mob alrt Chg Jul-18+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 24776.5
+  },
+  {
+    "transactionId": "S65724656",
+    "Date": "21/08/2018",
+    "Narration": "Dbt card Chg Jul-18+GST",
+    "transactionType": "DR",
+    "transactionAmount": 885,
+    "balance": 23891.5
+  },
+  {
+    "transactionId": "S76918321",
+    "Date": "23/08/2018",
+    "Narration": "BIL/INFT/001519003383/Funds Transfer/ADDIT LABS/ICICI Bank",
+    "transactionType": "CR",
+    "transactionAmount": 3000,
+    "balance": 26891.5
+  },
+  {
+    "transactionId": "S45216316",
+    "Date": "01/09/2018",
+    "Narration": "ATM/CASH WDL/01-09-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 19000,
+    "balance": 7891.5
+  },
+  {
+    "transactionId": "S69114615",
+    "Date": "17/09/2018",
+    "Narration": "Mob alrt Chg Aug-18+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 7862
+  },
+  {
+    "transactionId": "S4521991",
+    "Date": "22/09/2018",
+    "Narration": "MMT/IMPS/826509124395/Operational Exp/ADDIT LABS/HDFC BANK LTD",
+    "transactionType": "CR",
+    "transactionAmount": 19000,
+    "balance": 26862
+  },
+  {
+    "transactionId": "S88885349",
+    "Date": "13/10/2018",
+    "Narration": "VPS/GURUBAL ENG/20181013105457/0",
+    "transactionType": "DR",
+    "transactionAmount": 767,
+    "balance": 26095
+  },
+  {
+    "transactionId": "S15536432",
+    "Date": "16/10/2018",
+    "Narration": "Mob alrt Chg Sep-18+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 26065.5
+  },
+  {
+    "transactionId": "S37085770",
+    "Date": "19/10/2018",
+    "Narration": "NMMAB Chg Sep-18+GST",
+    "transactionType": "DR",
+    "transactionAmount": 1180,
+    "balance": 24885.5
+  },
+  {
+    "transactionId": "S18173423",
+    "Date": "08/11/2018",
+    "Narration": "NFS/CASH WDL/08-11-18/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 14861.9
+  },
+  {
+    "transactionId": "S18180622",
+    "Date": "08/11/2018",
+    "Narration": "NFS/CASH WDL/08-11-18/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 4523.6,
+    "balance": 10338.3
+  },
+  {
+    "transactionId": "S20087530",
+    "Date": "08/11/2018",
+    "Narration": "NEFT-N312180675951027-ADDIT LABS-Money transfere-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 20000,
+    "balance": 30338.3
+  },
+  {
+    "transactionId": "S40112262",
+    "Date": "11/11/2018",
+    "Narration": "MMT/IMPS/831509188687/POP Advance/ADDIT LABS/HDFCBANK LTD",
+    "transactionType": "CR",
+    "transactionAmount": 45000,
+    "balance": 75338.3
+  },
+  {
+    "transactionId": "S40159977",
+    "Date": "11/11/2018",
+    "Narration": "MMT/IMPS/831510529428/POPAdvance/PUNB0477700",
+    "transactionType": "DR",
+    "transactionAmount": 25000,
+    "balance": 50338.3
+  },
+  {
+    "transactionId": "S51371003",
+    "Date": "12/11/2018",
+    "Narration": "ATM/CASH WDL/12-11-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 20000,
+    "balance": 30338.3
+  },
+  {
+    "transactionId": "S51383889",
+    "Date": "12/11/2018",
+    "Narration": "ATM/CASH WDL/12-11-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 20338.3
+  },
+  {
+    "transactionId": "S70320899",
+    "Date": "14/11/2018",
+    "Narration": "ATM/CASH WDL/14-11-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 11000,
+    "balance": 9338.3
+  },
+  {
+    "transactionId": "S71146049",
+    "Date": "14/11/2018",
+    "Narration": "MMT/IMPS/831819139937/Company Funds/ADDIT LABS/HDFC BANK LTD",
+    "transactionType": "CR",
+    "transactionAmount": 50000,
+    "balance": 59338.3
+  },
+  {
+    "transactionId": "S75140016",
+    "Date": "15/11/2018",
+    "Narration": "NFS/CASH WDL/15-11-18/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 6023.6,
+    "balance": 53314.7
+  },
+  {
+    "transactionId": "S80511539",
+    "Date": "15/11/2018",
+    "Narration": "ATM/CASH WDL/15-11-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 38314.7
+  },
+  {
+    "transactionId": "S85508419",
+    "Date": "16/11/2018",
+    "Narration": "Mob alrt Chg Oct-18+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 38285.2
+  },
+  {
+    "transactionId": "S85664190",
+    "Date": "16/11/2018",
+    "Narration": "VPS/CHUTNEY CHA/20181116140925/0",
+    "transactionType": "DR",
+    "transactionAmount": 6876,
+    "balance": 31409.2
+  },
+  {
+    "transactionId": "S90665878",
+    "Date": "17/11/2018",
+    "Narration": "MMT/IMPS/832106103054/Office Rennovat/ADDIT LABS/HDFC BANK LTD",
+    "transactionType": "CR",
+    "transactionAmount": 50000,
+    "balance": 81409.2
+  },
+  {
+    "transactionId": "S91592798",
+    "Date": "17/11/2018",
+    "Narration": "ATM/CASH WDL/17-11-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 10000,
+    "balance": 71409.2
+  },
+  {
+    "transactionId": "S99209328",
+    "Date": "18/11/2018",
+    "Narration": "ATM/CASH WDL/18-11-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 56409.2
+  },
+  {
+    "transactionId": "S10736144",
+    "Date": "19/11/2018",
+    "Narration": "VPS/FUTURA DIGI/20181119183042/0",
+    "transactionType": "DR",
+    "transactionAmount": 4144,
+    "balance": 52265.2
+  },
+  {
+    "transactionId": "S17376867",
+    "Date": "20/11/2018",
+    "Narration": "NFS/CASH WDL/20-11-18/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 42241.6
+  },
+  {
+    "transactionId": "S26529074",
+    "Date": "21/11/2018",
+    "Narration": "ATM/CASH WDL/21-11-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 27241.6
+  },
+  {
+    "transactionId": "S25812024",
+    "Date": "02/12/2018",
+    "Narration": "NFS/CASH WDL/02-12-18/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 8023.6,
+    "balance": 19218
+  },
+  {
+    "transactionId": "S62767576",
+    "Date": "05/12/2018",
+    "Narration": "ATM/CASH WDL/05-12-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 15000,
+    "balance": 4218
+  },
+  {
+    "transactionId": "S62840573",
+    "Date": "05/12/2018",
+    "Narration": "MMT/IMPS/833917142103/Money Transfere/ADDIT LABS/HDFC BANK LTD",
+    "transactionType": "CR",
+    "transactionAmount": 25000,
+    "balance": 29218
+  },
+  {
+    "transactionId": "S71619270",
+    "Date": "06/12/2018",
+    "Narration": "NFS/CASH WDL/06-12-18/Fee Rs20.00 GST Rs3.60",
+    "transactionType": "DR",
+    "transactionAmount": 10023.6,
+    "balance": 19194.4
+  },
+  {
+    "transactionId": "S41139882",
+    "Date": "13/12/2018",
+    "Narration": "Mob alrt Chg Nov-18+GST",
+    "transactionType": "DR",
+    "transactionAmount": 29.5,
+    "balance": 19164.9
+  },
+  {
+    "transactionId": "S42008617",
+    "Date": "13/12/2018",
+    "Narration": "VPS/MSW*ESVEE T/20181213204600/0",
+    "transactionType": "DR",
+    "transactionAmount": 2197,
+    "balance": 16967.9
+  },
+  {
+    "transactionId": "S42911482",
+    "Date": "13/12/2018",
+    "Narration": "VPS/NAMDHARI AG/20181213164337/0",
+    "transactionType": "DR",
+    "transactionAmount": 307,
+    "balance": 16660.9
+  },
+  {
+    "transactionId": "S48245742",
+    "Date": "14/12/2018",
+    "Narration": "NEFT-N348180702834424-ADDIT LABS-BusinessExpense-50200032062102-HDFC0000001",
+    "transactionType": "CR",
+    "transactionAmount": 25000,
+    "balance": 41660.9
+  },
+  {
+    "transactionId": "S90459217",
+    "Date": "18/12/2018",
+    "Narration": "VPS/FUTURA DIGI/20181218162020/0",
+    "transactionType": "DR",
+    "transactionAmount": 2778,
+    "balance": 38882.9
+  },
+  {
+    "transactionId": "S92461064",
+    "Date": "18/12/2018",
+    "Narration": "ATM/CASH WDL/18-12-18/0",
+    "transactionType": "DR",
+    "transactionAmount": 2500,
+    "balance": 36382.9
+  },
+  {
+    "transactionId": "S96236678",
+    "Date": "29/12/2018",
+    "Narration": "VPS/NAMDHARI AG/20181229144551/0",
+    "transactionType": "DR",
+    "transactionAmount": 143,
+    "balance": 36239.9
+  }
+]
