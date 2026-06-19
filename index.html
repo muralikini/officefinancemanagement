@@ -2184,11 +2184,16 @@ function categorizeExpense(narration) {
   if (!narration) return "Others";
   const n = narration.toLowerCase();
 
-  // === HIGH PRIORITY CATEGORIES ===
-
-  // Salary Payments
-  if (n.includes("salary") && (n.includes("payment") || n.includes("sal to") || n.includes("tpt-salary"))) {
+  // === Salary Payments (Expense) ===
+  if ((n.includes("salary") && (n.includes("tpt") || n.includes("payment") || n.includes("sal to") || n.includes("salary to"))) ||
+      n.includes("employee salary") || n.includes("sal to")) {
     return "Salary to Employees";
+  }
+
+  // === Income (Salary Credit / Client Payment) ===
+  if ((n.includes("salary") && !n.includes("tpt") && !n.includes("payment") && !n.includes("sal to")) ||
+      (n.includes("neft") && (n.includes("hdfc") || n.includes("addit labs") || n.includes("client")))) {
+    return "Client Payment (Income)";
   }
 
   // Rent
