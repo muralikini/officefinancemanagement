@@ -2038,15 +2038,10 @@ function loadCashflow() {
 function isInterbankTransferFromOtherBank(narration) {
   if (!narration) return false;
   const n = narration.toLowerCase();
-
-  return n.includes("icici") || 
-         n.includes("idfc") ||
-         n.includes("rtgs dr-icic") ||
-         n.includes("rtgs dr-idfb") ||
-         n.includes("icic0006254") ||
-         n.includes("idfb0080184") ||
-         n.includes("from icici") ||
-         n.includes("from idfc");
+  return n.includes("icici") || n.includes("idfc") ||
+         n.includes("rtgs dr-icic") || n.includes("rtgs dr-idfb") ||
+         n.includes("icic0006254") || n.includes("idfb0080184") ||
+         n.includes("from icici") || n.includes("from idfc");
 }
 
 function renderMonthlyCashflow(transactions) {
@@ -2111,14 +2106,9 @@ function renderMonthlyCashflow(transactions) {
 function isFDorRDInvestment(narration) {
   if (!narration) return false;
   const n = narration.toLowerCase();
-
-  return n.includes("-fd") || 
-         n.includes("fd ") ||
-         n.includes("fixed deposit") ||
-         n.includes("rd installment") ||
-         n.includes("recurring deposit") ||
-         n.includes("trf to fd") ||
-         n.includes("trf to rd");
+  return n.includes("-fd") || n.includes("fd ") || n.includes("fixed deposit") ||
+         n.includes("rd installment") || n.includes("recurring deposit") ||
+         n.includes("trf to fd") || n.includes("trf to rd");
 }
 
 
@@ -2278,47 +2268,45 @@ function loadExpenses() {
   const catFilter = document.getElementById('expenseCategory').value || "";
 
   let expenses = allTransactions.filter(t => {
-  if (t.bank !== "HDFC") return false;
+    if (t.bank !== "HDFC") return false;
 
-  const withdrawalAmount = Math.abs(t.withdrawal || 0);
-  if (withdrawalAmount <= 1) return false;
+    const withdrawalAmount = Math.abs(t.withdrawal || 0);
+    if (withdrawalAmount <= 1) return false;
 
-  const narration = (t.narration || "").toLowerCase();
+    const narration = (t.narration || "").toLowerCase();
 
-  // ✅ Exclude FD and RD investments from Expenses
-  if (isFDorRDInvestment(narration)) return false;
+    // ✅ Exclude FD and RD investments (same as Cashflow)
+    if (isFDorRDInvestment(narration)) return false;
 
-  const category = categorizeExpense(t.narration || "");
+    // ✅ Exclude interbank transfers if any (though rare in expenses)
+    if (isInterbankTransferFromOtherBank(narration)) return false;
 
-  if (category.includes("Income") || category.includes("Salary Credit")) return false;
+    const category = categorizeExpense(t.narration || "");
 
-  if (fy && getFinancialYear(t.date) !== fy) return false;
+    // Exclude income categories
+    if (category.includes("Income") || category.includes("Salary Credit") || 
+        category.includes("Client Payment")) return false;
 
-  if (monthFilter && t.date) {
-    const dateStr = String(t.date).trim();
-    if (!dateStr.includes(monthFilter) && !dateStr.includes(monthFilter.replace('-', '/'))) {
-      return false;
+    if (fy && getFinancialYear(t.date) !== fy) return false;
+
+    if (monthFilter && t.date) {
+      const dateStr = String(t.date).trim();
+      if (!dateStr.includes(monthFilter) && !dateStr.includes(monthFilter.replace('-', '/'))) {
+        return false;
+      }
     }
-  }
 
-  if (catFilter && category !== catFilter) return false;
+    if (catFilter && category !== catFilter) return false;
 
-  return true;
-});
+    return true;
+  });
 
   currentExpenses = expenses;
 
-  // Deduplicate
-  //expenses = [...new Map(expenses.map(item => [`${item.date}-${(item.narration || '').substring(0,80)}`, item])).values()];
-
   console.log(`Expenses Tab → Showing ${expenses.length} HDFC outflows (Month: ${monthFilter || 'All'})`);
 
-  const totalExpense = expenses.reduce((sum, t) => sum + t.withdrawal, 0);
+  const totalExpense = expenses.reduce((sum, t) => sum + Math.abs(t.withdrawal || 0), 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
-
-  //const uniqueMonths = new Set(expenses.map(t => t.date ? t.date.substring(3,10).replace('/', '-') : ''));
-  //const avgMonthly = uniqueMonths.size > 0 ? Math.round(totalExpense / uniqueMonths.size) : 0;
-  //document.getElementById('avg-monthly').textContent = '₹' + avgMonthly.toLocaleString('en-IN');
 
   renderExpenseCategoryBreakdown(expenses);
   renderExpensesTable(expenses);
