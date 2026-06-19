@@ -1994,7 +1994,7 @@ function loadCashflow() {
         ignoredInterbank += t.deposit;
         return;
       }
-      totalIncome += t.deposit;   // Genuine income
+      totalIncome += t.deposit;           // Genuine income
     }
 
     // === WITHDRAWALS from HDFC ===
@@ -2003,7 +2003,7 @@ function loadCashflow() {
         ignoredInvestments += t.withdrawal;
         return;
       }
-      totalExpense += t.withdrawal;   // Normal business expense
+      totalExpense += t.withdrawal;       // Normal business expense
     }
   });
 
@@ -2036,7 +2036,10 @@ function loadCashflow() {
   netEl.textContent = '₹' + netCashFlow.toLocaleString('en-IN');
   netEl.className = `text-3xl font-bold mt-2 ${netCashFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  // Monthly Breakdown (using only genuine transactions)
+  document.getElementById('cf-tx-count').textContent = hdfcTxns.length;
+  document.getElementById('cf-internal-count').textContent = ignoredInterbank + ignoredInvestments;
+
+  // Monthly Breakdown (only genuine transactions)
   const filteredForMonthly = hdfcTxns.filter(t => {
     const narr = (t.narration || "").toLowerCase();
     return !isInterbankTransferFromOtherBank(narr) && !isFDorRDInvestment(narr);
