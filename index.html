@@ -690,24 +690,24 @@ async function loadSelectedBank() {
 
 function parseDate(dateStr) {
   if (!dateStr) return null;
-  try {
-    const str = String(dateStr).trim();
-    const parts = str.split(/[\/-]/);
-    if (parts.length !== 3) return null;
+  const str = String(dateStr).trim();
 
+  // Try DD/MM/YYYY or DD-MM-YYYY
+  const parts = str.split(/[\/-]/);
+  if (parts.length === 3) {
     let day = parseInt(parts[0], 10);
     let month = parseInt(parts[1], 10);
     let year = parseInt(parts[2], 10);
 
-    if (year < 100) year += 2000; // Handle 2-digit year
+    if (year < 100) year += 2000;
 
-    // Basic validation
-    if (month < 1 || month > 12 || day < 1 || day > 31) return null;
-
-    return new Date(year, month - 1, day);
-  } catch (e) {
-    return null;
+    if (month >= 1 && month <= 12 && day >= 1 && day <= 31) {
+      return new Date(year, month - 1, day);
+    }
   }
+
+  // Fallback
+  return new Date(str);
 }
 
 function getAvailableFYs() {
@@ -1976,7 +1976,7 @@ function loadCashflow() {
   if (!fy) return;
 
   const [startYear] = fy.split('-').map(Number);
-  const previousFYEndDate = `${startYear}-03-31`;   // 31 March of starting year
+  const previousFYEndStr = `${startYear}-03-31`;   // 31 March
 
   // All HDFC transactions for this FY
   let hdfcTxns = allTransactions.filter(t => 
@@ -2010,17 +2010,17 @@ function loadCashflow() {
 
   const netCashFlow = totalIncome - totalExpense;
 
-  // === Correct Opening Balance: Balance as on 31 March of previous year ===
+  // === Robust Opening Balance: Last known balance before or on 31 March ===
   let openingBalance = 0;
   const beforeFY = allTransactions.filter(t => {
     if (t.bank !== "HDFC") return false;
     const d = parseDate(t.date);
     if (!d) return false;
-    return d <= parseDate(previousFYEndDate);
+    return d <= parseDate(previousFYEndStr);
   });
 
   if (beforeFY.length > 0) {
-    // Get the latest balance before or on 31 March
+    // Sort by date descending and take the most recent balance
     beforeFY.sort((a, b) => parseDate(b.date) - parseDate(a.date));
     openingBalance = beforeFY[0].balance || 0;
   }
