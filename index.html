@@ -1975,6 +1975,10 @@ function loadCashflow() {
   const fy = document.getElementById('cashflowFY').value;
   if (!fy) return;
 
+  const [startYear] = fy.split('-').map(Number);
+  const previousFYEndDate = `${startYear}-03-31`;   // 31 March of starting year
+
+  // All HDFC transactions for this FY
   let hdfcTxns = allTransactions.filter(t => 
     t.bank === "HDFC" && getFinancialYear(t.date) === fy
   );
@@ -1987,9 +1991,7 @@ function loadCashflow() {
   hdfcTxns.forEach(t => {
     const narration = (t.narration || "").toLowerCase();
 
-    // === DEPOSITS (Income) ===
     if (t.deposit > 0) {
-      // Only exclude money coming *into* HDFC from ICICI/IDFC
       if (isInterbankTransferFromOtherBank(narration)) {
         ignoredInterbankIn += t.deposit;
         return;
@@ -1997,24 +1999,30 @@ function loadCashflow() {
       totalIncome += t.deposit;
     }
 
-    // === WITHDRAWALS (Expense) ===
     if (t.withdrawal > 0) {
-      // Only exclude FD and RD investments
       if (isFDorRDInvestment(narration)) {
         ignoredInvestments += t.withdrawal;
         return;
       }
-      totalExpense += t.withdrawal;   // Everything else = Expense
+      totalExpense += t.withdrawal;
     }
   });
 
   const netCashFlow = totalIncome - totalExpense;
 
-  // Opening & Closing Balance
+  // === Correct Opening Balance: Balance as on 31 March of previous year ===
   let openingBalance = 0;
-  if (hdfcTxns.length > 0) {
-    const sorted = [...hdfcTxns].sort((a, b) => parseDate(a.date) - parseDate(b.date));
-    openingBalance = sorted[0].balance || 0;
+  const beforeFY = allTransactions.filter(t => {
+    if (t.bank !== "HDFC") return false;
+    const d = parseDate(t.date);
+    if (!d) return false;
+    return d <= parseDate(previousFYEndDate);
+  });
+
+  if (beforeFY.length > 0) {
+    // Get the latest balance before or on 31 March
+    beforeFY.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    openingBalance = beforeFY[0].balance || 0;
   }
 
   const closingBalance = openingBalance + netCashFlow;
@@ -2029,7 +2037,7 @@ function loadCashflow() {
   netEl.textContent = '₹' + netCashFlow.toLocaleString('en-IN');
   netEl.className = `text-3xl font-bold mt-2 ${netCashFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  // Monthly Breakdown (same filter as overall)
+  // Monthly Breakdown
   const filteredForMonthly = hdfcTxns.filter(t => {
     const narr = (t.narration || "").toLowerCase();
     return !isFDorRDInvestment(narr);
