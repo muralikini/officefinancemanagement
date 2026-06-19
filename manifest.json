@@ -5,6 +5,9 @@
       "bankName": "HDFC",
       "accountNumber": "62102",
       "files": [
+        { "year": "2018", "filePath": "data/banking/HDFC/HDFC_62102_2018.json" },
+        { "year": "2019", "filePath": "data/banking/HDFC/HDFC_62102_2019.json" },
+        { "year": "2020", "filePath": "data/banking/HDFC/HDFC_62102_2020.json" },
         { "year": "2021", "filePath": "data/banking/HDFC/HDFC_62102_2021.json" },
         { "year": "2022", "filePath": "data/banking/HDFC/HDFC_62102_2022.json" },
         { "year": "2023", "filePath": "data/banking/HDFC/HDFC_62102_2023.json" },
