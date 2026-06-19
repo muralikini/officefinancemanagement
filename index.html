@@ -1975,39 +1975,42 @@ function loadCashflow() {
   const fy = document.getElementById('cashflowFY').value;
   if (!fy) return;
 
-  // Only HDFC transactions for this FY
   let hdfcTxns = allTransactions.filter(t => 
     t.bank === "HDFC" && getFinancialYear(t.date) === fy
   );
 
   let totalIncome = 0;
   let totalExpense = 0;
-  let ignoredInterbank = 0;
+  let ignoredInterbankIn = 0;
   let ignoredInvestments = 0;
 
   hdfcTxns.forEach(t => {
     const narration = (t.narration || "").toLowerCase();
 
+    // === DEPOSITS (Income) ===
     if (t.deposit > 0) {
+      // Only exclude money coming *into* HDFC from ICICI/IDFC
       if (isInterbankTransferFromOtherBank(narration)) {
-        ignoredInterbank += t.deposit;
+        ignoredInterbankIn += t.deposit;
         return;
       }
       totalIncome += t.deposit;
     }
 
+    // === WITHDRAWALS (Expense) ===
     if (t.withdrawal > 0) {
+      // Only exclude FD and RD investments
       if (isFDorRDInvestment(narration)) {
         ignoredInvestments += t.withdrawal;
         return;
       }
-      totalExpense += t.withdrawal;
+      totalExpense += t.withdrawal;   // Everything else = Expense
     }
   });
 
   const netCashFlow = totalIncome - totalExpense;
 
-  // Opening Balance (from first transaction in this FY)
+  // Opening & Closing Balance
   let openingBalance = 0;
   if (hdfcTxns.length > 0) {
     const sorted = [...hdfcTxns].sort((a, b) => parseDate(a.date) - parseDate(b.date));
@@ -2026,10 +2029,10 @@ function loadCashflow() {
   netEl.textContent = '₹' + netCashFlow.toLocaleString('en-IN');
   netEl.className = `text-3xl font-bold mt-2 ${netCashFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  // Monthly Breakdown (this should now match the overall)
+  // Monthly Breakdown (same filter as overall)
   const filteredForMonthly = hdfcTxns.filter(t => {
     const narr = (t.narration || "").toLowerCase();
-    return !isInterbankTransferFromOtherBank(narr) && !isFDorRDInvestment(narr);
+    return !isFDorRDInvestment(narr);
   });
 
   renderMonthlyCashflow(filteredForMonthly);
@@ -2249,15 +2252,10 @@ function loadExpenses() {
 
     const narration = (t.narration || "").toLowerCase();
 
-    // Exclude FD, RD and Interbank (same as Cashflow)
+    // Only exclude FD and RD investments
     if (isFDorRDInvestment(narration)) return false;
-    if (isInterbankTransferFromOtherBank(narration)) return false;
 
-    const category = categorizeExpense(t.narration || "");
-
-    // Exclude income
-    if (category.includes("Income") || category.includes("Client Payment")) return false;
-
+    // All other HDFC outflows = Expense (including interbank transfers out)
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
     if (monthFilter && t.date) {
@@ -2267,7 +2265,7 @@ function loadExpenses() {
       }
     }
 
-    if (catFilter && category !== catFilter) return false;
+    if (catFilter && categorizeExpense(t.narration || "") !== catFilter) return false;
 
     return true;
   });
