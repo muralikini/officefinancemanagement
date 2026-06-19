@@ -2185,82 +2185,51 @@ function categorizeExpense(narration) {
   const n = narration.toLowerCase();
 
   // === Salary Payments (Expense) ===
-  if ((n.includes("salary") && (n.includes("tpt") || n.includes("payment") || n.includes("sal to") || n.includes("salary to"))) ||
-      n.includes("employee salary") || n.includes("sal to")) {
+  if (n.includes("tpt") && n.includes("salary")) {
+    return "Salary to Employees";
+  }
+  if (n.includes("salary payment") || n.includes("employee salary") || 
+      n.includes("sal to") || n.includes("salary to")) {
     return "Salary to Employees";
   }
 
-  // === Income (Salary Credit / Client Payment) ===
-  if ((n.includes("salary") && !n.includes("tpt") && !n.includes("payment") && !n.includes("sal to")) ||
+  // === Income (to be excluded) ===
+  if ((n.includes("salary") && !n.includes("tpt")) || 
+      n.includes("inw ") || 
       (n.includes("neft") && (n.includes("hdfc") || n.includes("addit labs") || n.includes("client")))) {
     return "Client Payment (Income)";
   }
 
-  // Rent
-  if (n.includes("rent") || n.includes("house rent") || 
-      (n.includes("chirra energy") && n.includes("rent"))) {
-    return "Rent";
-  }
-
-  // Credit Card Payments / Autopay
-  if (n.includes("credit card") || n.includes("cc payment") || 
-      n.includes("cc autopay") || n.includes("autopay si-tad") ||
-      n.includes("american expres")) {
+  // === Credit Card / American Express ===
+  if (n.includes("credit card") || n.includes("cc ") || n.includes("autopay") || 
+      n.includes("american expres") || n.includes("billdkamericanexpres")) {
     return "Credit Card Payment";
   }
 
-  // GST / Tax Payments
-  if (n.includes("cgst") || n.includes("sgst") || n.includes("gst payment") ||
-      n.includes("cbdt") || n.includes("income tax") || n.includes("professional tax") ||
-      n.includes("tds") || n.includes("govtofkarnataka")) {
+  // === Taxes & Government ===
+  if (n.includes("cbdt") || n.includes("cgst") || n.includes("sgst") || 
+      n.includes("professional tax") || n.includes("govtofkarnataka")) {
     return "Taxes & Government Dues";
   }
 
-  // Electricity / BESCOM
-  if (n.includes("bescom") || n.includes("electricity") || n.includes("eb bill")) {
-    return "Utilities & Bills";
+  // === Rent & Maintenance ===
+  if (n.includes("chirra energy")) {
+    return "Rent / Maintenance";
   }
 
-  // UPI Payments (General)
-  if (n.startsWith("upi-") || n.includes("@icici") || n.includes("@hdfc") || 
-      n.includes("@axis") || n.includes("@sbin") || n.includes("upi")) {
+  // === UPI Payments ===
+  if (n.startsWith("upi-")) {
     return "UPI Payment";
   }
 
-  // Avenue Supermarts / DMart
-  if (n.includes("avenue supermarts") || n.includes("d mart") || n.includes("dmart")) {
-    return "Office Supplies & Grocery";
+  // === BESCOM / Electricity ===
+  if (n.includes("bescom") || n.includes("electricity") || n.includes("si hg")) {
+    return "Utilities & Bills";
   }
 
-  // American Express Bill
-  if (n.includes("american expres") || n.includes("billdkamericanexpres")) {
-    return "Credit Card Payment";
-  }
-
-  // Cheque Payments
-  if (n.includes("chq paid") || n.includes("cheque")) {
-    return "Cheque Payment";
-  }
-
-  // Vendor / Maintenance (Chirra Energy)
-  if (n.includes("chirra energy") || n.includes("vendor") || n.includes("supplier")) {
-    return "Vendor / Maintenance";
-  }
-
-  // Fuel
-  if (n.includes("fuel") || n.includes("petrol") || n.includes("diesel")) {
-    return "Fuel";
-  }
-
-  // Professional Fees
-  if (n.includes("professional fee") || n.includes("ca ") || n.includes("consult")) {
-    return "Professional Fees";
-  }
-
-  // === INCOME (to be excluded) ===
-  if ((n.includes("salary") && !n.includes("payment") && !n.includes("sal to")) || 
-      (n.includes("neft") && (n.includes("hdfc") || n.includes("addit labs") || n.includes("client")))) {
-    return "Client Payment (Income)";
+  // === Other common expenses ===
+  if (n.includes("dhl") || n.includes("fedex") || n.includes("box makers")) {
+    return "Courier / Logistics";
   }
 
   return "Others";
@@ -2280,17 +2249,14 @@ function loadExpenses() {
 
     const narration = (t.narration || "").toLowerCase();
 
-    // ✅ Exclude FD and RD investments (same as Cashflow)
+    // Exclude FD, RD and Interbank (same as Cashflow)
     if (isFDorRDInvestment(narration)) return false;
-
-    // ✅ Exclude interbank transfers if any (though rare in expenses)
     if (isInterbankTransferFromOtherBank(narration)) return false;
 
     const category = categorizeExpense(t.narration || "");
 
-    // Exclude income categories
-    if (category.includes("Income") || category.includes("Salary Credit") || 
-        category.includes("Client Payment")) return false;
+    // Exclude income
+    if (category.includes("Income") || category.includes("Client Payment")) return false;
 
     if (fy && getFinancialYear(t.date) !== fy) return false;
 
@@ -2307,8 +2273,6 @@ function loadExpenses() {
   });
 
   currentExpenses = expenses;
-
-  console.log(`Expenses Tab → Showing ${expenses.length} HDFC outflows (Month: ${monthFilter || 'All'})`);
 
   const totalExpense = expenses.reduce((sum, t) => sum + Math.abs(t.withdrawal || 0), 0);
   document.getElementById('total-expenses').textContent = '₹' + totalExpense.toLocaleString('en-IN');
