@@ -353,204 +353,15 @@
   {
     "Date": "11/11/2018",
     "Narration": "IMPS-831509185648-RAVESH KUMAR-PUNB-XXXX XXXXXXXX3494-TEST MONEY TRANSFERE",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
+    "Chq./Ref.No.": 831509185648,
+    "Value Dt": "11/11/2018",
+    "Withdrawal Amt.": "1,000.00",
     "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "IMPS-831509188687-ADDIT LABS-ICIC-XXXXXX XX8836-POP ADVANCE",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "IMPS-831509188895-RAVESH KUMAR-PUNB-XXXX XXXXXXXX3494-POP ADVANCE",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "IMPS-831709178771-MUKESH SHARMA-SBIN-XXX XXXX0740-CARPENTER ADVANCE",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "NEFT CR-VIJB0001020-UMAR FAROOQ HASSAN R IYAZ-KINI-VIJBH18318035144",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "IMPS-831819139937-ADDIT LABS-ICIC-XXXXXX XX8836-COMPANY FUNDS",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": ".IMPS P2P 831509185648#11/11/2018 121118",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "-MIR1831918119423",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": ".IMPS P2P 831509188687#11/11/2018 121118",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "-MIR1831918119413",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": ".IMPS P2P 831509188895#11/11/2018 121118",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "-MIR1831918119403",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": ".IMPS P2P 831709178771#13/11/2018 131118",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "-MIR1831918108861",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "IMPS-832106103054-ADDIT LABS-ICIC-XXXXXX XX8836-OFFICE RENNOVATION EXPENSES",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": ".IMPS P2P 831819139937#14/11/2018 151118",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "-MIR1832123767780",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "IMPS-832117154048-CHAITANYA C N-VIJB-XXX XXXXXXXX6779-POOJA CHARGES",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "IMPS-832122115743-RAVESH KUMAR-PUNB-XXXX XXXXXXXX3494-POP ADVANCE 3",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "IMPS-832122117821-SYED NADEEM-IDIB-XXXXX 2911-FURNITURE PAYMENT",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "NEFT CR-VIJB0001020-UMAR FAROOQ HASSAN R",
-    "Narration": "",
-    "Chq./Ref.No.": "",
-    "Value Dt": "",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "",
-    "Closing Balance": ""
-  },
-  {
-    "Date": "IYAZ-KINI-VIJBH18323044544",
-    "Narration": 831509185648,
-    "Chq./Ref.No.": "11/11/18",
-    "Value Dt": "1,000.00",
-    "Withdrawal Amt.": "",
-    "Deposit Amt.": "2,68,650.64",
-    "Closing Balance": ""
+    "Closing Balance": "2,68,650.64"
   },
   {
     "Date": "11/11/2018",
-    "Narration": "",
+    "Narration": "IMPS-831509188687-ADDIT LABS-ICIC-XXXXXX XX8836-POP ADVANCE",
     "Chq./Ref.No.": 831509188687,
     "Value Dt": "11/11/2018",
     "Withdrawal Amt.": "45,000.00",
@@ -559,7 +370,7 @@
   },
   {
     "Date": "11/11/2018",
-    "Narration": "",
+    "Narration": "IMPS-831509188895-RAVESH KUMAR-PUNB-XXXX XXXXXXXX3494-POP ADVANCE",
     "Chq./Ref.No.": 831509188895,
     "Value Dt": "11/11/2018",
     "Withdrawal Amt.": "24,000.00",
@@ -568,7 +379,7 @@
   },
   {
     "Date": "13/11/2018",
-    "Narration": "",
+    "Narration": "IMPS-831709178771-MUKESH SHARMA-SBIN-XXX XXXX0740-CARPENTER ADVANCE",
     "Chq./Ref.No.": 831709178771,
     "Value Dt": "13/11/2018",
     "Withdrawal Amt.": "12,000.00",
@@ -577,7 +388,7 @@
   },
   {
     "Date": "14/11/2018",
-    "Narration": "",
+    "Narration": "NEFT CR-VIJB0001020-UMAR FAROOQ HASSAN R IYAZ-KINI-VIJBH18318035144",
     "Chq./Ref.No.": "VIJBH18318035144",
     "Value Dt": "14/11/2018",
     "Withdrawal Amt.": "",
@@ -586,7 +397,7 @@
   },
   {
     "Date": "14/11/2018",
-    "Narration": "",
+    "Narration": "IMPS-831819139937-ADDIT LABS-ICIC-XXXXXX XX8836-COMPANY FUNDS",
     "Chq./Ref.No.": 831819139937,
     "Value Dt": "14/11/2018",
     "Withdrawal Amt.": "50,000.00",
@@ -595,7 +406,7 @@
   },
   {
     "Date": "16/11/2018",
-    "Narration": "",
+    "Narration": "IMPS P2P 831509185648#11/11/2018 121118",
     "Chq./Ref.No.": "MIR1831918119423",
     "Value Dt": "16/11/2018",
     "Withdrawal Amt.": 5.9,
@@ -604,7 +415,7 @@
   },
   {
     "Date": "16/11/2018",
-    "Narration": "",
+    "Narration": "MIR1831918119423",
     "Chq./Ref.No.": "MIR1831918119413",
     "Value Dt": "16/11/2018",
     "Withdrawal Amt.": 5.9,
@@ -613,7 +424,7 @@
   },
   {
     "Date": "16/11/2018",
-    "Narration": "",
+    "Narration": "IMPS P2P 831509188687#11/11/2018 121118",
     "Chq./Ref.No.": "MIR1831918119403",
     "Value Dt": "16/11/2018",
     "Withdrawal Amt.": 5.9,
@@ -622,7 +433,7 @@
   },
   {
     "Date": "16/11/2018",
-    "Narration": "",
+    "Narration": "MIR1831918119413",
     "Chq./Ref.No.": "MIR1831918108861",
     "Value Dt": "16/11/2018",
     "Withdrawal Amt.": 5.9,
@@ -631,7 +442,7 @@
   },
   {
     "Date": "17/11/2018",
-    "Narration": "",
+    "Narration": "IMPS-832106103054-ADDIT LABS-ICIC-XXXXXX XX8836-OFFICE RENNOVATION EXPENSES",
     "Chq./Ref.No.": 832106103054,
     "Value Dt": "17/11/2018",
     "Withdrawal Amt.": "50,000.00",
@@ -640,7 +451,7 @@
   },
   {
     "Date": "17/11/2018",
-    "Narration": "",
+    "Narration": "MPS P2P 831509188895#11/11/2018 121118",
     "Chq./Ref.No.": "MIR1832123767780",
     "Value Dt": "17/11/2018",
     "Withdrawal Amt.": 5.9,
@@ -649,7 +460,7 @@
   },
   {
     "Date": "17/11/2018",
-    "Narration": "",
+    "Narration": "IMPS-832117154048-CHAITANYA C N-VIJB-XXX XXXXXXXX6779-POOJA CHARGES",
     "Chq./Ref.No.": 832117154048,
     "Value Dt": "17/11/2018",
     "Withdrawal Amt.": "5,000.00",
@@ -658,7 +469,7 @@
   },
   {
     "Date": "17/11/2018",
-    "Narration": "",
+    "Narration": "IMPS-832122115743-RAVESH KUMAR-PUNB-XXXX XXXXXXXX3494-POP ADVANCE 3",
     "Chq./Ref.No.": 832122115743,
     "Value Dt": "18/11/2018",
     "Withdrawal Amt.": "50,000.00",
@@ -667,7 +478,7 @@
   },
   {
     "Date": "17/11/2018",
-    "Narration": "",
+    "Narration": "IMPS-832122117821-SYED NADEEM-IDIB-XXXXX 2911-FURNITURE PAYMENT",
     "Chq./Ref.No.": 832122117821,
     "Value Dt": "18/11/2018",
     "Withdrawal Amt.": "25,000.00",
@@ -676,7 +487,7 @@
   },
   {
     "Date": "19/11/2018",
-    "Narration": "",
+    "Narration": "NEFT CR-VIJB0001020-UMAR FAROOQ HASSAN R",
     "Chq./Ref.No.": "VIJBH18323044544",
     "Value Dt": "19/11/2018",
     "Withdrawal Amt.": "",
