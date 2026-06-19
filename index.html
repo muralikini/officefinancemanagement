@@ -2109,11 +2109,16 @@ function renderMonthlyCashflow(transactions) {
 function isFDorRDInvestment(narration) {
   if (!narration) return false;
   const n = narration.toLowerCase();
-  return n.includes("-fd") || n.includes("fd ") || n.includes("fixed deposit") ||
-         n.includes("rd installment") || n.includes("recurring deposit") ||
-         n.includes("trf to fd") || n.includes("trf to rd");
-}
 
+  return n.includes("-fd") || 
+         n.includes("fd ") || 
+         n.includes("fixed deposit") ||
+         n.includes("rd through net") ||      // ← New
+         n.includes("rd installment") ||      // Existing
+         n.includes("recurring deposit") ||
+         n.includes("trf to fd") || 
+         n.includes("trf to rd");
+}
 
 // ==================== EXPENSES TAB FUNCTIONS ====================
 
