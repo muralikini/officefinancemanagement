@@ -1975,7 +1975,7 @@ function loadCashflow() {
   const fy = document.getElementById('cashflowFY').value;
   if (!fy) return;
 
-  // Only HDFC transactions
+  // Only HDFC transactions for this FY
   let hdfcTxns = allTransactions.filter(t => 
     t.bank === "HDFC" && getFinancialYear(t.date) === fy
   );
@@ -1988,40 +1988,30 @@ function loadCashflow() {
   hdfcTxns.forEach(t => {
     const narration = (t.narration || "").toLowerCase();
 
-    // === DEPOSITS into HDFC ===
     if (t.deposit > 0) {
       if (isInterbankTransferFromOtherBank(narration)) {
         ignoredInterbank += t.deposit;
         return;
       }
-      totalIncome += t.deposit;           // Genuine income
+      totalIncome += t.deposit;
     }
 
-    // === WITHDRAWALS from HDFC ===
     if (t.withdrawal > 0) {
       if (isFDorRDInvestment(narration)) {
         ignoredInvestments += t.withdrawal;
         return;
       }
-      totalExpense += t.withdrawal;       // Normal business expense
+      totalExpense += t.withdrawal;
     }
   });
 
   const netCashFlow = totalIncome - totalExpense;
 
-  // Opening & Closing Balance
+  // Opening Balance (from first transaction in this FY)
   let openingBalance = 0;
-  const [startYear] = fy.split('-').map(Number);
-
-  const beforeFY = allTransactions.filter(t => {
-    if (t.bank !== "HDFC") return false;
-    const d = parseDate(t.date);
-    return d && (d.getFullYear() < startYear || (d.getFullYear() === startYear && d.getMonth() < 3));
-  });
-
-  if (beforeFY.length > 0) {
-    beforeFY.sort((a, b) => parseDate(b.date) - parseDate(a.date));
-    openingBalance = beforeFY[0].balance || 0;
+  if (hdfcTxns.length > 0) {
+    const sorted = [...hdfcTxns].sort((a, b) => parseDate(a.date) - parseDate(b.date));
+    openingBalance = sorted[0].balance || 0;
   }
 
   const closingBalance = openingBalance + netCashFlow;
@@ -2036,10 +2026,7 @@ function loadCashflow() {
   netEl.textContent = '₹' + netCashFlow.toLocaleString('en-IN');
   netEl.className = `text-3xl font-bold mt-2 ${netCashFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  document.getElementById('cf-tx-count').textContent = hdfcTxns.length;
-  document.getElementById('cf-internal-count').textContent = ignoredInterbank + ignoredInvestments;
-
-  // Monthly Breakdown (only genuine transactions)
+  // Monthly Breakdown (this should now match the overall)
   const filteredForMonthly = hdfcTxns.filter(t => {
     const narr = (t.narration || "").toLowerCase();
     return !isInterbankTransferFromOtherBank(narr) && !isFDorRDInvestment(narr);
