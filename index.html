@@ -1976,7 +1976,7 @@ function loadCashflow() {
   if (!fy) return;
 
   // Only HDFC transactions
-  const hdfcTxns = allTransactions.filter(t => 
+  let hdfcTxns = allTransactions.filter(t => 
     t.bank === "HDFC" && getFinancialYear(t.date) === fy
   );
 
@@ -1988,28 +1988,28 @@ function loadCashflow() {
   hdfcTxns.forEach(t => {
     const narration = (t.narration || "").toLowerCase();
 
-    // === DEPOSITS ===
+    // === DEPOSITS into HDFC ===
     if (t.deposit > 0) {
       if (isInterbankTransferFromOtherBank(narration)) {
         ignoredInterbank += t.deposit;
         return;
       }
-      totalIncome += t.deposit;           // Genuine income
+      totalIncome += t.deposit;   // Genuine income
     }
 
-    // === WITHDRAWALS ===
+    // === WITHDRAWALS from HDFC ===
     if (t.withdrawal > 0) {
       if (isFDorRDInvestment(narration)) {
         ignoredInvestments += t.withdrawal;
         return;
       }
-      totalExpense += t.withdrawal;       // Normal business expense
+      totalExpense += t.withdrawal;   // Normal business expense
     }
   });
 
   const netCashFlow = totalIncome - totalExpense;
 
-  // Opening Balance calculation (same as before)
+  // Opening & Closing Balance
   let openingBalance = 0;
   const [startYear] = fy.split('-').map(Number);
 
@@ -2036,16 +2036,13 @@ function loadCashflow() {
   netEl.textContent = '₹' + netCashFlow.toLocaleString('en-IN');
   netEl.className = `text-3xl font-bold mt-2 ${netCashFlow >= 0 ? 'text-green-400' : 'text-red-400'}`;
 
-  document.getElementById('cf-tx-count').textContent = hdfcTxns.length;
-  document.getElementById('cf-internal-count').textContent = ignoredInterbank + ignoredInvestments;
-
-  // Monthly breakdown (excluding investments & interbank)
-  const filteredTxns = hdfcTxns.filter(t => {
+  // Monthly Breakdown (using only genuine transactions)
+  const filteredForMonthly = hdfcTxns.filter(t => {
     const narr = (t.narration || "").toLowerCase();
     return !isInterbankTransferFromOtherBank(narr) && !isFDorRDInvestment(narr);
   });
 
-  renderMonthlyCashflow(filteredTxns);
+  renderMonthlyCashflow(filteredForMonthly);
 }
 
 function isInterbankTransferFromOtherBank(narration) {
@@ -2125,10 +2122,10 @@ function isFDorRDInvestment(narration) {
   if (!narration) return false;
   const n = narration.toLowerCase();
 
-  return n.includes("-fd") ||                    // Catches "-FD..." at the end
+  return n.includes("-fd") || 
          n.includes("fd ") ||
          n.includes("fixed deposit") ||
-         n.includes("rd installment") ||         // Catches RD transactions
+         n.includes("rd installment") ||
          n.includes("recurring deposit") ||
          n.includes("trf to fd") ||
          n.includes("trf to rd");
