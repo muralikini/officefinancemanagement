@@ -2239,14 +2239,20 @@ function categorizeExpense(narration) {
 
   // Vendor / Supplier Payments
   if (n.includes("vendor") || n.includes("supplier") || n.includes("purchase") ||
-      n.includes("payment to") || n.includes("neft") && n.includes("labs")) {
+      n.includes("payment to")) {
     return "Vendor / Supplier Payment";
   }
 
-  // Office Supplies & Stationery
-  if (n.includes("stationery") || n.includes("office supply") || n.includes("dmart") ||
-      n.includes("bigbasket") || n.includes("more") || n.includes("reliance retail")) {
-    return "Office Supplies";
+  // Office Supplies & Grocery (DMart, Supermarts, etc.)
+  if (n.includes("avenue supermarts") || n.includes("d mart") || n.includes("dmart") ||
+      n.includes("bigbasket") || n.includes("reliance retail") || n.includes("more")) {
+    return "Office Supplies & Grocery";
+  }
+
+  // UPI Payments (General)
+  if (n.startsWith("upi-") || n.includes("@icici") || n.includes("@hdfc") || 
+      n.includes("@axis") || n.includes("@sbin") || n.includes("upi")) {
+    return "UPI Payment";
   }
 
   // Travel & Conveyance
@@ -2295,7 +2301,7 @@ function categorizeExpense(narration) {
 
   // === INCOME (to be excluded) ===
   if ((n.includes("salary") && !n.includes("payment")) || 
-      n.includes("neft") && (n.includes("hdfc") || n.includes("addit labs") || n.includes("client"))) {
+      (n.includes("neft") && (n.includes("hdfc") || n.includes("addit labs") || n.includes("client")))) {
     return "Client Payment (Income)";
   }
 
